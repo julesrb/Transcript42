@@ -3,6 +3,6 @@ from fill_template import fill_template
 from generate_pdf import generate_pdf
 
 
-get_user_data()
+# get_user_data()
 fill_template()
 generate_pdf()

@@ -3,8 +3,7 @@
             left=1.0cm, 
             right=1.0cm, 
             top=1.0cm, 
-            bottom=1.0cm, 
-            includeheadfoot]{geometry}
+            bottom=1.0cm]{geometry}
 \usepackage[scaled]{helvet} % Helvetica (Arial-like)
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{array}
@@ -14,137 +13,190 @@
 \usepackage{setspace}
 \usepackage{anyfontsize}
 \usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{pagecolor}
+\usepackage{showframe}
+\usepackage{eso-pic}
+\usepackage{tikz}
+
+
 
 
 \begin{document}
+
+% BACKGROUND IMAGE (centered, semi-transparent)
+\AddToShipoutPictureBG*{
+  \AtPageCenter{
+    \begin{tikzpicture}[remember picture, overlay]
+      \node[opacity=0.1] at (current page.center) {
+        \includegraphics[width=0.5\paperwidth]{42_logo.png}
+      };
+    \end{tikzpicture}
+  }
+}
+
+% SMALL LOGO top-left (2cm from top, 2cm from left)
+\AddToShipoutPicture*{
+  \begin{tikzpicture}[remember picture, overlay]
+    \node at (2.2cm, 26.5cm) {
+		% 27.5
+      \includegraphics[width=2.5cm]{42_logo.png}
+    };
+  \end{tikzpicture}
+}
+
 \fontsize{9}{11}\selectfont
 
-\thispagestyle{empty}
+% MAIN LAYOUT
+\noindent
+\begin{tabularx}{\textwidth}{@{}X X@{}}
 
-\begin{figure}[h]
-    \includegraphics[width=0.2\textwidth]{42_Logo.png} 
-    \label{fig:example}
-\end{figure}
+% LEFT COLUMN
+\colorbox{yellow!30}{
+  \parbox[t]{\dimexpr\linewidth\relax}{
+    \hspace*{2.5cm}%
+    \begin{minipage}[t]{\dimexpr\linewidth-3cm\relax} % width after padding
+      42 Berlin\\
+      Harzer Straße 39\\
+      12059 Berlin\\
+      GERMANY
+    \end{minipage}
+  }
+}
 
-
-\begin{minipage}[t]{0.5\textwidth}
-	\setlength{\fboxsep}{0pt}
-    42 Berlin \\
-    Harzer Straße 39 \\
-    12059 Berlin \\
-    GERMANY \\
-
-    \vspace{0.5cm}
-
-    Passed Selection on: \quad \quad \quad \quad \quad \quad \quad {{ pool_month }} {{ pool_year }} \\
-    Core Curriculum started on: \quad \quad \quad \quad November 28, 2022 \\
-    Core Curriculum complete on: \quad \quad \quad September 6, 2024 \\
-    {% for project in projects_users %}
-		{%- if project.id == 3816445 -%}
-			{%- if project["validated?"] -%}
-				date: {{ project.marked_at }} \\
-			{%- endif -%}
-		{%- endif -%}
-	{% endfor %}
-    Advanced Curriculum complete on: \quad \_\_\_\_\_\_\_\_ \\
-\end{minipage}%
-\begin{minipage}[t]{0.5\textwidth}
-    \centering
-    \fontsize{12}{11}\selectfont
-    \textbf{TRANSCRIPT OF ACADEMIC RECORD}
-	\fontsize{9}{11}\selectfont
-    \vspace{0.5cm}
-
-    \raggedright % Left-align the following text
-    Record of: \quad {{ first_name }} {{ last_name }} \\
-    Date of birth: \quad 06.07.1994 \\
-    Date issued: \quad 03.06.2025 \\
-
-    \vspace{0.5cm}
-
-    This certificate is delivered upon request \\
-    for all legal intents and purposes.
+&
+% RIGHT COLUMN
+\begin{minipage}[t]{\linewidth}
+\colorbox{blue!20}{
+  \parbox[t]{\dimexpr\linewidth-2\fboxsep}{ % remove padding effect
+    This is the text in the right column. It takes the entire second column width.
+  }
+}
 \end{minipage}
 
-\vspace{0.5cm}
-
-\noindent
-\begin{tabularx}{\textwidth}{l X c c}
-\hline
-\textbf{NAME} & \textbf{DETAILS} & \textbf{GRADE} & \textbf{WORKLOAD} \\
-\hline
-Rank0 & --- & - & - \\
-\hline
-Libft & Reimplementation of key C standard library functions and custom utilities. & 125 & 70 H \\
-\hline
-Rank 1 & --- & - & - \\
-\hline
-ft\_printf & Custom printf using variable functions and format specifiers in C. & 100 & 70 H \\
-\hline
-Born2beroot & Introduction to system administration and virtualization with Linux. & 100 & 40 H \\
-\hline
-get\_next\_line & Read file or input content line by line with buffer management. & 104 & 70 H \\
-\hline
-Rank2 & --- & - & - \\
-\hline
-Fdf & 3D wireframe rendering using a basic graphics window and event handling. & 111 & 60 H \\
-\hline
-pushswap & Sort a stack with a minimal set of operations using sorting algorithms. & 86 & 60 H \\
-\hline
-Minitalk & Exchange messages between processes via UNIX signals. & 106 & 50 H \\
-\hline
-Exam Rank 2 & Evaluation of C programming skills through practical exercises. & 100 & - \\
-\hline
-Rank3 & --- & - & - \\
-\hline
-Minishell & Build a simple shell handling commands, paths, and environment variables. & 100 & 210 H \\
-\hline
-Philosophers & Learn concurrency using threads and mutexes in the classic dining problem. & 100 & 70 H \\
-\hline
-Exam Rank 3 & Practical exam to assess UNIX and C programming proficiency. & 100 & - \\
-\hline
-Rank 4 & --- & - & - \\
-\hline
-Net Practise & Explore networking basics: IPs, subnets, routing, and connectivity. & 100 & 50 H \\
-\hline
-cub3d & Raycasting-based 3D maze viewer inspired by 90s FPS games. & 125 & 280 H \\
-\hline
-inception & Deploy Docker containers and virtual environments for system setup. & 100 & 210 H \\
-\hline
-Exam Rank 4 & Advanced C and system programming skills evaluation. & 100 & - \\
-\hline
-Rank 5 & --- & - & - \\
-\hline
-Ft\_Irc & Develop a fully functional IRC server using C++. & 125 & 175 H \\
-\hline
-cpp0 & Introduction to C++ syntax and differences from C. & 80 & 22 H \\
-\hline
-cpp1 & Study memory allocation, references, and member pointers in C++. & 90 & 12 H \\
-\hline
-cpp2 & Practice function overloading and canonical class forms in C++. & 80 & 12 H \\
-\hline
-cpp3 & Explore class inheritance and object hierarchies in C++. & 80 & 12 H \\
-\hline
-cpp4 & Implement abstract classes and runtime polymorphism in C++. & 80 & 12 H \\
-\hline
-Exam Rank 5 & Evaluation of object-oriented programming and templates. & 100 & - \\
-\hline
-Rank 6 & --- & - & - \\
-\hline
-cpp5 & Handle exceptions and try/catch blocks in C++. & 100 & 25 H \\
-\hline
-cpp6 & Use static, dynamic, and reinterpret casting in C++. & 100 & 25 H \\
-\hline
-cpp7 & Study class and function templates in C++. & 100 & 25 H \\
-\hline
-cpp8 & Implement iterators and STL-like templated containers. & 100 & 25 H \\
-\hline
-cpp9 & Advanced use of containers and algorithms in C++. & 90 & 40 H \\
-\hline
-ft\_transcendence & Build and manage a full-stack web application from scratch. & 115 & 245 H \\
-\hline
-Exam Rank 6 & Final evaluation of full-stack development and project management. & 100 & - \\
-\hline
 \end{tabularx}
+
+\end{document}
+	% \end{tabularx}
+
+	% \begin{minipage}[t]{0.5\textwidth}
+	% 	\setlength{\fboxsep}{0pt}
+	% 	42 Berlin \\
+	% 	Harzer Straße 39 \\
+	% 	12059 Berlin \\
+	% 	GERMANY \\
+
+	% 	\vspace{0.5cm}
+
+	% 	Passed Selection on: \quad \quad \quad \quad \quad \quad \quad {{ pool_month }} {{ pool_year }} \\
+	% 	Core Curriculum started on: \quad \quad \quad \quad November 28, 2022 \\
+	% 	Core Curriculum complete on: \quad \quad \quad September 6, 2024 \\
+	% 	{% for project in projects_users %}
+	% 		{%- if project.id == 3816445 -%}
+	% 			{%- if project["validated?"] -%}
+	% 				date: {{ project.marked_at }} \\
+	% 			{%- endif -%}
+	% 		{%- endif -%}
+	% 	{% endfor %}
+	% 	Advanced Curriculum complete on: \quad \_\_\_\_\_\_\_\_ \\
+	% \end{minipage}%
+	% \begin{minipage}[t]{0.5\textwidth}
+	% 	\centering
+	% 	\fontsize{12}{11}\selectfont
+	% 	\textbf{TRANSCRIPT OF ACADEMIC RECORD}
+	% 	\fontsize{9}{11}\selectfont
+	% 	\vspace{0.5cm}
+
+	% 	\raggedright % Left-align the following text
+	% 	Record of: \quad {{ first_name }} {{ last_name }} \\
+	% 	Date of birth: \quad 06.07.1994 \\
+	% 	Date issued: \quad 03.06.2025 \\
+
+	% 	\vspace{0.5cm}
+
+	% 	This certificate is delivered upon request \\
+	% 	for all legal intents and purposes.
+	% \end{minipage}
+
+	% \vspace{0.5cm}
+
+	% % \noindent
+	% \begin{tabularx}{\textwidth}{l X c c}
+	% \hline
+	% \textbf{NAME} & \textbf{DETAILS} & \textbf{GRADE} & \textbf{WORKLOAD} \\
+	% \hline
+	% Rank0 & --- & - & - \\
+	% \hline
+	% Libft & Reimplementation of key C standard library functions and custom utilities. & 125 & 70 H \\
+	% \hline
+	% Rank 1 & --- & - & - \\
+	% \hline
+	% ft\_printf & Custom printf using variable functions and format specifiers in C. & 100 & 70 H \\
+	% \hline
+	% Born2beroot & Introduction to system administration and virtualization with Linux. & 100 & 40 H \\
+	% \hline
+	% get\_next\_line & Read file or input content line by line with buffer management. & 104 & 70 H \\
+	% \hline
+	% Rank2 & --- & - & - \\
+	% \hline
+	% Fdf & 3D wireframe rendering using a basic graphics window and event handling. & 111 & 60 H \\
+	% \hline
+	% pushswap & Sort a stack with a minimal set of operations using sorting algorithms. & 86 & 60 H \\
+	% \hline
+	% Minitalk & Exchange messages between processes via UNIX signals. & 106 & 50 H \\
+	% \hline
+	% Exam Rank 2 & Evaluation of C programming skills through practical exercises. & 100 & - \\
+	% \hline
+	% Rank3 & --- & - & - \\
+	% \hline
+	% Minishell & Build a simple shell handling commands, paths, and environment variables. & 100 & 210 H \\
+	% \hline
+	% Philosophers & Learn concurrency using threads and mutexes in the classic dining problem. & 100 & 70 H \\
+	% \hline
+	% Exam Rank 3 & Practical exam to assess UNIX and C programming proficiency. & 100 & - \\
+	% \hline
+	% Rank 4 & --- & - & - \\
+	% \hline
+	% Net Practise & Explore networking basics: IPs, subnets, routing, and connectivity. & 100 & 50 H \\
+	% \hline
+	% cub3d & Raycasting-based 3D maze viewer inspired by 90s FPS games. & 125 & 280 H \\
+	% \hline
+	% inception & Deploy Docker containers and virtual environments for system setup. & 100 & 210 H \\
+	% \hline
+	% Exam Rank 4 & Advanced C and system programming skills evaluation. & 100 & - \\
+	% \hline
+	% Rank 5 & --- & - & - \\
+	% \hline
+	% Ft\_Irc & Develop a fully functional IRC server using C++. & 125 & 175 H \\
+	% \hline
+	% cpp0 & Introduction to C++ syntax and differences from C. & 80 & 22 H \\
+	% \hline
+	% cpp1 & Study memory allocation, references, and member pointers in C++. & 90 & 12 H \\
+	% \hline
+	% cpp2 & Practice function overloading and canonical class forms in C++. & 80 & 12 H \\
+	% \hline
+	% cpp3 & Explore class inheritance and object hierarchies in C++. & 80 & 12 H \\
+	% \hline
+	% cpp4 & Implement abstract classes and runtime polymorphism in C++. & 80 & 12 H \\
+	% \hline
+	% Exam Rank 5 & Evaluation of object-oriented programming and templates. & 100 & - \\
+	% \hline
+	% Rank 6 & --- & - & - \\
+	% \hline
+	% cpp5 & Handle exceptions and try/catch blocks in C++. & 100 & 25 H \\
+	% \hline
+	% cpp6 & Use static, dynamic, and reinterpret casting in C++. & 100 & 25 H \\
+	% \hline
+	% cpp7 & Study class and function templates in C++. & 100 & 25 H \\
+	% \hline
+	% cpp8 & Implement iterators and STL-like templated containers. & 100 & 25 H \\
+	% \hline
+	% cpp9 & Advanced use of containers and algorithms in C++. & 90 & 40 H \\
+	% \hline
+	% ft\_transcendence & Build and manage a full-stack web application from scratch. & 115 & 245 H \\
+	% \hline
+	% Exam Rank 6 & Final evaluation of full-stack development and project management. & 100 & - \\
+	% \hline
+	% \end{tabularx}
 
 \end{document}
