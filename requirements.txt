@@ -1,0 +1,5 @@
+requests
+python-dotenv
+attrs==18.2.0
+pdflatex
+jinja2
