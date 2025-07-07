@@ -22,7 +22,7 @@ install: venv
 	$(PIP) install --upgrade pip
 	$(PIP) install -r requirements.txt
 
-run: install
+run: 
 	$(PYTHON) src/main.py
 
 clean:
