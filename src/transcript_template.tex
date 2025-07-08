@@ -22,6 +22,7 @@
 
 
 \begin{document}
+\fontsize{10}{11}\selectfont
 
 {% raw %}
 \newcommand{\whitbf}[1]{\textcolor{white}{\textbf{#1}}}
@@ -50,7 +51,6 @@
     \end{tikzpicture}
   }
 
-  \fontsize{9.5}{11}\selectfont
 
   % MAIN LAYOUT
   \noindent
@@ -79,9 +79,9 @@
     % \colorbox{blue!20}{
     \parbox[t]{\dimexpr\linewidth-2\fboxsep}{ % remove padding effect
       \textbf{\large TRANSCRIPT OF ACADEMIC RECORD} \\[0.5em]
-      Record of: \quad {{ first_name }} {{ last_name }} \\
-      Date of birth: \quad 06.07.1994 \\
-      Date issued: \quad 03.06.2025 \\
+      Record of: \quad \quad \quad {{ first_name }} {{ last_name }} \\
+      Date of birth: \quad \quad 06.07.1994 \\
+      Date issued: \quad \quad 03.06.2025 \\
 
       \vspace{0.5cm}
 
@@ -91,6 +91,7 @@
     % }
   \end{minipage}
   \end{tabularx}
+  \vspace{1.0cm}
 }
 
 \myHeader
@@ -147,46 +148,71 @@
 
 	\rowcolor{black}
 	\whitbf{Name} & \whitbf{Details} & \whitbf{Grade} & \whitbf{Workload} \\
+
+	{% if ai %}
 	\rowcolor{lightgrey}
-	 & Algo \& AI \& Data &  &  \\
+	& Algo \& AI \& Data &  &  \\
 	{% for project in ai %}
-	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
+		{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{ project.grade }} & {{ project.hours }} \\
 	{% endfor %}
+	{% endif %}
+
+	{% if security %}
 	\rowcolor{lightgrey}
-	 & Security &  &  \\
+	& Security &  &  \\
 	{% for project in security %}
-	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
+		{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{ project.grade }} & {{ project.hours }} \\
 	{% endfor %}
+	{% endif %}
+
+	{% if devops %}
 	\rowcolor{lightgrey}
-	 & Devops &  &  \\
+	& Devops &  &  \\
 	{% for project in devops %}
-	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
+		{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{ project.grade }} & {{ project.hours }} \\
 	{% endfor %}
+	{% endif %}
+
+	{% if web %}
 	\rowcolor{lightgrey}
-	 & Web \& Mobile &  &  \\
+	& Web \& Mobile &  &  \\
 	{% for project in web %}
-	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
+		{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{ project.grade }} & {{ project.hours }} \\
 	{% endfor %}
+	{% endif %}
+
+	{% if kernel %}
 	\rowcolor{lightgrey}
-	 & System \& Kernel &  &  \\
+	& System \& Kernel &  &  \\
 	{% for project in kernel %}
-	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
+		{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{ project.grade }} & {{ project.hours }} \\
 	{% endfor %}
+	{% endif %}
+
+	{% if graphics %}
 	\rowcolor{lightgrey}
-	 & Graphics \& Gaming &  &  \\
+	& Graphics \& Gaming &  &  \\
 	{% for project in graphics %}
-	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
+		{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{ project.grade }} & {{ project.hours }} \\
 	{% endfor %}
+	{% endif %}
+
+	{% if crypto %}
 	\rowcolor{lightgrey}
-	 & Cryptography \& Maths &  &  \\
+	& Cryptography \& Maths &  &  \\
 	{% for project in crypto %}
-	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
+		{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{ project.grade }} & {{ project.hours }} \\
 	{% endfor %}
+	{% endif %}
+
+	{% if dev %}
 	\rowcolor{lightgrey}
-	 & Development &  &  \\
+	& Development &  &  \\
 	{% for project in dev %}
-	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
+		{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{ project.grade }} & {{ project.hours }} \\
 	{% endfor %}
+	{% endif %}
+
 
 \end{tabularx}
 
