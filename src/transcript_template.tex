@@ -15,119 +15,176 @@
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{pagecolor}
-\usepackage{showframe}
+% \usepackage{showframe}
+\usepackage{colortbl}
 \usepackage{eso-pic}
 \usepackage{tikz}
 
 
 \begin{document}
 
-% BACKGROUND IMAGE (centered, semi-transparent)
-\AddToShipoutPictureBG*{
-  \AtPageCenter{
-	\begin{tikzpicture}[remember picture, overlay]
-	  \node[opacity=0.1] at (current page.center) {
-		\includegraphics[width=0.5\paperwidth]{42_logo.png}
-	  };
-	\end{tikzpicture}
+{% raw %}
+\newcommand{\whitbf}[1]{\textcolor{white}{\textbf{#1}}}
+{% endraw %}
+
+\definecolor{lightgrey}{gray}{0.9}
+
+\newcommand{\myHeader}{
+  % BACKGROUND IMAGE (centered, semi-transparent)
+  \AddToShipoutPictureBG*{
+    \AtPageCenter{
+      \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.07] at (current page.center) {
+          \includegraphics[width=0.5\paperwidth]{42_logo.png}
+        };
+      \end{tikzpicture}
+    }
   }
-}
 
-% SMALL LOGO top-left (2cm from top, 2cm from left)
-\AddToShipoutPicture*{
-  \begin{tikzpicture}[remember picture, overlay]
-	\node at (2.42cm, 26.5cm) {
-		% 27.5
-	  \includegraphics[width=2.5cm]{42_logo.png}
-	};
-  \end{tikzpicture}
-}
-
-\fontsize{9}{11}\selectfont
-
-% MAIN LAYOUT
-\noindent
-\begin{tabularx}{\textwidth}{@{}X X@{}}
-
-% LEFT COLUMN
-\colorbox{yellow!30}{
-  \parbox[t]{\dimexpr\linewidth\relax}{
-	\hspace*{2.5cm}%
-	\begin{minipage}[t]{\dimexpr\linewidth-3cm\relax} % width after padding
-	{{ school_address | replace("\n", " \\\\ ") }}
-	\end{minipage}
-	\begin{minipage}[t]{\linewidth}
-		Passed Selection on: \quad \quad \quad \quad \quad \quad \quad {{ passed_selection }} \\
-		Core Curriculum started on: \quad \quad \quad \quad {{ core_started }} \\
-		Core Curriculum complete on: \quad \quad \quad {{ core_completed }} \\
-		Advanced Curriculum complete on: \quad {{ advanced_completed }} \\
-	\end{minipage}
+  % SMALL LOGO top-left (2cm from top, 2cm from left)
+  \AddToShipoutPicture*{
+    \begin{tikzpicture}[remember picture, overlay]
+      \node at (2.51cm, 27.55cm) {
+        \includegraphics[width=2.7cm]{42_logo.png}
+      };
+    \end{tikzpicture}
   }
+
+  \fontsize{9.5}{11}\selectfont
+
+  % MAIN LAYOUT
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}X X@{}}
+
+  % LEFT COLUMN
+  % \colorbox{yellow!30}{
+    \parbox[t]{\dimexpr\linewidth\relax}{
+      \hspace*{3.1cm}%
+      \begin{minipage}[t]{\dimexpr\linewidth-3cm\relax}
+      {{ school_address | replace("\n", " \\\\ ") }}
+      \vspace{1.23cm}
+      \end{minipage}
+      \begin{minipage}[t]{\linewidth}
+        Passed Selection on: \quad \quad \quad \quad \quad \quad \quad {{ passed_selection }} \\
+        Core Curriculum started on: \quad \quad \quad \quad {{ core_started }} \\
+        Core Curriculum complete on: \quad \quad \quad {{ core_completed }} \\
+        Advanced Curriculum complete on: \quad {{ advanced_completed }} \\
+      \end{minipage}
+    }
+  % }
+
+  &
+  % RIGHT COLUMN
+  \begin{minipage}[t]{\linewidth}
+    % \colorbox{blue!20}{
+    \parbox[t]{\dimexpr\linewidth-2\fboxsep}{ % remove padding effect
+      \textbf{\large TRANSCRIPT OF ACADEMIC RECORD} \\[0.5em]
+      Record of: \quad {{ first_name }} {{ last_name }} \\
+      Date of birth: \quad 06.07.1994 \\
+      Date issued: \quad 03.06.2025 \\
+
+      \vspace{0.5cm}
+
+      This certificate is delivered upon request \\
+      for all legal intents and purposes.
+    }
+    % }
+  \end{minipage}
+  \end{tabularx}
 }
 
-&
-% RIGHT COLUMN
-\begin{minipage}[t]{\linewidth}
-\colorbox{blue!20}{
-  \parbox[t]{\dimexpr\linewidth-2\fboxsep}{ % remove padding effect
-		Record of: \quad {{ first_name }} {{ last_name }} \\
-		Date of birth: \quad 06.07.1994 \\
-		Date issued: \quad 03.06.2025 \\
-
-		\vspace{0.5cm}
-
-		This certificate is delivered upon request \\
-		for all legal intents and purposes.
-  }
-}
-\end{minipage}
-\end{tabularx}
+\myHeader
 
 \noindent
 \begin{tabularx}{\textwidth}{l X c c}
 
-	\hline
-	\textbf{NAME} & \textbf{DETAILS} & \textbf{GRADE} & \textbf{WORKLOAD} \\
-	\hline
+	\rowcolor{black}
+	\whitbf{Name} & \whitbf{Details} & \whitbf{Grade} & \whitbf{Workload} \\
+	\rowcolor{lightgrey}
 	Rank 0 &  &  &  \\
-	\hline
 	{% for project in rank0 %}
 	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
 	{% endfor %}
-	\hline
+	\rowcolor{lightgrey}
 	Rank 1 &  &  &  \\
-	\hline
 	{% for project in rank1 %}
 	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
 	{% endfor %}
-	\hline
+	\rowcolor{lightgrey}
 	Rank 2 &  &  &  \\
-	\hline
 	{% for project in rank2 %}
 	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
 	{% endfor %}
-	\hline
+	\rowcolor{lightgrey}
 	Rank 3 &  &  &  \\
-	\hline
 	{% for project in rank3 %}
 	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
 	{% endfor %}
-	\hline
+	\rowcolor{lightgrey}
 	Rank 4 &  &  &  \\
-	\hline
 	{% for project in rank4 %}
 	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
 	{% endfor %}
-	\hline
+	\rowcolor{lightgrey}
 	Rank 5 &  &  &  \\
-	\hline
 	{% for project in rank5 %}
 	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
 	{% endfor %}
-	\hline
+	\rowcolor{lightgrey}
 	Rank 6 &  &  &  \\
-	\hline
 	{% for project in rank6 %}
+	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
+	{% endfor %}
+
+\end{tabularx}
+
+\newpage
+
+\myHeader
+
+\noindent
+\begin{tabularx}{\textwidth}{l X c c}
+
+	\rowcolor{black}
+	\whitbf{Name} & \whitbf{Details} & \whitbf{Grade} & \whitbf{Workload} \\
+	\rowcolor{lightgrey}
+	 & Algo \& AI \& Data &  &  \\
+	{% for project in ai %}
+	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
+	{% endfor %}
+	\rowcolor{lightgrey}
+	 & Security &  &  \\
+	{% for project in security %}
+	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
+	{% endfor %}
+	\rowcolor{lightgrey}
+	 & Devops &  &  \\
+	{% for project in devops %}
+	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
+	{% endfor %}
+	\rowcolor{lightgrey}
+	 & Web \& Mobile &  &  \\
+	{% for project in web %}
+	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
+	{% endfor %}
+	\rowcolor{lightgrey}
+	 & System \& Kernel &  &  \\
+	{% for project in kernel %}
+	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
+	{% endfor %}
+	\rowcolor{lightgrey}
+	 & Graphics \& Gaming &  &  \\
+	{% for project in graphics %}
+	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
+	{% endfor %}
+	\rowcolor{lightgrey}
+	 & Cryptography \& Maths &  &  \\
+	{% for project in crypto %}
+	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
+	{% endfor %}
+	\rowcolor{lightgrey}
+	 & Development &  &  \\
+	{% for project in dev %}
 	{{ project.name | replace("_", "\\_") }} & {{ project.description }} & {{project.grade}} & {{project.hours}} \\
 	{% endfor %}
 

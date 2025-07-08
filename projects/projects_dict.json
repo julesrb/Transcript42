@@ -27,12 +27,12 @@
     "2009": {
         "name": "so_long",
         "description": "",
-        "hours": " H"
+        "hours": "60 H"
     },
     "1476": {
         "name": "fract-ol",
         "description": "",
-        "hours": " H"
+        "hours": "60 H"
     },
     "1471": {
         "name": "push_swap",
@@ -47,7 +47,7 @@
     "2004": {
         "name": "pipex",
         "description": "",
-        "hours": "H"
+        "hours": "50 H"
     },
     "1331": {
         "name": "minishell",
@@ -67,7 +67,7 @@
     "1315": {
         "name": "miniRT",
         "description": "",
-        "hours": ""
+        "hours": "280 H"
     },
     "2007": {
         "name": "NetPractice",
@@ -132,7 +132,7 @@
     "1332": {
         "name": "webserv",
         "description": "Build and manage a full-stack web application from scratch.",
-        "hours": ""
+        "hours": "175 H"
     },
     "1983": {
         "name": "Inception",
@@ -146,7 +146,7 @@
     },
 
 
-    "1": {
+    "1000001": {
     "name": "AI & Algo",
     "description": "",
     "hours": ""
@@ -154,47 +154,47 @@
 	"1383": {
 		"name": "gomoku",
 		"description": "",
-		"hours": ""
+		"hours": "196 H"
 	},
 	"1384": {
 		"name": "expert-system",
 		"description": "",
-		"hours": ""
+		"hours": "98 H"
 	},
 	"1385": {
 		"name": "n-puzzle",
 		"description": "",
-		"hours": ""
+		"hours": "98 H"
 	},
 	"1391": {
 		"name": "ft_linear_regression",
 		"description": "",
-		"hours": ""
+		"hours": "70 H"
 	},
 	"1392": {
 		"name": "krpsim",
 		"description": "",
-		"hours": ""
+		"hours": "49 H"
 	},
 	"1393": {
 		"name": "rubik",
 		"description": "",
-		"hours": ""
+		"hours": "98 H"
 	},
 	"1453": {
 		"name": "dslr",
 		"description": "",
-		"hours": ""
+		"hours": "98 H"
 	},
 	"1457": {
 		"name": "multilayer-perceptron",
 		"description": "",
-		"hours": ""
+		"hours": "98 H"
 	},
 	"1460": {
 		"name": "total-perspective-vortex",
 		"description": "",
-		"hours": ""
+		"hours": "98 H"
 	},
 	"1463": {
 		"name": "zappy",
@@ -204,7 +204,7 @@
 	"1470": {
 		"name": "lem_in",
 		"description": "",
-		"hours": ""
+		"hours": "98 H"
 	},
 	"1475": {
 		"name": "corewar",
@@ -214,19 +214,21 @@
 	"2267": {
 		"name": "Python for Data Science",
 		"description": "",
-		"hours": ""
+		"hours": "35 H"
 	},
 	"2295": {
 		"name": "Piscine Data Science",
 		"description": "",
-		"hours": ""
+		"hours": "35 H"
 	},
 	"2372": {
 		"name": "Leaffliction",
 		"description": "",
-		"hours": ""
+		"hours": "294 H"
 	},
-	"2": {
+
+
+	"1000002": {
 		"name": "Security",
 		"description": "",
 		"hours": ""
@@ -311,7 +313,9 @@
 		"description": "",
 		"hours": ""
 	},
-	"3": {
+
+
+	"1000003": {
 		"name": "Devops",
 		"description": "",
 		"hours": ""
@@ -334,19 +338,21 @@
 	"1414": {
 		"name": "cloud-1",
 		"description": "",
-		"hours": ""
+		"hours": "100 H"
 	},
 	"2064": {
 		"name": "Inception-of-Things",
 		"description": "",
-		"hours": ""
+		"hours": "200 H"
 	},
 	"2071": {
 		"name": "Bgp At Doors of Autonomous Systems is Simple",
 		"description": "",
-		"hours": ""
+		"hours": "200 H"
 	},
-	"4": {
+
+
+	"1000004": {
 		"name": "Web & Mobile",
 		"description": "",
 		"hours": ""
@@ -418,7 +424,7 @@
 	},
 
 
-    "45": {
+    "1000005": {
     "name": "System & Kernel",
     "description": "",
     "hours": ""
@@ -548,7 +554,9 @@
 		"description": "",
 		"hours": ""
 	},
-	"6": {
+
+
+	"1000006": {
 		"name": "Graphics & Gaming",
 		"description": "",
 		"hours": ""
@@ -638,7 +646,9 @@
 		"description": "",
 		"hours": ""
 	},
-	"7": {
+
+
+	"100000": {
 		"name": "Cryptography & Maths",
 		"description": "",
 		"hours": ""
@@ -683,6 +693,7 @@
 		"description": "",
 		"hours": ""
 	},
+
 	"8": {
 		"name": "Development",
 		"description": "",
@@ -706,7 +717,7 @@
 	"1435": {
 		"name": "avaj-launcher",
 		"description": "",
-		"hours": ""
+		"hours": "50 H"
 	},
 	"1436": {
 		"name": "swingy",
@@ -753,7 +764,8 @@
 		"description": "",
 		"hours": ""
 	},
-	"9": {
+
+	"1000009": {
 		"name": "Professional Experience",
 		"description": "",
 		"hours": ""
