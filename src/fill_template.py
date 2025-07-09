@@ -51,7 +51,8 @@ def fill_template():
 	
 	first_name = data["first_name"]
 	last_name = data["last_name"]
-	date_of_birth = "06.07.1994"
+	date_of_birth = "-coming soon-"
+	date_issued = datetime.today().strftime("%B %d, %Y")
 
 	passed_selection = data["pool_month"].capitalize() + " " + data["pool_year"]
 	core_started = "November 28, 2022"
@@ -150,253 +151,247 @@ def fill_template():
 
 	#AI and Algo
 	ai= []
-	if parsed.get("gomoku", {}).get("validated"):
+	if parsed.get("gomoku", {}):
 		ai.append(parsed["gomoku"])
-	if parsed.get("expert-system", {}).get("validated"):
+	if parsed.get("expert-system", {}):
 		ai.append(parsed["expert-system"])
-	if parsed.get("n-puzzle", {}).get("validated"):
+	if parsed.get("n-puzzle", {}):
 		ai.append(parsed["n-puzzle"])
-	if parsed.get("ft_linear_regression", {}).get("validated"):
+	if parsed.get("ft_linear_regression", {}):
 		ai.append(parsed["ft_linear_regression"])
-	if parsed.get("krpsim", {}).get("validated"):
+	if parsed.get("krpsim", {}):
 		ai.append(parsed["krpsim"])
-	if parsed.get("rubik", {}).get("validated"):
+	if parsed.get("rubik", {}):
 		ai.append(parsed["rubik"])
-	if parsed.get("dslr", {}).get("validated"):
+	if parsed.get("dslr", {}):
 		ai.append(parsed["dslr"])
-	if parsed.get("multilayer-perceptron", {}).get("validated"):
+	if parsed.get("multilayer-perceptron", {}):
 		ai.append(parsed["multilayer-perceptron"])
-	if parsed.get("total-perspective-vortex", {}).get("validated"):
+	if parsed.get("total-perspective-vortex", {}):
 		ai.append(parsed["total-perspective-vortex"])
-	if parsed.get("zappy", {}).get("validated"):
+	if parsed.get("zappy", {}):
 		ai.append(parsed["zappy"])
-	if parsed.get("lem_in", {}).get("validated"):
+	if parsed.get("lem_in", {}):
 		ai.append(parsed["lem_in"])
-	if parsed.get("corewar", {}).get("validated"):
+	if parsed.get("corewar", {}):
 		ai.append(parsed["corewar"])
-	if parsed.get("Python for Data Science", {}).get("validated"):
+	if parsed.get("Python for Data Science", {}):
 		ai.append(parsed["Python for Data Science"])
-	if parsed.get("Piscine Data Science", {}).get("validated"):
+	if parsed.get("Piscine Data Science", {}):
 		ai.append(parsed["Piscine Data Science"])
-	if parsed.get("Leaffliction", {}).get("validated"):
+	if parsed.get("Leaffliction", {}):
 		ai.append(parsed["Leaffliction"])
 
 	#Security 
 	security = []
-	if parsed.get("ft_nmap", {}).get("validated"):
+	if parsed.get("ft_nmap", {}):
 		security.append(parsed["ft_nmap"])
-	if parsed.get("snow-crash", {}).get("validated"):
+	if parsed.get("snow-crash", {}):
 		security.append(parsed["snow-crash"])
-	if parsed.get("darkly", {}).get("validated"):
+	if parsed.get("darkly", {}):
 		security.append(parsed["darkly"])
-	if parsed.get("rainfall", {}).get("validated"):
+	if parsed.get("rainfall", {}):
 		security.append(parsed["rainfall"])
-	if parsed.get("dr-quine", {}).get("validated"):
+	if parsed.get("dr-quine", {}):
 		security.append(parsed["dr-quine"])
-	if parsed.get("woody-woodpacker", {}).get("validated"):
+	if parsed.get("woody-woodpacker", {}):
 		security.append(parsed["woody-woodpacker"])
-	if parsed.get("famine", {}).get("validated"):
+	if parsed.get("famine", {}):
 		security.append(parsed["famine"])
-	if parsed.get("pestilence", {}).get("validated"):
+	if parsed.get("pestilence", {}):
 		security.append(parsed["pestilence"])
-	if parsed.get("war", {}).get("validated"):
+	if parsed.get("war", {}):
 		security.append(parsed["war"])
-	if parsed.get("death", {}).get("validated"):
+	if parsed.get("death", {}):
 		security.append(parsed["death"])
-	if parsed.get("boot2root", {}).get("validated"):
+	if parsed.get("boot2root", {}):
 		security.append(parsed["boot2root"])
-	if parsed.get("ft_shield", {}).get("validated"):
+	if parsed.get("ft_shield", {}):
 		security.append(parsed["ft_shield"])
-	if parsed.get("override", {}).get("validated"):
+	if parsed.get("override", {}):
 		security.append(parsed["override"])
-	if parsed.get("ft_malcolm", {}).get("validated"):
+	if parsed.get("ft_malcolm", {}):
 		security.append(parsed["ft_malcolm"])
-	if parsed.get("tinky-winkey", {}).get("validated"):
+	if parsed.get("tinky-winkey", {}):
 		security.append(parsed["tinky-winkey"])
-	if parsed.get("Cybersecurity", {}).get("validated"):
+	if parsed.get("Cybersecurity", {}):
 		security.append(parsed["Cybersecurity"])
 
 	# Networking
 	devops = []
-	if parsed.get("taskmaster", {}).get("validated"):
+	if parsed.get("taskmaster", {}):
 		devops.append(parsed["taskmaster"])
-	if parsed.get("ft_ping", {}).get("validated"):
+	if parsed.get("ft_ping", {}):
 		devops.append(parsed["ft_ping"])
-	if parsed.get("ft_traceroute", {}).get("validated"):
+	if parsed.get("ft_traceroute", {}):
 		devops.append(parsed["ft_traceroute"])
-	if parsed.get("cloud-1", {}).get("validated"):
+	if parsed.get("cloud-1", {}):
 		devops.append(parsed["cloud-1"])
-	if parsed.get("Inception-of-Things", {}).get("validated"):
+	if parsed.get("Inception-of-Things", {}):
 		devops.append(parsed["Inception-of-Things"])
-	if parsed.get("Bgp At Doors of Autonomous Systems is Simple", {}).get("validated"):
+	if parsed.get("Bgp At Doors of Autonomous Systems is Simple", {}):
 		devops.append(parsed["Bgp At Doors of Autonomous Systems is Simple"])
 
 	# Web & Mobile
 	web = []
-	if parsed.get("ft_hangouts", {}).get("validated"):
+	if parsed.get("ft_hangouts", {}):
 		web.append(parsed["ft_hangouts"])
-	if parsed.get("swifty-companion", {}).get("validated"):
+	if parsed.get("swifty-companion", {}):
 		web.append(parsed["swifty-companion"])
-	if parsed.get("camagru", {}).get("validated"):
+	if parsed.get("camagru", {}):
 		web.append(parsed["camagru"])
-	if parsed.get("matcha", {}).get("validated"):
+	if parsed.get("matcha", {}):
 		web.append(parsed["matcha"])
-	if parsed.get("hypertube", {}).get("validated"):
+	if parsed.get("hypertube", {}):
 		web.append(parsed["hypertube"])
-	if parsed.get("swifty-proteins", {}).get("validated"):
+	if parsed.get("swifty-proteins", {}):
 		web.append(parsed["swifty-proteins"])
-	if parsed.get("music-room", {}).get("validated"):
+	if parsed.get("music-room", {}):
 		web.append(parsed["music-room"])
-	if parsed.get("red-tetris", {}).get("validated"):
+	if parsed.get("red-tetris", {}):
 		web.append(parsed["red-tetris"])
-	if parsed.get("[DEPRECATED] Piscine Swift iOS", {}).get("validated"):
-		web.append(parsed["[DEPRECATED] Piscine Swift iOS"])
-	if parsed.get("Piscine RoR", {}).get("validated"):
+	if parsed.get("Piscine RoR", {}):
 		web.append(parsed["Piscine RoR"])
-	if parsed.get("Piscine Django", {}).get("validated"):
+	if parsed.get("Piscine Django", {}):
 		web.append(parsed["Piscine Django"])
-	if parsed.get("Piscine Symfony", {}).get("validated"):
+	if parsed.get("Piscine Symfony", {}):
 		web.append(parsed["Piscine Symfony"])
-	if parsed.get("Mobile", {}).get("validated"):
+	if parsed.get("Mobile", {}):
 		web.append(parsed["Mobile"])
 
 	# Kernel
 	kernel = []
-	if parsed.get("libasm", {}).get("validated"):
+	if parsed.get("libasm", {}):
 		kernel.append(parsed["libasm"])
-	if parsed.get("nibbler", {}).get("validated"):
+	if parsed.get("nibbler", {}):
 		kernel.append(parsed["nibbler"])
-	if parsed.get("strace", {}).get("validated"):
+	if parsed.get("strace", {}):
 		kernel.append(parsed["strace"])
-	if parsed.get("ft_linux", {}).get("validated"):
+	if parsed.get("ft_linux", {}):
 		kernel.append(parsed["ft_linux"])
-	if parsed.get("little-penguin-1", {}).get("validated"):
+	if parsed.get("little-penguin-1", {}):
 		kernel.append(parsed["little-penguin-1"])
-	if parsed.get("matt-daemon", {}).get("validated"):
+	if parsed.get("matt-daemon", {}):
 		kernel.append(parsed["matt-daemon"])
-	if parsed.get("process-and-memory", {}).get("validated"):
+	if parsed.get("process-and-memory", {}):
 		kernel.append(parsed["process-and-memory"])
-	if parsed.get("drivers-and-interrupts", {}).get("validated"):
+	if parsed.get("drivers-and-interrupts", {}):
 		kernel.append(parsed["drivers-and-interrupts"])
-	if parsed.get("filesystem", {}).get("validated"):
+	if parsed.get("filesystem", {}):
 		kernel.append(parsed["filesystem"])
-	if parsed.get("kfs-2", {}).get("validated"):
+	if parsed.get("kfs-2", {}):
 		kernel.append(parsed["kfs-2"])
-	if parsed.get("kfs-1", {}).get("validated"):
+	if parsed.get("kfs-1", {}):
 		kernel.append(parsed["kfs-1"])
-	if parsed.get("kfs-3", {}).get("validated"):
+	if parsed.get("kfs-3", {}):
 		kernel.append(parsed["kfs-3"])
-	if parsed.get("kfs-4", {}).get("validated"):
+	if parsed.get("kfs-4", {}):
 		kernel.append(parsed["kfs-4"])
-	if parsed.get("kfs-5", {}).get("validated"):
+	if parsed.get("kfs-5", {}):
 		kernel.append(parsed["kfs-5"])
-	if parsed.get("kfs-6", {}).get("validated"):
+	if parsed.get("kfs-6", {}):
 		kernel.append(parsed["kfs-6"])
-	if parsed.get("kfs-7", {}).get("validated"):
+	if parsed.get("kfs-7", {}):
 		kernel.append(parsed["kfs-7"])
-	if parsed.get("kfs-8", {}).get("validated"):
+	if parsed.get("kfs-8", {}):
 		kernel.append(parsed["kfs-8"])
-	if parsed.get("kfs-9", {}).get("validated"):
+	if parsed.get("kfs-9", {}):
 		kernel.append(parsed["kfs-9"])
-	if parsed.get("kfs-x", {}).get("validated"):
+	if parsed.get("kfs-x", {}):
 		kernel.append(parsed["kfs-x"])
-	if parsed.get("userspace_digressions", {}).get("validated"):
+	if parsed.get("userspace_digressions", {}):
 		kernel.append(parsed["userspace_digressions"])
-	if parsed.get("lem-ipc", {}).get("validated"):
+	if parsed.get("lem-ipc", {}):
 		kernel.append(parsed["lem-ipc"])
-	if parsed.get("nm", {}).get("validated"):
+	if parsed.get("nm", {}):
 		kernel.append(parsed["nm"])
-	if parsed.get("malloc", {}).get("validated"):
+	if parsed.get("malloc", {}):
 		kernel.append(parsed["malloc"])
-	if parsed.get("ft_ls", {}).get("validated"):
+	if parsed.get("ft_ls", {}):
 		kernel.append(parsed["ft_ls"])
-	if parsed.get("42sh", {}).get("validated"):
+	if parsed.get("42sh", {}):
 		kernel.append(parsed["42sh"])
 
 	# Graphics
 	graphics = []
-	if parsed.get("42run", {}).get("validated"):
+	if parsed.get("42run", {}):
 		graphics.append(parsed["42run"])
-	if parsed.get("bomberman", {}).get("validated"):
+	if parsed.get("bomberman", {}):
 		graphics.append(parsed["bomberman"])
-	if parsed.get("scop", {}).get("validated"):
+	if parsed.get("scop", {}):
 		graphics.append(parsed["scop"])
-	if parsed.get("humangl", {}).get("validated"):
+	if parsed.get("humangl", {}):
 		graphics.append(parsed["humangl"])
-	if parsed.get("xv", {}).get("validated"):
+	if parsed.get("xv", {}):
 		graphics.append(parsed["xv"])
-	if parsed.get("in-the-shadows", {}).get("validated"):
+	if parsed.get("in-the-shadows", {}):
 		graphics.append(parsed["in-the-shadows"])
-	if parsed.get("particle-system", {}).get("validated"):
+	if parsed.get("particle-system", {}):
 		graphics.append(parsed["particle-system"])
-	if parsed.get("ft_vox", {}).get("validated"):
+	if parsed.get("ft_vox", {}):
 		graphics.append(parsed["ft_vox"])
-	if parsed.get("shaderpixel", {}).get("validated"):
+	if parsed.get("shaderpixel", {}):
 		graphics.append(parsed["shaderpixel"])
-	if parsed.get("guimp", {}).get("validated"):
+	if parsed.get("guimp", {}):
 		graphics.append(parsed["guimp"])
-	if parsed.get("doom-nukem", {}).get("validated"):
+	if parsed.get("doom-nukem", {}):
 		graphics.append(parsed["doom-nukem"])
-	if parsed.get("mod1", {}).get("validated"):
+	if parsed.get("mod1", {}):
 		graphics.append(parsed["mod1"])
-	if parsed.get("[DEPRECATED] Piscine Unity", {}).get("validated"):
-		graphics.append(parsed["[DEPRECATED] Piscine Unity"])
-	if parsed.get("rt", {}).get("validated"):
+	if parsed.get("rt", {}):
 		graphics.append(parsed["rt"])
-	if parsed.get("ft_newton", {}).get("validated"):
+	if parsed.get("ft_newton", {}):
 		graphics.append(parsed["ft_newton"])
-	if parsed.get("ft_minecraft", {}).get("validated"):
+	if parsed.get("ft_minecraft", {}):
 		graphics.append(parsed["ft_minecraft"])
-	if parsed.get("Unity", {}).get("validated"):
+	if parsed.get("Unity", {}):
 		graphics.append(parsed["Unity"])
 
 	# Crypto
 	crypto = []
-	if parsed.get("computorv1", {}).get("validated"):
+	if parsed.get("computorv1", {}):
 		crypto.append(parsed["computorv1"])
-	if parsed.get("computorv2", {}).get("validated"):
+	if parsed.get("computorv2", {}):
 		crypto.append(parsed["computorv2"])
-	if parsed.get("ft_ssl_rsa", {}).get("validated"):
+	if parsed.get("ft_ssl_rsa", {}):
 		crypto.append(parsed["ft_ssl_rsa"])
-	if parsed.get("ft_ssl_md5", {}).get("validated"):
+	if parsed.get("ft_ssl_md5", {}):
 		crypto.append(parsed["ft_ssl_md5"])
-	if parsed.get("ft_ssl_des", {}).get("validated"):
+	if parsed.get("ft_ssl_des", {}):
 		crypto.append(parsed["ft_ssl_des"])
-	if parsed.get("ready set boole", {}).get("validated"):
+	if parsed.get("ready set boole", {}):
 		crypto.append(parsed["ready set boole"])
-	if parsed.get("matrix", {}).get("validated"):
+	if parsed.get("matrix", {}):
 		crypto.append(parsed["matrix"])
-	if parsed.get("ft_kalman", {}).get("validated"):
+	if parsed.get("ft_kalman", {}):
 		crypto.append(parsed["ft_kalman"])
 
 
 	# Dev
 	dev = []
-	if parsed.get("ft_turing", {}).get("validated"):
+	if parsed.get("ft_turing", {}):
 		dev.append(parsed["ft_turing"])
-	if parsed.get("ft_ality", {}).get("validated"):
+	if parsed.get("ft_ality", {}):
 		dev.append(parsed["ft_ality"])
-	if parsed.get("h42n42", {}).get("validated"):
+	if parsed.get("h42n42", {}):
 		dev.append(parsed["h42n42"])
-	if parsed.get("avaj-launcher", {}).get("validated"):
+	if parsed.get("avaj-launcher", {}):
 		dev.append(parsed["avaj-launcher"])
-	if parsed.get("swingy", {}).get("validated"):
+	if parsed.get("swingy", {}):
 		dev.append(parsed["swingy"])
-	if parsed.get("fix-me", {}).get("validated"):
+	if parsed.get("fix-me", {}):
 		dev.append(parsed["fix-me"])
-	if parsed.get("[DEPRECATED] Piscine OCaml", {}).get("validated"):
-		dev.append(parsed["[DEPRECATED] Piscine OCaml"])
-	if parsed.get("Open Project", {}).get("validated"):
+	if parsed.get("Open Project", {}):
 		dev.append(parsed["Open Project"])
-	if parsed.get("Rushes", {}).get("validated"):
+	if parsed.get("Rushes", {}):
 		dev.append(parsed["Rushes"])
-	if parsed.get("Piscine Object", {}).get("validated"):
+	if parsed.get("Piscine Object", {}):
 		dev.append(parsed["Piscine Object"])
-	if parsed.get("Abstract_data", {}).get("validated"):
+	if parsed.get("Abstract_data", {}):
 		dev.append(parsed["Abstract_data"])
-	if parsed.get("ft_lex", {}).get("validated"):
+	if parsed.get("ft_lex", {}):
 		dev.append(parsed["ft_lex"])
-	if parsed.get("ft_yacc", {}).get("validated"):
+	if parsed.get("ft_yacc", {}):
 		dev.append(parsed["ft_yacc"])
 
 
@@ -412,6 +407,7 @@ def fill_template():
 		"first_name": first_name,
 		"last_name": last_name,
 		"date_of_birth": date_of_birth,
+		"date_issued": date_issued,
 		"passed_selection": passed_selection,
 		"core_started": core_started,
 		"core_completed": core_completed,

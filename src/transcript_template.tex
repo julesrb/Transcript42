@@ -9,20 +9,37 @@
 \usepackage{array}
 \usepackage{multirow}
 \usepackage{tabularx}
-% \usepackage{fontspec}
 \usepackage{setspace}
 \usepackage{anyfontsize}
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{pagecolor}
-% \usepackage{showframe}
 \usepackage{colortbl}
 \usepackage{eso-pic}
 \usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
 
+% BACKGROUND IMAGE
+\newcommand\BackgroundPic{
+  \put(-3,0){
+    \parbox[b][\paperheight]{\paperwidth}{
+      \vfill
+      \centering
+      \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.75] at (current page.center) {
+          \includegraphics[width=\paperwidth,height=\paperheight]{back.png}
+        };
+      \end{tikzpicture}%
+      \vfill
+    }
+  }
+}
+\AddToShipoutPictureBG*{\BackgroundPic}
 
 \begin{document}
-\fontsize{10}{11}\selectfont
+\fontsize{10}{12}\selectfont
+\pagestyle{empty}
 
 {% raw %}
 \newcommand{\whitbf}[1]{\textcolor{white}{\textbf{#1}}}
@@ -35,7 +52,7 @@
   \AddToShipoutPictureBG*{
     \AtPageCenter{
       \begin{tikzpicture}[remember picture, overlay]
-        \node[opacity=0.07] at (current page.center) {
+        \node[opacity=0.06] at (current page.center) {
           \includegraphics[width=0.5\paperwidth]{42_logo.png}
         };
       \end{tikzpicture}
@@ -57,7 +74,6 @@
   \begin{tabularx}{\textwidth}{@{}X X@{}}
 
   % LEFT COLUMN
-  % \colorbox{yellow!30}{
     \parbox[t]{\dimexpr\linewidth\relax}{
       \hspace*{3.1cm}%
       \begin{minipage}[t]{\dimexpr\linewidth-3cm\relax}
@@ -65,42 +81,53 @@
       \vspace{1.23cm}
       \end{minipage}
       \begin{minipage}[t]{\linewidth}
-        Passed Selection on: \quad \quad \quad \quad \quad \quad \quad {{ passed_selection }} \\
-        Core Curriculum started on: \quad \quad \quad \quad {{ core_started }} \\
-        Core Curriculum complete on: \quad \quad \quad {{ core_completed }} \\
-        Advanced Curriculum complete on: \quad {{ advanced_completed }} \\
+        \begin{tabular}{@{}l l@{}}
+			Passed Selection on: & {{ passed_selection }} \\
+			Core Curriculum started on: & {{ core_started }} \\
+			Core Curriculum complete on: & {{ core_completed }} \\
+			{% if core_completed != "in progress" %}
+			Advanced Curriculum complete on: & {{ advanced_completed }} \\
+			{% endif %}
+		\end{tabular}
       \end{minipage}
     }
-  % }
 
   &
   % RIGHT COLUMN
   \begin{minipage}[t]{\linewidth}
-    % \colorbox{blue!20}{
     \parbox[t]{\dimexpr\linewidth-2\fboxsep}{ % remove padding effect
       \textbf{\large TRANSCRIPT OF ACADEMIC RECORD} \\[0.5em]
-      Record of: \quad \quad \quad {{ first_name }} {{ last_name }} \\
-      Date of birth: \quad \quad 06.07.1994 \\
-      Date issued: \quad \quad 03.06.2025 \\
+		\begin{tabular}{@{}l l@{}}
+			Record of: & {{ first_name }} {{ last_name }} \\
+			Date issued: & {{ date_issued }} \\
+			Date of birth: & {{ date_of_birth }} \\
+		\end{tabular}
+
 
       \vspace{0.5cm}
-
-      This certificate is delivered upon request \\
-      for all legal intents and purposes.
+    	I, Daniel Hadley, Pedagogy Lead of 42 Berlin, certify that the above-named individual has met academic requirements as of the date issued. 
+		This transcript is issued upon request for all official purposes. \\
+		\vspace{-0.5cm}
+		\begin{flushright}
+		Page: \thepage{} / \pageref{LastPage}
+		\end{flushright}
     }
-    % }
   \end{minipage}
   \end{tabularx}
-  \vspace{1.0cm}
+%   \vspace{1.0cm}
 }
 
 \myHeader
 
+\begin{center}
+  \textbf{\large Core Curriculum}
+\end{center}
+
 \noindent
-\begin{tabularx}{\textwidth}{l X c c}
+\begin{tabularx}{\textwidth}{l X c r}
 
 	\rowcolor{black}
-	\whitbf{Name} & \whitbf{Details} & \whitbf{Grade} & \whitbf{Workload} \\
+	\whitbf{Name} & \whitbf{Details} & \whitbf{Grade *} & \whitbf{Workload} \\
 	\rowcolor{lightgrey}
 	Rank 0 &  &  &  \\
 	{% for project in rank0 %}
@@ -139,12 +166,25 @@
 
 \end{tabularx}
 
+\vspace{0.5cm}
+\noindent
+\textit{\footnotesize
+* At 42, project grades are given on a scale from 0 to 100. A grade of 100 reflects full mastery of the project's objectives. Exceptional submissions may receive a bonus, resulting in grades over 100. All evaluations are peer-reviewed and follow a strict rubric to ensure fairness and consistency.
+}
+
+{% if core_completed != "in progress" %}
 \newpage
+
+\AddToShipoutPictureBG*{\BackgroundPic}
 
 \myHeader
 
+\begin{center}
+  \textbf{\large Adanced Curriculum}
+\end{center}
+
 \noindent
-\begin{tabularx}{\textwidth}{l X c c}
+\begin{tabularx}{\textwidth}{l X c r}
 
 	\rowcolor{black}
 	\whitbf{Name} & \whitbf{Details} & \whitbf{Grade} & \whitbf{Workload} \\
@@ -215,5 +255,120 @@
 
 
 \end{tabularx}
+
+\vspace{0.5cm}
+\noindent
+\textit{\footnotesize
+* At 42, project grades are given on a scale from 0 to 100. A grade of 100 reflects full mastery of the project's objectives. Exceptional submissions may receive a bonus, resulting in grades over 100. All evaluations are peer-reviewed and follow a strict rubric to ensure fairness and consistency.
+}
+
+{% endif %}  % end of core_completed check
+
+\newpage
+
+\AddToShipoutPictureBG*{\BackgroundPic}
+
+\myHeader
+
+
+
+\begin{center}
+	\textbf{\large Curriculum Progression of the Student}
+  \label{LastPage}
+\end{center}
+
+\definecolor{customteal}{HTML}{04809F}
+\newcommand{\progressbar}[2]{
+	\begin{tikzpicture}[baseline]
+		% Outline
+		\draw[thick] (0,0) rectangle (9,0.6);
+		% Fill
+		\fill[customteal] (0,0) rectangle (#1*9/100,0.6);
+		% Label
+		\node[text=black] at (4.5, 0.3) {\small #2};
+	\end{tikzpicture}
+	}
+	
+	
+	{\setlength{\tabcolsep}{0pt}%
+	\noindent 
+	\begin{tabular}{@{}l l@{}}
+	\progressbar{100}{Core Curriculum - Bachelor equivalent}
+	&
+	\progressbar{10}{Advanced Curriculum - Master equivalent}
+\end{tabular}
+}
+
+\vspace{0.5cm}
+
+\fontsize{11}{13}\selectfont
+\begin{flushleft}
+	Founded in 2013, 42 is a global network of ICT schools providing scalable, high-quality software engineering education.
+	Our innovative model emphasizes peer-to-peer learning, project-based and hands-on programming, enabling students to become industry-ready within 2 to 5 years.
+	The curriculum is divided into two parts: the Core Curriculum, after which students may either continue to the Advanced Curriculum or graduate as alumni.
+	
+\end{flushleft}
+
+\vspace{0.5em}
+
+\noindent\textbf{Skills developed during the entire Core Curriculum:}
+\vspace{0.5em}
+
+\noindent \textbf{Algorithms \& AI}: Implemented classic algorithms (search, sort, insert, delete) on arrays, linked lists, trees; managed state machines and asynchronous logic.
+
+\noindent \textbf{Graphics}: Manipulated images (RGB), drew shapes, handled user input (keyboard/mouse), used event loops and callbacks.
+
+\noindent \textbf{Group \& Interpersonal}: Collaborated in teams, navigated group dynamics, and worked in various interaction scenarios.
+
+\noindent \textbf{Imperative Programming}: Built projects in C using loops, conditionals, pointers, memory management, linked lists, trees, and the C standard library.
+
+\noindent \textbf{Object-Oriented Programming}: Used C++ for classes, inheritance, abstraction, templates, and memory-safe programming with STL.
+
+\noindent \textbf{System Programming}: Wrote Unix-based programs using system calls, file handling, process control, pipes, signals, and socket programming.
+
+\noindent \textbf{Network \& Sysadmin}: Set up and managed Linux systems; configured users, permissions, storage, and basic network services (DNS, mail, web).
+
+\noindent \textbf{Web}: Developed full-stack apps with HTML, CSS, JavaScript, and backend frameworks (Node, Django, etc.); implemented MVC, sessions, auth, and UI/UX basics.
+
+\vspace{0.5cm}
+
+{% if core_completed != "in progress" %}
+\noindent\textbf{Specialisation during the Advanced Curriculum:}
+\vspace{0.5em}
+
+{% if ai %}
+  \noindent \textbf{Algorithms \& AI}: Machine learning models, and data processing techniques.%
+{% endif %}
+
+{% if security %}
+  \noindent \textbf{Security}: Explored system hardening, network security, encryption protocols, and vulnerability assessments. %
+{% endif %}
+
+{% if devops %}
+  \noindent \textbf{DevOps}: Managed CI/CD pipelines, automated deployments, containerization, and infrastructure as code. %
+{% endif %}
+
+{% if web %}
+  \noindent \textbf{Web \& Mobile}: Developed responsive web apps with HTML, CSS, JS, and backend frameworks; mobile-first design principles. %
+{% endif %}
+
+{% if kernel %}
+  \noindent \textbf{System \& Kernel}: Programmed low-level OS components, device drivers, process scheduling, and memory management. %
+{% endif %}
+
+{% if graphics %}
+  \noindent \textbf{Graphics \& Gaming}: Created graphical applications using rendering techniques, event handling, and game logic. %
+{% endif %}
+
+{% if crypto %}
+  \noindent \textbf{Cryptography \& Maths}: Applied cryptographic algorithms, secure communication protocols, and mathematical proofs. %
+{% endif %}
+
+{% if dev %}
+  \noindent \textbf{Development}: Built software solutions focusing on modularity, testing, and code maintainability. %
+{% endif %}
+{% endif %}
+
+
 
 \end{document}
