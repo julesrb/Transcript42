@@ -1,6 +1,6 @@
 # from .get_user_data import get_user_data
-from .fill_template import fill_template
-from .generate_pdf import generate_pdf
+from .utils import log_event, save_json
+from .services import exchange_code_for_token, fetch_user_data, generate_transcript
 from fastapi import FastAPI, Request
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, RedirectResponse
 import uvicorn
@@ -35,8 +35,10 @@ def login():
         'scope': 'public'
     })}")
 
+
 @app.get("/callback")
 def callback(request: Request):
+    """Handle OAuth callback, exchange code, fetch user, generate PDF, and return it."""
     lock_path = os.path.join("data", "callback.lock")
     lock = FileLock(lock_path, timeout=60)  # Wait up to 60 seconds for the lock
     try:
@@ -46,64 +48,37 @@ def callback(request: Request):
             now = datetime.datetime.now().isoformat()
             if not code:
                 error_msg = f"[{now}] [IP: {client_host}] Authentication failed. No code found."
-                with open(ERROR_LOG_PATH, "a", encoding="utf-8") as f:
-                    f.write(error_msg + "\n")
+                log_event(ERROR_LOG_PATH, error_msg)
                 return HTMLResponse("<h1>Authentication failed. No code found.</h1>", status_code=400)
-            # Exchange code for access token
-            data = {
-                "grant_type": "authorization_code",
-                "client_id": UID,
-                "client_secret": SECRET,
-                "code": code,
-                "redirect_uri": REDIRECT_URI
-            }
             try:
-                response = requests.post(TOKEN_URL, data=data)
-                response.raise_for_status()
-                token_info = response.json()
-                access_token = token_info.get("access_token")
+                access_token = exchange_code_for_token(code, UID, SECRET, REDIRECT_URI, TOKEN_URL)
                 if not access_token:
                     error_msg = f"[{now}] [IP: {client_host}] Failed to get access token."
-                    with open(ERROR_LOG_PATH, "a", encoding="utf-8") as f:
-                        f.write(error_msg + "\n")
+                    log_event(ERROR_LOG_PATH, error_msg)
                     return HTMLResponse("<h1>Failed to get access token.</h1>", status_code=400)
-                # Fetch user data
-                headers = {"Authorization": f"Bearer {access_token}"}
-                user_response = requests.get(USER_URL, headers=headers)
-                user_response.raise_for_status()
-                user_data = user_response.json()
-                # Save user data to file (for fill_template)
-                with open("./data/user.json", "w", encoding="utf-8") as f:
-                    json.dump(user_data, f, ensure_ascii=False, indent=4)
-                # Extract first and last name for filename
+                user_data = fetch_user_data(access_token, USER_URL)
+                save_json(user_data, "./data/user.json")
+                log_entry = f"[{now}] [IP: {client_host}] Login: {user_data.get('first_name', 'Unknown')} {user_data.get('last_name', 'Unknown')} (ID: {user_data.get('id', 'N/A')}, Login: {user_data.get('login', 'N/A')})"
+                log_event(ACCESS_LOG_PATH, log_entry)
+                # Generate transcript
+                generate_transcript()
                 first_name = user_data.get("first_name", "Unknown")
                 last_name = user_data.get("last_name", "Unknown")
                 safe_first_name = ''.join(c for c in first_name if c.isalnum())
                 safe_last_name = ''.join(c for c in last_name if c.isalnum())
                 pdf_filename = f"Academic_Transcript_{safe_first_name}_{safe_last_name}.pdf"
-                # Log successful login
-                log_entry = f"[{now}] [IP: {client_host}] Login: {first_name} {last_name} (ID: {user_data.get('id', 'N/A')}, Login: {user_data.get('login', 'N/A')})"
-                with open(ACCESS_LOG_PATH, "a", encoding="utf-8") as f:
-                    f.write(log_entry + "\n")
-                # Generate transcript
-                fill_template()
-                generate_pdf()
                 pdf_path = os.path.join("data", "output.pdf")
                 if os.path.exists(pdf_path):
-                    # Log successful PDF generation
                     pdf_log_entry = f"[{now}] [IP: {client_host}] PDF generated for: {first_name} {last_name} (ID: {user_data.get('id', 'N/A')}, Login: {user_data.get('login', 'N/A')})"
-                    with open(ACCESS_LOG_PATH, "a", encoding="utf-8") as f:
-                        f.write(pdf_log_entry + "\n")
+                    log_event(ACCESS_LOG_PATH, pdf_log_entry)
                     return FileResponse(pdf_path, media_type="application/pdf", filename=pdf_filename)
                 else:
                     error_msg = f"[{now}] [IP: {client_host}] PDF not found after generation."
-                    with open(ERROR_LOG_PATH, "a", encoding="utf-8") as f:
-                        f.write(error_msg + "\n")
+                    log_event(ERROR_LOG_PATH, error_msg)
                     return HTMLResponse("<h1>PDF not found after generation.</h1>", status_code=500)
             except Exception as e:
                 error_msg = f"[{now}] [IP: {client_host}] Error: {str(e)}"
-                with open(ERROR_LOG_PATH, "a", encoding="utf-8") as f:
-                    f.write(error_msg + "\n")
+                log_event(ERROR_LOG_PATH, error_msg)
                 return HTMLResponse(f"<h1>Error: {str(e)}</h1>", status_code=500)
     except Timeout:
         return HTMLResponse("<h1>Server busy. Please try again in a moment.</h1>", status_code=503)
