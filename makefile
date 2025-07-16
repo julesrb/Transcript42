@@ -25,6 +25,9 @@ install: venv
 run: 
 	$(PYTHON) src/main.py
 
+serve: docker-image venv install
+	$(VENV_DIR)/bin/uvicorn src.api:app --host 0.0.0.0 --port 8000 --reload
+
 clean:
 	rm -rf $(VENV_DIR)
 	find . -type d -name "__pycache__" -exec rm -rf {} +
