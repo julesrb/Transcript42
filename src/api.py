@@ -8,8 +8,6 @@ import os
 import requests
 import json
 from dotenv import load_dotenv
-from fill_template import fill_template
-from generate_pdf import generate_pdf
 import urllib.parse
 
 app = FastAPI()
