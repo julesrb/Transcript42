@@ -1,9 +1,9 @@
+from .get_user_data import get_user_data
+from .fill_template import fill_template
+from .generate_pdf import generate_pdf
 from fastapi import FastAPI
 from fastapi.responses import FileResponse, JSONResponse
 import uvicorn
-from get_user_data import get_user_data
-from fill_template import fill_template
-from generate_pdf import generate_pdf
 import os
 
 app = FastAPI()
