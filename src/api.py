@@ -90,6 +90,10 @@ def callback(request: Request):
                 generate_pdf()
                 pdf_path = os.path.join("data", "output.pdf")
                 if os.path.exists(pdf_path):
+                    # Log successful PDF generation
+                    pdf_log_entry = f"[{now}] [IP: {client_host}] PDF generated for: {first_name} {last_name} (ID: {user_data.get('id', 'N/A')}, Login: {user_data.get('login', 'N/A')})"
+                    with open(ACCESS_LOG_PATH, "a", encoding="utf-8") as f:
+                        f.write(pdf_log_entry + "\n")
                     return FileResponse(pdf_path, media_type="application/pdf", filename=pdf_filename)
                 else:
                     error_msg = f"[{now}] [IP: {client_host}] PDF not found after generation."
