@@ -5,3 +5,4 @@ pdflatex
 jinja2
 fastapi
 uvicorn
+filelock
