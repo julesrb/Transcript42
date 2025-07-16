@@ -170,7 +170,7 @@
         "hours": "98 H"
     },
     "1391": {
-        "name": "ft_linear_regression",
+        "name": "ft_linreg",
         "description": "Implement linear regression to predict values using gradient descent.",
         "hours": "70 H"
     },
@@ -190,12 +190,12 @@
         "hours": "98 H"
     },
     "1457": {
-        "name": "multilayer-perceptron",
+        "name": "mlp",
         "description": "Implement a multilayer perceptron for neural network fundamentals.",
         "hours": "98 H"
     },
     "1460": {
-        "name": "total-perspective-vortex",
+        "name": "tot-perspect",
         "description": "Process high-dimensional data and interface with brainwave inputs.",
         "hours": "98 H"
     },
@@ -215,12 +215,12 @@
         "hours": ""
     },
     "2267": {
-        "name": "Python for Data Science",
+        "name": "PyDataSci",
         "description": "Intensive introduction to Python for data science applications.",
         "hours": "35 H"
     },
     "2295": {
-        "name": "Piscine Data Science",
+        "name": "PiscineDataSci",
         "description": "Introductory immersion in data science professions and tools.",
         "hours": "35 H"
     },
@@ -260,7 +260,7 @@
         "hours": ""
     },
     "1419": {
-        "name": "woody-woodpacker",
+        "name": "woodpacker",
         "description": "Modify ELF64 headers to conceal code and study binary manipulation.",
         "hours": ""
     },
@@ -340,12 +340,12 @@
         "hours": "100 H"
     },
     "2064": {
-        "name": "Inception-of-Things",
+        "name": "InceptThings",
         "description": "Set up Kubernetes clusters and CI pipelines for Dockerized apps.",
         "hours": "200 H"
     },
     "2071": {
-        "name": "Bgp At Doors of Autonomous Systems is Simple",
+        "name": "BgpAutonSys",
         "description": "Simulate VXLAN+BGP-EVPN networks in GNS3 to deepen NetPractice skills.",
         "hours": "200 H"
     },
@@ -360,7 +360,7 @@
         "hours": ""
     },
     "1395": {
-        "name": "swifty-companion",
+        "name": "swifty-comp",
         "description": "Create a mobile app to retrieve and display 42 student information.",
         "hours": ""
     },
@@ -380,7 +380,7 @@
         "hours": ""
     },
     "1406": {
-        "name": "swifty-proteins",
+        "name": "swifty-prot",
         "description": "Model 3D ligands in a mobile app to deepen framework knowledge.",
         "hours": ""
     },
@@ -405,7 +405,7 @@
         "hours": ""
     },
     "2199": {
-        "name": "Piscine Symfony",
+        "name": "PiscSymfony",
         "description": "Intensive immersion in Symfony for web development skills.",
         "hours": ""
     },
@@ -440,7 +440,7 @@
         "hours": ""
     },
     "1416": {
-        "name": "little-penguin-1",
+        "name": "ltl-penguin1",
         "description": "Explore kernel development through Eudyptula-inspired challenges.",
         "hours": ""
     },
@@ -450,12 +450,12 @@
         "hours": ""
     },
     "1421": {
-        "name": "process-and-memory",
+        "name": "proc-memory",
         "description": "Study syscalls and memory management in the Linux kernel.",
         "hours": ""
     },
     "1422": {
-        "name": "drivers-and-interrupts",
+        "name": "drv-interrupts",
         "description": "Connect and manage drivers and interrupts in a custom kernel.",
         "hours": ""
     },
@@ -515,7 +515,7 @@
         "hours": ""
     },
     "1456": {
-        "name": "userspace_digressions",
+        "name": "usr-digress",
         "description": "Develop a custom userspace init binary for system initialization.",
         "hours": ""
     },
@@ -575,12 +575,12 @@
         "hours": ""
     },
     "1409": {
-        "name": "in-the-shadows",
+        "name": "in-shadows",
         "description": "Develop a complete game integrating algorithms and creative design.",
         "hours": ""
     },
     "1410": {
-        "name": "particle-system",
+        "name": "part-system",
         "description": "Design a GPU-accelerated particle system meeting performance constraints.",
         "hours": ""
     },
@@ -660,7 +660,7 @@
         "hours": ""
     },
     "2076": {
-        "name": "ready set boole",
+        "name": "set-boole",
         "description": "Study Boolean algebra and set theory for computer mathematics.",
         "hours": ""
     },
@@ -720,7 +720,7 @@
         "hours": ""
     },
     "2364": {
-        "name": "Piscine Object",
+        "name": "PiscObject",
         "description": "Intensive immersion in object-oriented programming concepts.",
         "hours": ""
     },
@@ -745,12 +745,12 @@
         "hours": ""
     },
     "1638": {
-        "name": "Work Experience I",
+        "name": "WorkExpI",
         "description": "Apply professional skills and adaptability in a real-world company setting.",
         "hours": ""
     },
     "1644": {
-        "name": "Work Experience II",
+        "name": "WorkExpII",
         "description": "Demonstrate expertise and integration during a second professional internship.",
         "hours": ""
     },
@@ -765,7 +765,7 @@
         "hours": ""
     },
     "1662": {
-        "name": "Startup Experience",
+        "name": "StartupExp",
         "description": "Found and manage a startup as a full-time professional project.",
         "hours": ""
     }
