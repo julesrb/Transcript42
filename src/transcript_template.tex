@@ -2,8 +2,8 @@
 \usepackage[a4paper, 
 			left=1.2cm, 
 			right=1.2cm, 
-			top=1.2cm, 
-			bottom=1.2cm]{geometry}
+			top=1.0cm, 
+			bottom=1.0cm]{geometry}
 \usepackage[scaled]{helvet} % Helvetica (Arial-like)
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{array}
@@ -28,7 +28,7 @@
       \centering
       \begin{tikzpicture}[remember picture, overlay]
         \node[opacity=0.75] at (current page.center) {
-          \includegraphics[width=\paperwidth,height=\paperheight]{back.png}
+          \includegraphics[width=\paperwidth,height=\paperheight]{42_BERLIN_back.pdf}
         };
       \end{tikzpicture}%
       \vfill
@@ -49,20 +49,20 @@
 
 \newcommand{\myHeader}{
   % BACKGROUND IMAGE (centered, semi-transparent)
-  \AddToShipoutPictureBG*{
-    \AtPageCenter{
-      \begin{tikzpicture}[remember picture, overlay]
-        \node[opacity=0.06] at (current page.center) {
-          \includegraphics[width=0.5\paperwidth]{42_logo.png}
-        };
-      \end{tikzpicture}
-    }
-  }
+%   \AddToShipoutPictureBG*{
+%     \AtPageCenter{
+%       \begin{tikzpicture}[remember picture, overlay]
+%         \node[opacity=0.06] at (current page.center) {
+%           \includegraphics[width=0.5\paperwidth]{42_logo.png}
+%         };
+%       \end{tikzpicture}
+%     }
+%   }
 
   % SMALL LOGO top-left (2cm from top, 2cm from left)
   \AddToShipoutPicture*{
     \begin{tikzpicture}[remember picture, overlay]
-      \node at (2.51cm, 27.55cm) {
+      \node at (2.51cm, 27.66cm) {
         \includegraphics[width=2.7cm]{42_logo.png}
       };
     \end{tikzpicture}
@@ -96,15 +96,17 @@
   % RIGHT COLUMN
   \begin{minipage}[t]{\linewidth}
     \parbox[t]{\dimexpr\linewidth-2\fboxsep}{ % remove padding effect
-      \textbf{\large TRANSCRIPT OF ACADEMIC RECORD} \\[0.5em]
+      \textbf{\large TRANSCRIPT OF ACADEMIC RECORD} \\ [0.5em]
+	  \textbf{\large {{ first_name }} {{ last_name }}} \\[0.7em]
 		\begin{tabular}{@{}l l@{}}
-			Record of: & {{ first_name }} {{ last_name }} \\
-			Date issued: & {{ date_issued }} \\
+			% Record of: & {{ first_name }} {{ last_name }} \\
 			Date of birth: & {{ date_of_birth }} \\
+			Location of birth: & {{ location_of_birth }} \\
+			Date issued: & {{ date_issued }} \\
 		\end{tabular}
 
 
-      \vspace{0.5cm}
+      \vspace{0.38cm}
     	I, Daniel Hadley, Pedagogy Lead of 42 Berlin, certify that the above-named individual has met academic requirements as of the date issued. 
 		This transcript is issued upon request for all official purposes. \\
 		\vspace{-0.5cm}
@@ -114,7 +116,7 @@
     }
   \end{minipage}
   \end{tabularx}
-%   \vspace{1.0cm}
+  \vspace{-0.4cm}
 }
 
 \myHeader
@@ -124,10 +126,10 @@
 \end{center}
 
 \noindent
-\begin{tabularx}{\textwidth}{l X c r}
+\begin{tabularx}{\textwidth}{l X r r}
 
 	\rowcolor{black}
-	\whitbf{Name} & \whitbf{Details} & \whitbf{Grade *} & \whitbf{Workload} \\
+	\whitbf{Name} & \whitbf{Details} & \whitbf{Grade*} & \whitbf{Workload} \\
 	\rowcolor{lightgrey}
 	Rank 0 &  &  &  \\
 	{% for project in rank0 %}
@@ -169,7 +171,7 @@
 \vspace{0.5cm}
 \noindent
 \textit{\footnotesize
-* At 42, project grades are given on a scale from 0 to 100. A grade of 100 reflects full mastery of the project's objectives. Exceptional submissions may receive a bonus, resulting in grades over 100. All evaluations are peer-reviewed and follow a strict rubric to ensure fairness and consistency.
+*At 42, project grades are given on a scale from 0 to 100. A grade of 100 reflects full mastery of the project's objectives. Exceptional submissions may receive a bonus, resulting in grades over 100. All evaluations are peer-reviewed and follow a strict rubric to ensure fairness and consistency.
 }
 
 {% if core_completed != "in progress" %}
@@ -184,10 +186,10 @@
 \end{center}
 
 \noindent
-\begin{tabularx}{\textwidth}{l X c r}
+\begin{tabularx}{\textwidth}{l X r r}
 
 	\rowcolor{black}
-	\whitbf{Name} & \whitbf{Details} & \whitbf{Grade} & \whitbf{Workload} \\
+	\whitbf{Name} & \whitbf{Details} & \whitbf{Grade*} & \whitbf{Workload} \\
 
 	{% if ai %}
 	\rowcolor{lightgrey}
@@ -259,7 +261,7 @@
 \vspace{0.5cm}
 \noindent
 \textit{\footnotesize
-* At 42, project grades are given on a scale from 0 to 100. A grade of 100 reflects full mastery of the project's objectives. Exceptional submissions may receive a bonus, resulting in grades over 100. All evaluations are peer-reviewed and follow a strict rubric to ensure fairness and consistency.
+*At 42, project grades are given on a scale from 0 to 100. A grade of 100 reflects full mastery of the project's objectives. Exceptional submissions may receive a bonus, resulting in grades over 100. All evaluations are peer-reviewed and follow a strict rubric to ensure fairness and consistency.
 }
 
 {% endif %}  % end of core_completed check

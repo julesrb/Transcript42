@@ -49,9 +49,10 @@ def fill_template():
 					12059 Berlin
 					GERMANY"""
 	
-	first_name = data["first_name"]
-	last_name = data["last_name"]
+	first_name = data["first_name"].upper()
+	last_name = data["last_name"].upper()
 	date_of_birth = "-coming soon-"
+	location_of_birth = "-coming soon-"
 	date_issued = datetime.today().strftime("%B %d, %Y")
 
 	passed_selection = data["pool_month"].capitalize() + " " + data["pool_year"]
@@ -269,6 +270,7 @@ def fill_template():
 		"first_name": first_name,
 		"last_name": last_name,
 		"date_of_birth": date_of_birth,
+		"location_of_birth": location_of_birth,
 		"date_issued": date_issued,
 		"passed_selection": passed_selection,
 		"core_started": core_started,
