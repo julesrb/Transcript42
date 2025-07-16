@@ -26,7 +26,7 @@ run:
 	$(PYTHON) src/main.py
 
 serve: docker-image venv install
-	$(VENV_DIR)/bin/uvicorn src.api:app --host 0.0.0.0 --port 8000 --reload
+	$(VENV_DIR)/bin/uvicorn src.api:app --host 0.0.0.0 --port 80 --reload
 
 clean:
 	rm -rf $(VENV_DIR)

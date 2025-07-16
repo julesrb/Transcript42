@@ -15,7 +15,7 @@ app = FastAPI()
 load_dotenv()
 UID = os.getenv("42UID")
 SECRET = os.getenv("42SECRET")
-REDIRECT_URI = os.getenv("OAUTH_REDIRECT_URI", "http://68.183.66.13:8000/callback")
+REDIRECT_URI = os.getenv("OAUTH_REDIRECT_URI", "http://68.183.66.13/callback")
 AUTH_URL = "https://api.intra.42.fr/oauth/authorize"
 TOKEN_URL = "https://api.intra.42.fr/oauth/token"
 USER_URL = "https://api.intra.42.fr/v2/me"
@@ -69,20 +69,6 @@ def callback(request: Request):
             return HTMLResponse("<h1>PDF not found after generation.</h1>", status_code=500)
     except Exception as e:
         return HTMLResponse(f"<h1>Error: {str(e)}</h1>", status_code=500)
-
-@app.post("/generate")
-def generate_transcript():
-    # This endpoint is now for local/manual testing only
-    try:
-        fill_template()
-        generate_pdf()
-        pdf_path = os.path.join("data", "output.pdf")
-        if os.path.exists(pdf_path):
-            return FileResponse(pdf_path, media_type="application/pdf", filename="transcript.pdf")
-        else:
-            return JSONResponse(content={"status": "error", "message": "PDF not found after generation."}, status_code=500)
-    except Exception as e:
-        return JSONResponse(content={"status": "error", "message": str(e)}, status_code=500)
 
 if __name__ == "__main__":
     uvicorn.run("api:app", host="0.0.0.0", port=8000, reload=True)
