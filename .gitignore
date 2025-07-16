@@ -2,4 +2,5 @@
 /src/__pycache__
 /data/*
 !/data/42_Logo.png
+!/data/42_BERLIN_back.pdf
 .env
