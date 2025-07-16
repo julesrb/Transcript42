@@ -7,6 +7,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: main 
 
     steps:
     - name: Checkout code
@@ -18,15 +19,18 @@ jobs:
         ssh-private-key: ${{ secrets.DROPLET_SSH_KEY }}
 
     - name: Deploy via Git pull
+      env:
+        REPO_URL: https://github.com/${{ github.repository }}.git
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.DROPLET_USER }}@68.183.66.13 "
           mkdir -p /var/www/pdf-service &&
           cd /var/www/pdf-service &&
           if [ ! -d .git ]; then
-            git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git . &&
+            git clone $REPO_URL . &&
             git checkout main
           else
             git fetch origin &&
             git reset --hard origin/main
-          fi
+          fi &&
+          echo "end"
         "
