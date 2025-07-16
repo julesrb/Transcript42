@@ -17,11 +17,16 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.DROPLET_SSH_KEY }}
 
-    - name: Deploy code to Droplet
+    - name: Deploy via Git pull
       run: |
-        ssh -o StrictHostKeyChecking=no ${{ secrets.DROPLET_USER }}@${{ secrets.DROPLET_HOST }} "
-          cd /var/www/myapp &&
-          git pull origin main &&
-          npm install &&
-          pm2 restart all || pm2 start index.js --name myapp
+        ssh -o StrictHostKeyChecking=no ${{ secrets.DROPLET_USER }}@68.183.66.13 "
+          mkdir -p /var/www/pdf-service &&
+          cd /var/www/pdf-service &&
+          if [ ! -d .git ]; then
+            git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git . &&
+            git checkout main
+          else
+            git fetch origin &&
+            git reset --hard origin/main
+          fi
         "
