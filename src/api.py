@@ -1,8 +1,8 @@
 # from .get_user_data import get_user_data
 from .fill_template import fill_template
 from .generate_pdf import generate_pdf
-from fastapi import FastAPI
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi import FastAPI, Request
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, RedirectResponse
 import uvicorn
 import os
 import requests
@@ -15,7 +15,7 @@ app = FastAPI()
 load_dotenv()
 UID = os.getenv("42UID")
 SECRET = os.getenv("42SECRET")
-REDIRECT_URI = os.getenv("OAUTH_REDIRECT_URI", "http://127.0.0.1:8000/callback")
+REDIRECT_URI = os.getenv("OAUTH_REDIRECT_URI", "http://68.183.66.13:8000/callback")
 AUTH_URL = "https://api.intra.42.fr/oauth/authorize"
 TOKEN_URL = "https://api.intra.42.fr/oauth/token"
 USER_URL = "https://api.intra.42.fr/v2/me"
