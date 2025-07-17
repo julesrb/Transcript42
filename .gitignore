@@ -2,5 +2,6 @@
 /src/__pycache__
 /data/*
 !/data/42_Logo.png
+!/data/Silka-Medium.otf
 !/data/42_BERLIN_back.pdf
 .env
