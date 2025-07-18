@@ -107,8 +107,14 @@ def create_transcript(
 ):
     generate_transcript(date_of_birth=date_of_birth, location_of_birth=location_of_birth, language=language, transcript_type=transcript_type)
     # Return the PDF as before
-    first_name = "Unknown" # Placeholder, actual user data is not available here
-    last_name = "Unknown" # Placeholder
+    try:
+        with open("./data/user.json", "r", encoding="utf-8") as f:
+            user_data = json.load(f)
+        first_name = user_data.get("first_name", "Unknown")
+        last_name = user_data.get("last_name", "Unknown")
+    except Exception:
+        first_name = "Unknown"
+        last_name = "Unknown"
     safe_first_name = ''.join(c for c in first_name if c.isalnum())
     safe_last_name = ''.join(c for c in last_name if c.isalnum())
     pdf_filename = f"Academic_Transcript_{safe_first_name}_{safe_last_name}.pdf"
