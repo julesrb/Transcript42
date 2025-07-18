@@ -260,7 +260,15 @@ def prepare_template_variables(data: dict, parsed: dict, organized: dict, date_o
     school_address = """42 Berlin\nHarzer Straße 39\n12059 Berlin\nGERMANY"""
     first_name = data["first_name"].upper()
     last_name = data["last_name"].upper()
-    date_of_birth = date_of_birth if date_of_birth else "-coming soon-"
+    # Format date_of_birth if provided
+    if date_of_birth:
+        try:
+            dob_dt = datetime.fromisoformat(date_of_birth)
+            date_of_birth_formatted = dob_dt.strftime("%B %d, %Y")
+        except Exception:
+            date_of_birth_formatted = date_of_birth  # fallback to original if parsing fails
+    else:
+        date_of_birth_formatted = "-coming soon-"
     location_of_birth = location_of_birth if location_of_birth else "-coming soon-"
     date_issued = datetime.today().strftime("%B %d, %Y")
     passed_selection = data["pool_month"].capitalize() + " " + data["pool_year"]
@@ -277,7 +285,7 @@ def prepare_template_variables(data: dict, parsed: dict, organized: dict, date_o
         "school_address": school_address,
         "first_name": first_name,
         "last_name": last_name,
-        "date_of_birth": date_of_birth,
+        "date_of_birth": date_of_birth_formatted,
         "location_of_birth": location_of_birth,
         "date_issued": date_issued,
         "passed_selection": passed_selection,
