@@ -26,7 +26,7 @@ LOG_VIEW_PASSWORD = os.getenv("LOG_VIEW_PASSWORD", "changeme")
 ACCESS_LOG_PATH = os.path.join("data", "access.log")
 ERROR_LOG_PATH = os.path.join("data", "error.log")
 
-@app.get("/login")
+@app.get("/my_fabulous_transcript")
 def login():
     # Log login attempt (IP will be logged on callback)
     return RedirectResponse(f"{AUTH_URL}?{urllib.parse.urlencode({
@@ -120,7 +120,10 @@ def create_transcript(
         log_event(ERROR_LOG_PATH, f"[{datetime.datetime.now().isoformat()}] Could not load user.json: {user_data_error}")
     safe_first_name = ''.join(c for c in first_name if c.isalnum())
     safe_last_name = ''.join(c for c in last_name if c.isalnum())
-    pdf_filename = f"Academic_Transcript_{safe_first_name}_{safe_last_name}.pdf"
+    if language == "de":
+        pdf_filename = f"Akademische_Leistungsübersicht_{safe_first_name}_{safe_last_name}.pdf"
+    else:
+        pdf_filename = f"Academic_Transcript_{safe_first_name}_{safe_last_name}.pdf"
     pdf_path = os.path.join("data", "output.pdf")
     client_host = request.client.host if hasattr(request, 'client') and request.client else 'unknown'
     if os.path.exists(pdf_path):
