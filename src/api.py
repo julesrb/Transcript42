@@ -40,6 +40,16 @@ def callback(request: Request):
     code = request.query_params.get("code")
     if not code:
         return HTMLResponse("<h1>Authentication failed. No code found.</h1>", status_code=400)
+    try:
+        access_token = exchange_code_for_token(code, UID, SECRET, REDIRECT_URI, TOKEN_URL)
+        user_data = fetch_user_data(access_token, USER_URL)
+        user_id = user_data.get("id")
+        if not user_id:
+            return HTMLResponse("<h1>User ID not found in user data.</h1>", status_code=500)
+        user_path = os.path.join("data", f"user_{user_id}.json")
+        save_json(user_data, user_path)
+    except Exception as e:
+        return HTMLResponse(f"<h1>Authentication failed: {str(e)}</h1>", status_code=400)
     return HTMLResponse(f"""
         <html>
         <head>
@@ -59,7 +69,7 @@ def callback(request: Request):
             <div class="container">
                 <h2>Complete your profile</h2>
                 <form action="/transcript" method="post">
-                    <input type="hidden" name="code" value="{code}">
+                    <input type="hidden" name="user_id" value="{user_id}">
                     <input type="hidden" name="date_of_birth" id="date_of_birth">
                     <label>Date of Birth:
                         <div class="date-group">
@@ -110,28 +120,20 @@ def callback(request: Request):
 @app.post("/transcript")
 def create_transcript(
     request: Request,
-    code: str = Form(...),
+    user_id: str = Form(...),
     date_of_birth: str = Form(...),
     location_of_birth: str = Form(...),
     language: str = Form(...),
     transcript_type: str = Form(...),
 ):
+    user_path = os.path.join("data", f"user_{user_id}.json")
+    if not os.path.exists(user_path):
+        return HTMLResponse("<h1>User data not found. Please log in again.</h1>", status_code=401)
     try:
-        access_token = exchange_code_for_token(code, UID, SECRET, REDIRECT_URI, TOKEN_URL)
-        user_data = fetch_user_data(access_token, USER_URL)
+        with open(user_path, "r", encoding="utf-8") as f:
+            user_data = json.load(f)
     except Exception as e:
-        # If the code is expired or invalid, offer a relogin
-        return HTMLResponse(f"""
-            <html>
-            <body>
-                <h2>Session expired or invalid. Please log in again.</h2>
-                <form action='/my_fabulous_transcript' method='get'>
-                    <button type='submit'>Re-login</button>
-                </form>
-                <p style='color:gray;font-size:small;'>Error: {str(e)}</p>
-            </body>
-            </html>
-        """, status_code=401)
+        return HTMLResponse(f"<h1>Error loading user data: {str(e)}</h1>", status_code=500)
     generate_transcript(
         user_data=user_data,
         date_of_birth=date_of_birth,
