@@ -337,15 +337,14 @@
 }
 {% endif %}
 
-{% endif %}  % end of transcript_type == 'core_advanced' and core_completed check
+{% endif %}
 
 \newpage
+\label{LastPage}
 
 \AddToShipoutPictureBG*{\BackgroundPic}
 
 \myHeader
-
-
 
 \begin{center}
   {% if language == 'de' %}
@@ -353,7 +352,6 @@
   {% else %}
     \textbf{\large Details of the Curriculum}
   {% endif %}
-  \label{LastPage}
 \end{center}
 
 
