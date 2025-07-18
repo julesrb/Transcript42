@@ -13,7 +13,7 @@ def load_data(user_path: str, projects_path: str) -> tuple[dict, dict]:
     return user_data, projects_dict
 
 
-def parse_projects(data: dict, pj_dic: dict) -> dict:
+def parse_projects(data: dict, pj_dic: dict, language: str = "en") -> dict:
     """Parse and enrich project data from user and project dictionary."""
     parsed = {}
     for entry in data["projects_users"]:
@@ -29,12 +29,16 @@ def parse_projects(data: dict, pj_dic: dict) -> dict:
                     marked_at = None
             project_id = str(project.get("id"))
             project_data = pj_dic.get(project_id, {})
+            if language == "de":
+                description = project_data.get("beschreibung")
+            else:
+                description = project_data.get("description")
             parsed[project_name] = {
                 "id": project_id,
                 "name": project_data.get("name"),
                 "validated": entry.get("validated?"),
                 "marked_at": marked_at,
-                "description": project_data.get("description"),
+                "description": description,
                 "grade": entry.get("final_mark"),
                 "hours": project_data.get("hours")
             }
@@ -299,7 +303,9 @@ def render_and_save_template(template_path: str, variables: dict, output_path: s
 def fill_template(date_of_birth=None, location_of_birth=None, language=None, transcript_type=None):
     """Orchestrate the transcript template filling process."""
     user_data, projects_dict = load_data("./data/user.json", "./projects/projects_dict.json")
-    parsed = parse_projects(user_data, projects_dict)
+    # Ensure language is a string and not None
+    lang = language if isinstance(language, str) and language else "en"
+    parsed = parse_projects(user_data, projects_dict, lang)
     with open("./data/user_prj.json", "w", encoding="utf-8") as f:
         json.dump(parsed, f, ensure_ascii=False, indent=4, default=str)
     organized = organize_projects_by_category(parsed)
