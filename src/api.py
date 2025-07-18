@@ -107,8 +107,17 @@ def create_transcript(
 ):
     generate_transcript(date_of_birth=date_of_birth, location_of_birth=location_of_birth, language=language, transcript_type=transcript_type)
     # Return the PDF as before
-    first_name = "Unknown" # Placeholder, actual user data is not available here
-    last_name = "Unknown" # Placeholder
+    user_data_error = None
+    try:
+        with open("./data/user.json", "r", encoding="utf-8") as f:
+            user_data = json.load(f)
+        first_name = user_data.get("first_name", "Unknown")
+        last_name = user_data.get("last_name", "Unknown")
+    except Exception as e:
+        first_name = "Unknown"
+        last_name = "Unknown"
+        user_data_error = str(e)
+        log_event(ERROR_LOG_PATH, f"[{datetime.datetime.now().isoformat()}] Could not load user.json: {user_data_error}")
     safe_first_name = ''.join(c for c in first_name if c.isalnum())
     safe_last_name = ''.join(c for c in last_name if c.isalnum())
     pdf_filename = f"Academic_Transcript_{safe_first_name}_{safe_last_name}.pdf"
@@ -117,6 +126,8 @@ def create_transcript(
     if os.path.exists(pdf_path):
         pdf_log_entry = f"[{datetime.datetime.now().isoformat()}] [IP: {client_host}] PDF generated for: {first_name} {last_name} (ID: N/A, Login: N/A)"
         log_event(ACCESS_LOG_PATH, pdf_log_entry)
+        if user_data_error:
+            return FileResponse(pdf_path, media_type="application/pdf", filename=pdf_filename, headers={"X-User-Data-Warning": "User name could not be retrieved. PDF will have generic name."})
         return FileResponse(pdf_path, media_type="application/pdf", filename=pdf_filename)
     else:
         error_msg = f"[{datetime.datetime.now().isoformat()}] [IP: {client_host}] PDF not found after generation."
