@@ -58,8 +58,9 @@ def callback(request: Request):
         <body>
             <div class="container">
                 <h2>Complete your profile</h2>
-                <form action=\"/transcript\" method=\"post\">
-                    <input type=\"hidden\" name=\"code\" value=\"{code}\">
+                <form action="/transcript" method="post">
+                    <input type="hidden" name="code" value="{code}">
+                    <input type="hidden" name="date_of_birth" id="date_of_birth">
                     <label>Date of Birth:
                         <div class="date-group">
                             <select name="dob_day" required>
@@ -76,22 +77,32 @@ def callback(request: Request):
                             </select>
                         </div>
                     </label>
-                    <label>Location of Birth: <input type=\"text\" name=\"location_of_birth\" required></label>
+                    <label>Location of Birth: <input type="text" name="location_of_birth" required></label>
                     <label>Language:
-                        <select name=\"language\" required>
-                            <option value=\"en\">English</option>
-                            <option value=\"de\">German</option>
+                        <select name="language" required>
+                            <option value="en">English</option>
+                            <option value="de">German</option>
                         </select>
                     </label>
                     <label>Transcript Type:
-                        <select name=\"transcript_type\" required>
-                            <option value=\"core\">Core</option>
-                            <option value=\"core_advanced\">Core + Advanced</option>
+                        <select name="transcript_type" required>
+                            <option value="core">Core</option>
+                            <option value="core_advanced">Core + Advanced</option>
                         </select>
                     </label>
-                    <button type=\"submit\">Generate Transcript</button>
+                    <button type="submit">Generate Transcript</button>
                 </form>
             </div>
+            <script>
+            document.querySelector('form').addEventListener('submit', function(e) {{
+                var day = document.querySelector('[name="dob_day"]').value;
+                var month = document.querySelector('[name="dob_month"]').value;
+                var year = document.querySelector('[name="dob_year"]').value;
+                if(day && month && year) {{
+                    document.getElementById('date_of_birth').value = year + '-' + month.padStart(2, '0') + '-' + day.padStart(2, '0');
+                }}
+            }});
+            </script>
         </body>
         </html>
     """)
