@@ -49,14 +49,14 @@
 
 \newcommand{\myHeader}{
 
-  % SMALL LOGO top-left (2cm from top, 2cm from left)
-  \AddToShipoutPicture*{
-    \begin{tikzpicture}[remember picture, overlay]
-      \node at (2.51cm, 27.66cm) {
-        \includegraphics[width=2.7cm]{42_logo.png}
-      };
-    \end{tikzpicture}
-  }
+% SMALL LOGO top-left (2cm from top, 2cm from left)
+\AddToShipoutPicture*{
+  \begin{tikzpicture}[remember picture, overlay]
+    \node at (2.51cm, 27.66cm) {
+      \includegraphics[width=2.7cm]{42_logo.png}
+    };
+  \end{tikzpicture}
+}
 
   % MAIN LAYOUT
   \noindent
@@ -66,7 +66,7 @@
     \parbox[t]{\dimexpr\linewidth\relax}{
       \hspace*{3.1cm}%
       \begin{minipage}[t]{\dimexpr\linewidth-3cm\relax}
-      {{ school_address | replace("\n", " \\ ") }}
+      {{ school_address | replace("\n", " \\\\ ") }}
       \vspace{1.23cm}
       \end{minipage}
       \begin{minipage}[t]{\linewidth}
@@ -94,12 +94,12 @@
   % RIGHT COLUMN
   \begin{minipage}[t]{\linewidth}
     \parbox[t]{\dimexpr\linewidth-2\fboxsep}{ % remove padding effect
-      {% if language == 'de' %}
-      \textbf{\large ZEUGNIS DER AKADEMISCHEN LEISTUNGEN} \\ [0.5em]
-      {% else %}
-      \textbf{\large TRANSCRIPT OF ACADEMIC RECORD} \\ [0.5em]
-      {% endif %}
-      \textbf{\large {{ first_name }} {{ last_name }}} \\[0.7em]
+    {%- if language == 'de' %}
+    \textbf{\large ZEUGNIS DER AKADEMISCHEN LEISTUNGEN} \\[0.5em]
+    {%- else %}
+    \textbf{\large TRANSCRIPT OF ACADEMIC RECORD} \\[0.5em]
+    {%- endif %}
+    \textbf{\large {{ first_name }} {{ last_name }}} \\[0.7em]
         \begin{tabular}{@{}l l@{}}
             {% if language == 'de' %}
             Geburtsdatum: & {{ date_of_birth }} \\
@@ -120,7 +120,11 @@
       {% endif %}
         \vspace{-0.5cm}
         \begin{flushright}
+		{% if language == 'de' %}
+		Seite: \thepage{} / \pageref{LastPage}
+		{% else %}
         Page: \thepage{} / \pageref{LastPage}
+		{% endif %}
         \end{flushright}
     }
   \end{minipage}
@@ -187,13 +191,15 @@
 
 \vspace{0.5cm}
 \noindent
-\textit{\footnotesize
 {% if language == 'de' %}
+\textit{\footnotesize
 *Bei 42 werden Projektbewertungen auf einer Skala von 0 bis 100 vergeben. Eine Note von 100 spiegelt die vollständige Beherrschung der Projektziele wider. Außergewöhnliche Einreichungen können einen Bonus erhalten, was zu Noten über 100 führt. Alle Bewertungen werden von Peers überprüft und folgen einem strengen Bewertungsraster, um Fairness und Konsistenz zu gewährleisten.
-{% else %}
-*At 42, project grades are given on a scale from 0 to 100. A grade of 100 reflects full mastery of the project's objectives. Exceptional submissions may receive a bonus, resulting in grades over 100. All evaluations are peer-reviewed and follow a strict rubric to ensure fairness and consistency.
-{% endif %}
 }
+{% else %}
+\textit{\footnotesize
+*At 42, project grades are given on a scale from 0 to 100. A grade of 100 reflects full mastery of the project's objectives. Exceptional submissions may receive a bonus, resulting in grades over 100. All evaluations are peer-reviewed and follow a strict rubric to ensure fairness and consistency.
+}
+{% endif %}}
 
 {% if transcript_type == 'core_advanced' and core_completed != "in progress" %}
 \newpage
@@ -321,13 +327,15 @@
 
 \vspace{0.5cm}
 \noindent
-\textit{\footnotesize
 {% if language == 'de' %}
+\textit{\footnotesize
 *Bei 42 werden Projektbewertungen auf einer Skala von 0 bis 100 vergeben. Eine Note von 100 spiegelt die vollständige Beherrschung der Projektziele wider. Außergewöhnliche Einreichungen können einen Bonus erhalten, was zu Noten über 100 führt. Alle Bewertungen werden von Peers überprüft und folgen einem strengen Bewertungsraster, um Fairness und Konsistenz zu gewährleisten.
-{% else %}
-*At 42, project grades are given on a scale from 0 to 100. A grade of 100 reflects full mastery of the project's objectives. Exceptional submissions may receive a bonus, resulting in grades over 100. All evaluations are peer-reviewed and follow a strict rubric to ensure fairness and consistency.
-{% endif %}
 }
+{% else %}
+\textit{\footnotesize
+*At 42, project grades are given on a scale from 0 to 100. A grade of 100 reflects full mastery of the project's objectives. Exceptional submissions may receive a bonus, resulting in grades over 100. All evaluations are peer-reviewed and follow a strict rubric to ensure fairness and consistency.
+}
+{% endif %}
 
 {% endif %}  % end of transcript_type == 'core_advanced' and core_completed check
 
@@ -391,65 +399,66 @@
 \vspace{1.0cm}
 
 {% if transcript_type == 'core_advanced' and core_completed != "in progress" %}
-{% if language == 'de' %}
-\noindent\textbf{Während der Spezialisierung erworbene Fähigkeiten:}
-{% else %}
-\noindent\textbf{Skills developed during the Specialization track:}
-{% endif %}
-\vspace{0.5em}
 
-{% if language == 'de' %}
-{% if ai %}
-  \noindent \textbf{Algorithmen \& KI}: Maschinelles Lernen, Datenverarbeitungstechniken. %
-{% endif %}
-{% if security %}
-  \noindent \textbf{Sicherheit}: Systemhärtung, Netzwerksicherheit, Verschlüsselungsprotokolle, Schwachstellenanalyse. %
-{% endif %}
-{% if devops %}
-  \noindent \textbf{DevOps}: CI/CD-Pipelines, automatisierte Deployments, Containerisierung, Infrastructure as Code. %
-{% endif %}
-{% if web %}
-  \noindent \textbf{Web \& Mobile}: Entwicklung responsiver Webanwendungen mit HTML, CSS, JS und Backend-Frameworks; Mobile-First-Designprinzipien. %
-{% endif %}
-{% if kernel %}
-  \noindent \textbf{System \& Kernel}: Programmierung von Betriebssystemkomponenten, Gerätetreibern, Prozessplanung und Speicherverwaltung. %
-{% endif %}
-{% if graphics %}
-  \noindent \textbf{Grafik \& Spiele}: Entwicklung grafischer Anwendungen mit Rendering-Techniken, Ereignisbehandlung und Spielmechanik. %
-{% endif %}
-{% if crypto %}
-  \noindent \textbf{Kryptographie \& Mathematik}: Anwendung kryptographischer Algorithmen, sicherer Kommunikationsprotokolle und mathematischer Beweise. %
-{% endif %}
-{% if dev %}
-  \noindent \textbf{Entwicklung}: Entwicklung modularer, getesteter und wartbarer Softwarelösungen. %
-{% endif %}
-{% else %}
-{% if ai %}
-  \noindent \textbf{Algorithms \& AI}: Machine learning models, and data processing techniques.%
-{% endif %}
-{% if security %}
-  \noindent \textbf{Security}: Explored system hardening, network security, encryption protocols, and vulnerability assessments. %
-{% endif %}
-{% if devops %}
-  \noindent \textbf{DevOps}: Managed CI/CD pipelines, automated deployments, containerization, and infrastructure as code. %
-{% endif %}
-{% if web %}
-  \noindent \textbf{Web \& Mobile}: Developed responsive web apps with HTML, CSS, JS, and backend frameworks; mobile-first design principles. %
-{% endif %}
-{% if kernel %}
-  \noindent \textbf{System \& Kernel}: Programmed low-level OS components, device drivers, process scheduling, and memory management. %
-{% endif %}
-{% if graphics %}
-  \noindent \textbf{Graphics \& Gaming}: Created graphical applications using rendering techniques, event handling, and game logic. %
-{% endif %}
-{% if crypto %}
-  \noindent \textbf{Cryptography \& Maths}: Applied cryptographic algorithms, secure communication protocols, and mathematical proofs. %
-{% endif %}
-{% if dev %}
-  \noindent \textbf{Development}: Built software solutions focusing on modularity, testing, and code maintainability. %
-{% endif %}
-{% endif %}
+	{% if language == 'de' %}
+	\noindent\textbf{Während der Spezialisierung erworbene Fähigkeiten:}
+	{% else %}
+	\noindent\textbf{Skills developed during the Specialization track:}
+	{% endif %}
 
+	\vspace{0.5em}
 
+	{% if language == 'de' %}
+		{% if ai %}
+		\noindent \textbf{Algorithmen \& KI}: Maschinelles Lernen, Datenverarbeitungstechniken. %
+		{% endif %}
+		{% if security %}
+		\noindent \textbf{Sicherheit}: Systemhärtung, Netzwerksicherheit, Verschlüsselungsprotokolle, Schwachstellenanalyse. %
+		{% endif %}
+		{% if devops %}
+		\noindent \textbf{DevOps}: CI/CD-Pipelines, automatisierte Deployments, Containerisierung, Infrastructure as Code. %
+		{% endif %}
+		{% if web %}
+		\noindent \textbf{Web \& Mobile}: Entwicklung responsiver Webanwendungen mit HTML, CSS, JS und Backend-Frameworks; Mobile-First-Designprinzipien. %
+		{% endif %}
+		{% if kernel %}
+		\noindent \textbf{System \& Kernel}: Programmierung von Betriebssystemkomponenten, Gerätetreibern, Prozessplanung und Speicherverwaltung. %
+		{% endif %}
+		{% if graphics %}
+		\noindent \textbf{Grafik \& Spiele}: Entwicklung grafischer Anwendungen mit Rendering-Techniken, Ereignisbehandlung und Spielmechanik. %
+		{% endif %}
+		{% if crypto %}
+		\noindent \textbf{Kryptographie \& Mathematik}: Anwendung kryptographischer Algorithmen, sicherer Kommunikationsprotokolle und mathematischer Beweise. %
+		{% endif %}
+		{% if dev %}
+		\noindent \textbf{Entwicklung}: Entwicklung modularer, getesteter und wartbarer Softwarelösungen. %
+		{% endif %}
+	{% else %}
+		{% if ai %}
+		\noindent \textbf{Algorithms \& AI}: Machine learning models, and data processing techniques.%
+		{% endif %}
+		{% if security %}
+		\noindent \textbf{Security}: Explored system hardening, network security, encryption protocols, and vulnerability assessments. %
+		{% endif %}
+		{% if devops %}
+		\noindent \textbf{DevOps}: Managed CI/CD pipelines, automated deployments, containerization, and infrastructure as code. %
+		{% endif %}
+		{% if web %}
+		\noindent \textbf{Web \& Mobile}: Developed responsive web apps with HTML, CSS, JS, and backend frameworks; mobile-first design principles. %
+		{% endif %}
+		{% if kernel %}
+		\noindent \textbf{System \& Kernel}: Programmed low-level OS components, device drivers, process scheduling, and memory management. %
+		{% endif %}
+		{% if graphics %}
+		\noindent \textbf{Graphics \& Gaming}: Created graphical applications using rendering techniques, event handling, and game logic. %
+		{% endif %}
+		{% if crypto %}
+		\noindent \textbf{Cryptography \& Maths}: Applied cryptographic algorithms, secure communication protocols, and mathematical proofs. %
+		{% endif %}
+		{% if dev %}
+		\noindent \textbf{Development}: Built software solutions focusing on modularity, testing, and code maintainability. %
+		{% endif %}
+	{% endif %}
+{% endif %}
 
 \end{document}
