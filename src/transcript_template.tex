@@ -21,6 +21,22 @@
 \usepackage{lastpage}
 
 % BACKGROUND IMAGE
+\newcommand\BackgroundPic{
+  \put(-3,0){
+    \parbox[b][\paperheight]{\paperwidth}{
+      \vfill
+      \centering
+      \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.75] at (current page.center) {
+          \includegraphics[width=\paperwidth,height=\paperheight]{42_BERLIN_back.pdf}
+        };
+      \end{tikzpicture}%
+      \vfill
+    }
+  }
+}
+\AddToShipoutPictureBG*{\BackgroundPic}
+
 \AddToShipoutPictureBG*{
   \begin{tikzpicture}[remember picture, overlay]
     \node[opacity=0.75, at=(current page.center)] {
