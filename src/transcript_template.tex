@@ -95,9 +95,9 @@
   \begin{minipage}[t]{\linewidth}
     \parbox[t]{\dimexpr\linewidth-2\fboxsep}{ % remove padding effect
       {% if language == 'de' %}
-      \textbf{\large ZEUGNIS DER AKADEMISCHEN LEISTUNGEN} \\[0.5em]
+      \textbf{\large ZEUGNIS DER AKADEMISCHEN LEISTUNGEN} \\ [0.5em]
       {%- else %}
-      \textbf{\large TRANSCRIPT OF ACADEMIC RECORD} \\[0.5em]
+      \textbf{\large TRANSCRIPT OF ACADEMIC RECORD} \\ [0.5em]
       {% endif %}
       \textbf{\large {{ first_name }} {{ last_name }}} \\[0.7em]
         \begin{tabular}{@{}l l@{}}
@@ -335,7 +335,7 @@
 \textit{\footnotesize
 *At 42, project grades are given on a scale from 0 to 100. A grade of 100 reflects full mastery of the project's objectives. Exceptional submissions may receive a bonus, resulting in grades over 100. All evaluations are peer-reviewed and follow a strict rubric to ensure fairness and consistency.
 }
-{% endif %}}
+{% endif %}
 
 {% endif %}  % end of transcript_type == 'core_advanced' and core_completed check
 
