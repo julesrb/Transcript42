@@ -94,11 +94,11 @@
   % RIGHT COLUMN
   \begin{minipage}[t]{\linewidth}
     \parbox[t]{\dimexpr\linewidth-2\fboxsep}{ % remove padding effect
-      {% if language == 'de' %}
+      {%- if language == 'de' -%}
       \textbf{\large ZEUGNIS DER AKADEMISCHEN LEISTUNGEN} \\[0.5em]
-      {% else %}
+      {%- else -%}
       \textbf{\large TRANSCRIPT OF ACADEMIC RECORD} \\[0.5em]
-      {% endif %}
+      {%- endif -%}
       \textbf{\large {{ first_name }} {{ last_name }}} \\[0.7em]
         \begin{tabular}{@{}l l@{}}
             {% if language == 'de' %}
