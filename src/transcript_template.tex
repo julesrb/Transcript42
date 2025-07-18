@@ -21,27 +21,21 @@
 \usepackage{lastpage}
 
 % BACKGROUND IMAGE
-\newcommand\FullPageGraphics{
+\newcommand\BackgroundPic{
   \put(-3,0){
     \parbox[b][\paperheight]{\paperwidth}{
       \vfill
       \centering
       \begin{tikzpicture}[remember picture, overlay]
-        % Background image
         \node[opacity=0.75] at (current page.center) {
           \includegraphics[width=\paperwidth,height=\paperheight]{42_BERLIN_back.pdf}
-        };
-        % Logo image
-        \node at ([xshift=2.51cm,yshift=-3.24cm]current page.north west) {
-          \includegraphics[width=2.7cm]{42_logo.png}
         };
       \end{tikzpicture}%
       \vfill
     }
   }
 }
-
-\AddToShipoutPictureBG*{\FullPageGraphics}
+\AddToShipoutPictureBG*{\BackgroundPic}
 
 \begin{document}
 \fontsize{10}{12}\selectfont
@@ -54,6 +48,15 @@
 \definecolor{lightgrey}{gray}{0.9}
 
 \newcommand{\myHeader}{
+
+% SMALL LOGO top-left (2cm from top, 2cm from left)
+\AddToShipoutPicture*{
+  \begin{tikzpicture}[remember picture, overlay]
+    \node at (2.51cm, 27.66cm) {
+      \includegraphics[width=2.7cm]{42_logo.png}
+    };
+  \end{tikzpicture}
+}
 
   % MAIN LAYOUT
   \noindent
