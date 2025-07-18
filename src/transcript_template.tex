@@ -49,14 +49,14 @@
 
 \newcommand{\myHeader}{
 
-  % SMALL LOGO top-left (2cm from top, 2cm from left)
-  \AddToShipoutPicture*{
-    \begin{tikzpicture}[remember picture, overlay]
-      \node at (2.51cm, 27.66cm) {
-        \includegraphics[width=2.7cm]{42_logo.png}
-      };
-    \end{tikzpicture}
-  }
+% SMALL LOGO top-left (2cm from top, 2cm from left)
+\AddToShipoutPicture*{
+  \begin{tikzpicture}[remember picture, overlay]
+    \node at (2.51cm, 27.66cm) {
+      \includegraphics[width=2.7cm]{42_logo.png}
+    };
+  \end{tikzpicture}
+}
 
   % MAIN LAYOUT
   \noindent
@@ -391,65 +391,66 @@
 \vspace{1.0cm}
 
 {% if transcript_type == 'core_advanced' and core_completed != "in progress" %}
-{% if language == 'de' %}
-\noindent\textbf{Während der Spezialisierung erworbene Fähigkeiten:}
-{% else %}
-\noindent\textbf{Skills developed during the Specialization track:}
-{% endif %}
-\vspace{0.5em}
 
-{% if language == 'de' %}
-{% if ai %}
-  \noindent \textbf{Algorithmen \& KI}: Maschinelles Lernen, Datenverarbeitungstechniken. %
-{% endif %}
-{% if security %}
-  \noindent \textbf{Sicherheit}: Systemhärtung, Netzwerksicherheit, Verschlüsselungsprotokolle, Schwachstellenanalyse. %
-{% endif %}
-{% if devops %}
-  \noindent \textbf{DevOps}: CI/CD-Pipelines, automatisierte Deployments, Containerisierung, Infrastructure as Code. %
-{% endif %}
-{% if web %}
-  \noindent \textbf{Web \& Mobile}: Entwicklung responsiver Webanwendungen mit HTML, CSS, JS und Backend-Frameworks; Mobile-First-Designprinzipien. %
-{% endif %}
-{% if kernel %}
-  \noindent \textbf{System \& Kernel}: Programmierung von Betriebssystemkomponenten, Gerätetreibern, Prozessplanung und Speicherverwaltung. %
-{% endif %}
-{% if graphics %}
-  \noindent \textbf{Grafik \& Spiele}: Entwicklung grafischer Anwendungen mit Rendering-Techniken, Ereignisbehandlung und Spielmechanik. %
-{% endif %}
-{% if crypto %}
-  \noindent \textbf{Kryptographie \& Mathematik}: Anwendung kryptographischer Algorithmen, sicherer Kommunikationsprotokolle und mathematischer Beweise. %
-{% endif %}
-{% if dev %}
-  \noindent \textbf{Entwicklung}: Entwicklung modularer, getesteter und wartbarer Softwarelösungen. %
-{% endif %}
-{% else %}
-{% if ai %}
-  \noindent \textbf{Algorithms \& AI}: Machine learning models, and data processing techniques.%
-{% endif %}
-{% if security %}
-  \noindent \textbf{Security}: Explored system hardening, network security, encryption protocols, and vulnerability assessments. %
-{% endif %}
-{% if devops %}
-  \noindent \textbf{DevOps}: Managed CI/CD pipelines, automated deployments, containerization, and infrastructure as code. %
-{% endif %}
-{% if web %}
-  \noindent \textbf{Web \& Mobile}: Developed responsive web apps with HTML, CSS, JS, and backend frameworks; mobile-first design principles. %
-{% endif %}
-{% if kernel %}
-  \noindent \textbf{System \& Kernel}: Programmed low-level OS components, device drivers, process scheduling, and memory management. %
-{% endif %}
-{% if graphics %}
-  \noindent \textbf{Graphics \& Gaming}: Created graphical applications using rendering techniques, event handling, and game logic. %
-{% endif %}
-{% if crypto %}
-  \noindent \textbf{Cryptography \& Maths}: Applied cryptographic algorithms, secure communication protocols, and mathematical proofs. %
-{% endif %}
-{% if dev %}
-  \noindent \textbf{Development}: Built software solutions focusing on modularity, testing, and code maintainability. %
-{% endif %}
-{% endif %}
+	{% if language == 'de' %}
+	\noindent\textbf{Während der Spezialisierung erworbene Fähigkeiten:}
+	{% else %}
+	\noindent\textbf{Skills developed during the Specialization track:}
+	{% endif %}
 
+	\vspace{0.5em}
 
+	{% if language == 'de' %}
+		{% if ai %}
+		\noindent \textbf{Algorithmen \& KI}: Maschinelles Lernen, Datenverarbeitungstechniken. %
+		{% endif %}
+		{% if security %}
+		\noindent \textbf{Sicherheit}: Systemhärtung, Netzwerksicherheit, Verschlüsselungsprotokolle, Schwachstellenanalyse. %
+		{% endif %}
+		{% if devops %}
+		\noindent \textbf{DevOps}: CI/CD-Pipelines, automatisierte Deployments, Containerisierung, Infrastructure as Code. %
+		{% endif %}
+		{% if web %}
+		\noindent \textbf{Web \& Mobile}: Entwicklung responsiver Webanwendungen mit HTML, CSS, JS und Backend-Frameworks; Mobile-First-Designprinzipien. %
+		{% endif %}
+		{% if kernel %}
+		\noindent \textbf{System \& Kernel}: Programmierung von Betriebssystemkomponenten, Gerätetreibern, Prozessplanung und Speicherverwaltung. %
+		{% endif %}
+		{% if graphics %}
+		\noindent \textbf{Grafik \& Spiele}: Entwicklung grafischer Anwendungen mit Rendering-Techniken, Ereignisbehandlung und Spielmechanik. %
+		{% endif %}
+		{% if crypto %}
+		\noindent \textbf{Kryptographie \& Mathematik}: Anwendung kryptographischer Algorithmen, sicherer Kommunikationsprotokolle und mathematischer Beweise. %
+		{% endif %}
+		{% if dev %}
+		\noindent \textbf{Entwicklung}: Entwicklung modularer, getesteter und wartbarer Softwarelösungen. %
+		{% endif %}
+	{% else %}
+		{% if ai %}
+		\noindent \textbf{Algorithms \& AI}: Machine learning models, and data processing techniques.%
+		{% endif %}
+		{% if security %}
+		\noindent \textbf{Security}: Explored system hardening, network security, encryption protocols, and vulnerability assessments. %
+		{% endif %}
+		{% if devops %}
+		\noindent \textbf{DevOps}: Managed CI/CD pipelines, automated deployments, containerization, and infrastructure as code. %
+		{% endif %}
+		{% if web %}
+		\noindent \textbf{Web \& Mobile}: Developed responsive web apps with HTML, CSS, JS, and backend frameworks; mobile-first design principles. %
+		{% endif %}
+		{% if kernel %}
+		\noindent \textbf{System \& Kernel}: Programmed low-level OS components, device drivers, process scheduling, and memory management. %
+		{% endif %}
+		{% if graphics %}
+		\noindent \textbf{Graphics \& Gaming}: Created graphical applications using rendering techniques, event handling, and game logic. %
+		{% endif %}
+		{% if crypto %}
+		\noindent \textbf{Cryptography \& Maths}: Applied cryptographic algorithms, secure communication protocols, and mathematical proofs. %
+		{% endif %}
+		{% if dev %}
+		\noindent \textbf{Development}: Built software solutions focusing on modularity, testing, and code maintainability. %
+		{% endif %}
+	{% endif %}
+{% endif %}
 
 \end{document}
