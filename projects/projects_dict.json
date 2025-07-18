@@ -255,13 +255,13 @@
         "beschreibung": "Einen virtuellen Arena für Assembly-Programme und VM-Design simulieren.",
         "hours": ""
     },
-    "2267": {
+    "22670000000000": {
         "name": "PyDataSci",
         "description": "Intensive introduction to Python for data science applications.",
         "beschreibung": "Intensive Einführung in Python für Anwendungen der Datenwissenschaft.",
         "hours": "35 H"
     },
-    "2295": {
+    "22950000000000": {
         "name": "PiscineDataSci",
         "description": "Introductory immersion in data science professions and tools.",
         "beschreibung": "Einführung in die Berufe der Datenwissenschaft und Werkzeuge.",
@@ -913,5 +913,65 @@
         "description": "Found and manage a startup as a full-time professional project.",
         "beschreibung": "Ein Startup als vollzeitiges berufliches Projekt gründen und verwalten.",
         "hours": ""
+    },
+    "2268": {
+        "name": "Py Start",
+        "description": "Introduction to Python programming fundamentals and syntax principles.",
+        "beschreibung": "Einführung in die Grundlagen und Syntax der Python-Programmierung.",
+        "hours": "7 H"
+    },
+    "2269": {
+        "name": "Py Array",
+        "description": "Study of arrays, their manipulation, and application in image processing.",
+        "beschreibung": "Untersuchung von Arrays, deren Manipulation und Anwendung in der Bildverarbeitung.",
+        "hours": "7 H"
+    },
+    "2270": {
+        "name": "Py DataTable",
+        "description": "Techniques for loading, manipulating, and presenting tabular data in Python.",
+        "beschreibung": "Techniken zum Laden, Bearbeiten und Darstellen tabellarischer Daten in Python.",
+        "hours": "7 H"
+    },
+    "2271": {
+        "name": "Py OOP",
+        "description": "Principles of object-oriented programming and inheritance in Python.",
+        "beschreibung": "Grundlagen der objektorientierten Programmierung und Vererbung in Python.",
+        "hours": "7 H"
+    },
+    "2272": {
+        "name": "Py StructDes",
+        "description": "Design and analysis of data structures for efficient problem solving in Python.",
+        "beschreibung": "Entwurf und Analyse von Datenstrukturen für effiziente Problemlösung in Python.",
+        "hours": "7 H"
+    },
+    "2306": {
+        "name": "Data Science 0",
+        "description": "Fundamentals of database creation and management for data science tasks.",
+        "beschreibung": "Grundlagen der Datenbankerstellung und -verwaltung für Data-Science-Aufgaben.",
+        "hours": "7 H"
+    },
+    "2318": {
+        "name": "Data Science 1",
+        "description": "Principles and methods for building and maintaining a data warehouse.",
+        "beschreibung": "Prinzipien und Methoden zum Aufbau und zur Pflege eines Data Warehouses.",
+        "hours": "7 H"
+    },
+    "2311": {
+        "name": "Data Science 2",
+        "description": "Techniques for customer segmentation using data analysis and clustering.",
+        "beschreibung": "Techniken zur Kundensegmentierung mittels Datenanalyse und Clustering.",
+        "hours": "7 H"
+    },
+    "2316": {
+        "name": "Data Science 3",
+        "description": "Introduction to data science concepts and practical analytical methods.",
+        "beschreibung": "Einführung in Data-Science-Konzepte und praktische Analysemethoden.",
+        "hours": "7 H"
+    },
+    "2317": {
+        "name": "Data Science 4",
+        "description": "Advanced data science techniques for real-world data analysis projects.",
+        "beschreibung": "Fortgeschrittene Data-Science-Techniken für reale Analyseprojekte.",
+        "hours": "7 H"
     }
 }
