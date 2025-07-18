@@ -36,6 +36,13 @@
   }
 }
 \AddToShipoutPictureBG*{\BackgroundPic}
+\AddToShipoutPicture*{
+  \begin{tikzpicture}[remember picture, overlay]
+    \node at (2.51cm, 27.66cm) {
+      \includegraphics[width=2.7cm]{42_logo.png}
+    };
+  \end{tikzpicture}
+}
 
 \begin{document}
 \fontsize{10}{12}\selectfont
@@ -48,15 +55,6 @@
 \definecolor{lightgrey}{gray}{0.9}
 
 \newcommand{\myHeader}{
-
-% SMALL LOGO top-left (2cm from top, 2cm from left)
-\AddToShipoutPicture*{
-  \begin{tikzpicture}[remember picture, overlay]
-    \node at (2.51cm, 27.66cm) {
-      \includegraphics[width=2.7cm]{42_logo.png}
-    };
-  \end{tikzpicture}
-}
 
   % MAIN LAYOUT
   \noindent
