@@ -24,7 +24,7 @@ def fetch_user_data(access_token, USER_URL):
     user_response.raise_for_status()
     return user_response.json()
 
-def generate_transcript(date_of_birth=None, location_of_birth=None):
+def generate_transcript(date_of_birth=None, location_of_birth=None, language=None, transcript_type=None):
     """Generate the transcript PDF by filling the template and generating the PDF file."""
-    fill_template(date_of_birth=date_of_birth, location_of_birth=location_of_birth)
+    fill_template(date_of_birth=date_of_birth, location_of_birth=location_of_birth, language=language, transcript_type=transcript_type)
     generate_pdf() 

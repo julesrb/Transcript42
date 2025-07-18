@@ -251,7 +251,7 @@ def organize_projects_by_category(parsed: dict) -> dict:
     }
 
 
-def prepare_template_variables(data: dict, parsed: dict, organized: dict, date_of_birth=None, location_of_birth=None) -> dict:
+def prepare_template_variables(data: dict, parsed: dict, organized: dict, date_of_birth=None, location_of_birth=None, language=None, transcript_type=None) -> dict:
     """Prepare all variables required for the LaTeX template."""
     school_address = """42 Berlin\nHarzer Straße 39\n12059 Berlin\nGERMANY"""
     first_name = data["first_name"].upper()
@@ -280,6 +280,8 @@ def prepare_template_variables(data: dict, parsed: dict, organized: dict, date_o
         "core_started": core_started,
         "core_completed": core_completed,
         "advanced_completed": advanced_completed,
+        "language": language,
+        "transcript_type": transcript_type,
     }
     extra_vars.update(organized)
     return extra_vars
@@ -294,12 +296,12 @@ def render_and_save_template(template_path: str, variables: dict, output_path: s
         f.write(output_tex)
 
 
-def fill_template(date_of_birth=None, location_of_birth=None):
+def fill_template(date_of_birth=None, location_of_birth=None, language=None, transcript_type=None):
     """Orchestrate the transcript template filling process."""
     user_data, projects_dict = load_data("./data/user.json", "./projects/projects_dict.json")
     parsed = parse_projects(user_data, projects_dict)
     with open("./data/user_prj.json", "w", encoding="utf-8") as f:
         json.dump(parsed, f, ensure_ascii=False, indent=4, default=str)
     organized = organize_projects_by_category(parsed)
-    variables = prepare_template_variables(user_data, parsed, organized, date_of_birth, location_of_birth)
+    variables = prepare_template_variables(user_data, parsed, organized, date_of_birth, location_of_birth, language, transcript_type)
     render_and_save_template("./src/transcript_template.tex", variables, "./data/output.tex")

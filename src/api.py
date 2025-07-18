@@ -79,6 +79,18 @@ def complete_profile():
             <form action="/transcript" method="post">
                 <label>Date of Birth: <input type="date" name="date_of_birth" required></label><br>
                 <label>Location of Birth: <input type="text" name="location_of_birth" required></label><br>
+                <label>Language:
+                    <select name="language" required>
+                        <option value="en">English</option>
+                        <option value="de">German</option>
+                    </select>
+                </label><br>
+                <label>Transcript Type:
+                    <select name="transcript_type" required>
+                        <option value="core">Core</option>
+                        <option value="core_advanced">Core + Advanced</option>
+                    </select>
+                </label><br>
                 <button type="submit">Generate Transcript</button>
             </form>
         </body>
@@ -90,8 +102,10 @@ def create_transcript(
     request: Request,
     date_of_birth: str = Form(...),
     location_of_birth: str = Form(...),
+    language: str = Form(...),
+    transcript_type: str = Form(...),
 ):
-    generate_transcript(date_of_birth=date_of_birth, location_of_birth=location_of_birth)
+    generate_transcript(date_of_birth=date_of_birth, location_of_birth=location_of_birth, language=language, transcript_type=transcript_type)
     # Return the PDF as before
     first_name = "Unknown" # Placeholder, actual user data is not available here
     last_name = "Unknown" # Placeholder
