@@ -23,7 +23,7 @@ install: venv
 	$(PIP) install -r requirements.txt
 
 run: 
-	$(PYTHON) src/main.py
+	$(PYTHON) -m src.main
 
 serve: docker-image venv install
 	$(VENV_DIR)/bin/uvicorn src.api:app --host 0.0.0.0 --port 80 --reload
