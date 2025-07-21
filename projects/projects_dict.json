@@ -24,68 +24,68 @@
     },
     "1327": {
         "name": "get_next_line",
-        "description": "Read file or input content line by line with buffer management.",
-        "beschreibung": "Datei- oder Eingabezeilen mit Buffer-Management zeilenweise einlesen.",
+        "description": "Read file or input content line by line with buffer management in C.",
+        "beschreibung": "Datei- oder Eingabezeilen mit Buffer-Management in C zeilenweise einlesen.",
         "hours": "70 H"
     },
     "2008": {
         "name": "FdF",
-        "description": "3D wireframe rendering using a basic graphics window and event handling.",
-        "beschreibung": "3D-Wireframe-Rendering mit einfacher Grafik und Event-Handling.",
+        "description": "3D wireframe rendering using a basic graphics window and event handling in C.",
+        "beschreibung": "3D-Wireframe-Rendering mit Grafik und Event-Handling in C.",
         "hours": "60 H"
     },
     "2009": {
         "name": "so_long",
-        "description": "Create 2D maze game with player movement, collectibles, and event handling.",
-        "beschreibung": "2D-Maze-Game mit Player-Movement, Collectibles und Event-Handling entwickeln.",
+        "description": "Create 2D game with player movement, collectibles, and event handling in C.",
+        "beschreibung": "2D-Game mit Player-Movement, Collectibles und Events in C entwickeln.",
         "hours": "60 H"
     },
     "1476": {
         "name": "fract-ol",
-        "description": "Render Mandelbrot and Julia fractals with zoom and mouse controls.",
-        "beschreibung": "Mandelbrot- und Julia-Fraktale mit Zoom und Maussteuerung rendern.",
+        "description": "Render Mandelbrot and Julia fractals with zoom and mouse controls in C.",
+        "beschreibung": "Mandelbrot- und Julia-Fraktale mit Zoom und Maussteuerung in C rendern.",
         "hours": "60 H"
     },
     "1471": {
         "name": "push_swap",
-        "description": "Sort a stack with a minimal set of operations using sorting algorithms.",
-        "beschreibung": "Stack mit minimalen Operationen per Sorting-Algorithmus sortieren.",
+        "description": "Sort a stack with a minimal set of operations using sorting algorithms in C.",
+        "beschreibung": "Stack mit minimalen Operationen per Sorting-Algorithmus in C sortieren.",
         "hours": "60 H"
     },
     "2005": {
         "name": "minitalk",
-        "description": "Exchange messages between processes via UNIX signals.",
-        "beschreibung": "Nachrichten zwischen Prozessen via UNIX-Signalen austauschen.",
+        "description": "Exchange messages between processes via UNIX signals in C.",
+        "beschreibung": "Nachrichten zwischen Prozessen via UNIX-Signalen in C austauschen.",
         "hours": "50 H"
     },
     "2004": {
         "name": "pipex",
-        "description": "Implement UNIX pipe mechanics to connect processes and manage i/o streams",
-        "beschreibung": "UNIX-Pipe-Mechanik für Prozessverbindung und I/O-Stream-Handling umsetzen.",
+        "description": "Implement UNIX pipe mechanics to connect processes and manage i/o in C.",
+        "beschreibung": "UNIX-Pipe-Mechanik für Prozessverbindung und I/O-Handling in C umsetzen.",
         "hours": "50 H"
     },
     "1331": {
         "name": "minishell",
-        "description": "Build a simple shell handling commands, paths, and environment variables.",
-        "beschreibung": "Einfache Shell für Commands, Pfade und Environment-Variablen bauen.",
+        "description": "Build a simple shell handling commands, paths, and env variables in C.",
+        "beschreibung": "Einfache Shell für Commands, Pfade und Env-Variablen in C bauen.",
         "hours": "210 H"
     },
     "1334": {
         "name": "Philosophers",
-        "description": "Learn concurrency using threads and mutexes in the classic dining problem.",
-        "beschreibung": "Klassisches Dining-Problem: Concurrency mit Threads und Mutexes lernen.",
+        "description": "Learn concurrency using threads and mutexes in the dining problem in C.",
+        "beschreibung": "Dining-Problem: Concurrency mit Threads und Mutexes in C lernen.",
         "hours": "70 H"
     },
     "1326": {
         "name": "cub3d",
-        "description": "Raycasting-based 3D maze viewer inspired by 90s FPS games.",
-        "beschreibung": "Raycasting-3D-Maze-Viewer inspiriert von 90er-FPS-Games entwickeln.",
+        "description": "Raycasting-based 3D maze viewer inspired by 90s FPS games in C.",
+        "beschreibung": "Raycasting-3D-Maze-Viewer inspiriert von 90er-FPS-Games in C entwickeln.",
         "hours": "280 H"
     },
     "1315": {
         "name": "miniRT",
-        "description": "Build a ray tracer rendering 3D scenes with basic shapes and lighting.",
-        "beschreibung": "Raytracer für 3D-Szenen mit Grundformen und Lighting entwickeln.",
+        "description": "Build a ray tracer rendering 3D scenes with shapes and lighting in C.",
+        "beschreibung": "Raytracer für 3D-Szenen mit Grundformen und Lighting in C entwickeln.",
         "hours": "280 H"
     },
     "2007": {
@@ -162,8 +162,8 @@
     },
     "1332": {
         "name": "webserv",
-        "description": "Build an HTTP server to handle requests, responses, and browser testing.",
-        "beschreibung": "HTTP-Server für Requests, Responses und Browser-Testing bauen.",
+        "description": "Build an HTTP server to handle requests, responses, and browser testing in c++.",
+        "beschreibung": "HTTP-Server für Requests, Responses und Browser-Testing in C++ bauen.",
         "hours": "175 H"
     },
     "1983": {
@@ -255,13 +255,13 @@
         "beschreibung": "Einen virtuellen Arena für Assembly-Programme und VM-Design simulieren.",
         "hours": ""
     },
-    "2267": {
+    "22670000000000": {
         "name": "PyDataSci",
         "description": "Intensive introduction to Python for data science applications.",
         "beschreibung": "Intensive Einführung in Python für Anwendungen der Datenwissenschaft.",
         "hours": "35 H"
     },
-    "2295": {
+    "22950000000000": {
         "name": "PiscineDataSci",
         "description": "Introductory immersion in data science professions and tools.",
         "beschreibung": "Einführung in die Berufe der Datenwissenschaft und Werkzeuge.",
@@ -913,5 +913,65 @@
         "description": "Found and manage a startup as a full-time professional project.",
         "beschreibung": "Ein Startup als vollzeitiges berufliches Projekt gründen und verwalten.",
         "hours": ""
+    },
+    "2268": {
+        "name": "Py Start",
+        "description": "Introduction to Python programming fundamentals and syntax principles.",
+        "beschreibung": "Einführung in die Grundlagen und Syntax der Python-Programmierung.",
+        "hours": "7 H"
+    },
+    "2269": {
+        "name": "Py Array",
+        "description": "Study of arrays, their manipulation, and application in image processing.",
+        "beschreibung": "Untersuchung von Arrays, deren Manipulation und Anwendung in der Bildverarbeitung.",
+        "hours": "7 H"
+    },
+    "2270": {
+        "name": "Py DataTable",
+        "description": "Techniques for loading, manipulating, and presenting tabular data in Python.",
+        "beschreibung": "Techniken zum Laden, Bearbeiten und Darstellen tabellarischer Daten in Python.",
+        "hours": "7 H"
+    },
+    "2271": {
+        "name": "Py OOP",
+        "description": "Principles of object-oriented programming and inheritance in Python.",
+        "beschreibung": "Grundlagen der objektorientierten Programmierung und Vererbung in Python.",
+        "hours": "7 H"
+    },
+    "2272": {
+        "name": "Py StructDes",
+        "description": "Design and analysis of data structures for efficient problem solving in Python.",
+        "beschreibung": "Entwurf und Analyse von Datenstrukturen für effiziente Problemlösung in Python.",
+        "hours": "7 H"
+    },
+    "2306": {
+        "name": "Data Science 0",
+        "description": "Fundamentals of database creation and management for data science tasks.",
+        "beschreibung": "Grundlagen der Datenbankerstellung und -verwaltung für Data-Science-Aufgaben.",
+        "hours": "7 H"
+    },
+    "2318": {
+        "name": "Data Science 1",
+        "description": "Principles and methods for building and maintaining a data warehouse.",
+        "beschreibung": "Prinzipien und Methoden zum Aufbau und zur Pflege eines Data Warehouses.",
+        "hours": "7 H"
+    },
+    "2311": {
+        "name": "Data Science 2",
+        "description": "Techniques for customer segmentation using data analysis and clustering.",
+        "beschreibung": "Techniken zur Kundensegmentierung mittels Datenanalyse und Clustering.",
+        "hours": "7 H"
+    },
+    "2316": {
+        "name": "Data Science 3",
+        "description": "Introduction to data science concepts and practical analytical methods.",
+        "beschreibung": "Einführung in Data-Science-Konzepte und praktische Analysemethoden.",
+        "hours": "7 H"
+    },
+    "2317": {
+        "name": "Data Science 4",
+        "description": "Advanced data science techniques for real-world data analysis projects.",
+        "beschreibung": "Fortgeschrittene Data-Science-Techniken für reale Analyseprojekte.",
+        "hours": "7 H"
     }
 }
