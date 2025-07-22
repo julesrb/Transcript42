@@ -2,9 +2,10 @@
 \usepackage[a4paper, 
 			left=1.2cm, 
 			right=1.2cm, 
-			top=1.0cm, 
-			bottom=1.0cm]{geometry}
-\usepackage[scaled]{helvet} % Helvetica (Arial-like)
+			top=6.5cm, 
+			bottom=2.5cm,
+			headheight=4.5cm]{geometry}
+\usepackage[scaled]{roboto} % Helvetica (Arial-like)
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{array}
 \usepackage{multirow}
@@ -36,62 +37,31 @@
   }
 }
 \AddToShipoutPictureBG*{\BackgroundPic}
+\fontsize{10}{12.1}\selectfont
+\pagestyle{fancy}
+\fancyhf{}
 
-\begin{document}
-\fontsize{10}{12}\selectfont
-\pagestyle{empty}
-
-{%- raw %}
-
-\newcommand{\whitbf}[1]{\textcolor{white}{\textbf{#1}}}
-
-{% endraw -%}
-
-\definecolor{lightgrey}{gray}{0.9}
-
-
-% HEADER
-\newcommand{\myHeader}{
-
-% 42 logo
-\AddToShipoutPicture*{
-  \begin{tikzpicture}[remember picture, overlay]
-    \node at (2.51cm, 27.66cm) {
-      \includegraphics[width=2.7cm]{42_logo.png}
-    };
-  \end{tikzpicture}
-}
-
-\noindent
-\begin{tabularx}{\textwidth}{@{}X X@{}}
-
-% LEFT COLUMN
-\parbox[t]{\dimexpr\linewidth\relax}{
-  \hspace*{3.1cm}%
-  \begin{minipage}[t]{\dimexpr\linewidth-3cm\relax}
+\fancyhead[L]{
+	\fontsize{10}{12}\selectfont
+	\begin{tabularx}{\textwidth}{@{}X X@{}}
+	% LEFT COLUMN
+	\parbox[t]{\dimexpr\linewidth\relax}{
+	\raisebox{-37pt}{\includegraphics[width=4.1cm]{42_BERLIN_logo.png}}
+	\hspace*{-1.6cm}
+	\begin{minipage}[t]{\dimexpr\linewidth-3cm\relax}
+	\vspace{1.03cm}
   {{ school_address | replace("\n", " \\\\ ") }}
-  \vspace{1.23cm}
   \end{minipage}
   \begin{minipage}[t]{\linewidth}
-    \begin{tabular}{@{}l l@{}}
-    {%- if language == 'de' %}
-        Auswahl bestanden am: & {{ passed_selection }} \\
-        Kernstudium begonnen am: & {{ core_started }} \\
-        Kernstudium abgeschlossen am: & {{ core_completed }} \\
-        {% if transcript_type == 'core_advanced' and core_completed != "in progress" -%}
-        Spezialisierung abgeschlossen am: & {{ advanced_completed }} \\
-        {% endif -%}
-    {%- else %}
-        Passed Selection on: & {{ passed_selection }} \\
-        Core Curriculum started on: & {{ core_started }} \\
-        Core Curriculum complete on: & {{ core_completed }} \\
-        {% if transcript_type == 'core_advanced' and core_completed != "in progress" -%}
-        Specialization track complete on: & {{ advanced_completed }} \\
-        {% endif -%}
-    {% endif -%}
-    \end{tabular}
+	\vspace{0.45cm}
+  {%- if language == 'de' %}
+    Ich, Daniel Hadley, Pädagogischer Leiter von 42 Berlin, bestätige, dass die oben genannte Person zum Ausstellungsdatum alle Voraussetzungen erfüllt hat. Dieses Zeugnis wird auf Anfrage für offizielle Zwecke ausgestellt. \\
+  {%- else %}
+    I, Daniel Hadley, Pedagogy Lead of 42 Berlin, certify that the above-named individual has met academic requirements as of the date issued. This transcript is issued upon request for all official purposes. \\
+  {%- endif %}
   \end{minipage}
 }
+
 &
 % RIGHT COLUMN
 \begin{minipage}[t]{\linewidth}
@@ -104,23 +74,28 @@
   \textbf{\large {{ first_name }} {{ last_name }}} \\[0.7em]
   \begin{tabular}{@{}l l@{}}
     {%- if language == 'de' %}
-    Geburtsdatum: & {{ date_of_birth }} \\
-    Geburtsort: & {{ location_of_birth }} \\
-    Ausstellungsdatum: & {{ date_issued }} \\
+        Geburtsdatum: & {{ date_of_birth }} \\
+        Geburtsort: & {{ location_of_birth }} \\
+        Ausstellungsdatum: & {{ date_issued }} \\
+        Auswahl bestanden am: & {{ passed_selection }} \\
+        Kernstudium begonnen am: & {{ core_started }} \\
+        Kernstudium abgeschlossen am: & {{ core_completed }} \\
+        {% if transcript_type == 'core_advanced' and core_completed != "in progress" -%}
+        Spezialisierung abgeschlossen am: & {{ advanced_completed }} \\
+        {% endif -%}
     {%- else %}
-    Date of birth: & {{ date_of_birth }} \\
-    Location of birth: & {{ location_of_birth }} \\
-    Date issued: & {{ date_issued }} \\
-    {%- endif %}
+        Date of birth: & {{ date_of_birth }} \\
+        Location of birth: & {{ location_of_birth }} \\
+        Date issued: & {{ date_issued }} \\
+        Passed Selection on: & {{ passed_selection }} \\
+        Core Curriculum started on: & {{ core_started }} \\
+        Core Curriculum complete on: & {{ core_completed }} \\
+        {% if transcript_type == 'core_advanced' and core_completed != "in progress" -%}
+        Specialization track complete on: & {{ advanced_completed }} \\
+        {% endif -%}
+    {% endif -%}
   \end{tabular}
 
-  \vspace{0.38cm}
-  {%- if language == 'de' %}
-    Ich, Daniel Hadley, Pädagogischer Leiter von 42 Berlin, bestätige, dass die oben genannte Person zum Ausstellungsdatum alle Voraussetzungen erfüllt hat. Dieses Zeugnis wird auf Anfrage für offizielle Zwecke ausgestellt. \\
-  {%- else %}
-    I, Daniel Hadley, Pedagogy Lead of 42 Berlin, certify that the above-named individual has met academic requirements as of the date issued. This transcript is issued upon request for all official purposes. \\
-  {%- endif %}
-  \vspace{-0.5cm}
   \begin{flushright}
   {%- if language == 'de' %}
     Seite: \thepage{} / \pageref{LastPage}
@@ -130,13 +105,33 @@
   \end{flushright}
   }
   \end{minipage}
-  \end{tabularx}
-  \vspace{-0.4cm}
 
+\end{tabularx}
 }
-% ENF OF HEADER
+	
 
-\myHeader
+
+\fancyfoot[C]{
+  \fontsize{8}{10}\selectfont
+  www.42berlin.de -- @42berlin\_ \\
+  Eingetragener Verein, gemeinnützig (equivalent to non-profit charity organisation) \\
+  Register No: VR 201961
+}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+\begin{document}
+\fontsize{10}{12}\selectfont
+
+
+{%- raw %}
+\newcommand{\whitbf}[1]{\textcolor{white}{\textbf{#1}}}
+{% endraw -%}
+
+\definecolor{lightgrey}{gray}{0.9}
+
+
 
 \begin{center}
   {%- if language == 'de' %}
@@ -210,7 +205,7 @@ At 42, project grades are given on a scale from 0 to 100. A grade of 100 reflect
 
 \AddToShipoutPictureBG*{\BackgroundPic}
 
-\myHeader
+% \myHeader
 
 \begin{center}
   {%- if language == 'de' %}
@@ -345,7 +340,7 @@ At 42, project grades are given on a scale from 0 to 100. A grade of 100 reflect
 \AddToShipoutPictureBG*{\BackgroundPic}
 \label{LastPage}
 
-\myHeader
+% \myHeader
 
 \begin{center}
   {%- if language == 'de' %}
