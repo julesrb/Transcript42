@@ -71,6 +71,7 @@
   \textbf{\large TRANSCRIPT OF ACADEMIC RECORD} \\[0.5em]
   {%- endif %}
   \textbf{\large {{ first_name }} {{ last_name }}} \\[0.7em]
+  \renewcommand{\arraystretch}{1}
   \begin{tabular}{@{}l l@{}}
     {%- if language == 'de' %}
         Geburtsdatum: & {{ date_of_birth }} \\
