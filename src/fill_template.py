@@ -267,7 +267,7 @@ def organize_projects_by_category(parsed: dict) -> dict:
 
 def prepare_template_variables(data: dict, parsed: dict, organized: dict, date_of_birth=None, location_of_birth=None, language=None, transcript_type=None) -> dict:
     """Prepare all variables required for the LaTeX template."""
-    school_address = """42 Berlin\nHarzer Straße 39\n12059 Berlin\nGERMANY"""
+    school_address = """Harzer Straße 39\n12059 Berlin\nGERMANY"""
     first_name = data["first_name"].upper()
     last_name = data["last_name"].upper()
     # Format date_of_birth if provided
