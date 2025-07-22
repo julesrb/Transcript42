@@ -32,6 +32,6 @@ jobs:
             git fetch origin &&
             git reset --hard origin/main
           fi &&
-          pkill uvicorn || echo 'No uvicorn process found.' &&
+          pkill gunicorn || echo 'No uvicorn process found.' &&
           make serve
         "
