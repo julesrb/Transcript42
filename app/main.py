@@ -49,9 +49,6 @@ def create_transcript(
 	transcript_type: str = Form(...),
 ):
 	user_path = os.path.join("data", f"user_{user_id}")
-	if not os.path.exists(user_path):
-		return HTMLResponse("<h1>User data not found. Please log in again.</h1>", status_code=401)
-
 	try:
 		with open(user_path + ".json", "r", encoding="utf-8") as f:
 			user_data = json.load(f)
@@ -83,9 +80,7 @@ def create_transcript(
 		return HTMLResponse("<h1>PDF not found after generation.</h1>", status_code=500)
 
 
-#TODO clean up git secrets
-
-@app.get("/logs") #TODO add secured log function
+@app.get("/logs") #TODO add more secured log function
 def get_logs(password: str = ""):
 	if password != LOG_VIEW_PASSWORD:
 		return HTMLResponse("<h1>Unauthorized</h1>", status_code=401)
