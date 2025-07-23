@@ -287,13 +287,13 @@
     "1404": {
         "name": "snow-crash",
         "description": "Intro to computer security: analyze vulnerabilities and code logic.",
-        "beschreibung": "Einführung in die Computer-Sicherheit: Sicherheitslücken und Code-Logik analysieren.",
+        "beschreibung": "Einführung in Sicherheitslücken und Logik-Analyse.",
         "hours": ""
     },
     "1405": {
         "name": "darkly",
         "description": "Dissect a vulnerable website to study web security fundamentals.",
-        "beschreibung": "Eine gefährliche Website zur Untersuchung grundlegender Web-Sicherheitsaspekte zerlegen.",
+        "beschreibung": "Website zur Analyse von Web-Sicherheit untersuchen.",
         "hours": ""
     },
     "1417": {
@@ -305,7 +305,7 @@
     "1418": {
         "name": "dr-quine",
         "description": "Explore auto-replication and recursion in algorithmic programming.",
-        "beschreibung": "Automatische Replikation und Rekursion in algorithmischen Programmierung erkunden.",
+        "beschreibung": "Replikation und Rekursion in Algorithmen erkunden.",
         "hours": ""
     },
     "1419": {
@@ -329,7 +329,7 @@
     "1444": {
         "name": "war",
         "description": "Implement runtime binary signature modification for advanced viruses.",
-        "beschreibung": "Laufzeit-Binär-Signaturen-Modifikation für fortgeschrittene Viren implementieren.",
+        "beschreibung": "Binärsignaturen für fortgeschrittene Viren verändern.",
         "hours": ""
     },
     "1445": {
@@ -341,31 +341,31 @@
     "1446": {
         "name": "boot2root",
         "description": "Collaborate to escalate privileges and gain root on a provided ISO.",
-        "beschreibung": "Mitarbeit zur Privilegien-Erhöhung und Root-Zugriff auf eine bereitgestellte ISO.",
+        "beschreibung": "Root-Zugriff auf ISO im Team gemeinsam erarbeiten.",
         "hours": "49 H"
     },
     "1447": {
         "name": "ft_shield",
         "description": "Create a daemon to implement a basic trojan for system security study.",
-        "beschreibung": "Einen Daemon erstellen, um ein grundlegendes Trojaner für die System-Sicherheitsstudie zu implementieren.",
+        "beschreibung": "Daemon mit Trojaner für Sicherheitssimulation bauen.",
         "hours": ""
     },
     "1448": {
         "name": "override",
         "description": "Analyze protected binaries and reconstruct them to find vulnerabilities.",
-        "beschreibung": "Geschützte Binärdateien analysieren und Rekonstruktion zur Suche nach Schwachstellen durchführen.",
+        "beschreibung": "Geschützte Binaries analysieren und rekonstruieren.",
         "hours": ""
     },
     "1840": {
         "name": "ft_malcolm",
         "description": "Study network security via Man-in-the-Middle attack implementation.",
-        "beschreibung": "Netzwerksicherheit durch Implementierung eines Man-in-the-Middle-Angriffs studieren.",
+        "beschreibung": "MitM-Angriff zur Analyse der Netzwerksicherheit bauen.",
         "hours": ""
     },
     "2097": {
         "name": "tinky-winkey",
         "description": "Develop a Windows service to implement and analyze a keylogger.",
-        "beschreibung": "Einen Windows-Service entwickeln, um einen Tastaturprotokollierer zu implementieren und zu analysieren.",
+        "beschreibung": "Windows-Dienst mit Keylogger analysieren und bauen.",
         "hours": ""
     },
     "2346": {
@@ -388,7 +388,7 @@
     "1397": {
         "name": "ft_ping",
         "description": "Reimplement ping to study raw IP communication and networking.",
-        "beschreibung": "Ping neu implementieren, um Roh-IP-Kommunikation und Netzwerk-Kenntnisse studieren.",
+        "beschreibung": "Ping neu bauen für Studium von IP und Netzwerken.",
         "hours": ""
     },
     "1399": {
@@ -412,7 +412,7 @@
     "2071": {
         "name": "BgpAutonSys",
         "description": "Simulate VXLAN+BGP-EVPN networks in GNS3 to deepen NetPractice skills.",
-        "beschreibung": "VXLAN+BGP-EVPN-Netzwerke in GNS3 simulieren, um NetPractice-Kenntnisse zu vertiefen.",
+        "beschreibung": "VXLAN+BGP-EVPN-Netze in GNS3 zur Übung simulieren.",
         "hours": "200 H"
     },
     "1000004": {
@@ -429,7 +429,7 @@
     "1395": {
         "name": "swifty-comp",
         "description": "Create a mobile app to retrieve and display 42 student information.",
-        "beschreibung": "Eine mobile App erstellen, um 42-Studenten-Informationen abzurufen und anzuzeigen.",
+        "beschreibung": "42-App zum Anzeigen von Studentendaten erstellen.",
         "hours": "49 H"
     },
     "1396": {
@@ -441,7 +441,7 @@
     "1401": {
         "name": "matcha",
         "description": "Develop a dating site using a micro-framework and user interaction.",
-        "beschreibung": "Eine Dating-Website mit einem Micro-Framework und Benutzerinteraktion entwickeln.",
+        "beschreibung": "Dating-App mit Micro-Framework und User-Logik bauen.",
         "hours": ""
     },
     "1402": {
@@ -453,19 +453,19 @@
     "1406": {
         "name": "swifty-prot",
         "description": "Model 3D ligands in a mobile app to deepen framework knowledge.",
-        "beschreibung": "3D-Liganden in einer mobilen App modellieren, um Framework-Kenntnisse zu vertiefen.",
+        "beschreibung": "3D-Liganden in App modellieren, Framework üben.",
         "hours": ""
     },
     "1427": {
         "name": "music-room",
         "description": "Develop a collaborative playlist app with native and backend components.",
-        "beschreibung": "Eine zusammenarbeitende Playlist-App mit nativen und Backend-Komponenten entwickeln.",
+        "beschreibung": "Playlist-App mit nativer und Backend-Logik bauen.",
         "hours": "196 H"
     },
     "1428": {
         "name": "red-tetris",
         "description": "Create a networked multiplayer Tetris game using full stack JavaScript.",
-        "beschreibung": "Einen netzwerkbasierten Multiplayer-Tetris-Spiel mit vollständigem Stack in JavaScript erstellen.",
+        "beschreibung": "Multiplayer-Tetris mit Fullstack-JavaScript umsetzen.",
         "hours": "147 H"
     },
     "2179": {
@@ -500,7 +500,7 @@
     "1330": {
         "name": "libasm",
         "description": "Gain proficiency in assembly language through practical implementation.",
-        "beschreibung": "Professionelle Fertigkeiten in Assembler-Sprache durch praktische Implementierung erlangen.",
+        "beschreibung": "Assembler-Skills durch praktische Übungen stärken.",
         "hours": ""
     },
     "1386": {
@@ -512,7 +512,7 @@
     "1388": {
         "name": "strace",
         "description": "Reimplement strace to list syscalls and study process tracing.",
-        "beschreibung": "Strace neu implementieren, um Systemaufrufe aufzulisten und Prozess-Ablaufverfolgung studieren.",
+        "beschreibung": "Strace neu bauen zur Prozess- und Syscall-Analyse.",
         "hours": ""
     },
     "1415": {
@@ -530,7 +530,7 @@
     "1420": {
         "name": "matt-daemon",
         "description": "Create a Unix daemon server to interpret and execute commands.",
-        "beschreibung": "Einen Unix-Daemon-Server erstellen, um Befehle zu interpretieren und auszuführen.",
+        "beschreibung": "Unix-Daemon zur Befehlsausführung entwickeln.",
         "hours": ""
     },
     "1421": {
@@ -542,31 +542,31 @@
     "1422": {
         "name": "drv-interrupts",
         "description": "Connect and manage drivers and interrupts in a custom kernel.",
-        "beschreibung": "Treiber und Interrupts in einem benutzerdefinierten Kernel verbinden und verwalten.",
+        "beschreibung": "Treiber und Interrupts im Kernel verwalten.",
         "hours": ""
     },
     "1423": {
         "name": "filesystem",
         "description": "Design and implement a custom filesystem for a Linux kernel.",
-        "beschreibung": "Einen benutzerdefinierten Dateisystem-Design und -Implementierung für einen Linux-Kernel erstellen.",
+        "beschreibung": "Eigenes Dateisystem für Linux-Kernel erstellen.",
         "hours": ""
     },
     "1424": {
         "name": "kfs-2",
         "description": "Create a kernel from scratch, deepening kernel programming skills.",
-        "beschreibung": "Einen Kernel von Grund auf neu erstellen, um Kernel-Programmierungsfähigkeiten zu vertiefen.",
+        "beschreibung": "Kernel neu bauen und Skills vertiefen.",
         "hours": ""
     },
     "1425": {
         "name": "kfs-1",
         "description": "Create a kernel from scratch, deepening kernel programming skills.",
-        "beschreibung": "Einen Kernel von Grund auf neu erstellen, um Kernel-Programmierungsfähigkeiten zu vertiefen.",
+        "beschreibung": "Kernel neu bauen und Skills vertiefen.",
         "hours": ""
     },
     "1426": {
         "name": "kfs-3",
         "description": "Manage memory in a custom kernel as part of kernel development.",
-        "beschreibung": "Speicherverwaltung in einem benutzerdefinierten Kernel als Teil der Kernel-Entwicklung verwalten.",
+        "beschreibung": "Speicher im eigenen Kernel gezielt verwalten.",
         "hours": ""
     },
     "1431": {
@@ -584,7 +584,7 @@
     "1438": {
         "name": "kfs-6",
         "description": "Advance kernel development by implementing a custom filesystem.",
-        "beschreibung": "Kernel-Entwicklung durch Implementierung eines benutzerdefinierten Dateisystems fortsetzen.",
+        "beschreibung": "Eigenes Dateisystem für Kernel implementieren.",
         "hours": ""
     },
     "1439": {
@@ -614,19 +614,19 @@
     "1456": {
         "name": "usr-digress",
         "description": "Develop a custom userspace init binary for system initialization.",
-        "beschreibung": "Ein benutzerdefiniertes Userspace-Init-Binär für Systeminitialisierung entwickeln.",
+        "beschreibung": "Init-Binary für Userspace-Systemstart entwickeln.",
         "hours": ""
     },
     "1464": {
         "name": "lem-ipc",
         "description": "Implement local IPC using UNIX tools in a board game client.",
-        "beschreibung": "Lokale IPC mithilfe von UNIX-Werkzeugen in einem Brettspiel-Client implementieren.",
+        "beschreibung": "Lokale IPC mit UNIX-Werkzeugen im Spielclient nutzen.",
         "hours": ""
     },
     "1467": {
         "name": "nm",
         "description": "Recreate nm to analyze Linux executables and symbol tables.",
-        "beschreibung": "Nm neu erstellen, um Linux-Ausführbare zu analysieren und Symboltabellen zu analysieren.",
+        "beschreibung": "Nm neu bauen zur Analyse von Binaries und Symbolen.",
         "hours": ""
     },
     "1468": {
@@ -644,7 +644,7 @@
     "1854": {
         "name": "42sh",
         "description": "Develop a full-featured shell with advanced UNIX and POSIX features.",
-        "beschreibung": "Einen voll funktionsfähigen Shell mit fortgeschrittenen UNIX- und POSIX-Funktionen entwickeln.",
+        "beschreibung": "Shell mit fortgeschrittenem UNIX und POSIX bauen.",
         "hours": ""
     },
     "1000006": {
@@ -655,13 +655,13 @@
     "1387": {
         "name": "42run",
         "description": "Create a 3D game in OpenGL, focusing on meshes and GPU-based gameplay.",
-        "beschreibung": "Eine 3D-Spiel in OpenGL erstellen, das auf Meshes und GPU-basiertem Spielprinzip basiert.",
+        "beschreibung": "OpenGL-Spiel mit Meshes und GPU-Logik umsetzen.",
         "hours": ""
     },
     "1389": {
         "name": "bomberman",
         "description": "Recode Bomberman in C++ and OpenGL for advanced game development.",
-        "beschreibung": "Bomberman in C++ und OpenGL neu codieren, um fortgeschrittene Spielentwicklung zu ermöglichen.",
+        "beschreibung": "Bomberman mit OpenGL für Game-Dev neu bauen.",
         "hours": ""
     },
     "1390": {
@@ -673,13 +673,13 @@
     "1394": {
         "name": "humangl",
         "description": "Model and animate humanoid figures using hierarchical OpenGL techniques.",
-        "beschreibung": "Humanoide Figuren mithilfe hierarchischer OpenGL-Techniken modellieren und animieren.",
+        "beschreibung": "Humanoide mit hierarchischem OpenGL animieren.",
         "hours": ""
     },
     "1408": {
         "name": "xv",
         "description": "Develop a Unity-based interface to optimize industrial processes.",
-        "beschreibung": "Eine Unity-basierte Schnittstelle entwickeln, um industrielle Prozesse zu optimieren.",
+        "beschreibung": "Unity-Interface für Industrieprozesse entwickeln.",
         "hours": ""
     },
     "1409": {
@@ -691,13 +691,13 @@
     "1410": {
         "name": "part-system",
         "description": "Design a GPU-accelerated particle system meeting performance constraints.",
-        "beschreibung": "Einen GPU-beschleunigten Partikelsystem-Design entwerfen, das Leistungskonstrainten erfüllt.",
+        "beschreibung": "GPU-Partikelsystem mit Performance-Optimierung bauen.",
         "hours": ""
     },
     "1449": {
         "name": "ft_vox",
         "description": "Implement a voxel engine to generate a 3D world, inspired by Minecraft.",
-        "beschreibung": "Einen Voxel-Engine implementieren, um eine 3D-Welt zu generieren, inspiriert von Minecraft.",
+        "beschreibung": "Voxel-Engine im Minecraft-Stil implementieren.",
         "hours": ""
     },
     "1454": {
@@ -715,7 +715,7 @@
     "1458": {
         "name": "doom-nukem",
         "description": "Advance raycasting and game design by merging Doom and Duke Nukem 3D.",
-        "beschreibung": "Raycasting und Spielentwicklung durch Zusammenführung von Doom und Duke Nukem 3D fortsetzen.",
+        "beschreibung": "Raycasting mit Doom und Duke Nukem kombinieren.",
         "hours": ""
     },
     "1462": {
@@ -727,19 +727,19 @@
     "1855": {
         "name": "rt",
         "description": "Implement advanced raytracing: mirrors, transparency, and textures.",
-        "beschreibung": "Fortgeschrittene Raytracing-Techniken: Spiegel, Transparenz und Texturen implementieren.",
+        "beschreibung": "Raytracing mit Spiegeln, Transparenz und Texturen.",
         "hours": ""
     },
     "1962": {
         "name": "ft_newton",
         "description": "Develop a basic physics engine for motion, gravity, and collisions.",
-        "beschreibung": "Einen grundlegenden Physik-Engine für Bewegung, Schwerkraft und Kollisionen entwickeln.",
+        "beschreibung": "Physik-Engine für Bewegung und Kollision bauen.",
         "hours": ""
     },
     "2126": {
         "name": "ft_minecraft",
         "description": "Extend voxel engine with procedural generation, rendering, and networking.",
-        "beschreibung": "Voxel-Engine mit Prozeduraler Generierung, Rendering und Netzwerk-Funktionalität erweitern.",
+        "beschreibung": "Voxel-Engine mit Netzwerk und Procedural erweitern.",
         "hours": ""
     },
     "2288": {
@@ -768,7 +768,7 @@
     "1450": {
         "name": "ft_ssl_rsa",
         "description": "Generate random primes and create private RSA keys from scratch.",
-        "beschreibung": "Zufällige Primzahlen generieren und private RSA-Schlüssel von Grund auf erstellen.",
+        "beschreibung": "RSA-Schlüssel mit Zufallsprimes selbst erstellen.",
         "hours": ""
     },
     "1451": {
@@ -846,13 +846,13 @@
     "1635": {
         "name": "Open Project",
         "description": "Manage a long-term project with computer science elements in a team.",
-        "beschreibung": "Einen langfristigen Projekt mit Computer-Wissenschaftselementen in einer Team arbeiten.",
+        "beschreibung": "CS-Projekt langfristig im Team organisieren.",
         "hours": "180 D"
     },
     "2065": {
         "name": "Rushes",
         "description": "Intensive collaborative sprints to solve advanced technical challenges.",
-        "beschreibung": "Intensive zusammenarbeitende Sprints zur Lösung fortgeschrittener technischer Herausforderungen.",
+        "beschreibung": "Sprints zur Lösung technischer Probleme meistern.",
         "hours": ""
     },
     "2364": {
@@ -870,7 +870,7 @@
     "2380": {
         "name": "ft_lex",
         "description": "Implement a regex engine for lexical analysis and finite automata.",
-        "beschreibung": "Einen Regex-Engine für lexikalische Analyse und endliche Automaten implementieren.",
+        "beschreibung": "Regex-Engine für Lexer und Automaten entwickeln.",
         "hours": ""
     },
     "2381": {
@@ -887,13 +887,13 @@
     "1638": {
         "name": "WorkExpI",
         "description": "Apply professional skills and adaptability in a real-world company setting.",
-        "beschreibung": "Berufliche Fähigkeiten und Anpassungsfähigkeit in einem realen Unternehmensumfeld anwenden.",
+        "beschreibung": "Skills in realem Berufsumfeld anwenden.",
         "hours": ""
     },
     "1644": {
         "name": "WorkExpII",
         "description": "Demonstrate expertise and integration during a second professional internship.",
-        "beschreibung": "Fachkompetenz und Integration während eines zweiten beruflichen Praktikums beweisen.",
+        "beschreibung": "Kompetenz im zweiten Praktikum zeigen.",
         "hours": ""
     },
     "1650": {
@@ -923,7 +923,7 @@
     "2269": {
         "name": "Py Array",
         "description": "Study of arrays, their manipulation, and application in image processing.",
-        "beschreibung": "Untersuchung von Arrays, deren Manipulation und Anwendung in der Bildverarbeitung.",
+        "beschreibung": "Arrays analysieren und für Bildverarbeitung nutzen.",
         "hours": "7 H"
     },
     "2270": {
