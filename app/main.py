@@ -7,6 +7,8 @@ from fastapi.responses import HTMLResponse, FileResponse, JSONResponse, Redirect
 import os
 import json
 import urllib.parse
+import logging
+import traceback
 
 app = FastAPI()
 
@@ -58,6 +60,7 @@ def create_transcript(
 	try:
 		fill_latex_template(user_path, user_data, date_of_birth, location_of_birth, language, transcript_type)
 	except Exception as e:
+		logging.error("Error generating transcript: %s\n%s", e, traceback.format_exc())
 		return HTMLResponse(f"<h1>User Data can't be used to generate a transcipt</h1>", status_code=500)
 	
 	try:
