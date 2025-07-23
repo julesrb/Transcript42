@@ -26,13 +26,13 @@ run:
 	$(PYTHON) -m src.local
 
 serve: docker-image venv install
-	nohup $(VENV_DIR)/bin/gunicorn src.api:app \
-    --workers 1 \
-    --worker-class uvicorn.workers.UvicornWorker \
-    --bind 0.0.0.0:80 \
-    --access-logfile - \
-    --error-logfile - \
-    >> data/logs.log 2>&1 &
+	PYTHONPATH=app nohup $(VENV_DIR)/bin/gunicorn app.main:app \
+		--workers 1 \
+		--worker-class uvicorn.workers.UvicornWorker \
+		--bind 0.0.0.0:80 \
+		--access-logfile - \
+		--error-logfile - \
+		>> data/logs.log 2>&1 &
 
 clean:
 	rm -rf $(VENV_DIR)

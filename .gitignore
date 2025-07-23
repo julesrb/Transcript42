@@ -1,5 +1,5 @@
 .venv
-/src/__pycache__
+/app/__pycache__
 /data/*
 !/data/42_Logo.png
 !/data/Silka-Medium.otf
