@@ -23,7 +23,7 @@ install: venv
 	$(PIP) install -r requirements.txt
 
 run: 
-	$(PYTHON) -m src.local
+	$(PYTHON) -m app.local
 
 serve: docker-image venv install
 	PYTHONPATH=app nohup $(VENV_DIR)/bin/gunicorn app.main:app \

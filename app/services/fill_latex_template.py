@@ -32,15 +32,16 @@ def parse_projects(data: dict, pj_dic: dict, language: str = "en") -> dict:
 				description = project_data.get("beschreibung")
 			else:
 				description = project_data.get("description")
-			parsed[project_name] = {
-				"id": project_id,
-				"name": project_data.get("name"),
-				"validated": entry.get("validated?"),
-				"marked_at": marked_at,
-				"description": description,
-				"grade": entry.get("final_mark"),
-				"hours": project_data.get("hours")
-			}
+			if project_data:
+				parsed[project_name] = {
+					"id": project_id,
+					"name": project_data.get("name"),
+					"validated": entry.get("validated?"),
+					"marked_at": marked_at,
+					"description": description,
+					"grade": entry.get("final_mark"),
+					"hours": project_data.get("hours")
+				}
 	return parsed
 
 

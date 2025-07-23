@@ -253,7 +253,7 @@
         "name": "corewar",
         "description": "Simulate a virtual arena for assembly programs and VM design.",
         "beschreibung": "Einen virtuellen Arena für Assembly-Programme und VM-Design simulieren.",
-        "hours": ""
+        "hours": "196 H"
     },
     "22670000000000": {
         "name": "PyDataSci",
@@ -342,7 +342,7 @@
         "name": "boot2root",
         "description": "Collaborate to escalate privileges and gain root on a provided ISO.",
         "beschreibung": "Mitarbeit zur Privilegien-Erhöhung und Root-Zugriff auf eine bereitgestellte ISO.",
-        "hours": ""
+        "hours": "49 H"
     },
     "1447": {
         "name": "ft_shield",
@@ -430,7 +430,7 @@
         "name": "swifty-comp",
         "description": "Create a mobile app to retrieve and display 42 student information.",
         "beschreibung": "Eine mobile App erstellen, um 42-Studenten-Informationen abzurufen und anzuzeigen.",
-        "hours": ""
+        "hours": "49 H"
     },
     "1396": {
         "name": "camagru",
@@ -460,13 +460,13 @@
         "name": "music-room",
         "description": "Develop a collaborative playlist app with native and backend components.",
         "beschreibung": "Eine zusammenarbeitende Playlist-App mit nativen und Backend-Komponenten entwickeln.",
-        "hours": ""
+        "hours": "196 H"
     },
     "1428": {
         "name": "red-tetris",
         "description": "Create a networked multiplayer Tetris game using full stack JavaScript.",
         "beschreibung": "Einen netzwerkbasierten Multiplayer-Tetris-Spiel mit vollständigem Stack in JavaScript erstellen.",
-        "hours": ""
+        "hours": "147 H"
     },
     "2179": {
         "name": "Piscine RoR",
@@ -847,7 +847,7 @@
         "name": "Open Project",
         "description": "Manage a long-term project with computer science elements in a team.",
         "beschreibung": "Einen langfristigen Projekt mit Computer-Wissenschaftselementen in einer Team arbeiten.",
-        "hours": ""
+        "hours": "180 D"
     },
     "2065": {
         "name": "Rushes",

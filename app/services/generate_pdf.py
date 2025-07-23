@@ -9,7 +9,7 @@ def generate_pdf(user_path):
 		# Run pdflatex via Docker
 		subprocess.run([
 			"docker", "run", "--rm",
-			"-v", f"{os.path.abspath("data")}:/workdir",
+			"-v", f"{os.path.abspath('data')}:/workdir",
 			"-w", "/workdir",  # Set working directory in container
 			"pdflatex-image",
 			"-interaction=nonstopmode",
