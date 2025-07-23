@@ -1,5 +1,5 @@
 import requests
-from ..config import USER_URL
+from app.config import USER_URL
 
 def fetch_user_data(access_token):
     """Fetch user data from the 42 API using the access token."""

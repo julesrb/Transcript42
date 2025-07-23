@@ -1,5 +1,5 @@
 import requests
-from ..config import UID, SECRET, REDIRECT_URI, TOKEN_URL
+from app.config import UID, SECRET, REDIRECT_URI, TOKEN_URL
 
 def get_oauth_token(code):
 	"""Exchange the authorization code for an access token."""
