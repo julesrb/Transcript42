@@ -23,16 +23,16 @@ install: venv
 	$(PIP) install -r requirements.txt
 
 run: 
-	$(PYTHON) -m src.main
+	$(PYTHON) -m src.local
 
 serve: docker-image venv install
-	$(VENV_DIR)/bin/gunicorn src.api:app \
+	nohup $(VENV_DIR)/bin/gunicorn src.api:app \
     --workers 1 \
     --worker-class uvicorn.workers.UvicornWorker \
     --bind 0.0.0.0:80 \
     --access-logfile - \
     --error-logfile - \
-    > data/logs.log 2>&1
+    > data/logs.log 2>&1 &
 
 clean:
 	rm -rf $(VENV_DIR)
