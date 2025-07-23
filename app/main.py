@@ -1,11 +1,9 @@
-# from .get_user_data import get_user_data
-from .config import UID, SECRET, REDIRECT_URI, TOKEN_URL, AUTH_URL, LOG_VIEW_PASSWORD, LOG_PATH
+from config import UID, SECRET, REDIRECT_URI, TOKEN_URL, AUTH_URL, LOG_VIEW_PASSWORD, LOG_PATH
 from .services.handle_oauth_redirect import handle_oauth_redirect
 from .services.fill_latex_template import fill_latex_template
 from .services.generate_pdf import generate_pdf
 from fastapi import FastAPI, Request, Form
 from fastapi.responses import HTMLResponse, FileResponse, JSONResponse, RedirectResponse
-import uvicorn
 import os
 import json
 import urllib.parse
