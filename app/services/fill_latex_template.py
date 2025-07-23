@@ -1,6 +1,7 @@
 import json
 from jinja2 import Template
 from datetime import datetime
+from app.utils.json_utils import save_json
 
 def load_data(user_path: str, projects_path: str) -> tuple[dict, dict]:
 	"""Load user and project dictionary data from JSON files."""
@@ -322,6 +323,7 @@ def fill_latex_template(user_path, user_data, date_of_birth=None, location_of_bi
 	# Ensure language is a string and not None
 	lang = language if isinstance(language, str) and language else "en"
 	parsed = parse_projects(user_data, projects_dict, lang)
+	save_json(parsed, user_path + "parsed.json")
 	# Optionally, you can still write parsed to a user-specific file if needed, but not to a shared file
 	organized = organize_projects_by_category(parsed)
 	variables = prepare_template_variables(user_data, parsed, organized, date_of_birth, location_of_birth, language, transcript_type)
