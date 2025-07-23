@@ -10,7 +10,7 @@ fill_latex_template(user_path = "data/user_local",
 					user_data = user_data,
 					date_of_birth = "-test-",
 					location_of_birth = "-test",
-					language = "de",
+					language = "en",
 					transcript_type = "core_advanced")
 generate_pdf(user_path = "data/user_local")
 
