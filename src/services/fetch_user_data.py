@@ -1,7 +1,4 @@
 import requests
-import os
-from ..fill_template import fill_template
-from ..generate_pdf import generate_pdf
 from ..config import USER_URL
 
 def fetch_user_data(access_token):

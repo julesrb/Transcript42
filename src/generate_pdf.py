@@ -1,6 +1,5 @@
 import os
 import subprocess
-from tempfile import NamedTemporaryFile
 
 def generate_pdf(output_dir="data"):
     os.makedirs(output_dir, exist_ok=True)

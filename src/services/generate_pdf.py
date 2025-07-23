@@ -1,6 +1,5 @@
 import os
 import subprocess
-from tempfile import NamedTemporaryFile
 
 def generate_pdf(user_path):
 	

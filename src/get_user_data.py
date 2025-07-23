@@ -1,6 +1,4 @@
 import os
-import json
-import requests
 import webbrowser
 import threading
 import http.server

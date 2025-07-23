@@ -1,7 +1,4 @@
 import requests
-import os
-from ..fill_template import fill_template
-from ..generate_pdf import generate_pdf
 from ..config import UID, SECRET, REDIRECT_URI, TOKEN_URL
 
 def get_oauth_token(code):

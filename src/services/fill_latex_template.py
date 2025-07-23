@@ -1,7 +1,6 @@
 import json
 from jinja2 import Template
 from datetime import datetime
-from typing import Dict, Any, List
 
 def load_data(user_path: str, projects_path: str) -> tuple[dict, dict]:
 	"""Load user and project dictionary data from JSON files."""
