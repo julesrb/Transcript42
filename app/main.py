@@ -78,6 +78,7 @@ def create_transcript(
 			pdf_filename = f"Akademische_Leistungsübersicht_{safe_first_name}_{safe_last_name}.pdf"
 		else:
 			pdf_filename = f"Academic_Transcript_{safe_first_name}_{safe_last_name}.pdf"
+		logging.info(f"{user_id} successfully generated a {language} PDF")
 		return FileResponse(pdf_path, media_type="application/pdf", filename=pdf_filename)
 	else:
 		return HTMLResponse("<h1>PDF not found after generation.</h1>", status_code=500)
