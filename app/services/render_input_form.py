@@ -40,6 +40,7 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 					}}
 				h2 {{
 					margin-top: 4px;
+					margin-bottom: 30px;
 				}}
 
 				form label {{
