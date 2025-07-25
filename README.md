@@ -1,6 +1,6 @@
 # 42 Berlin Transcript Generator
 
-A web-based tool developed in collaboration with the **Pedago team at 42 Berlin** to generate **official-looking academic transcripts** for 42 Berlin students. This service was created to fill the gap where a formal transcript did not previously exist, helping students present their achievements to employers, universities, and other institutions upon request.
+A web-based tool developed in collaboration with the **Pedago team at 42 Berlin** to generate ** academic transcripts** for 42 Berlin students. This service was created to fill the gap where a formal transcript did not previously exist, helping students present their achievements to employers, universities, and other institutions upon request.
 
 ![42 Berlin Transcript Generator Screenshot](img/42_Berlin_Transcript_Generator.jpg)
 
