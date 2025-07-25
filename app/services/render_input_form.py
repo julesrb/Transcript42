@@ -63,7 +63,7 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 		</head>
 		<body>
 			<div class="container">
-				<h2>Complete your profile</h2>
+				<h2>42 Berlin Academic Transcript</h2>
 				<form action="/transcript" method="post">
 					<input type="hidden" name="user_id" value="{user_id}">
 					<input type="hidden" name="date_of_birth" id="date_of_birth">
