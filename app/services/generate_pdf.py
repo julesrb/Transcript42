@@ -7,13 +7,16 @@ def generate_pdf(user_path):
 
 	try:
 		# Run pdflatex via Docker
-		subprocess.run([
-			"docker", "run", "--rm",
-			"-v", f"{os.path.abspath('data')}:/workdir",
-			"-w", "/workdir",
-			"pdflatex-image",
-			"latexmk", "-pdf", "-quiet", os.path.basename(filled_template_path)
-		], check=True, capture_output=True)
+		for i in range(2):
+			subprocess.run([
+				"docker", "run", "--rm",
+				"-v", f"{os.path.abspath('data')}:/workdir",
+				"-w", "/workdir",
+				"pdflatex-image",
+				"-interaction=nonstopmode",
+				"-output-directory=/workdir",
+				os.path.basename(filled_template_path)
+			], check=True, capture_output=True)
 		
 		# Check if PDF was generated
 		pdf_path = os.path.join("data", 
