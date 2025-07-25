@@ -69,6 +69,7 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 					font-size: 16px;
 					cursor: pointer;
 					margin-top: 16px;
+					font-weight: bold;
 				}}
 				button:hover {{
 					background: #0056b3;
