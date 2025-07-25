@@ -27,7 +27,7 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 					margin: 40px auto;
 					background: #1d2028;
 					border-radius: 8px;
-					border: 1px solid #f7f7f7;
+					border: 1px solid #424242;
 					box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 					padding: 32px;
 					box-sizing: border-box;
