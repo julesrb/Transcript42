@@ -32,10 +32,16 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 					box-sizing: border-box;
 					color: white;
 				}}
-				h2 {{
+				h1, h2 {{
 					text-align: center;
 					color: white;
+					margin: 0;
+					line-height: 1.2;
+					}}
+				h2 {{
+					margin-top: 4px;
 				}}
+
 				form label {{
 					display: block;
 					margin-bottom: 12px;
@@ -78,7 +84,8 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 		</head>
 		<body>
 			<div class="container">
-				<h2>42 Berlin <br>Academic Transcript</h2>
+				<h1>42 Berlin</h1>
+				<h2>42Academic Transcript</h2>
 				<form action="/transcript" method="post">
 					<input type="hidden" name="user_id" value="{user_id}">
 					<input type="hidden" name="date_of_birth" id="date_of_birth">
