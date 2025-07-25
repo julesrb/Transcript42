@@ -23,18 +23,14 @@
 
 % BACKGROUND IMAGE
 \newcommand\BackgroundPic{
-  \put(-3,0){
-    \parbox[b][\paperheight]{\paperwidth}{
-      \vfill
-      \centering
-      \begin{tikzpicture}[remember picture, overlay]
-        \node[opacity=0.85] at (current page.center) {
-          \includegraphics[width=\paperwidth,height=\paperheight]{42_BERLIN_back.pdf}
-        };
-      \end{tikzpicture}
-      \vfill
-    }
-  }
+  \begin{tikzpicture}[remember picture, overlay]
+    \node at (current page.center) [
+      opacity=0.85,
+      inner sep=0pt
+    ] {
+      \includegraphics[width=\paperwidth, height=\paperheight]{42_BERLIN_back.pdf}
+    };
+  \end{tikzpicture}
 }
 \AddToShipoutPictureBG*{\BackgroundPic}
 \pagestyle{fancy}
