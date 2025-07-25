@@ -8,26 +8,36 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 			<style>
 				body {{
 					font-family: Arial, sans-serif;
-					background: #f7f7f7;
+					background: #12141a;
 					margin: 0;
 					padding: 0;
+					height: 100vh;
+
+					/* Flex to center container vertically and horizontally */
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: white;
 				}}
 				.container {{
 					max-width: 400px;
+					width: 100%;
 					margin: 40px auto;
-					background: #fff;
+					background: #1d2028;
 					border-radius: 8px;
 					box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 					padding: 32px;
+					box-sizing: border-box;
+					color: white;
 				}}
 				h2 {{
 					text-align: center;
-					color: #333;
+					color: white;
 				}}
 				form label {{
 					display: block;
 					margin-bottom: 12px;
-					color: #222;
+					color: white;
 				}}
 				form input,
 				form select {{
@@ -37,6 +47,8 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 					border-radius: 4px;
 					border: 1px solid #ccc;
 					box-sizing: border-box;
+					background: #2a2d37;
+					color: white;
 				}}
 				.date-group {{
 					display: flex;
@@ -47,8 +59,8 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 				}}
 				button {{
 					width: 100%;
-					background: #007bff;
-					color: #fff;
+					background: #00babc;
+					color: white;
 					border: none;
 					padding: 12px;
 					border-radius: 4px;
