@@ -2,7 +2,7 @@ from config import UID, SECRET, REDIRECT_URI, TOKEN_URL, AUTH_URL, LOG_VIEW_PASS
 from .services.handle_oauth_redirect import handle_oauth_redirect
 from .services.fill_latex_template import fill_latex_template
 from .services.generate_pdf import generate_pdf
-from fastapi import FastAPI, Request, Form
+from fastapi import FastAPI, HTTPException, Request, Form, Header
 from fastapi.responses import HTMLResponse, FileResponse, JSONResponse, RedirectResponse
 import os
 import json
@@ -78,19 +78,20 @@ def create_transcript(
 			pdf_filename = f"Akademische_Leistungsübersicht_{safe_first_name}_{safe_last_name}.pdf"
 		else:
 			pdf_filename = f"Academic_Transcript_{safe_first_name}_{safe_last_name}.pdf"
+		logging.info(f"{user_id} successfully generated a {language} PDF")
 		return FileResponse(pdf_path, media_type="application/pdf", filename=pdf_filename)
 	else:
 		return HTMLResponse("<h1>PDF not found after generation.</h1>", status_code=500)
 
 
-@app.get("/logs") #TODO add more secured log function
-def get_logs(password: str = ""):
-	if password != LOG_VIEW_PASSWORD:
-		return HTMLResponse("<h1>Unauthorized</h1>", status_code=401)
-	try:
-		with open(LOG_PATH, "r", encoding="utf-8") as f:
-			content = f.read()
-		return HTMLResponse(f"<pre>{content}</pre>", status_code=200)
-	except Exception as e:
-		return HTMLResponse(f"<h1>Error reading access log: {str(e)}</h1>", status_code=500)
+@app.get("/logs")
+def get_logs(x_api_key: str = Header(...)):
+    if x_api_key != LOG_VIEW_PASSWORD:
+        raise HTTPException(status_code=401, detail="Unauthorized")
+    try:
+        with open(LOG_PATH, "r", encoding="utf-8") as f:
+            content = f.read()
+        return HTMLResponse(f"<pre>{content}</pre>", status_code=200)
+    except Exception as e:
+        return HTMLResponse(f"<h1>Error reading access log: {str(e)}</h1>", status_code=500)
 

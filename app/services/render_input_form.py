@@ -6,28 +6,48 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 		<html>
 		<head>
 			<style>
-				body {{
+				* {{
 					font-family: Arial, sans-serif;
-					background: #f7f7f7;
+				}}
+				body {{
+					background: #12141a;
 					margin: 0;
 					padding: 0;
+					height: 100vh;
+
+					/* Flex to center container vertically and horizontally */
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: white;
 				}}
 				.container {{
 					max-width: 400px;
+					width: 100%;
 					margin: 40px auto;
-					background: #fff;
+					background: #1d2028;
 					border-radius: 8px;
+					border: 1px solid #424242;
 					box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 					padding: 32px;
+					box-sizing: border-box;
+					color: white;
 				}}
-				h2 {{
+				h1, h2 {{
 					text-align: center;
-					color: #333;
+					color: white;
+					margin: 0;
+					line-height: 1.2;
+					}}
+				h2 {{
+					margin-top: 4px;
+					margin-bottom: 30px;
 				}}
+
 				form label {{
 					display: block;
 					margin-bottom: 12px;
-					color: #222;
+					color: white;
 				}}
 				form input,
 				form select {{
@@ -35,8 +55,10 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 					padding: 8px;
 					margin-top: 4px;
 					border-radius: 4px;
-					border: 1px solid #ccc;
+					border: 1px solid #00babc;
 					box-sizing: border-box;
+					background: #2a2d37;
+					color: white;
 				}}
 				.date-group {{
 					display: flex;
@@ -47,14 +69,15 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 				}}
 				button {{
 					width: 100%;
-					background: #007bff;
-					color: #fff;
+					background: #00babc;
+					color: white;
 					border: none;
 					padding: 12px;
 					border-radius: 4px;
 					font-size: 16px;
 					cursor: pointer;
 					margin-top: 16px;
+					font-weight: bold;
 				}}
 				button:hover {{
 					background: #0056b3;
@@ -63,7 +86,8 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 		</head>
 		<body>
 			<div class="container">
-				<h2>Complete your profile</h2>
+				<h1>42 Berlin</h1>
+				<h2>Academic Transcript</h2>
 				<form action="/transcript" method="post">
 					<input type="hidden" name="user_id" value="{user_id}">
 					<input type="hidden" name="date_of_birth" id="date_of_birth">

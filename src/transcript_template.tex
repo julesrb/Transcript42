@@ -23,18 +23,14 @@
 
 % BACKGROUND IMAGE
 \newcommand\BackgroundPic{
-  \put(-3,0){
-    \parbox[b][\paperheight]{\paperwidth}{
-      \vfill
-      \centering
-      \begin{tikzpicture}[remember picture, overlay]
-        \node[opacity=0.85] at (current page.center) {
-          \includegraphics[width=\paperwidth,height=\paperheight]{42_BERLIN_back.pdf}
-        };
-      \end{tikzpicture}
-      \vfill
-    }
-  }
+  \begin{tikzpicture}[remember picture, overlay]
+    \node at (current page.center) [
+      opacity=0.85,
+      inner sep=0pt
+    ] {
+      \includegraphics[width=\paperwidth, height=\paperheight]{42_BERLIN_back.pdf}
+    };
+  \end{tikzpicture}
 }
 \AddToShipoutPictureBG*{\BackgroundPic}
 \pagestyle{fancy}
@@ -403,57 +399,57 @@
 
   \vspace{0.5em}
 
-  {%- if language == 'de' %}
-    {%- if ai %}
-    \noindent \textbf{Algorithmen \& KI}: Maschinelles Lernen, Datenverarbeitungstechniken. \\%
-    {%- endif %}
-    {%- if security %}
-    \noindent \textbf{Sicherheit}: Systemhärtung, Netzwerksicherheit, Verschlüsselungsprotokolle, Schwachstellenanalyse. \\%
-    {%- endif %}
-    {%- if devops %}
-    \noindent \textbf{DevOps}: CI/CD-Pipelines, automatisierte Deployments, Containerisierung, Infrastructure as Code. \\%
-    {%- endif %}
-    {%- if web %}
-    \noindent \textbf{Web \& Mobile}: Entwicklung responsiver Webanwendungen mit HTML, CSS, JS und Backend-Frameworks; Mobile-First-Designprinzipien. \\%
-    {%- endif %}
-    {%- if kernel %}
-    \noindent \textbf{System \& Kernel}: Programmierung von Betriebssystemkomponenten, Gerätetreibern, Prozessplanung und Speicherverwaltung. \\%
-    {%- endif %}
-    {%- if graphics %}
-    \noindent \textbf{Grafik \& Spiele}: Entwicklung grafischer Anwendungen mit Rendering-Techniken, Ereignisbehandlung und Spielmechanik. \\%
-    {%- endif %}
-    {%- if crypto %}
-    \noindent \textbf{Kryptographie \& Mathematik}: Anwendung kryptographischer Algorithmen, sicherer Kommunikationsprotokolle und mathematischer Beweise. \\%
-    {%- endif %}
-    {%- if dev %}
-    \noindent \textbf{Entwicklung}: Entwicklung modularer, getesteter und wartbarer Softwarelösungen. \\%
-    {%- endif %}
-  {%- else %}
-    {%- if ai %}
-    \noindent \textbf{Algorithms \& AI}: Machine learning models, and data processing techniques. \\%
-    {%- endif %}
-    {%- if security %}
-    \noindent \textbf{Security}: Explored system hardening, network security, encryption protocols, and vulnerability assessments. \\%
-    {%- endif %}
-    {%- if devops %}
-    \noindent \textbf{DevOps}: Managed CI/CD pipelines, automated deployments, containerization, and infrastructure as code. \\%
-    {%- endif %}
-    {%- if web %}
-    \noindent \textbf{Web \& Mobile}: Developed responsive web apps with HTML, CSS, JS, and backend frameworks; mobile-first design principles. \\%
-    {%- endif %}
-    {%- if kernel %}
-    \noindent \textbf{System \& Kernel}: Programmed low-level OS components, device drivers, process scheduling, and memory management. \\%
-    {%- endif %}
-    {%- if graphics %}
-    \noindent \textbf{Graphics \& Gaming}: Created graphical applications using rendering techniques, event handling, and game logic. \\%
-    {%- endif %}
-    {%- if crypto %}
-    \noindent \textbf{Cryptography \& Maths}: Applied cryptographic algorithms, secure communication protocols, and mathematical proofs. \\%
-    {%- endif %}
-    {%- if dev %}
-    \noindent \textbf{Development}: Built software solutions focusing on modularity, testing, and code maintainability. \\%
-    {%- endif %}
+{%- if language == 'de' %}
+  {%- if ai %}
+  \noindent \textbf{Algorithmen \& KI}: Maschinelles Lernen und Datenverarbeitungstechniken. \\%
   {%- endif %}
+  {%- if security %}
+  \noindent \textbf{Sicherheit}: Systemhärtung, Netzwerksicherheit, Verschlüsselung, Schwachstellenanalyse. \\%
+  {%- endif %}
+  {%- if devops %}
+  \noindent \textbf{DevOps}: CI/CD, automatisierte Deployments, Containerisierung, Infrastructure as Code. \\%
+  {%- endif %}
+  {%- if web %}
+  \noindent \textbf{Web \& Mobile}: Responsive Web-Apps mit HTML, CSS, JS, Backend-Frameworks; Mobile-First-Design. \\%
+  {%- endif %}
+  {%- if kernel %}
+  \noindent \textbf{System \& Kernel}: OS-Komponenten, Gerätetreiber, Prozessplanung, Speicherverwaltung. \\%
+  {%- endif %}
+  {%- if graphics %}
+  \noindent \textbf{Grafik \& Spiele}: Grafikanwendungen mit Rendering, Ereignisbehandlung und Spielmechanik. \\%
+  {%- endif %}
+  {%- if crypto %}
+  \noindent \textbf{Kryptographie \& Mathematik}: Kryptographische Algorithmen, sichere Protokolle, mathematische Beweise. \\%
+  {%- endif %}
+  {%- if dev %}
+  \noindent \textbf{Entwicklung}: Modulare, getestete und wartbare Softwarelösungen. \\%
+  {%- endif %}
+{%- else %}
+  {%- if ai %}
+  \noindent \textbf{Algorithms \& AI}: Machine learning and data processing techniques. \\%
+  {%- endif %}
+  {%- if security %}
+  \noindent \textbf{Security}: System hardening, network security, encryption, vulnerability assessment. \\%
+  {%- endif %}
+  {%- if devops %}
+  \noindent \textbf{DevOps}: CI/CD pipelines, automated deployments, containerization, infrastructure as code. \\%
+  {%- endif %}
+  {%- if web %}
+  \noindent \textbf{Web \& Mobile}: Responsive web apps with HTML, CSS, JS, backend frameworks; mobile-first design. \\%
+  {%- endif %}
+  {%- if kernel %}
+  \noindent \textbf{System \& Kernel}: Low-level OS components, device drivers, scheduling, memory management. \\%
+  {%- endif %}
+  {%- if graphics %}
+  \noindent \textbf{Graphics \& Gaming}: Graphical apps using rendering, event handling, and game logic. \\%
+  {%- endif %}
+  {%- if crypto %}
+  \noindent \textbf{Cryptography \& Maths}: Cryptographic algorithms, secure communication protocols, proofs. \\%
+  {%- endif %}
+  {%- if dev %}
+  \noindent \textbf{Development}: Modular, tested, maintainable software solutions. \\%
+  {%- endif %}
+{%- endif %}
 {%- endif %}
 
 \end{document}
