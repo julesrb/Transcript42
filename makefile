@@ -25,11 +25,14 @@ install: venv
 run: 
 	$(PYTHON) -m app.local
 
+ssl-certif:
+	bash reverse_proxy.sh
+
 serve: docker-image venv install
 	PYTHONPATH=app nohup $(VENV_DIR)/bin/gunicorn app.main:app \
 		--workers 1 \
 		--worker-class uvicorn.workers.UvicornWorker \
-		--bind 0.0.0.0:80 \
+		--bind 0.0.0.0:8000 \
 		--access-logfile - \
 		--error-logfile - \
 		>> data/logs.log 2>&1 &
