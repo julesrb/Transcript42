@@ -22,7 +22,7 @@ jobs:
       env:
         REPO_URL: https://github.com/${{ github.repository }}.git
       run: |
-        ssh -o StrictHostKeyChecking=no ${{ secrets.DROPLET_USER }}@68.183.66.13 "
+        ssh -o StrictHostKeyChecking=no ${{ secrets.DROPLET_USER }}@${{ secrets.DROPLET_HOST }} "
           mkdir -p /var/www/pdf-service &&
           cd /var/www/pdf-service &&
           if [ ! -d .git ]; then
