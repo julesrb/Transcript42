@@ -8,7 +8,36 @@ echo "Updating packages and installing nginx, certbot..."
 sudo apt update
 sudo apt install -y nginx certbot python3-certbot-nginx
 
-echo "Creating Nginx config for $DOMAIN..."
+echo "Creating temporary Nginx config (HTTP only) for Certbot validation..."
+
+sudo tee /etc/nginx/sites-available/$DOMAIN > /dev/null << EOF
+server {
+    listen 80;
+    server_name $DOMAIN;
+
+    location /.well-known/acme-challenge/ {
+        root /var/www/certbot;
+    }
+
+    location / {
+        return 301 http://\$host\$request_uri;
+    }
+}
+EOF
+
+sudo ln -sf /etc/nginx/sites-available/$DOMAIN /etc/nginx/sites-enabled/
+sudo mkdir -p /var/www/certbot
+
+echo "Testing Nginx configuration..."
+sudo nginx -t
+
+echo "Reloading Nginx..."
+sudo systemctl reload nginx
+
+echo "Obtaining SSL certificate with Certbot..."
+sudo certbot certonly --webroot -w /var/www/certbot -d $DOMAIN --non-interactive --agree-tos -m jubernar@student.42berlin.de
+
+echo "Creating full HTTPS Nginx config..."
 
 sudo tee /etc/nginx/sites-available/$DOMAIN > /dev/null << EOF
 server {
@@ -45,20 +74,8 @@ server {
 }
 EOF
 
-echo "Enabling Nginx config and creating webroot for certbot..."
-sudo ln -sf /etc/nginx/sites-available/$DOMAIN /etc/nginx/sites-enabled/
-sudo mkdir -p /var/www/certbot
-
-echo "Testing Nginx configuration..."
+echo "Reloading Nginx with HTTPS config..."
 sudo nginx -t
-
-echo "Reloading Nginx..."
-sudo systemctl reload nginx
-
-echo "Obtaining SSL certificate with Certbot..."
-sudo certbot certonly --webroot -w /var/www/certbot -d $DOMAIN --non-interactive --agree-tos -m your-email@example.com
-
-echo "Reloading Nginx to apply SSL cert..."
 sudo systemctl reload nginx
 
 echo "Setup complete."
