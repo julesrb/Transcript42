@@ -103,7 +103,7 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 							</select>
 							<select name="dob_year" required>
 								<option value="">Year</option>
-								{''.join(f'<option value="{y}">{y}</option>' for y in range(1980, datetime.now().year - 10))}
+								{''.join(f'<option value="{y}">{y}</option>' for y in range(1940, datetime.now().year - 10))}
 							</select>
 						</div>
 					</label>
