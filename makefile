@@ -34,6 +34,7 @@ serve: docker-image venv install
 		--worker-class uvicorn.workers.UvicornWorker \
 		--bind 0.0.0.0:8000 \
 		--access-logfile - \
+		--access-logformat '%(t)s %(h)s %(r)s %(s)s %(b)s %(L)ss %(u)s %(q)s' \
 		--error-logfile - \
 		>> /logs.log 2>&1 &
 
