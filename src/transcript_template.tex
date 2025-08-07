@@ -73,7 +73,7 @@
         Geburtsdatum: & {{ date_of_birth }} \\
         Geburtsort: & {{ location_of_birth }} \\
         Ausstellungsdatum: & {{ date_issued }} \\
-        Auswahl bestanden am: & {{ passed_selection }} \\
+        Auswahl bestanden in: & {{ passed_selection }} \\
         Kernstudium begonnen am: & {{ core_started }} \\
         Kernstudium abgeschlossen am: & {{ core_completed }} \\
         {% if transcript_type == 'core_advanced' and core_completed != "in progress" -%}
@@ -83,9 +83,9 @@
         Date of birth: & {{ date_of_birth }} \\
         Location of birth: & {{ location_of_birth }} \\
         Date issued: & {{ date_issued }} \\
-        Passed Selection on: & {{ passed_selection }} \\
+        Passed Selection in: & {{ passed_selection }} \\
         Core Curriculum started on: & {{ core_started }} \\
-        Core Curriculum complete on: & {{ core_completed }} \\
+        Core Curriculum completed on: & {{ core_completed }} \\
         {% if transcript_type == 'core_advanced' and core_completed != "in progress" -%}
         Specialization track complete on: & {{ advanced_completed }} \\
         {% endif -%}
