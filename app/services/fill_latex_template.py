@@ -283,7 +283,7 @@ def prepare_template_variables(data: dict, parsed: dict, organized: dict, date_o
 	date_issued = datetime.today().strftime("%B %d, %Y")
 	passed_selection = data["pool_month"].capitalize() + " " + data["pool_year"]
 	target_cursus = next(
-		(c for c in data["cursus_users"] if c["id"] == 244384),
+		(c for c in data["cursus_users"] if c["id"] in {244384, 196717}),
 		None
 	)
 	core_started = None
