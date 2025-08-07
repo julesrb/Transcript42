@@ -282,7 +282,15 @@ def prepare_template_variables(data: dict, parsed: dict, organized: dict, date_o
 	location_of_birth = location_of_birth if location_of_birth else "-coming soon-"
 	date_issued = datetime.today().strftime("%B %d, %Y")
 	passed_selection = data["pool_month"].capitalize() + " " + data["pool_year"]
-	core_started = "November 28, 2022"
+	target_cursus = next(
+		(c for c in data["cursus_users"] if c["id"] == 244384),
+		None
+	)
+	core_started = None
+	if target_cursus:
+		raw_date = target_cursus["begin_at"]
+		dt = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
+		core_started = dt.strftime("%B %-d, %Y")
 	tran = parsed.get("ft_transcendence")
 	exam = parsed.get("Exam Rank 06")
 	if tran is not None and exam is not None and tran.get("validated") and exam.get("validated"):
