@@ -35,7 +35,7 @@ serve: docker-image venv install
 		--bind 0.0.0.0:8000 \
 		--access-logfile - \
 		--error-logfile - \
-		>> data/logs.log 2>&1 &
+		>> /logs.log 2>&1 &
 
 clean:
 	rm -rf $(VENV_DIR)
