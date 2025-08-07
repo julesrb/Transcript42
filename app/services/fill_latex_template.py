@@ -274,14 +274,23 @@ def prepare_template_variables(data: dict, parsed: dict, organized: dict, date_o
 	if date_of_birth:
 		try:
 			dob_dt = datetime.fromisoformat(date_of_birth)
-			date_of_birth_formatted = dob_dt.strftime("%B %d, %Y")
+			date_of_birth_formatted = dob_dt.strftime("%d.%m.%Y")
 		except Exception:
 			date_of_birth_formatted = date_of_birth  # fallback to original if parsing fails
 	else:
 		date_of_birth_formatted = "-coming soon-"
 	location_of_birth = location_of_birth if location_of_birth else "-coming soon-"
-	date_issued = datetime.today().strftime("%B %d, %Y")
-	passed_selection = data["pool_month"].capitalize() + " " + data["pool_year"]
+	date_issued = datetime.today().strftime("%d.%m.%Y")
+	month_name = data["pool_month"].strip().capitalize()
+	year = data["pool_year"].strip()
+	try:
+		# Parse "October" into a datetime object
+		dt = datetime.strptime(month_name, "%B")
+		month_number = dt.month
+		passed_selection = f"{month_number:02}.{year}"
+	except Exception as e:
+		passed_selection = f"{month_name} {year}"
+
 	target_cursus = next(
 		(c for c in data["cursus_users"] if c["id"] in {244384, 196717}),
 		None
@@ -290,12 +299,12 @@ def prepare_template_variables(data: dict, parsed: dict, organized: dict, date_o
 	if target_cursus:
 		raw_date = target_cursus["begin_at"]
 		dt = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
-		core_started = dt.strftime("%B %-d, %Y")
+		core_started = dt.strftime("%d.%m.%Y")
 	tran = parsed.get("ft_transcendence")
 	exam = parsed.get("Exam Rank 06")
 	if tran is not None and exam is not None and tran.get("validated") and exam.get("validated"):
 		dt = max(tran["marked_at"], exam["marked_at"])
-		core_completed = dt.strftime("%B %-d, %Y")
+		core_completed = dt.strftime("%d.%m.%Y")
 	else:
 		core_completed = "in progress"
 	advanced_completed = "in progress"  # TODO: add logic to get the date here
