@@ -1,5 +1,6 @@
 import os
 import subprocess
+import logging
 
 def generate_pdf(user_path):
 	
@@ -22,9 +23,9 @@ def generate_pdf(user_path):
 		pdf_path = os.path.join("data", 
 							  os.path.splitext(os.path.basename(filled_template_path))[0] + ".pdf")
 		if os.path.exists(pdf_path):
-			print(f"✅ PDF successfully generated: {pdf_path}")
+			logging.info(f"✅ PDF successfully generated: {pdf_path}")
 		else:
-			print("❌ PDF generation failed - no output file created")
+			logging.error("❌ PDF generation failed - no output file created")
 			
 	except subprocess.CalledProcessError as e:
 		print(f"🔥 Error during PDF generation:")
