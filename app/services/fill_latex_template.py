@@ -38,6 +38,7 @@ def parse_projects(data: dict, pj_dic: dict, language: str = "en") -> dict:
 					"name": project_data.get("name"),
 					"validated": entry.get("validated?"),
 					"marked_at": marked_at,
+					"created_at": entry.get("created_at"),
 					"description": description,
 					"grade": entry.get("final_mark"),
 					"hours": project_data.get("hours")
@@ -291,15 +292,27 @@ def prepare_template_variables(data: dict, parsed: dict, organized: dict, date_o
 	except Exception as e:
 		passed_selection = f"{month_name} {year}"
 
-	target_cursus = next(
-		(c for c in data["cursus_users"] if c["id"] in {244384, 196717}),
-		None
-	)
+	# target_cursus = next(
+	# 	(c for c in data["cursus_users"] if c["id"] in {244384, 196717}),
+	# 	None
+	# )
+	c_rld = parsed.get("C-piscine-reloaded")
+	libft = parsed.get("Libft")
 	core_started = None
-	if target_cursus:
-		raw_date = target_cursus["begin_at"]
-		dt = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
-		core_started = dt.strftime("%d.%m.%Y")
+	if core_started is None:
+		dates = []
+		for proj in (c_rld, libft):
+			if proj and proj.get("created_at"):
+				dt = datetime.fromisoformat(proj["created_at"].replace("Z", "+00:00"))
+				dates.append(dt)
+		if dates:
+			earliest = min(dates)
+			core_started = earliest.strftime("%d.%m.%Y")
+	
+	# if target_cursus:
+	# 	raw_date = target_cursus["begin_at"]
+	# 	dt = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
+	# 	core_started = dt.strftime("%d.%m.%Y")
 	tran = parsed.get("ft_transcendence")
 	exam = parsed.get("Exam Rank 06")
 	if tran is not None and exam is not None and tran.get("validated") and exam.get("validated"):
