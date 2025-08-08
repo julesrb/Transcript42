@@ -90,8 +90,8 @@
     },
     "2007": {
         "name": "NetPractice",
-        "description": "Deploy Docker containers and virtual environments for system setup.",
-        "beschreibung": "Docker-Container und virtuelle Environments für System-Setup deployen.",
+        "description": "Configure IP routing and subnetting to build functional network connections.",
+        "beschreibung": "IP-Routing und Subnetze konfigurieren, um funktionale Netzwerke aufzubauen.",
         "hours": "50 H"
     },
     "1338": {
