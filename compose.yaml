@@ -1,0 +1,30 @@
+services:
+
+  pdf_latex:
+    build:
+      context: pdf_latex
+      dockerfile: Dockerfile
+    volumes:
+      - shared_data:/var/data
+    restart: unless-stopped
+
+  fast_api:
+    build:
+      context: fastapi-app
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - 8000:8000
+    volumes:
+      - shared_data:/var/data
+    restart: unless-stopped
+
+volumes:
+  shared_data:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/goinfre/jubernar/data' # for 42 computer test dev
+      # device: '/var/data'
