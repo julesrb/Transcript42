@@ -41,7 +41,7 @@ def create_transcript(
 	language: str = Form(...),
 	transcript_type: str = Form(...),
 ):
-	user_path = os.path.join("data", f"user_{user_id}")
+	user_path = os.path.join("/var/data", f"user_{user_id}")
 	try:
 		with open(user_path + ".json", "r", encoding="utf-8") as f:
 			user_data = json.load(f)

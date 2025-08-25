@@ -9,4 +9,4 @@ AUTH_URL = "https://api.intra.42.fr/oauth/authorize"
 TOKEN_URL = "https://api.intra.42.fr/oauth/token"
 USER_URL = "https://api.intra.42.fr/v2/me"
 LOG_VIEW_PASSWORD = os.getenv("LOG_VIEW_PASSWORD", "changeme")
-LOG_PATH = "/logs.log"
+LOG_PATH = "/var/data/logs.log"

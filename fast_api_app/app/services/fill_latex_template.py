@@ -336,7 +336,7 @@ def render_and_save_template(template_path: str, variables: dict, output_path: s
 
 def fill_latex_template(user_path, user_data, date_of_birth=None, location_of_birth=None, language=None, transcript_type=None):
 	"""Orchestrate the transcript template filling process."""
-	with open("./projects/projects_dict.json") as f:
+	with open("/var/data/projects/projects_dict.json") as f:
 		projects_dict = json.load(f)
 	# Ensure language is a string and not None
 	lang = language if isinstance(language, str) and language else "en"
@@ -344,4 +344,4 @@ def fill_latex_template(user_path, user_data, date_of_birth=None, location_of_bi
 	# Optionally, you can still write parsed to a user-specific file if needed, but not to a shared file
 	organized = organize_projects_by_category(parsed)
 	variables = prepare_template_variables(user_data, parsed, organized, date_of_birth, location_of_birth, language, transcript_type)
-	render_and_save_template("./src/transcript_template.tex", variables, user_path + ".tex")
+	render_and_save_template("/var/data/src/transcript_template.tex", variables, user_path + ".tex")

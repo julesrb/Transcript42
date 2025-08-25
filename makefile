@@ -5,38 +5,20 @@ PIP := $(VENV_DIR)/bin/pip
 DOCKER_IMAGE := pdflatex-image
 
 
-all: docker-image venv install run
+all: shared-folder docker-up
 
-docker-image:
-	@if [ -z "$$(docker images -q $(DOCKER_IMAGE))" ]; then \
-		echo "Building Docker image $(DOCKER_IMAGE)..."; \
-		docker build -t $(DOCKER_IMAGE) .; \
-	else \
-		echo "Docker image $(DOCKER_IMAGE) already exists."; \
-	fi
+docker-up: 
+	docker-compose up --build
 
-venv:
-	@test -d $(VENV_DIR) || python3 -m venv $(VENV_DIR)
+shared-folder: 
+	sudo mkdir -p /var/data
+	sudo chmod -R 777 /data
 
-install: venv
-	$(PIP) install --upgrade pip
-	$(PIP) install -r requirements.txt
-
-run: 
+run-local: 
 	$(PYTHON) -m app.local
 
 ssl-certif:
 	bash reverse_proxy.sh
-
-serve: docker-image venv install
-	PYTHONPATH=app nohup $(VENV_DIR)/bin/gunicorn app.main:app \
-		--workers 1 \
-		--worker-class uvicorn.workers.UvicornWorker \
-		--bind 0.0.0.0:8000 \
-		--access-logfile - \
-		--access-logformat '%(t)s %(h)s %(r)s %(s)s %(b)s %(L)ss %(u)s %(q)s' \
-		--error-logfile - \
-		>> /logs.log 2>&1 &
 
 clean:
 	rm -rf $(VENV_DIR)

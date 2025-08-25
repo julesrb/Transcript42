@@ -20,7 +20,7 @@ def generate_pdf(user_path):
 			], check=True, capture_output=True)
 		
 		# Check if PDF was generated
-		pdf_path = os.path.join("data", 
+		pdf_path = os.path.join("/var/data", 
 							  os.path.splitext(os.path.basename(filled_template_path))[0] + ".pdf")
 		if os.path.exists(pdf_path):
 			logging.info(f"✅ PDF successfully generated: {pdf_path}")
