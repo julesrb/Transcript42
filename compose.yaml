@@ -1,24 +1,15 @@
 services:
 
-  pdf_latex:
+  transcript_42:
     build:
-      context: pdf_latex
+      context: transcript_42
       dockerfile: Dockerfile
-    volumes:
-      - shared_data:/var/data
-    restart: unless-stopped
-
-  fast_api_app:
-    build:
-      context: fast_api_app
-      dockerfile: Dockerfile
-    env_file:
-      - .env
     ports:
       - 8000:8000
+    env_file:
+      - .env
     volumes:
-      - shared_data:/var/data
-      - /var/run/docker.sock:/var/run/docker.sock 
+      - shared_data:/app/output
     restart: unless-stopped
 
 volumes:
@@ -27,5 +18,4 @@ volumes:
     driver_opts:
       type: 'none'
       o: 'bind'
-      # device: '/goinfre/jubernar/data' # for 42 computer test dev
-      device: '/var/data'
+      device: './transcript_42/output'

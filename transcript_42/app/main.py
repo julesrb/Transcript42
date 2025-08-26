@@ -1,8 +1,8 @@
 from config import UID, SECRET, REDIRECT_URI, TOKEN_URL, AUTH_URL, LOG_VIEW_PASSWORD, LOG_PATH
-from .services.handle_oauth_redirect import handle_oauth_redirect
-from .services.fill_latex_template import fill_latex_template
-from .services.generate_pdf import generate_pdf
-from .services.render_start_page import render_start_page
+from services.handle_oauth_redirect import handle_oauth_redirect
+from services.fill_latex_template import fill_latex_template
+from services.generate_pdf import generate_pdf
+from services.render_start_page import render_start_page
 from fastapi import FastAPI, HTTPException, Request, Form, Header
 from fastapi.responses import HTMLResponse, FileResponse, JSONResponse, RedirectResponse
 import os
@@ -10,19 +10,21 @@ import json
 import urllib.parse
 import logging
 import traceback
+import shutil
+import tempfile
 
 app = FastAPI()
 
 @app.get("/")
 def landing_page():
-    # Construct the OAuth URL for redirect
-    auth_url = f"{AUTH_URL}?{urllib.parse.urlencode({
-        'client_id': UID,
-        'redirect_uri': REDIRECT_URI,
-        'response_type': 'code',
-        'scope': 'public'
-    })}"
-    return render_start_page(auth_url)
+	# Construct the OAuth URL for redirect
+	auth_url = f"{AUTH_URL}?{urllib.parse.urlencode({
+		'client_id': UID,
+		'redirect_uri': REDIRECT_URI,
+		'response_type': 'code',
+		'scope': 'public'
+	})}"
+	return render_start_page(auth_url)
 
 
 @app.get("/oauth_redirect")
@@ -86,3 +88,29 @@ def get_logs(x_api_key: str = Header(...)):
 	except Exception as e:
 		return HTMLResponse(f"<h1>Error reading access log: {str(e)}</h1>", status_code=500)
 
+
+@app.get("/logs_full")
+def get_logs_full(x_api_key: str = Header(...)):
+	if x_api_key != LOG_VIEW_PASSWORD:
+		raise HTTPException(status_code=401, detail="Unauthorized")
+
+	log_dir = os.path.dirname("/app/output")  # directory containing logs
+
+	if not os.path.exists(log_dir):
+		raise HTTPException(status_code=404, detail="Log directory not found")
+
+	try:
+		# Create a temporary zip archive
+		tmp_zip = tempfile.NamedTemporaryFile(delete=False, suffix=".zip")
+		tmp_zip.close()  # Close so shutil can write to it
+
+		shutil.make_archive(tmp_zip.name[:-4], 'zip', log_dir)
+
+		return FileResponse(
+			tmp_zip.name,
+			media_type="application/zip",
+			filename="logs.zip"
+		)
+
+	except Exception as e:
+		raise HTTPException(status_code=500, detail=f"Error creating log archive: {str(e)}")
