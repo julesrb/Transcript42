@@ -6,8 +6,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "127.0.0.1:8000:8000"
-    networks:
-      - nginx-network
+    # networks:
+    #   - nginx-network
     env_file:
       - .env
     volumes:
