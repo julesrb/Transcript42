@@ -5,7 +5,9 @@ services:
       context: transcript_42
       dockerfile: Dockerfile
     ports:
-      - 8000:8000
+      - "127.0.0.1:8000:8000"
+    networks:
+      - nginx-network
     env_file:
       - .env
     volumes:
