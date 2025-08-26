@@ -18,12 +18,13 @@ app = FastAPI()
 @app.get("/")
 def landing_page():
 	# Construct the OAuth URL for redirect
-	auth_url = f"{AUTH_URL}?{urllib.parse.urlencode({
+	params = {
 		'client_id': UID,
 		'redirect_uri': REDIRECT_URI,
 		'response_type': 'code',
 		'scope': 'public'
-	})}"
+	}
+	auth_url = f"{AUTH_URL}?{urllib.parse.urlencode(params)}"
 	return render_start_page(auth_url)
 
 
@@ -94,7 +95,7 @@ def get_logs_full(x_api_key: str = Header(...)):
 	if x_api_key != LOG_VIEW_PASSWORD:
 		raise HTTPException(status_code=401, detail="Unauthorized")
 
-	log_dir = os.path.dirname("/app/output/")  # directory containing logs
+	log_dir = "/app/output"  # directory containing logs
 
 	if not os.path.exists(log_dir):
 		raise HTTPException(status_code=404, detail="Log directory not found")
