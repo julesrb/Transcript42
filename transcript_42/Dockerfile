@@ -22,8 +22,4 @@ COPY . .
 
 WORKDIR /app/app
 
-# WORKDIR /root/shared/folder
-# ENTRYPOINT ["pdflatex"]
-
-# CMD ["gunicorn", "main:app", "--workers", "1", "--worker-class", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:8000", "--access-logfile", "-", "--access-logformat", "%(t)s %(h)s %(r)s %(s)s %(b)s %(L)ss %(u)s %(q)s", "--error-logfile", "-"]
-CMD ["tail", "-f", "/dev/null"]
+CMD ["gunicorn", "main:app", "--workers", "1", "--worker-class", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:8000", "--access-logfile", "-", "--access-logformat", "%(t)s %(h)s %(r)s %(s)s %(b)s %(L)ss %(u)s %(q)s", "--error-logfile", "-"]
