@@ -22,4 +22,4 @@ COPY . .
 
 WORKDIR /app/app
 
-CMD ["gunicorn", "main:app", "--workers", "1", "--worker-class", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:8000", "--access-logfile", "-", "--access-logformat", "%(t)s %(h)s %(r)s %(s)s %(b)s %(L)ss %(u)s %(q)s", "--error-logfile", "-"]
+CMD bash -c "gunicorn main:app --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000 --access-logfile - --error-logfile - >> /app/output/logs.log 2>&1"
