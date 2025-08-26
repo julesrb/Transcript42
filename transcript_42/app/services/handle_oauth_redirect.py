@@ -10,7 +10,7 @@ def handle_oauth_redirect(code: str) -> HTMLResponse:
 		access_token = get_oauth_token(code)
 		user_data = fetch_user_data(access_token)
 		user_id = user_data.get("id")
-		user_path = os.path.join("data", f"user_{user_id}.json")
+		user_path = os.path.join("/app/output", f"user_{user_id}.json")
 		save_json(user_data, user_path)
 	except Exception as e:
 		return HTMLResponse(f"<h1>Authentication failed: {str(e)}</h1>", status_code=400)

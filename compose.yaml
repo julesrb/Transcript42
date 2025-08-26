@@ -1,0 +1,23 @@
+services:
+
+  transcript_42:
+    build:
+      context: transcript_42
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:8000:8000"
+    networks:
+      - nginx-network
+    env_file:
+      - .env
+    volumes:
+      - shared_data:/app/output
+    restart: unless-stopped
+
+volumes:
+  shared_data:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: './transcript_42/output'
