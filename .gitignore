@@ -1,8 +1,3 @@
-.venv
-/app/__pycache__
-/data/*
-!/data/42_Logo.png
-!/data/Silka-Medium.otf
-!/data/42_BERLIN_back.pdf
+/transcript_42/output/*
+!/transcript_42/output/user_local.json
 .env
-.DS_store
