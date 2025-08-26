@@ -94,7 +94,7 @@ def get_logs_full(x_api_key: str = Header(...)):
 	if x_api_key != LOG_VIEW_PASSWORD:
 		raise HTTPException(status_code=401, detail="Unauthorized")
 
-	log_dir = os.path.dirname("/app/output")  # directory containing logs
+	log_dir = os.path.dirname("/app/output/")  # directory containing logs
 
 	if not os.path.exists(log_dir):
 		raise HTTPException(status_code=404, detail="Log directory not found")
