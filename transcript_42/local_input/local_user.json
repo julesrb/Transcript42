@@ -1,22 +1,22 @@
 {
     "id": 136199,
-    "email": "max_the_dog@student.42berlin.de",
+    "email": "max_mustermann@student.42berlin.de",
     "login": "max",
     "first_name": "Max",
-    "last_name": "Doggo",
-    "usual_full_name": "Max Doggo",
+    "last_name": "mustermann",
+    "usual_full_name": "Max mustermann",
     "usual_first_name": null,
-    "url": "https://api.intra.42.fr/v2/users/max_the_dog",
+    "url": "https://api.intra.42.fr/v2/users/max_mustermann",
     "phone": "hidden",
-    "displayname": "Max Doggo",
+    "displayname": "Max mustermann",
     "kind": "student",
     "image": {
-        "link": "https://cdn.intra.42.fr/users/79d761cd6a342dba1dfeacaf3f0173a9/max_the_dog.jpg",
+        "link": "https://cdn.intra.42.fr/users/79d761cd6a342dba1dfeacaf3f0173a9/max_mustermann.jpg",
         "versions": {
-            "large": "https://cdn.intra.42.fr/users/4e0c99018141fe5d1bc8fd63ff2190f3/large_max_the_dog.jpg",
-            "medium": "https://cdn.intra.42.fr/users/9fd8a15c518feea222dc594adfa74f7c/medium_max_the_dog.jpg",
-            "small": "https://cdn.intra.42.fr/users/a3b64b3a29c449a4ddd19e53cf707929/small_max_the_dog.jpg",
-            "micro": "https://cdn.intra.42.fr/users/1879f2b45199cc62f8db2d56a512c4d5/micro_max_the_dog.jpg"
+            "large": "https://cdn.intra.42.fr/users/4e0c99018141fe5d1bc8fd63ff2190f3/large_max_mustermann.jpg",
+            "medium": "https://cdn.intra.42.fr/users/9fd8a15c518feea222dc594adfa74f7c/medium_max_mustermann.jpg",
+            "small": "https://cdn.intra.42.fr/users/a3b64b3a29c449a4ddd19e53cf707929/small_max_mustermann.jpg",
+            "micro": "https://cdn.intra.42.fr/users/1879f2b45199cc62f8db2d56a512c4d5/micro_max_mustermann.jpg"
         }
     },
     "staff?": false,

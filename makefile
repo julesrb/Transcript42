@@ -9,6 +9,7 @@ shared-folder:
 	chmod -R 777 ../transcript_42_shared_data
 
 run-local: shared-folder
+	docker compose build transcript_42
 	docker compose run --rm transcript_42 python3 local.py
 	echo "The generated files are in ../transcript_42_shared_data"
 

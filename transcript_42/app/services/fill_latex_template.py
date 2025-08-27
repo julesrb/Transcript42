@@ -268,7 +268,14 @@ def organize_projects_by_category(parsed: dict) -> dict:
 
 def prepare_template_variables(data: dict, parsed: dict, organized: dict, date_of_birth=None, location_of_birth=None, language=None, transcript_type=None) -> dict:
 	"""Prepare all variables required for the LaTeX template."""
-	school_address = """Harzer Straße 39\n12059 Berlin\nGERMANY"""
+	school_address = ""
+	campus_id = None
+	for campus in data["campus_users"]:
+		if campus.get("is_primary"):
+			campus_id = campus.get("campus_id") or 51
+	if campus_id == 52:
+		school_address = """Harzer Straße 39\n12059 Berlin\nGERMANY"""
+
 	first_name = data["first_name"].upper()
 	last_name = data["last_name"].upper()
 	# Format date_of_birth if provided
@@ -334,6 +341,7 @@ def prepare_template_variables(data: dict, parsed: dict, organized: dict, date_o
 		"advanced_completed": advanced_completed,
 		"language": language,
 		"transcript_type": transcript_type,
+		"campus_id": campus_id
 	}
 	extra_vars.update(organized)
 	return extra_vars

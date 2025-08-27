@@ -28,8 +28,12 @@
       opacity=0.85,
       inner sep=0pt
     ] {
+      {%- if campus_id == 51 %}
       \includegraphics[width=\paperwidth, height=\paperheight]{/app/graphics/42_BERLIN_back.pdf}
-    };
+      {%- else %}
+      \includegraphics[width=\paperwidth, height=\paperheight]{/app/graphics/42_back.pdf}
+      {%- endif %}
+	  };
   \end{tikzpicture}
 }
 \AddToShipoutPictureBG*{\BackgroundPic}
@@ -41,7 +45,11 @@
 	\begin{tabularx}{\textwidth}{@{}X X@{}}
 	% LEFT COLUMN
 	\parbox[t]{\dimexpr\linewidth\relax}{
+	{%- if campus_id == 51 %}
 	\raisebox{-37pt}{\includegraphics[width=4.1cm]{/app/graphics/42_BERLIN_logo.png}}
+	{%- else %}
+	\raisebox{-47pt}{\includegraphics[width=2.1cm]{/app/graphics/42_logo.png}}
+	{%- endif %}
 	\hspace*{-1.6cm}
 	\begin{minipage}[t]{\dimexpr\linewidth-3cm\relax}
 	\vspace{1.03cm}
@@ -49,10 +57,12 @@
   \end{minipage}
   \begin{minipage}[t]{\linewidth}
 	\vspace{0.44cm}
+  {%- if campus_id == 51 %}
   {%- if language == 'de' %}
     Ich, Daniel Hadley, Pädagogischer Leiter von 42 Berlin, bestätige, dass die oben genannte Person zum Ausstellungsdatum alle Voraussetzungen erfüllt hat. Dieses Zeugnis wird auf Anfrage für offizielle Zwecke ausgestellt. \\
   {%- else %}
     I, Daniel Hadley, Pedagogy Lead of 42 Berlin, certify that the above-named student has met academic requirements as of the date issued. This transcript is issued upon request for all official purposes. \\
+  {%- endif %}
   {%- endif %}
   \end{minipage}
 }
@@ -105,12 +115,14 @@
 \end{tabularx}
 }
 
+{%- if campus_id == 51 %}
 \fancyfoot[C]{
   \fontsize{8}{10}\selectfont
   www.42berlin.de -- @42berlin\_ \\
   Eingetragener Verein, gemeinnützig (equivalent to non-profit charity organisation) \\
   Register No: VR 201961
 }
+{%- endif %}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 

@@ -17,6 +17,7 @@ def render_start_page(auth_url: str) -> HTMLResponse:
                 justify-content: center;
                 align-items: center;
                 color: white;
+                flex-direction: column;
             }}
             .container {{
                 max-width: 400px;
@@ -28,6 +29,7 @@ def render_start_page(auth_url: str) -> HTMLResponse:
                 padding: 32px;
                 box-sizing: border-box;
                 text-align: center;
+                margin-bottom: 16px;
             }}
             h1, h2 {{
                 margin: 0;
@@ -53,6 +55,19 @@ def render_start_page(auth_url: str) -> HTMLResponse:
             a.button:hover {{
                 background: #009fa0;
             }}
+            .note {{
+                max-width: 400px;
+                color: #cfcfcf;
+                font-size: 14px;
+                text-align: center;
+            }}
+            .note a {{
+                color: #00babc;
+                text-decoration: none;
+            }}
+            .note a:hover {{
+                text-decoration: underline;
+            }}
         </style>
     </head>
     <body>
@@ -60,6 +75,10 @@ def render_start_page(auth_url: str) -> HTMLResponse:
             <h1>42 Berlin</h1>
             <h2>Academic Transcript</h2>
             <a class="button" href="{auth_url}">Login with 42</a>
+        </div>
+        <div class="note">
+            Only Berlin campus is fully supported so far. If you want to include your campus to have the logo, legal notes, and address featured in the PDF, let's talk: 
+            <a href="mailto:jubernar@student.42berlin.de">jubernar@student.42berlin.de</a>
         </div>
     </body>
     </html>
