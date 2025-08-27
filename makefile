@@ -2,6 +2,7 @@
 all: docker-up
 
 docker-up: shared-folder
+	docker compose down
 	docker compose up --build
 
 shared-folder: 
