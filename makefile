@@ -3,7 +3,7 @@ all: docker-up
 
 docker-up: shared-folder
 	docker compose down
-	docker compose up --build
+	docker compose up --build -d
 
 shared-folder: 
 	mkdir -p ../transcript_42_shared_data
