@@ -77,8 +77,8 @@ def render_start_page(auth_url: str) -> HTMLResponse:
             <a class="button" href="{auth_url}">Login with 42</a>
         </div>
         <div class="note">
-            Only Berlin campus is fully supported so far. If you want to include your campus to have the logo, legal notes, and address featured in the PDF, let's talk: 
-            <a href="mailto:jubernar@student.42berlin.de">jubernar@student.42berlin.de</a>
+            Only Berlin campus is fully supported so far. If you want to include your campus to have the logo, legal notes, and address featured in the PDF, 
+            <a href="mailto:jubernar@student.42berlin.de">let's talk:</a>
         </div>
     </body>
     </html>

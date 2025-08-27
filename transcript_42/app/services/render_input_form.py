@@ -13,11 +13,9 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 					background: #12141a;
 					margin: 0;
 					padding: 0;
-					height: 100vh;
-
-					/* Flex to center container vertically and horizontally */
+					min-height: 100vh;
 					display: flex;
-					justify-content: center;
+					flex-direction: column;
 					align-items: center;
 					color: white;
 				}}
@@ -38,12 +36,11 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 					color: white;
 					margin: 0;
 					line-height: 1.2;
-					}}
+				}}
 				h2 {{
 					margin-top: 4px;
 					margin-bottom: 30px;
 				}}
-
 				form label {{
 					display: block;
 					margin-bottom: 12px;
@@ -82,6 +79,20 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 				button:hover {{
 					background: #0056b3;
 				}}
+				.note {{
+					max-width: 400px;
+					color: #cfcfcf;
+					font-size: 14px;
+					text-align: center;
+					margin-bottom: 40px;
+				}}
+				.note a {{
+					color: #00babc;
+					text-decoration: none;
+				}}
+				.note a:hover {{
+					text-decoration: underline;
+				}}
 			</style>
 		</head>
 		<body>
@@ -95,15 +106,15 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 						<div class="date-group">
 							<select name="dob_day" required>
 								<option value="">Day</option>
-								{''.join(f'<option value="{d}">{d}</option>' for d in range(1, 32))}
+								{''.join(f'<option value="{{d}}">{{d}}</option>' for d in range(1, 32))}
 							</select>
 							<select name="dob_month" required>
 								<option value="">Month</option>
-								{''.join(f'<option value="{m}">{m}</option>' for m in range(1, 13))}
+								{''.join(f'<option value="{{m}}">{{m}}</option>' for m in range(1, 13))}
 							</select>
 							<select name="dob_year" required>
 								<option value="">Year</option>
-								{''.join(f'<option value="{y}">{y}</option>' for y in range(1940, datetime.now().year - 10))}
+								{''.join(f'<option value="{{y}}">{{y}}</option>' for y in range(1940, datetime.now().year - 10))}
 							</select>
 						</div>
 					</label>
@@ -122,6 +133,10 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 					</label>
 					<button type="submit">Generate Transcript</button>
 				</form>
+			</div>
+			<div class="note">
+				Only Berlin campus is fully supported so far. If you want to include your campus to have the logo, legal notes, and address featured in the PDF, 
+				<a href="mailto:jubernar@student.42berlin.de">let's talk:</a>
 			</div>
 			<script>
 				document.querySelector('form').addEventListener('submit', function(e) {{
