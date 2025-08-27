@@ -4,12 +4,12 @@ import json
 
 # provide the "user_local.json" as your user API call response
 
-with open("/app/output/user_local.json", "r", encoding="utf-8") as f:
+with open("/app/local_input/local_user.json", "r", encoding="utf-8") as f:
 			user_data = json.load(f)
 fill_latex_template(user_path = "/app/output/user_local",
 					user_data = user_data,
 					date_of_birth = "place-your-own",
-					location_of_birth = "plcae-your-own",
+					location_of_birth = "place-your-own",
 					language = "en",
 					transcript_type = "core_advanced")
 generate_pdf(user_path = "/app/output/user_local")

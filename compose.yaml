@@ -20,4 +20,4 @@ volumes:
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: './transcript_42/output'
+      device: '../transcript_42_shared_data'
