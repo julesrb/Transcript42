@@ -13,6 +13,12 @@ import traceback
 import shutil
 import tempfile
 
+logging.basicConfig(
+    filename="/app/output/logs.log",
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+)
+
 app = FastAPI()
 
 @app.get("/")

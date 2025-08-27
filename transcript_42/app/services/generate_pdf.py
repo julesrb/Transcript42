@@ -2,6 +2,12 @@ import os
 import subprocess
 import logging
 
+logging.basicConfig(
+    filename="/app/output/logs.log",
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+)
+
 def generate_pdf(user_path):
 	filled_template_path = user_path + ".tex"
 
