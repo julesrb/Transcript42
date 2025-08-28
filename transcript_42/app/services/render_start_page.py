@@ -55,6 +55,19 @@ def render_start_page(auth_url: str) -> HTMLResponse:
             a.button:hover {{
                 background: #009fa0;
             }}
+            .footer {{
+                margin-top: 20px;
+                font-size: 13px;
+                color: #a0a0a0;
+                text-align: center;
+            }}
+            .footer a {{
+                color: #00babc;
+                text-decoration: none;
+            }}
+            .footer a:hover {{
+                text-decoration: underline;
+            }}
             .note {{
                 max-width: 400px;
                 color: #cfcfcf;
@@ -75,7 +88,13 @@ def render_start_page(auth_url: str) -> HTMLResponse:
             <h1>42 Berlin</h1>
             <h2>Academic Transcript</h2>
             <a class="button" href="{auth_url}">Login with 42</a>
+
+            <div class="footer">
+                42 Berlin © <a href="https://42berlin.de/" target="_blank">42 Berlin</a> | Made by 
+                <a href="https://github.com/julesrb" target="_blank">Jules Bernard</a>
+            </div>
         </div>
+        
         <div class="note">
             Only Berlin campus is fully supported so far. If you want to include your campus to have the logo, legal notes, and address featured in the PDF, 
             <a href="mailto:jubernar@student.42berlin.de">let's talk.</a>

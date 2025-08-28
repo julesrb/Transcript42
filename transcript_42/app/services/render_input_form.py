@@ -1,3 +1,6 @@
+from datetime import datetime
+from fastapi.responses import HTMLResponse
+
 def render_profile_form(user_id: str) -> HTMLResponse:
 	return HTMLResponse(f"""
 		<html>
@@ -152,7 +155,7 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 
 			<div class="note">
 				Only Berlin campus is fully supported so far. If you want to include your campus to have the logo, legal notes, and address featured in the PDF, 
-				<a href="mailto:jubernar@student.42berlin.de">let's talk</a>
+				<a href="mailto:jubernar@student.42berlin.de">let's talk:</a>
 			</div>
 			<script>
 				document.querySelector('form').addEventListener('submit', function(e) {{
