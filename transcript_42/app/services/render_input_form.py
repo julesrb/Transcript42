@@ -147,16 +147,13 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 					<button type="submit">Generate Transcript</button>
 				</form>
 
-				<div class="footer">
-					42 Berlin © <a href="https://42berlin.de/" target="_blank">42 Berlin</a> | Made by 
-					<a href="https://github.com/julesrb" target="_blank">Jules Bernard</a>
-				</div>
-			</div>
-
 			<div class="note">
 				Only Berlin campus is fully supported so far. If you want to include your campus to have the logo, legal notes, and address featured in the PDF, 
 				<a href="mailto:jubernar@student.42berlin.de">let's talk:</a>
 			</div>
+
+			</div>
+
 			<script>
 				document.querySelector('form').addEventListener('submit', function(e) {{
 					var day = document.querySelector('[name="dob_day"]').value;
