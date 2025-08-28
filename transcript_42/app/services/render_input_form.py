@@ -82,7 +82,7 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 				.note {{
 					max-width: 400px;
 					color: #cfcfcf;
-					font-size: 14px;
+					font-size: 13px;
 					text-align: center;
 					margin-bottom: 40px;
 				}}

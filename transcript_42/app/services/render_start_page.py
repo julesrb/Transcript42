@@ -71,7 +71,7 @@ def render_start_page(auth_url: str) -> HTMLResponse:
             .note {{
                 max-width: 400px;
                 color: #cfcfcf;
-                font-size: 14px;
+                font-size: 13px;
                 text-align: center;
             }}
             .note a {{
