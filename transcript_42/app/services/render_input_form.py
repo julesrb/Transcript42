@@ -1,6 +1,3 @@
-from datetime import datetime
-from fastapi.responses import HTMLResponse
-
 def render_profile_form(user_id: str) -> HTMLResponse:
 	return HTMLResponse(f"""
 		<html>
@@ -93,6 +90,19 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 				.note a:hover {{
 					text-decoration: underline;
 				}}
+				.footer {{
+					margin-top: 20px;
+					font-size: 13px;
+					color: #a0a0a0;
+					text-align: center;
+				}}
+				.footer a {{
+					color: #00babc;
+					text-decoration: none;
+				}}
+				.footer a:hover {{
+					text-decoration: underline;
+				}}
 			</style>
 		</head>
 		<body>
@@ -133,10 +143,16 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 					</label>
 					<button type="submit">Generate Transcript</button>
 				</form>
+
+				<div class="footer">
+					42 Berlin © <a href="https://42berlin.de/" target="_blank">42 Berlin</a> | Made by 
+					<a href="https://github.com/julesrb" target="_blank">Jules Bernard</a>
+				</div>
 			</div>
+
 			<div class="note">
 				Only Berlin campus is fully supported so far. If you want to include your campus to have the logo, legal notes, and address featured in the PDF, 
-				<a href="mailto:jubernar@student.42berlin.de">let's talk:</a>
+				<a href="mailto:jubernar@student.42berlin.de">let's talk</a>
 			</div>
 			<script>
 				document.querySelector('form').addEventListener('submit', function(e) {{

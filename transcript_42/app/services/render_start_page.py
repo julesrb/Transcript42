@@ -78,7 +78,7 @@ def render_start_page(auth_url: str) -> HTMLResponse:
         </div>
         <div class="note">
             Only Berlin campus is fully supported so far. If you want to include your campus to have the logo, legal notes, and address featured in the PDF, 
-            <a href="mailto:jubernar@student.42berlin.de">let's talk:</a>
+            <a href="mailto:jubernar@student.42berlin.de">let's talk.</a>
         </div>
     </body>
     </html>
