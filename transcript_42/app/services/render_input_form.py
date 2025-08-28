@@ -84,7 +84,6 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 					color: #cfcfcf;
 					font-size: 13px;
 					text-align: center;
-					margin-bottom: 40px;
 				}}
 				.note a {{
 					color: #00babc;
@@ -94,7 +93,6 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 					text-decoration: underline;
 				}}
 				.footer {{
-					margin-top: 20px;
 					font-size: 13px;
 					color: #a0a0a0;
 					text-align: center;
