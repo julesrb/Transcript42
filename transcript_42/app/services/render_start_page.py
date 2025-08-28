@@ -91,7 +91,7 @@ def render_start_page(auth_url: str) -> HTMLResponse:
 
         </div>
             <div class="footer">
-                42 Berlin © <a href="https://42berlin.de/" target="_blank">42 Berlin</a> | Made by 
+                <a href="https://42berlin.de/" target="_blank">42 Berlin </a>© | Made by 
                 <a href="https://github.com/julesrb" target="_blank">Jules Bernard</a>
             </div>
     </body>
