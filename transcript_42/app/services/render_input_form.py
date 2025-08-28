@@ -153,6 +153,10 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 			</div>
 
 			</div>
+			<div class="footer">
+                42 Berlin © <a href="https://42berlin.de/" target="_blank">42 Berlin</a> | Made by 
+                <a href="https://github.com/julesrb" target="_blank">Jules Bernard</a>
+            </div>
 
 			<script>
 				document.querySelector('form').addEventListener('submit', function(e) {{
