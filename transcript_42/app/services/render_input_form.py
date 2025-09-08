@@ -2,6 +2,11 @@ from datetime import datetime
 from fastapi.responses import HTMLResponse
 
 def render_profile_form(user_id: str) -> HTMLResponse:
+	months = [
+		"January", "February", "March", "April", "May", "June",
+		"July", "August", "September", "October", "November", "December"
+	]
+	
 	return HTMLResponse(f"""
 		<html>
 		<head>
@@ -117,15 +122,15 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 						<div class="date-group">
 							<select name="dob_day" required>
 								<option value="">Day</option>
-								{''.join(f'<option value="{{d}}">{{d}}</option>' for d in range(1, 32))}
+								{''.join(f'<option value="{d}">{d}</option>' for d in range(1, 32))}
 							</select>
 							<select name="dob_month" required>
 								<option value="">Month</option>
-								{''.join(f'<option value="{{m}}">{{m}}</option>' for m in range(1, 13))}
+								{''.join(f'<option value="{i+1}">{m}</option>' for i, m in enumerate(months))}
 							</select>
 							<select name="dob_year" required>
 								<option value="">Year</option>
-								{''.join(f'<option value="{{y}}">{{y}}</option>' for y in range(1940, datetime.now().year - 10))}
+								{''.join(f'<option value="{y}">{y}</option>' for y in range(1940, datetime.now().year - 10))}
 							</select>
 						</div>
 					</label>
@@ -152,9 +157,9 @@ def render_profile_form(user_id: str) -> HTMLResponse:
 
 			</div>
 			<div class="footer">
-                <a href="https://42berlin.de/" target="_blank">42 Berlin </a>© Made by 
-                <a href="https://github.com/julesrb" target="_blank">Jules Bernard</a>
-            </div>
+				<a href="https://42berlin.de/" target="_blank">42 Berlin </a>© Made by 
+				<a href="https://github.com/julesrb" target="_blank">Jules Bernard</a>
+			</div>
 
 			<script>
 				document.querySelector('form').addEventListener('submit', function(e) {{
