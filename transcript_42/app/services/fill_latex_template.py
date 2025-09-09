@@ -273,7 +273,7 @@ def prepare_template_variables(data: dict, parsed: dict, organized: dict, date_o
 	for campus in data["campus_users"]:
 		if campus.get("is_primary"):
 			campus_id = campus.get("campus_id") or 51
-	if campus_id == 52:
+	if campus_id == 51:
 		school_address = """Harzer Straße 39\n12059 Berlin\nGERMANY"""
 
 	first_name = data["first_name"].upper()
