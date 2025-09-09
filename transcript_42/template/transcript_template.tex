@@ -44,75 +44,75 @@
 	\fontsize{9.5}{12}\selectfont
 	\begin{tabularx}{\textwidth}{@{}X X@{}}
 	% LEFT COLUMN
-	\parbox[t]{\dimexpr\linewidth\relax}{
-	{%- if campus_id == 51 %}
-	\raisebox{-37pt}{\includegraphics[width=4.1cm]{/app/graphics/42_BERLIN_logo.png}}
-	{%- else %}
-	\raisebox{-47pt}{\includegraphics[width=2.1cm]{/app/graphics/42_logo.png}}
-	{%- endif %}
-	\hspace*{-1.6cm}
-	\begin{minipage}[t]{\dimexpr\linewidth-3cm\relax}
-	\vspace{1.03cm}
-  {{ school_address | replace("\n", " \\\\ ") }}
-  \end{minipage}
-  \begin{minipage}[t]{\linewidth}
-	\vspace{0.44cm}
-  {%- if campus_id == 51 %}
-  {%- if language == 'de' %}
-    Ich, Daniel Hadley, Pädagogischer Leiter von 42 Berlin, bestätige, dass die oben genannte Person zum Ausstellungsdatum alle Voraussetzungen erfüllt hat. Dieses Zeugnis wird auf Anfrage für offizielle Zwecke ausgestellt. \\
-  {%- else %}
-    I, Daniel Hadley, Pedagogy Lead of 42 Berlin, certify that the above-named student has met academic requirements as of the date issued. This transcript is issued upon request for all official purposes. \\
-  {%- endif %}
-  {%- endif %}
-  \end{minipage}
-}
+    \parbox[t]{\hsize}{
+		{%- if campus_id == 51 %}
+		\raisebox{-37pt}{\includegraphics[width=4.1cm]{/app/graphics/42_BERLIN_logo.png}}
+		{%- else %}
+		\raisebox{-47pt}{\includegraphics[width=2.1cm]{/app/graphics/42_logo.png}}
+		{%- endif %}
+		\hspace*{-1.6cm}
+		\begin{minipage}[t]{\dimexpr\hsize-3cm\relax}
+			\vspace{1.03cm}
+			{{ school_address | replace("\n", " \\\\ ") }}
+		\end{minipage}
 
-&
-% RIGHT COLUMN
-\begin{minipage}[t]{\linewidth}
-\parbox[t]{\dimexpr\linewidth-2\fboxsep}{
-  {%- if language == 'de' %}
-  \textbf{\large ZEUGNIS DER AKADEMISCHEN LEISTUNGEN} \\[0.5em]
-  {%- else %}
-  \textbf{\large TRANSCRIPT OF ACADEMIC RECORDS} \\[0.5em]
-  {%- endif %}
-  \textbf{\large {{ first_name }} {{ last_name }}} \\[0.7em]
-  \renewcommand{\arraystretch}{1}
-  \begin{tabular}{@{}l l@{}}
-    {%- if language == 'de' %}
-        Geburtsdatum: & {{ date_of_birth }} \\
-        Geburtsort: & {{ location_of_birth }} \\
-        Ausstellungsdatum: & {{ date_issued }} \\
-        Auswahl bestanden in: & {{ passed_selection }} \\
-        Kernstudium begonnen am: & {{ core_started }} \\
-        Kernstudium abgeschlossen am: & {{ core_completed }} \\
-        {% if transcript_type == 'core_advanced' and core_completed != "in progress" -%}
-        Spezialisierung abgeschlossen am: & {{ advanced_completed }} \\
-        {% endif -%}
-    {%- else %}
-        Date of birth: & {{ date_of_birth }} \\
-        Location of birth: & {{ location_of_birth }} \\
-        Date issued: & {{ date_issued }} \\
-        Passed Selection in: & {{ passed_selection }} \\
-        Core Curriculum started on: & {{ core_started }} \\
-        Core Curriculum completed on: & {{ core_completed }} \\
-        {% if transcript_type == 'core_advanced' and core_completed != "in progress" -%}
-        Specialization track complete on: & {{ advanced_completed }} \\
-        {% endif -%}
-    {% endif -%}
-  \end{tabular}
 
-  \begin{flushright}
-  {%- if language == 'de' %}
-    Seite: \thepage{} / \pageref{LastPage}
-  {%- else %}
-    Page: \thepage{} / \pageref{LastPage}
-  {%- endif %}
-  \end{flushright}
-  }
-  \end{minipage}
 
-\end{tabularx}
+		\parbox[t]{\hsize}{
+			{%- if campus_id == 51 %}
+				\vspace{0.44cm}
+				{%- if language == 'de' %}
+					Ich, Daniel Hadley, Pädagogischer Leiter von 42 Berlin, bestätige, dass die oben genannte Person zum Ausstellungsdatum alle Voraussetzungen erfüllt hat. Dieses Zeugnis wird auf Anfrage für offizielle Zwecke ausgestellt.
+				{%- else %}
+					I, Daniel Hadley, Pedagogy Lead of 42 Berlin, certify that the above-named student has met academic requirements as of the date issued. This transcript is issued upon request for all official purposes.
+				{%- endif %}
+			{%- endif %}
+		}
+	}
+	&
+	% RIGHT COLUMN
+	\parbox[t]{\hsize}{
+		{%- if language == 'de' %}
+			\textbf{\large ZEUGNIS DER AKADEMISCHEN LEISTUNGEN} \\[0.5em]
+		{%- else %}
+			\textbf{\large TRANSCRIPT OF ACADEMIC RECORDS} \\[0.5em]
+		{%- endif %}
+		\textbf{\large {{ first_name }} {{ last_name }}} \\[0.7em]
+
+		\renewcommand{\arraystretch}{1}
+		\begin{tabular}{@{}l l@{}}
+			{%- if language == 'de' %}
+				Geburtsdatum: & {{ date_of_birth }} \\
+				Geburtsort: & {{ location_of_birth }} \\
+				Ausstellungsdatum: & {{ date_issued }} \\
+				Auswahl bestanden in: & {{ passed_selection }} \\
+				Kernstudium begonnen am: & {{ core_started }} \\
+				Kernstudium abgeschlossen am: & {{ core_completed }} \\
+				{% if transcript_type == 'core_advanced' and core_completed != "in progress" -%}
+					Spezialisierung abgeschlossen am: & {{ advanced_completed }} \\
+				{% endif -%}
+			{%- else %}
+				Date of birth: & {{ date_of_birth }} \\
+				Location of birth: & {{ location_of_birth }} \\
+				Date issued: & {{ date_issued }} \\
+				Passed Selection in: & {{ passed_selection }} \\
+				Core Curriculum started on: & {{ core_started }} \\
+				Core Curriculum completed on: & {{ core_completed }} \\
+				{% if transcript_type == 'core_advanced' and core_completed != "in progress" -%}
+					Specialization track complete on: & {{ advanced_completed }} \\
+				{% endif -%}
+			{% endif -%}
+		\end{tabular}
+
+		\begin{flushright}
+			{%- if language == 'de' %}
+				Seite: \thepage{} / \pageref{LastPage}
+			{%- else %}
+				Page: \thepage{} / \pageref{LastPage}
+			{%- endif %}
+		\end{flushright}
+	}
+	\end{tabularx}
 }
 
 {%- if campus_id == 51 %}
