@@ -1,9 +1,10 @@
+from config import UID, SECRET, REDIRECT_URI, TOKEN_URL, AUTH_URL, LOG_VIEW_PASSWORD, LOG_PATH
 import os
 import subprocess
 import logging
 
 logging.basicConfig(
-    filename="/app/output/logs.log",
+    filename=LOG_PATH,
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
 )

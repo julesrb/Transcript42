@@ -1,0 +1,12 @@
+requests
+python-dotenv
+attrs==18.2.0
+pdflatex
+jinja2
+fastapi
+uvicorn[standard]
+gunicorn
+filelock
+python-multipart
+watchfiles
+
