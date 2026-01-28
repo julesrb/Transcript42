@@ -6,7 +6,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: dibian-latest
+    runs-on: ubuntu-latest
     environment: main
 
     steps:
