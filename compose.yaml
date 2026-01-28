@@ -1,0 +1,25 @@
+services:
+
+  transcript42:
+    build:
+      context: transcript42
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_FORTYTWO_UID: ${NEXT_PUBLIC_FORTYTWO_UID}
+        NEXT_PUBLIC_OAUTH_REDIRECT_URI: ${NEXT_PUBLIC_OAUTH_REDIRECT_URI}
+        NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: ${NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}
+    ports:
+      - "127.0.0.1:8000:8000"
+    env_file:
+      - .env.prod
+    volumes:
+      - shared_data:/app/output
+    restart: unless-stopped
+
+volumes:
+  shared_data:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '../transcript_42_shared_data'

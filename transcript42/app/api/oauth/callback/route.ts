@@ -7,7 +7,7 @@ async function exchangeCodeForToken(code: string) {
     const authParams = new URLSearchParams({
         grant_type: "authorization_code",
         client_id: process.env.NEXT_PUBLIC_FORTYTWO_UID || "",
-        client_secret: process.env.NEXT_PUBLIC_FORTYTWO_SECRET || "",
+        client_secret: process.env.FORTYTWO_SECRET || "",
         code: code,
         redirect_uri: process.env.NEXT_PUBLIC_OAUTH_REDIRECT_URI || ""
     });
