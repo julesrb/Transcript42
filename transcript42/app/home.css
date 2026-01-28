@@ -1,0 +1,57 @@
+/* Semantic styles for Transcript42 */
+
+:root {
+    --brand-cyan: #00babc;
+    --brand-cyan-hover: #00d1d4;
+    --bg-dark: #12141a;
+    --card-bg: rgba(29, 32, 40, 0.45);
+    --border-white-o10: rgba(255, 255, 255, 0.1);
+}
+
+.login-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-white-o10);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.login-btn {
+    background: var(--brand-cyan);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 186, 188, 0.3);
+}
+
+.login-btn:hover {
+    background: var(--brand-cyan-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 186, 188, 0.4);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+.footer-link {
+    color: var(--brand-cyan);
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: var(--brand-cyan-hover);
+    text-decoration: underline;
+}
+
+.map-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    background: #1d2028;
+}
