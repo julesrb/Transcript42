@@ -1,4 +1,7 @@
-# 42 Berlin Transcript Generator
+# 42 Transcript Generator
+> [!IMPORTANT]
+> **This project is currently undergoing a major refactor (V2), moving away from Python (FastAPI) to Next.js.** Some features may be under active development during this transition.
+
 
 A web-based tool developed in collaboration with the **Pedago team at 42 Berlin** to generate ** academic transcripts** for 42 Berlin students. This service was created to fill the gap where a formal transcript did not previously exist, helping students present their achievements to employers, universities, and other institutions upon request.
 
@@ -26,8 +29,11 @@ https://transcript42.project-cloud.cloud
 
 | Technology      | Role                                     |
 |-----------------|------------------------------------------|
-| **FastAPI**     | Web framework                            |
+| **Next.js 15**  | Full-stack Web Framework (App Router)    |
+| **React 19**    | UI Components                            |
+| **TypeScript**  | Static typing & DX                       |
 | **LaTeX**       | PDF formatting and generation            |
+| **Google Maps API** | Interactive background visualizations |
 | **Docker**      | Containerization                         |
 | **42 API**      | Student data integration (OAuth + fetch) |
 | **GitHub Actions** | CI/CD pipeline                       |
