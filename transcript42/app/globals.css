@@ -3,6 +3,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --brand-cyan: #00babc;
+  --brand-cyan-hover: #00d1d4;
+  --bg-dark: #12141a;
+  --card-bg: rgba(29, 32, 40, 0.45);
+  --border-white-o10: rgba(255, 255, 255, 0.1);
 }
 
 @theme inline {
@@ -23,4 +28,19 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.map-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  background: #1d2028;
 }

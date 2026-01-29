@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import Script from "next/script";
 import { cityData, mapStyles, City } from "../constants/mapData";
+import "../map.css";
 
 declare global {
     interface Window {
