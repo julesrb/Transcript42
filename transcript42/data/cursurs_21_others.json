@@ -1,0 +1,1215 @@
+[
+    {
+        "id": 2565,
+        "name": "Évaluation entreprise intermédiaire 1",
+        "slug": "fr-alternance-rncp6-1-an-evaluation-entreprise-intermediaire-1",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP6 - 1 an",
+            "id": 2561,
+            "slug": "fr-alternance-rncp6-1-an",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp6-1-an/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-11T10:08:14.674Z",
+        "updated_at": "2025-12-19T19:09:35.877Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2566,
+        "name": "Évaluation entreprise finale",
+        "slug": "fr-alternance-rncp6-1-an-evaluation-entreprise-finale",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP6 - 1 an",
+            "id": 2561,
+            "slug": "fr-alternance-rncp6-1-an",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp6-1-an/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:21:47.491Z",
+        "updated_at": "2025-12-19T19:09:50.796Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2566,
+        "name": "Évaluation entreprise finale",
+        "slug": "fr-alternance-rncp6-1-an-evaluation-entreprise-finale",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP6 - 1 an",
+            "id": 2561,
+            "slug": "fr-alternance-rncp6-1-an",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp6-1-an/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:21:47.491Z",
+        "updated_at": "2025-12-19T19:09:50.796Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2567,
+        "name": "Évaluation entreprise intermédiaire 1",
+        "slug": "fr-alternance-rncp6-2-ans-evaluation-entreprise-intermediaire-1",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP6 - 2 ans",
+            "id": 2562,
+            "slug": "fr-alternance-rncp6-2-ans",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp6-2-ans/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:25:13.781Z",
+        "updated_at": "2025-12-19T19:11:15.398Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2567,
+        "name": "Évaluation entreprise intermédiaire 1",
+        "slug": "fr-alternance-rncp6-2-ans-evaluation-entreprise-intermediaire-1",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP6 - 2 ans",
+            "id": 2562,
+            "slug": "fr-alternance-rncp6-2-ans",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp6-2-ans/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:25:13.781Z",
+        "updated_at": "2025-12-19T19:11:15.398Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2568,
+        "name": "Évaluation entreprise intermédiaire 2",
+        "slug": "fr-alternance-rncp6-2-ans-evaluation-entreprise-intermediaire-2",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP6 - 2 ans",
+            "id": 2562,
+            "slug": "fr-alternance-rncp6-2-ans",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp6-2-ans/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:27:35.722Z",
+        "updated_at": "2025-12-19T19:12:01.912Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2568,
+        "name": "Évaluation entreprise intermédiaire 2",
+        "slug": "fr-alternance-rncp6-2-ans-evaluation-entreprise-intermediaire-2",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP6 - 2 ans",
+            "id": 2562,
+            "slug": "fr-alternance-rncp6-2-ans",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp6-2-ans/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:27:35.722Z",
+        "updated_at": "2025-12-19T19:12:01.912Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2569,
+        "name": "Évaluation entreprise intermédiaire 3",
+        "slug": "fr-alternance-rncp6-2-ans-evaluation-entreprise-intermediaire-3",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP6 - 2 ans",
+            "id": 2562,
+            "slug": "fr-alternance-rncp6-2-ans",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp6-2-ans/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:29:58.055Z",
+        "updated_at": "2025-12-19T19:12:19.242Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2569,
+        "name": "Évaluation entreprise intermédiaire 3",
+        "slug": "fr-alternance-rncp6-2-ans-evaluation-entreprise-intermediaire-3",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP6 - 2 ans",
+            "id": 2562,
+            "slug": "fr-alternance-rncp6-2-ans",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp6-2-ans/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:29:58.055Z",
+        "updated_at": "2025-12-19T19:12:19.242Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2570,
+        "name": "Évaluation entreprise finale",
+        "slug": "fr-alternance-rncp6-2-ans-evaluation-entreprise-finale",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP6 - 2 ans",
+            "id": 2562,
+            "slug": "fr-alternance-rncp6-2-ans",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp6-2-ans/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:33:18.087Z",
+        "updated_at": "2025-12-19T19:12:36.584Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2570,
+        "name": "Évaluation entreprise finale",
+        "slug": "fr-alternance-rncp6-2-ans-evaluation-entreprise-finale",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP6 - 2 ans",
+            "id": 2562,
+            "slug": "fr-alternance-rncp6-2-ans",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp6-2-ans/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:33:18.087Z",
+        "updated_at": "2025-12-19T19:12:36.584Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2571,
+        "name": "Évaluation entreprise intermédiaire 1",
+        "slug": "fr-alternance-rncp7-1-an-evaluation-entreprise-intermediaire-1",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP7 - 1 an",
+            "id": 2563,
+            "slug": "fr-alternance-rncp7-1-an",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp7-1-an/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:35:59.336Z",
+        "updated_at": "2025-09-01T15:19:32.318Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2571,
+        "name": "Évaluation entreprise intermédiaire 1",
+        "slug": "fr-alternance-rncp7-1-an-evaluation-entreprise-intermediaire-1",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP7 - 1 an",
+            "id": 2563,
+            "slug": "fr-alternance-rncp7-1-an",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp7-1-an/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:35:59.336Z",
+        "updated_at": "2025-09-01T15:19:32.318Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2572,
+        "name": "Évaluation entreprise finale",
+        "slug": "fr-alternance-rncp7-1-an-evaluation-entreprise-finale",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP7 - 1 an",
+            "id": 2563,
+            "slug": "fr-alternance-rncp7-1-an",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp7-1-an/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:38:38.172Z",
+        "updated_at": "2025-09-01T15:19:32.297Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2572,
+        "name": "Évaluation entreprise finale",
+        "slug": "fr-alternance-rncp7-1-an-evaluation-entreprise-finale",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP7 - 1 an",
+            "id": 2563,
+            "slug": "fr-alternance-rncp7-1-an",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp7-1-an/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:38:38.172Z",
+        "updated_at": "2025-09-01T15:19:32.297Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2573,
+        "name": "Évaluation entreprise intermédiaire 1",
+        "slug": "fr-alternance-rncp7-2-ans-evaluation-entreprise-intermediaire-1",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP7 - 2 ans",
+            "id": 2564,
+            "slug": "fr-alternance-rncp7-2-ans",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp7-2-ans/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:40:50.136Z",
+        "updated_at": "2025-12-19T19:14:39.779Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2573,
+        "name": "Évaluation entreprise intermédiaire 1",
+        "slug": "fr-alternance-rncp7-2-ans-evaluation-entreprise-intermediaire-1",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP7 - 2 ans",
+            "id": 2564,
+            "slug": "fr-alternance-rncp7-2-ans",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp7-2-ans/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:40:50.136Z",
+        "updated_at": "2025-12-19T19:14:39.779Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2574,
+        "name": "Évaluation entreprise intermédiaire 2",
+        "slug": "fr-alternance-rncp7-2-ans-evaluation-entreprise-intermediaire-2",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP7 - 2 ans",
+            "id": 2564,
+            "slug": "fr-alternance-rncp7-2-ans",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp7-2-ans/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:43:08.454Z",
+        "updated_at": "2025-12-19T19:14:56.350Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2574,
+        "name": "Évaluation entreprise intermédiaire 2",
+        "slug": "fr-alternance-rncp7-2-ans-evaluation-entreprise-intermediaire-2",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP7 - 2 ans",
+            "id": 2564,
+            "slug": "fr-alternance-rncp7-2-ans",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp7-2-ans/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:43:08.454Z",
+        "updated_at": "2025-12-19T19:14:56.350Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2575,
+        "name": "Évaluation entreprise intermédiaire 3",
+        "slug": "fr-alternance-rncp7-2-ans-evaluation-entreprise-intermediaire-3",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP7 - 2 ans",
+            "id": 2564,
+            "slug": "fr-alternance-rncp7-2-ans",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp7-2-ans/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:45:04.419Z",
+        "updated_at": "2025-12-19T19:15:11.552Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2575,
+        "name": "Évaluation entreprise intermédiaire 3",
+        "slug": "fr-alternance-rncp7-2-ans-evaluation-entreprise-intermediaire-3",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP7 - 2 ans",
+            "id": 2564,
+            "slug": "fr-alternance-rncp7-2-ans",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp7-2-ans/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:45:04.419Z",
+        "updated_at": "2025-12-19T19:15:11.552Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2576,
+        "name": "Évaluation entreprise finale",
+        "slug": "fr-alternance-rncp7-2-ans-evaluation-entreprise-finale",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP7 - 2 ans",
+            "id": 2564,
+            "slug": "fr-alternance-rncp7-2-ans",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp7-2-ans/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:47:12.616Z",
+        "updated_at": "2025-12-19T19:15:37.009Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2576,
+        "name": "Évaluation entreprise finale",
+        "slug": "fr-alternance-rncp7-2-ans-evaluation-entreprise-finale",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP7 - 2 ans",
+            "id": 2564,
+            "slug": "fr-alternance-rncp7-2-ans",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp7-2-ans/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-12T12:47:12.616Z",
+        "updated_at": "2025-12-19T19:15:37.009Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2561,
+        "name": "FR - Alternance - RNCP6 - 1 an",
+        "slug": "fr-alternance-rncp6-1-an",
+        "difficulty": 90000,
+        "parent": null,
+        "children": [
+            {
+                "name": "Évaluation entreprise intermédiaire 1",
+                "id": 2565,
+                "slug": "fr-alternance-rncp6-1-an-evaluation-entreprise-intermediaire-1",
+                "url": "https://projects.intra.42.fr/fr-alternance-rncp6-1-an-evaluation-entreprise-intermediaire-1/mine"
+            },
+            {
+                "name": "Évaluation entreprise finale",
+                "id": 2566,
+                "slug": "fr-alternance-rncp6-1-an-evaluation-entreprise-finale",
+                "url": "https://projects.intra.42.fr/fr-alternance-rncp6-1-an-evaluation-entreprise-finale/mine"
+            }
+        ],
+        "attachments": [],
+        "created_at": "2024-04-11T09:40:22.327Z",
+        "updated_at": "2025-12-19T19:09:51.165Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2562,
+        "name": "FR - Alternance - RNCP6 - 2 ans",
+        "slug": "fr-alternance-rncp6-2-ans",
+        "difficulty": 150000,
+        "parent": null,
+        "children": [
+            {
+                "name": "Évaluation entreprise intermédiaire 1",
+                "id": 2567,
+                "slug": "fr-alternance-rncp6-2-ans-evaluation-entreprise-intermediaire-1",
+                "url": "https://projects.intra.42.fr/fr-alternance-rncp6-2-ans-evaluation-entreprise-intermediaire-1/mine"
+            },
+            {
+                "name": "Évaluation entreprise intermédiaire 2",
+                "id": 2568,
+                "slug": "fr-alternance-rncp6-2-ans-evaluation-entreprise-intermediaire-2",
+                "url": "https://projects.intra.42.fr/fr-alternance-rncp6-2-ans-evaluation-entreprise-intermediaire-2/mine"
+            },
+            {
+                "name": "Évaluation entreprise intermédiaire 3",
+                "id": 2569,
+                "slug": "fr-alternance-rncp6-2-ans-evaluation-entreprise-intermediaire-3",
+                "url": "https://projects.intra.42.fr/fr-alternance-rncp6-2-ans-evaluation-entreprise-intermediaire-3/mine"
+            },
+            {
+                "name": "Évaluation entreprise finale",
+                "id": 2570,
+                "slug": "fr-alternance-rncp6-2-ans-evaluation-entreprise-finale",
+                "url": "https://projects.intra.42.fr/fr-alternance-rncp6-2-ans-evaluation-entreprise-finale/mine"
+            }
+        ],
+        "attachments": [],
+        "created_at": "2024-04-11T09:47:41.131Z",
+        "updated_at": "2025-12-19T19:12:36.959Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2563,
+        "name": "FR - Alternance - RNCP7 - 1 an",
+        "slug": "fr-alternance-rncp7-1-an",
+        "difficulty": 90000,
+        "parent": null,
+        "children": [
+            {
+                "name": "Évaluation entreprise intermédiaire 1",
+                "id": 2571,
+                "slug": "fr-alternance-rncp7-1-an-evaluation-entreprise-intermediaire-1",
+                "url": "https://projects.intra.42.fr/fr-alternance-rncp7-1-an-evaluation-entreprise-intermediaire-1/mine"
+            },
+            {
+                "name": "Évaluation entreprise finale",
+                "id": 2572,
+                "slug": "fr-alternance-rncp7-1-an-evaluation-entreprise-finale",
+                "url": "https://projects.intra.42.fr/fr-alternance-rncp7-1-an-evaluation-entreprise-finale/mine"
+            }
+        ],
+        "attachments": [],
+        "created_at": "2024-04-11T09:50:56.197Z",
+        "updated_at": "2025-09-01T15:19:32.331Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2564,
+        "name": "FR - Alternance - RNCP7 - 2 ans",
+        "slug": "fr-alternance-rncp7-2-ans",
+        "difficulty": 180000,
+        "parent": null,
+        "children": [
+            {
+                "name": "Évaluation entreprise intermédiaire 1",
+                "id": 2573,
+                "slug": "fr-alternance-rncp7-2-ans-evaluation-entreprise-intermediaire-1",
+                "url": "https://projects.intra.42.fr/fr-alternance-rncp7-2-ans-evaluation-entreprise-intermediaire-1/mine"
+            },
+            {
+                "name": "Évaluation entreprise intermédiaire 2",
+                "id": 2574,
+                "slug": "fr-alternance-rncp7-2-ans-evaluation-entreprise-intermediaire-2",
+                "url": "https://projects.intra.42.fr/fr-alternance-rncp7-2-ans-evaluation-entreprise-intermediaire-2/mine"
+            },
+            {
+                "name": "Évaluation entreprise intermédiaire 3",
+                "id": 2575,
+                "slug": "fr-alternance-rncp7-2-ans-evaluation-entreprise-intermediaire-3",
+                "url": "https://projects.intra.42.fr/fr-alternance-rncp7-2-ans-evaluation-entreprise-intermediaire-3/mine"
+            },
+            {
+                "name": "Évaluation entreprise finale",
+                "id": 2576,
+                "slug": "fr-alternance-rncp7-2-ans-evaluation-entreprise-finale",
+                "url": "https://projects.intra.42.fr/fr-alternance-rncp7-2-ans-evaluation-entreprise-finale/mine"
+            }
+        ],
+        "attachments": [],
+        "created_at": "2024-04-11T09:53:48.867Z",
+        "updated_at": "2025-12-19T19:15:37.301Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2565,
+        "name": "Évaluation entreprise intermédiaire 1",
+        "slug": "fr-alternance-rncp6-1-an-evaluation-entreprise-intermediaire-1",
+        "difficulty": 0,
+        "parent": {
+            "name": "FR - Alternance - RNCP6 - 1 an",
+            "id": 2561,
+            "slug": "fr-alternance-rncp6-1-an",
+            "url": "https://projects.intra.42.fr/fr-alternance-rncp6-1-an/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2024-04-11T10:08:14.674Z",
+        "updated_at": "2025-12-19T19:09:35.877Z",
+        "exam": false,
+        "git_id": null,
+        "repository": null,
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2713,
+        "name": "Apprenticeship I",
+        "slug": "apprenticeship-i",
+        "difficulty": 42000,
+        "parent": null,
+        "children": [
+            {
+                "name": "Duration",
+                "id": 2714,
+                "slug": "apprenticeship-i-duration",
+                "url": "https://projects.intra.42.fr/apprenticeship-i-duration/mine"
+            },
+            {
+                "name": "Contract Upload",
+                "id": 2715,
+                "slug": "apprenticeship-i-contract-upload",
+                "url": "https://projects.intra.42.fr/apprenticeship-i-contract-upload/mine"
+            },
+            {
+                "name": "Mid-evaluation",
+                "id": 2716,
+                "slug": "apprenticeship-i-mid-evaluation",
+                "url": "https://projects.intra.42.fr/apprenticeship-i-mid-evaluation/mine"
+            },
+            {
+                "name": "Final evaluation",
+                "id": 2717,
+                "slug": "apprenticeship-i-final-evaluation",
+                "url": "https://projects.intra.42.fr/apprenticeship-i-final-evaluation/mine"
+            },
+            {
+                "name": "Peer video",
+                "id": 2718,
+                "slug": "apprenticeship-i-peer-video",
+                "url": "https://projects.intra.42.fr/apprenticeship-i-peer-video/mine"
+            }
+        ],
+        "attachments": [],
+        "created_at": "2025-12-04T16:33:30.322Z",
+        "updated_at": "2026-01-28T14:02:56.760Z",
+        "exam": false,
+        "git_id": 1,
+        "repository": "1526",
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2714,
+        "name": "Duration",
+        "slug": "apprenticeship-i-duration",
+        "difficulty": 0,
+        "parent": {
+            "name": "Apprenticeship I",
+            "id": 2713,
+            "slug": "apprenticeship-i",
+            "url": "https://projects.intra.42.fr/apprenticeship-i/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2025-12-04T16:36:04.547Z",
+        "updated_at": "2026-01-28T13:32:40.666Z",
+        "exam": false,
+        "git_id": 1,
+        "repository": "1528",
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2714,
+        "name": "Duration",
+        "slug": "apprenticeship-i-duration",
+        "difficulty": 0,
+        "parent": {
+            "name": "Apprenticeship I",
+            "id": 2713,
+            "slug": "apprenticeship-i",
+            "url": "https://projects.intra.42.fr/apprenticeship-i/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2025-12-04T16:36:04.547Z",
+        "updated_at": "2026-01-28T13:32:40.666Z",
+        "exam": false,
+        "git_id": 1,
+        "repository": "1528",
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2715,
+        "name": "Contract Upload",
+        "slug": "apprenticeship-i-contract-upload",
+        "difficulty": 0,
+        "parent": {
+            "name": "Apprenticeship I",
+            "id": 2713,
+            "slug": "apprenticeship-i",
+            "url": "https://projects.intra.42.fr/apprenticeship-i/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2025-12-04T16:38:10.136Z",
+        "updated_at": "2026-01-28T13:33:01.902Z",
+        "exam": false,
+        "git_id": 1,
+        "repository": "1527",
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2715,
+        "name": "Contract Upload",
+        "slug": "apprenticeship-i-contract-upload",
+        "difficulty": 0,
+        "parent": {
+            "name": "Apprenticeship I",
+            "id": 2713,
+            "slug": "apprenticeship-i",
+            "url": "https://projects.intra.42.fr/apprenticeship-i/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2025-12-04T16:38:10.136Z",
+        "updated_at": "2026-01-28T13:33:01.902Z",
+        "exam": false,
+        "git_id": 1,
+        "repository": "1527",
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2716,
+        "name": "Mid-evaluation",
+        "slug": "apprenticeship-i-mid-evaluation",
+        "difficulty": 0,
+        "parent": {
+            "name": "Apprenticeship I",
+            "id": 2713,
+            "slug": "apprenticeship-i",
+            "url": "https://projects.intra.42.fr/apprenticeship-i/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2025-12-04T16:39:46.960Z",
+        "updated_at": "2026-01-28T13:33:18.236Z",
+        "exam": false,
+        "git_id": 1,
+        "repository": "1529",
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2716,
+        "name": "Mid-evaluation",
+        "slug": "apprenticeship-i-mid-evaluation",
+        "difficulty": 0,
+        "parent": {
+            "name": "Apprenticeship I",
+            "id": 2713,
+            "slug": "apprenticeship-i",
+            "url": "https://projects.intra.42.fr/apprenticeship-i/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2025-12-04T16:39:46.960Z",
+        "updated_at": "2026-01-28T13:33:18.236Z",
+        "exam": false,
+        "git_id": 1,
+        "repository": "1529",
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2717,
+        "name": "Final evaluation",
+        "slug": "apprenticeship-i-final-evaluation",
+        "difficulty": 0,
+        "parent": {
+            "name": "Apprenticeship I",
+            "id": 2713,
+            "slug": "apprenticeship-i",
+            "url": "https://projects.intra.42.fr/apprenticeship-i/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2025-12-04T16:41:24.498Z",
+        "updated_at": "2026-01-28T13:33:32.505Z",
+        "exam": false,
+        "git_id": 1,
+        "repository": "1530",
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2717,
+        "name": "Final evaluation",
+        "slug": "apprenticeship-i-final-evaluation",
+        "difficulty": 0,
+        "parent": {
+            "name": "Apprenticeship I",
+            "id": 2713,
+            "slug": "apprenticeship-i",
+            "url": "https://projects.intra.42.fr/apprenticeship-i/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2025-12-04T16:41:24.498Z",
+        "updated_at": "2026-01-28T13:33:32.505Z",
+        "exam": false,
+        "git_id": 1,
+        "repository": "1530",
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2718,
+        "name": "Peer video",
+        "slug": "apprenticeship-i-peer-video",
+        "difficulty": 0,
+        "parent": {
+            "name": "Apprenticeship I",
+            "id": 2713,
+            "slug": "apprenticeship-i",
+            "url": "https://projects.intra.42.fr/apprenticeship-i/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2025-12-04T16:44:32.530Z",
+        "updated_at": "2026-01-28T13:33:48.402Z",
+        "exam": false,
+        "git_id": 1,
+        "repository": "1531",
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    },
+    {
+        "id": 2718,
+        "name": "Peer video",
+        "slug": "apprenticeship-i-peer-video",
+        "difficulty": 0,
+        "parent": {
+            "name": "Apprenticeship I",
+            "id": 2713,
+            "slug": "apprenticeship-i",
+            "url": "https://projects.intra.42.fr/apprenticeship-i/mine"
+        },
+        "children": [],
+        "attachments": [],
+        "created_at": "2025-12-04T16:44:32.530Z",
+        "updated_at": "2026-01-28T13:33:48.402Z",
+        "exam": false,
+        "git_id": 1,
+        "repository": "1531",
+        "recommendation": "forbidden",
+        "cursus": [
+            {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus",
+                "kind": "main"
+            }
+        ]
+    }
+]

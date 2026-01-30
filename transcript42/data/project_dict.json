@@ -1,0 +1,131 @@
+{
+    "1000000": {
+        "name": "",
+        "description": "ALL DESCRIPTION SHOULD BE 81 CHAR MAX",
+        "hours": ""
+    },
+    "1324": {
+        "name": "exam_06",
+        "description": "",
+        "beschreibung": "",
+        "hours": "0 H"
+    },
+    "1000001": {
+        "name": "AI & Algo",
+        "description": "",
+        "hours": ""
+    },
+    "22670000000000": {
+        "name": "PyDataSci",
+        "description": "Intensive introduction to Python for data science applications.",
+        "beschreibung": "Intensive Einf\u00fchrung in Python f\u00fcr Anwendungen der Datenwissenschaft.",
+        "hours": "35 H"
+    },
+    "22950000000000": {
+        "name": "PiscineDataSci",
+        "description": "Introductory immersion in data science professions and tools.",
+        "beschreibung": "Einf\u00fchrung in die Berufe der Datenwissenschaft und Werkzeuge.",
+        "hours": "35 H"
+    },
+    "1000002": {
+        "name": "Security",
+        "description": "",
+        "hours": ""
+    },
+    "1000003": {
+        "name": "Devops",
+        "description": "",
+        "hours": ""
+    },
+    "1000004": {
+        "name": "Web & Mobile",
+        "description": "",
+        "hours": ""
+    },
+    "1000005": {
+        "name": "System & Kernel",
+        "description": "",
+        "hours": ""
+    },
+    "1000006": {
+        "name": "Graphics & Gaming",
+        "description": "",
+        "hours": ""
+    },
+    "100000": {
+        "name": "Cryptography & Maths",
+        "description": "",
+        "hours": ""
+    },
+    "8": {
+        "name": "Development",
+        "description": "Implement ray-casting for dynamic 3D maze visualization.",
+        "beschreibung": "Ray-Casting f\u00fcr dynamische 3D-Maze-Visualisierung implementieren.",
+        "hours": ""
+    },
+    "1000009": {
+        "name": "Professional Experience",
+        "description": "",
+        "hours": ""
+    },
+    "2268": {
+        "name": "Py Start",
+        "description": "Introduction to Python programming fundamentals and syntax principles.",
+        "beschreibung": "Einf\u00fchrung in die Grundlagen und Syntax der Python-Programmierung.",
+        "hours": "7 H"
+    },
+    "2269": {
+        "name": "Py Array",
+        "description": "Study of arrays, their manipulation, and application in image processing.",
+        "beschreibung": "Arrays analysieren und f\u00fcr Bildverarbeitung nutzen.",
+        "hours": "7 H"
+    },
+    "2270": {
+        "name": "Py DataTable",
+        "description": "Techniques for loading, manipulating, and presenting tabular data in Python.",
+        "beschreibung": "Techniken zum Laden, Bearbeiten und Darstellen tabellarischer Daten in Python.",
+        "hours": "7 H"
+    },
+    "2271": {
+        "name": "Py OOP",
+        "description": "Principles of object-oriented programming and inheritance in Python.",
+        "beschreibung": "Grundlagen der objektorientierten Programmierung und Vererbung in Python.",
+        "hours": "7 H"
+    },
+    "2272": {
+        "name": "Py StructDes",
+        "description": "Design and analysis of data structures for efficient problem solving in Python.",
+        "beschreibung": "Entwurf und Analyse von Datenstrukturen f\u00fcr effiziente Probleml\u00f6sung in Python.",
+        "hours": "7 H"
+    },
+    "2306": {
+        "name": "Data Science 0",
+        "description": "Fundamentals of database creation and management for data science tasks.",
+        "beschreibung": "Grundlagen der Datenbankerstellung und -verwaltung f\u00fcr Data-Science-Aufgaben.",
+        "hours": "7 H"
+    },
+    "2318": {
+        "name": "Data Science 1",
+        "description": "Principles and methods for building and maintaining a data warehouse.",
+        "beschreibung": "Prinzipien und Methoden zum Aufbau und zur Pflege eines Data Warehouses.",
+        "hours": "7 H"
+    },
+    "2311": {
+        "name": "Data Science 2",
+        "description": "Techniques for customer segmentation using data analysis and clustering.",
+        "beschreibung": "Techniken zur Kundensegmentierung mittels Datenanalyse und Clustering.",
+        "hours": "7 H"
+    },
+    "2316": {
+        "name": "Data Science 3",
+        "description": "Introduction to data science concepts and practical analytical methods.",
+        "beschreibung": "Einf\u00fchrung in Data-Science-Konzepte und praktische Analysemethoden.",
+        "hours": "7 H"
+    },
+    "2317": {
+        "name": "Data Science 4",
+        "description": "Advanced data science techniques for real-world data analysis projects.",
+        "beschreibung": "Fortgeschrittene Data-Science-Techniken f\u00fcr reale Analyseprojekte.",
+        "hours": "7 H"
+    }
+}

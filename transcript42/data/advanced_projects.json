@@ -1,0 +1,900 @@
+{
+    "Algo & AI & Data": {
+        "1383": {
+            "name0": "gomoku",
+            "name1": "gomoku",
+            "description_en": "Implement Gomoku with AI using min-max and heuristic optimization.",
+            "description_de": "Gomoku mit AI, Min-Max und Heuristik-Optimierung implementieren.",
+            "hours": "196 H"
+        },
+        "1384": {
+            "name0": "expert-system",
+            "name1": "expert-system",
+            "description_en": "Design an expert system to deduce facts from rules and initial data.",
+            "description_de": "Expert-System entwerfen, das Fakten aus Regeln und Startdaten ableitet.",
+            "hours": "98 H"
+        },
+        "1385": {
+            "name0": "n-puzzle",
+            "name1": "n-puzzle",
+            "description_en": "Develop an optimized solver for n-puzzles of varying sizes.",
+            "description_de": "Optimierten Solver für N-Puzzles verschiedener Größen entwickeln.",
+            "hours": "98 H"
+        },
+        "1391": {
+            "name0": "ft_linear_regression",
+            "name1": "ft_linreg",
+            "description_en": "Implement linear regression to predict values using gradient descent.",
+            "description_de": "Lineare Regression mit Gradient-Descent zur Wertvorhersage implementieren.",
+            "hours": "70 H"
+        },
+        "1392": {
+            "name0": "krpsim",
+            "name1": "krpsim",
+            "description_en": "Optimize process graph rendering under resource constraints.",
+            "description_de": "Prozessgraph-Rendering unter Ressourcen-Beschränkungen optimieren.",
+            "hours": "49 H"
+        },
+        "1393": {
+            "name0": "rubik",
+            "name1": "rubik",
+            "description_en": "Create a Rubik's cube solver using advanced algorithmic techniques.",
+            "description_de": "Rubik's Cube Solver mit fortgeschrittenen Algorithmen entwickeln.",
+            "hours": "98 H"
+        },
+        "1453": {
+            "name0": "dslr",
+            "name1": "dslr",
+            "description_en": "Apply logistic regression for data classification and analysis.",
+            "description_de": "Logistische Regression für Datenklassifizierung und -analyse anwenden.",
+            "hours": "98 H"
+        },
+        "1457": {
+            "name0": "multilayer-perceptron",
+            "name1": "mlp",
+            "description_en": "Implement a multilayer perceptron for neural network fundamentals.",
+            "description_de": "Ein Multilayer-Perzeptron für neuronale Netzwerk-Grundlagen implementieren.",
+            "hours": "98 H"
+        },
+        "1460": {
+            "name0": "total-perspective-vortex",
+            "name1": "tot-perspect",
+            "description_en": "Process high-dimensional data and interface with brainwave inputs.",
+            "description_de": "Hochdimensionale Daten verarbeiten und mit Hirnwellen-Eingaben verbinden.",
+            "hours": "98 H"
+        },
+        "1463": {
+            "name0": "zappy",
+            "name1": "zappy",
+            "description_en": "Develop a multiplayer TCP/IP game with server, client, and AI agents.",
+            "description_de": "Einen Multiplayer-TCP/IP-Spiel mit Server, Client und AI-Agenten entwickeln.",
+            "hours": ""
+        },
+        "1470": {
+            "name0": "lem_in",
+            "name1": "lem_in",
+            "description_en": "Apply graph traversal to optimize ant colony pathfinding.",
+            "description_de": "Graph-Traversal zur Optimierung von Ameisen-Pfadfindung anwenden.",
+            "hours": "98 H"
+        },
+        "1475": {
+            "name0": "corewar",
+            "name1": "corewar",
+            "description_en": "Simulate a virtual arena for assembly programs and VM design.",
+            "description_de": "Einen virtuellen Arena für Assembly-Programme und VM-Design simulieren.",
+            "hours": "196 H"
+        },
+        "2267": "Python for Data Science",
+        "2295": "Piscine Data Science",
+        "2372": {
+            "name0": "Leaffliction",
+            "name1": "Leaffliction",
+            "description_en": "Analyze leaf images for disease recognition using computer vision.",
+            "description_de": "Blattbilder zur Krankheitserkennung mit Computer-Vision analysieren.",
+            "hours": "294 H"
+        }
+    },
+    "Security": {
+        "1400": {
+            "name0": "ft_nmap",
+            "name1": "ft_nmap",
+            "description_en": "Reimplement nmap to deepen TCP/IP and multithreading knowledge.",
+            "description_de": "Nmap neu implementieren, um TCP/IP und Multithreading-Kenntnisse zu vertiefen.",
+            "hours": ""
+        },
+        "1404": {
+            "name0": "snow-crash",
+            "name1": "snow-crash",
+            "description_en": "Intro to computer security: analyze vulnerabilities and code logic.",
+            "description_de": "Einführung in Sicherheitslücken und Logik-Analyse.",
+            "hours": ""
+        },
+        "1405": {
+            "name0": "darkly",
+            "name1": "darkly",
+            "description_en": "Dissect a vulnerable website to study web security fundamentals.",
+            "description_de": "Website zur Analyse von Web-Sicherheit untersuchen.",
+            "hours": ""
+        },
+        "1417": {
+            "name0": "rainfall",
+            "name1": "rainfall",
+            "description_en": "Reverse engineering challenge focused on code reconstruction and faults.",
+            "description_de": "Reverse Engineering-Herausforderung: Code-Rekonstruktion und Fehler analysieren.",
+            "hours": ""
+        },
+        "1418": {
+            "name0": "dr-quine",
+            "name1": "dr-quine",
+            "description_en": "Explore auto-replication and recursion in algorithmic programming.",
+            "description_de": "Replikation und Rekursion in Algorithmen erkunden.",
+            "hours": ""
+        },
+        "1419": {
+            "name0": "woody-woodpacker",
+            "name1": "woodpacker",
+            "description_en": "Modify ELF64 headers to conceal code and study binary manipulation.",
+            "description_de": "ELF64-Header modifizieren, um Code zu verbergen und Binärmanipulation studieren.",
+            "hours": ""
+        },
+        "1430": {
+            "name0": "famine",
+            "name1": "famine",
+            "description_en": "Create a virus by manipulating binary files for educational purposes.",
+            "description_de": "Einen Virus durch Binärdateimanipulation für Bildungszwecke erstellen.",
+            "hours": ""
+        },
+        "1443": {
+            "name0": "pestilence",
+            "name1": "pestilence",
+            "description_en": "Enhance virus code with advanced hiding techniques and obfuscation.",
+            "description_de": "Viruscode mit fortgeschrittenen Verstecktechniken und Verschleierung erweitern.",
+            "hours": ""
+        },
+        "1444": {
+            "name0": "war",
+            "name1": "war",
+            "description_en": "Implement runtime binary signature modification for advanced viruses.",
+            "description_de": "Binärsignaturen für fortgeschrittene Viren verändern.",
+            "hours": ""
+        },
+        "1445": {
+            "name0": "death",
+            "name1": "death",
+            "description_en": "Develop metamorphic code by combining previous virus projects.",
+            "description_de": "Metamorphisches Code durch Kombination früherer Viren-Projekte entwickeln.",
+            "hours": ""
+        },
+        "1446": {
+            "name0": "boot2root",
+            "name1": "boot2root",
+            "description_en": "Collaborate to escalate privileges and gain root on a provided ISO.",
+            "description_de": "Root-Zugriff auf ISO im Team gemeinsam erarbeiten.",
+            "hours": "49 H"
+        },
+        "1447": {
+            "name0": "ft_shield",
+            "name1": "ft_shield",
+            "description_en": "Create a daemon to implement a basic trojan for system security study.",
+            "description_de": "Daemon mit Trojaner für Sicherheitssimulation bauen.",
+            "hours": ""
+        },
+        "1448": {
+            "name0": "override",
+            "name1": "override",
+            "description_en": "Analyze protected binaries and reconstruct them to find vulnerabilities.",
+            "description_de": "Geschützte Binaries analysieren und rekonstruieren.",
+            "hours": ""
+        },
+        "1840": {
+            "name0": "ft_malcolm",
+            "name1": "ft_malcolm",
+            "description_en": "Study network security via Man-in-the-Middle attack implementation.",
+            "description_de": "MitM-Angriff zur Analyse der Netzwerksicherheit bauen.",
+            "hours": ""
+        },
+        "2097": {
+            "name0": "tinky-winkey",
+            "name1": "tinky-winkey",
+            "description_en": "Develop a Windows service to implement and analyze a keylogger.",
+            "description_de": "Windows-Dienst mit Keylogger analysieren und bauen.",
+            "hours": ""
+        },
+        "2346": {
+            "name0": "Cybersecurity",
+            "name1": "Cybersecurity",
+            "description_en": "Intensive immersion in cybersecurity concepts and practices.",
+            "description_de": "Intensive Einführung in Cyber-Sicherheits-Konzepte und Praktiken.",
+            "hours": ""
+        }
+    },
+    "Devops": {
+        "1381": {
+            "name0": "taskmaster",
+            "name1": "taskmaster",
+            "description_en": "Implement a job control system similar to a process supervisor.",
+            "description_de": "Einen Job-Steuerungs-System implementieren, das dem Prozess-Supervisor ähnelt.",
+            "hours": ""
+        },
+        "1397": {
+            "name0": "ft_ping",
+            "name1": "ft_ping",
+            "description_en": "Reimplement ping to study raw IP communication and networking.",
+            "description_de": "Ping neu bauen für Studium von IP und Netzwerken.",
+            "hours": ""
+        },
+        "1399": {
+            "name0": "ft_traceroute",
+            "name1": "ft_traceroute",
+            "description_en": "Reimplement traceroute to analyze IP packet routing and networks.",
+            "description_de": "Traceroute neu implementieren, um IP-Paket-Routing und Netzwerke analysieren.",
+            "hours": ""
+        },
+        "1400": {
+            "name0": "ft_nmap",
+            "name1": "ft_nmap",
+            "description_en": "Reimplement nmap to deepen TCP/IP and multithreading knowledge.",
+            "description_de": "Nmap neu implementieren, um TCP/IP und Multithreading-Kenntnisse zu vertiefen.",
+            "hours": ""
+        },
+        "1414": {
+            "name0": "cloud-1",
+            "name1": "cloud-1",
+            "description_en": "Introduction to cloud server concepts and deployment techniques.",
+            "description_de": "Einführung in Cloud-Server-Konzepte und Bereitstellungsverfahren.",
+            "hours": "100 H"
+        },
+        "2064": {
+            "name0": "Inception-of-Things",
+            "name1": "InceptThings",
+            "description_en": "Set up Kubernetes clusters and CI pipelines for Dockerized apps.",
+            "description_de": "Kubernetes-Cluster und CI-Pipelines für Dockerisierte Apps einrichten.",
+            "hours": "200 H"
+        },
+        "2071": {
+            "name0": "Bgp At Doors of Autonomous Systems is Simple",
+            "name1": "BgpAutonSys",
+            "description_en": "Simulate VXLAN+BGP-EVPN networks in GNS3 to deepen NetPractice skills.",
+            "description_de": "VXLAN+BGP-EVPN-Netze in GNS3 zur Übung simulieren.",
+            "hours": "200 H"
+        }
+    },
+    "Web & Mobile": {
+        "1379": {
+            "name0": "ft_hangouts",
+            "name1": "ft_hangouts",
+            "description_en": "Develop an Android contact management app to learn mobile fundamentals.",
+            "description_de": "Eine Android-Kontaktverwaltungs-App entwickeln, um mobile Grundlagen zu lernen.",
+            "hours": ""
+        },
+        "1395": {
+            "name0": "swifty-companion",
+            "name1": "swifty-comp",
+            "description_en": "Create a mobile app to retrieve and display 42 student information.",
+            "description_de": "42-App zum Anzeigen von Studentendaten erstellen.",
+            "hours": "49 H"
+        },
+        "1396": {
+            "name0": "camagru",
+            "name1": "camagru",
+            "description_en": "Build a web app for photomontage creation and sharing from scratch.",
+            "description_de": "Eine Web-App für Foto-Montage-Erstellung und -Freigabe von Grund auf erstellen.",
+            "hours": ""
+        },
+        "1401": {
+            "name0": "matcha",
+            "name1": "matcha",
+            "description_en": "Develop a dating site using a micro-framework and user interaction.",
+            "description_de": "Dating-App mit Micro-Framework und User-Logik bauen.",
+            "hours": ""
+        },
+        "1402": {
+            "name0": "hypertube",
+            "name1": "hypertube",
+            "description_en": "Create a video streaming site using an MVC framework and BitTorrent.",
+            "description_de": "Eine Video-Streaming-Website mit einem MVC-Framework und BitTorrent erstellen.",
+            "hours": ""
+        },
+        "1405": {
+            "name0": "darkly",
+            "name1": "darkly",
+            "description_en": "Dissect a vulnerable website to study web security fundamentals.",
+            "description_de": "Website zur Analyse von Web-Sicherheit untersuchen.",
+            "hours": ""
+        },
+        "1406": {
+            "name0": "swifty-proteins",
+            "name1": "swifty-prot",
+            "description_en": "Model 3D ligands in a mobile app to deepen framework knowledge.",
+            "description_de": "3D-Liganden in App modellieren, Framework üben.",
+            "hours": ""
+        },
+        "1427": {
+            "name0": "music-room",
+            "name1": "music-room",
+            "description_en": "Develop a collaborative playlist app with native and backend components.",
+            "description_de": "Playlist-App mit nativer und Backend-Logik bauen.",
+            "hours": "196 H"
+        },
+        "1428": {
+            "name0": "red-tetris",
+            "name1": "red-tetris",
+            "description_en": "Create a networked multiplayer Tetris game using full stack JavaScript.",
+            "description_de": "Multiplayer-Tetris mit Fullstack-JavaScript umsetzen.",
+            "hours": "147 H"
+        },
+        "1486": "[DEPRECATED] Piscine Swift iOS",
+        "2179": {
+            "name0": "Piscine RoR",
+            "name1": "Piscine RoR",
+            "description_en": "Intensive immersion in Ruby on Rails for web development skills.",
+            "description_de": "Intensive Einführung in Ruby on Rails für Web-Entwicklungsfähigkeiten.",
+            "hours": ""
+        },
+        "2189": {
+            "name0": "Piscine Django",
+            "name1": "Piscine Django",
+            "description_en": "Intensive immersion in Django for web development skills.",
+            "description_de": "Intensive Einführung in Django für Web-Entwicklungsfähigkeiten.",
+            "hours": ""
+        },
+        "2199": {
+            "name0": "Piscine Symfony",
+            "name1": "PiscSymfony",
+            "description_en": "Intensive immersion in Symfony for web development skills.",
+            "description_de": "Intensive Einführung in Symfony für Web-Entwicklungsfähigkeiten.",
+            "hours": ""
+        },
+        "2355": {
+            "name0": "Mobile",
+            "name1": "Mobile",
+            "description_en": "Intensive immersion in mobile development concepts and tools.",
+            "description_de": "Intensive Einführung in mobile Entwicklungskonzepte und Werkzeuge.",
+            "hours": ""
+        }
+    },
+    "System & Kernel": {
+        "1330": {
+            "name0": "libasm",
+            "name1": "libasm",
+            "description_en": "Gain proficiency in assembly language through practical implementation.",
+            "description_de": "Assembler-Skills durch praktische Übungen stärken.",
+            "hours": ""
+        },
+        "1381": {
+            "name0": "taskmaster",
+            "name1": "taskmaster",
+            "description_en": "Implement a job control system similar to a process supervisor.",
+            "description_de": "Einen Job-Steuerungs-System implementieren, das dem Prozess-Supervisor ähnelt.",
+            "hours": ""
+        },
+        "1386": {
+            "name0": "nibbler",
+            "name1": "nibbler",
+            "description_en": "Recode Snake in C++ with runtime interface switching capability.",
+            "description_de": "Snake in C++ mit Laufzeit-Schnittstellen-Wechsel-Fähigkeit neu codieren.",
+            "hours": ""
+        },
+        "1388": {
+            "name0": "strace",
+            "name1": "strace",
+            "description_en": "Reimplement strace to list syscalls and study process tracing.",
+            "description_de": "Strace neu bauen zur Prozess- und Syscall-Analyse.",
+            "hours": ""
+        },
+        "1397": {
+            "name0": "ft_ping",
+            "name1": "ft_ping",
+            "description_en": "Reimplement ping to study raw IP communication and networking.",
+            "description_de": "Ping neu bauen für Studium von IP und Netzwerken.",
+            "hours": ""
+        },
+        "1399": {
+            "name0": "ft_traceroute",
+            "name1": "ft_traceroute",
+            "description_en": "Reimplement traceroute to analyze IP packet routing and networks.",
+            "description_de": "Traceroute neu implementieren, um IP-Paket-Routing und Netzwerke analysieren.",
+            "hours": ""
+        },
+        "1400": {
+            "name0": "ft_nmap",
+            "name1": "ft_nmap",
+            "description_en": "Reimplement nmap to deepen TCP/IP and multithreading knowledge.",
+            "description_de": "Nmap neu implementieren, um TCP/IP und Multithreading-Kenntnisse zu vertiefen.",
+            "hours": ""
+        },
+        "1415": {
+            "name0": "ft_linux",
+            "name1": "ft_linux",
+            "description_en": "Build a simple LFS distribution as a foundation for kernel projects.",
+            "description_de": "Eine einfache LFS-Distribution als Grundlage für Kernel-Projekte erstellen.",
+            "hours": ""
+        },
+        "1416": {
+            "name0": "little-penguin-1",
+            "name1": "ltl-penguin1",
+            "description_en": "Explore kernel development through Eudyptula-inspired challenges.",
+            "description_de": "Kernel-Entwicklung durch Eudyptula-inspirierte Herausforderungen erkunden.",
+            "hours": ""
+        },
+        "1420": {
+            "name0": "matt-daemon",
+            "name1": "matt-daemon",
+            "description_en": "Create a Unix daemon server to interpret and execute commands.",
+            "description_de": "Unix-Daemon zur Befehlsausführung entwickeln.",
+            "hours": ""
+        },
+        "1421": {
+            "name0": "process-and-memory",
+            "name1": "proc-memory",
+            "description_en": "Study syscalls and memory management in the Linux kernel.",
+            "description_de": "Systemaufrufe und Speicherverwaltung im Linux-Kernel studieren.",
+            "hours": ""
+        },
+        "1422": {
+            "name0": "drivers-and-interrupts",
+            "name1": "drv-interrupts",
+            "description_en": "Connect and manage drivers and interrupts in a custom kernel.",
+            "description_de": "Treiber und Interrupts im Kernel verwalten.",
+            "hours": ""
+        },
+        "1423": {
+            "name0": "filesystem",
+            "name1": "filesystem",
+            "description_en": "Design and implement a custom filesystem for a Linux kernel.",
+            "description_de": "Eigenes Dateisystem für Linux-Kernel erstellen.",
+            "hours": ""
+        },
+        "1424": {
+            "name0": "kfs-2",
+            "name1": "kfs-2",
+            "description_en": "Create a kernel from scratch, deepening kernel programming skills.",
+            "description_de": "Kernel neu bauen und Skills vertiefen.",
+            "hours": ""
+        },
+        "1425": {
+            "name0": "kfs-1",
+            "name1": "kfs-1",
+            "description_en": "Create a kernel from scratch, deepening kernel programming skills.",
+            "description_de": "Kernel neu bauen und Skills vertiefen.",
+            "hours": ""
+        },
+        "1426": {
+            "name0": "kfs-3",
+            "name1": "kfs-3",
+            "description_en": "Manage memory in a custom kernel as part of kernel development.",
+            "description_de": "Speicher im eigenen Kernel gezielt verwalten.",
+            "hours": ""
+        },
+        "1431": {
+            "name0": "kfs-4",
+            "name1": "kfs-4",
+            "description_en": "Create an Interrupt Description Table and handle kernel interrupts.",
+            "description_de": "Eine Interrupt-Beschreibungstabelle erstellen und Kernel-Interrupts verarbeiten.",
+            "hours": ""
+        },
+        "1432": {
+            "name0": "kfs-5",
+            "name1": "kfs-5",
+            "description_en": "Implement process management and advanced shell command parsing.",
+            "description_de": "Prozessverwaltung und fortgeschrittene Shell-Befehlsanalyse implementieren.",
+            "hours": ""
+        },
+        "1438": {
+            "name0": "kfs-6",
+            "name1": "kfs-6",
+            "description_en": "Advance kernel development by implementing a custom filesystem.",
+            "description_de": "Eigenes Dateisystem für Kernel implementieren.",
+            "hours": ""
+        },
+        "1439": {
+            "name0": "kfs-7",
+            "name1": "kfs-7",
+            "description_en": "Build syscalls, user accounts, sockets, and Unix hierarchy in kernel.",
+            "description_de": "Systemaufrufe, Benutzerkonten, Sockets und Unix-Hierarchie im Kernel erstellen.",
+            "hours": ""
+        },
+        "1440": {
+            "name0": "kfs-8",
+            "name1": "kfs-8",
+            "description_en": "Develop a module interface for extensible kernel functionality.",
+            "description_de": "Eine Modul-Schnittstelle für erweiterbare Kernel-Funktionalität entwickeln.",
+            "hours": ""
+        },
+        "1441": {
+            "name0": "kfs-9",
+            "name1": "kfs-9",
+            "description_en": "Create an ELF parser and loader for a custom kernel.",
+            "description_de": "Einen ELF-Parser und -Lader für einen benutzerdefinierten Kernel erstellen.",
+            "hours": ""
+        },
+        "1442": {
+            "name0": "kfs-x",
+            "name1": "kfs-x",
+            "description_en": "Build a complete Linux environment as a final kernel project.",
+            "description_de": "Einen vollständigen Linux-Umgebung als Endprojekt eines Kernels erstellen.",
+            "hours": ""
+        },
+        "1456": {
+            "name0": "userspace_digressions",
+            "name1": "usr-digress",
+            "description_en": "Develop a custom userspace init binary for system initialization.",
+            "description_de": "Init-Binary für Userspace-Systemstart entwickeln.",
+            "hours": ""
+        },
+        "1463": {
+            "name0": "zappy",
+            "name1": "zappy",
+            "description_en": "Develop a multiplayer TCP/IP game with server, client, and AI agents.",
+            "description_de": "Einen Multiplayer-TCP/IP-Spiel mit Server, Client und AI-Agenten entwickeln.",
+            "hours": ""
+        },
+        "1464": {
+            "name0": "lem-ipc",
+            "name1": "lem-ipc",
+            "description_en": "Implement local IPC using UNIX tools in a board game client.",
+            "description_de": "Lokale IPC mit UNIX-Werkzeugen im Spielclient nutzen.",
+            "hours": ""
+        },
+        "1467": {
+            "name0": "nm",
+            "name1": "nm",
+            "description_en": "Recreate nm to analyze Linux executables and symbol tables.",
+            "description_de": "Nm neu bauen zur Analyse von Binaries und Symbolen.",
+            "hours": ""
+        },
+        "1468": {
+            "name0": "malloc",
+            "name1": "malloc",
+            "description_en": "Reimplement malloc, free, and realloc for memory management study.",
+            "description_de": "Malloc, free und realloc für Speicherverwaltungsschulung neu implementieren.",
+            "hours": ""
+        },
+        "1479": {
+            "name0": "ft_ls",
+            "name1": "ft_ls",
+            "description_en": "Recreate ls to explore filesystem structure and sorting algorithms.",
+            "description_de": "Ls neu erstellen, um Dateisystemstruktur und Sortierungsalgorithmen zu erkunden.",
+            "hours": ""
+        },
+        "1854": {
+            "name0": "42sh",
+            "name1": "42sh",
+            "description_en": "Develop a full-featured shell with advanced UNIX and POSIX features.",
+            "description_de": "Shell mit fortgeschrittenem UNIX und POSIX bauen.",
+            "hours": ""
+        }
+    },
+    "Graphics & Gaming": {
+        "1386": {
+            "name0": "nibbler",
+            "name1": "nibbler",
+            "description_en": "Recode Snake in C++ with runtime interface switching capability.",
+            "description_de": "Snake in C++ mit Laufzeit-Schnittstellen-Wechsel-Fähigkeit neu codieren.",
+            "hours": ""
+        },
+        "1387": {
+            "name0": "42run",
+            "name1": "42run",
+            "description_en": "Create a 3D game in OpenGL, focusing on meshes and GPU-based gameplay.",
+            "description_de": "OpenGL-Spiel mit Meshes und GPU-Logik umsetzen.",
+            "hours": ""
+        },
+        "1389": {
+            "name0": "bomberman",
+            "name1": "bomberman",
+            "description_en": "Recode Bomberman in C++ and OpenGL for advanced game development.",
+            "description_de": "Bomberman mit OpenGL für Game-Dev neu bauen.",
+            "hours": ""
+        },
+        "1390": {
+            "name0": "scop",
+            "name1": "scop",
+            "description_en": "Explore 3D rendering on GPU using OpenGL, Vulkan, or Metal.",
+            "description_de": "3D-Rendering auf GPU mithilfe von OpenGL, Vulkan oder Metal erkunden.",
+            "hours": ""
+        },
+        "1394": {
+            "name0": "humangl",
+            "name1": "humangl",
+            "description_en": "Model and animate humanoid figures using hierarchical OpenGL techniques.",
+            "description_de": "Humanoide mit hierarchischem OpenGL animieren.",
+            "hours": ""
+        },
+        "1408": {
+            "name0": "xv",
+            "name1": "xv",
+            "description_en": "Develop a Unity-based interface to optimize industrial processes.",
+            "description_de": "Unity-Interface für Industrieprozesse entwickeln.",
+            "hours": ""
+        },
+        "1409": {
+            "name0": "in-the-shadows",
+            "name1": "in-shadows",
+            "description_en": "Develop a complete game integrating algorithms and creative design.",
+            "description_de": "Eine vollständige Spiele mit Algorithmen und kreativem Design integrieren.",
+            "hours": ""
+        },
+        "1410": {
+            "name0": "particle-system",
+            "name1": "part-system",
+            "description_en": "Design a GPU-accelerated particle system meeting performance constraints.",
+            "description_de": "GPU-Partikelsystem mit Performance-Optimierung bauen.",
+            "hours": ""
+        },
+        "1449": {
+            "name0": "ft_vox",
+            "name1": "ft_vox",
+            "description_en": "Implement a voxel engine to generate a 3D world, inspired by Minecraft.",
+            "description_de": "Voxel-Engine im Minecraft-Stil implementieren.",
+            "hours": ""
+        },
+        "1454": {
+            "name0": "shaderpixel",
+            "name1": "shaderpixel",
+            "description_en": "Design creative 3D objects using advanced shader programming.",
+            "description_de": "Kreative 3D-Objekte mit fortgeschrittenen Shader-Programmierung entwerfen.",
+            "hours": ""
+        },
+        "1455": {
+            "name0": "guimp",
+            "name1": "guimp",
+            "description_en": "Develop a modular 2D graphics library and image editing software.",
+            "description_de": "Eine modulare 2D-Grafikbibliothek und Bildbearbeitungssoftware entwickeln.",
+            "hours": ""
+        },
+        "1458": {
+            "name0": "doom-nukem",
+            "name1": "doom-nukem",
+            "description_en": "Advance raycasting and game design by merging Doom and Duke Nukem 3D.",
+            "description_de": "Raycasting mit Doom und Duke Nukem kombinieren.",
+            "hours": ""
+        },
+        "1462": {
+            "name0": "mod1",
+            "name1": "mod1",
+            "description_en": "Simulate 3D water flow and surface dynamics using empirical models.",
+            "description_de": "3D-Wasserfluss und Oberflächendynamik mit empirischen Modellen simulieren.",
+            "hours": ""
+        },
+        "1463": {
+            "name0": "zappy",
+            "name1": "zappy",
+            "description_en": "Develop a multiplayer TCP/IP game with server, client, and AI agents.",
+            "description_de": "Einen Multiplayer-TCP/IP-Spiel mit Server, Client und AI-Agenten entwickeln.",
+            "hours": ""
+        },
+        "1485": "[DEPRECATED] Piscine Unity",
+        "1855": {
+            "name0": "rt",
+            "name1": "rt",
+            "description_en": "Implement advanced raytracing: mirrors, transparency, and textures.",
+            "description_de": "Raytracing mit Spiegeln, Transparenz und Texturen.",
+            "hours": ""
+        },
+        "1962": {
+            "name0": "ft_newton",
+            "name1": "ft_newton",
+            "description_en": "Develop a basic physics engine for motion, gravity, and collisions.",
+            "description_de": "Physik-Engine für Bewegung und Kollision bauen.",
+            "hours": ""
+        },
+        "2126": {
+            "name0": "ft_minecraft",
+            "name1": "ft_minecraft",
+            "description_en": "Extend voxel engine with procedural generation, rendering, and networking.",
+            "description_de": "Voxel-Engine mit Netzwerk und Procedural erweitern.",
+            "hours": ""
+        },
+        "2288": {
+            "name0": "Unity",
+            "name1": "Unity",
+            "description_en": "Intensive immersion in Unity for 3D and game development skills.",
+            "description_de": "Intensive Einführung in Unity für 3D- und Spieleentwicklungsfähigkeiten.",
+            "hours": ""
+        }
+    },
+    "Cryptography & Maths": {
+        "1382": {
+            "name0": "computorv1",
+            "name1": "computorv1",
+            "description_en": "Apply elementary math tools for equation solving and analysis.",
+            "description_de": "Elementare mathematische Werkzeuge für Gleichungslösung und Analyse anwenden.",
+            "hours": ""
+        },
+        "1391": {
+            "name0": "ft_linear_regression",
+            "name1": "ft_linreg",
+            "description_en": "Implement linear regression to predict values using gradient descent.",
+            "description_de": "Lineare Regression mit Gradient-Descent zur Wertvorhersage implementieren.",
+            "hours": "70 H"
+        },
+        "1433": {
+            "name0": "computorv2",
+            "name1": "computorv2",
+            "description_en": "Develop a CLI calculator for matrices, functions, and complex numbers.",
+            "description_de": "Einen CLI-Rechner für Matrizen, Funktionen und komplexe Zahlen entwickeln.",
+            "hours": ""
+        },
+        "1450": {
+            "name0": "ft_ssl_rsa",
+            "name1": "ft_ssl_rsa",
+            "description_en": "Generate random primes and create private RSA keys from scratch.",
+            "description_de": "RSA-Schlüssel mit Zufallsprimes selbst erstellen.",
+            "hours": ""
+        },
+        "1451": {
+            "name0": "ft_ssl_md5",
+            "name1": "ft_ssl_md5",
+            "description_en": "Reimplement the MD5 hashing algorithm from OpenSSL.",
+            "description_de": "MD5-Hash-Algorithmus von OpenSSL neu implementieren.",
+            "hours": ""
+        },
+        "1452": {
+            "name0": "ft_ssl_des",
+            "name1": "ft_ssl_des",
+            "description_en": "Reimplement BASE64, DES-ECB, and DES-CBC from OpenSSL.",
+            "description_de": "BASE64, DES-ECB und DES-CBC von OpenSSL neu implementieren.",
+            "hours": ""
+        },
+        "1855": {
+            "name0": "rt",
+            "name1": "rt",
+            "description_en": "Implement advanced raytracing: mirrors, transparency, and textures.",
+            "description_de": "Raytracing mit Spiegeln, Transparenz und Texturen.",
+            "hours": ""
+        },
+        "2076": {
+            "name0": "ready set boole",
+            "name1": "set-boole",
+            "description_en": "Study Boolean algebra and set theory for computer mathematics.",
+            "description_de": "Boolesche Algebra und Mengenlehre für Computer-Mathematik studieren.",
+            "hours": ""
+        },
+        "2077": {
+            "name0": "matrix",
+            "name1": "matrix",
+            "description_en": "Formalize linear algebra: matrices, transformations, and vector spaces.",
+            "description_de": "Lineare Algebra formalisieren: Matrizen, Transformationen und Vektorräume.",
+            "hours": ""
+        },
+        "2098": {
+            "name0": "ft_kalman",
+            "name1": "ft_kalman",
+            "description_en": "Implement a Kalman filter for signal processing and sensor fusion.",
+            "description_de": "Einen Kalman-Filter für Signalverarbeitung und Sensorfusion implementieren.",
+            "hours": ""
+        }
+    },
+    "Development": {
+        "1403": {
+            "name0": "ft_turing",
+            "name1": "ft_turing",
+            "description_en": "Implement the Turing model using imperative programming in OCaml.",
+            "description_de": "Turing-Modell mit imperativer Programmierung in OCaml implementieren.",
+            "hours": ""
+        },
+        "1407": {
+            "name0": "ft_ality",
+            "name1": "ft_ality",
+            "description_en": "Study syntax analysis and finite automata in a combat game context.",
+            "description_de": "Syntaxanalyse und endliche Automaten in einem Kampfspiel-Kontext studieren.",
+            "hours": ""
+        },
+        "1429": {
+            "name0": "h42n42",
+            "name1": "h42n42",
+            "description_en": "Design a bug simulator using the OCSIGEN framework in OCaml.",
+            "description_de": "Einen Fehler-Simulator mit dem OCSIGEN-Framework in OCaml entwerfen.",
+            "hours": ""
+        },
+        "1435": {
+            "name0": "avaj-launcher",
+            "name1": "avaj-launcher",
+            "description_en": "Implement a Java program following a UML class diagram.",
+            "description_de": "Ein Java-Programm nach einem UML-Klassendiagramm implementieren.",
+            "hours": "50 H"
+        },
+        "1436": {
+            "name0": "swingy",
+            "name1": "swingy",
+            "description_en": "Develop a GUI RPG game using Java SWING framework.",
+            "description_de": "Eine GUI-RPG-Spiel mit Java SWING-Framework entwickeln.",
+            "hours": ""
+        },
+        "1437": {
+            "name0": "fix-me",
+            "name1": "fix-me",
+            "description_en": "Simulate stock exchanges and trading algorithms with networking in Java.",
+            "description_de": "Aktienbörsen und Handelsalgorithmen mit Netzwerk-Funktionalität simulieren.",
+            "hours": ""
+        },
+        "1475": {
+            "name0": "corewar",
+            "name1": "corewar",
+            "description_en": "Simulate a virtual arena for assembly programs and VM design.",
+            "description_de": "Einen virtuellen Arena für Assembly-Programme und VM-Design simulieren.",
+            "hours": "196 H"
+        },
+        "1484": "[DEPRECATED] Piscine OCaml",
+        "1635": {
+            "name0": "Open Project",
+            "name1": "Open Project",
+            "description_en": "Manage a long-term project with computer science elements in a team.",
+            "description_de": "CS-Projekt langfristig im Team organisieren.",
+            "hours": "180 D"
+        },
+        "2065": {
+            "name0": "Rushes",
+            "name1": "Rushes",
+            "description_en": "Intensive collaborative sprints to solve advanced technical challenges.",
+            "description_de": "Sprints zur Lösung technischer Probleme meistern.",
+            "hours": ""
+        },
+        "2364": {
+            "name0": "Piscine Object",
+            "name1": "PiscObject",
+            "description_en": "Intensive immersion in object-oriented programming concepts.",
+            "description_de": "Intensive Einführung in objektorientierte Programmierungskonzepte.",
+            "hours": ""
+        },
+        "2371": {
+            "name0": "Abstract_data",
+            "name1": "Abstract_data",
+            "description_en": "Reimplement C++ containers to master their usage and design.",
+            "description_de": "C++-Container neu implementieren, um deren Nutzung und Design zu beherrschen.",
+            "hours": ""
+        },
+        "2380": {
+            "name0": "ft_lex",
+            "name1": "ft_lex",
+            "description_en": "Implement a regex engine for lexical analysis and finite automata.",
+            "description_de": "Regex-Engine für Lexer und Automaten entwickeln.",
+            "hours": ""
+        },
+        "2381": {
+            "name0": "ft_yacc",
+            "name1": "ft_yacc",
+            "description_en": "Implement a parser for syntactic analysis and stack automata.",
+            "description_de": "Einen Parser für syntaktische Analyse und Stapel-Automaten implementieren.",
+            "hours": ""
+        }
+    },
+    "Professional Experience": {
+        "1638": {
+            "name0": "Work Experience I",
+            "name1": "WorkExpI",
+            "description_en": "Apply professional skills and adaptability in a real-world company setting.",
+            "description_de": "Skills in realem Berufsumfeld anwenden.",
+            "hours": ""
+        },
+        "1644": {
+            "name0": "Work Experience II",
+            "name1": "WorkExpII",
+            "description_en": "Demonstrate expertise and integration during a second professional internship.",
+            "description_de": "Kompetenz im zweiten Praktikum zeigen.",
+            "hours": ""
+        },
+        "1650": {
+            "name0": "Part_Time I",
+            "name1": "Part_Time I",
+            "description_en": "Gain initial professional experience and explore career interests.",
+            "description_de": "Initiale berufliche Erfahrung sammeln und berufliche Interessen erkunden.",
+            "hours": ""
+        },
+        "1656": {
+            "name0": "Part_Time II",
+            "name1": "Part_Time II",
+            "description_en": "Continue professional development through a second internship.",
+            "description_de": "Berufliche Weiterentwicklung über ein zweites Praktikum fortsetzen.",
+            "hours": ""
+        },
+        "1662": {
+            "name0": "Startup Experience",
+            "name1": "StartupExp",
+            "description_en": "Found and manage a startup as a full-time professional project.",
+            "description_de": "Ein Startup als vollzeitiges berufliches Projekt gründen und verwalten.",
+            "hours": ""
+        }
+    }
+}
