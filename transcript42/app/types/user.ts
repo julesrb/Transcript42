@@ -1,29 +1,7 @@
 import { z } from "zod";
-
-export const ProjectSchema = z.object({
-    id: z.number(),
-    name: z.string(),
-});
-
-export const CampusSchema = z.object({
-    id: z.number(),
-    name: z.string(),
-    city: z.string(),
-    country: z.string(),
-});
-
-export const ProjectUserSchema = z.object({
-    final_mark: z.number().nullable().optional(),
-    status: z.string(),
-    project: ProjectSchema,
-    cursus_ids: z.array(z.number()),
-    "validated?": z.boolean().nullable().optional(),
-});
-
-export const CursusUserSchema = z.object({
-    cursus_id: z.number(),
-    grade: z.string().nullable().optional(),
-});
+import { CampusSchema } from "./campus";
+import { CursusUserSchema } from "./cursus-user";
+import { ProjectUserSchema } from "./project-user";
 
 export const UserSchema = z.object({
     id: z.number(),
@@ -36,5 +14,3 @@ export const UserSchema = z.object({
 });
 
 export type User = z.infer<typeof UserSchema>;
-export type Project = z.infer<typeof ProjectSchema>;
-export type ProjectUser = z.infer<typeof ProjectUserSchema>;
