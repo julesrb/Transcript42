@@ -2,7 +2,7 @@
 
 import { NextResponse } from "next/server";
 import { exchangeCodeForToken } from "../../../lib/fortytwo";
-import { saveSession } from "../../../lib/session";
+import { encryptSession } from "../../../lib/session";
 
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
@@ -14,9 +14,7 @@ export async function GET(request: Request) {
 
     const token = await exchangeCodeForToken(code);
 
-    const sessionId = crypto.randomUUID();
-
-    await saveSession(sessionId, {
+    const sessionId = await encryptSession({
         accessToken: token.access_token,
         expiresAt: Date.now() + token.expires_in * 1000,
     });

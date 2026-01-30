@@ -19,3 +19,18 @@ export async function exchangeCodeForToken(code: string) {
     const data = await response.json();
     return data;
 }
+
+export async function getUserInfo(token: string) {
+    const response = await fetch(
+        `https://api.intra.42.fr/v2/me`,
+        {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`,
+            },
+        }
+    );
+    const data = await response.json();
+    return data;
+}
+
