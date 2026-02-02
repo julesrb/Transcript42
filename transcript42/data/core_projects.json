@@ -1,220 +1,244 @@
-{
-    "rank0": {
-        "1314": {
-            "name0": "Libft",
-            "name1": "Libft",
-            "description_en": "Reimplementation of key C standard library functions and custom utilities.",
-            "description_de": "Wichtige C-Standardfunktionen und eigene Utilities in C neu implementiert.",
-            "hours": "70 H"
-        }
-    },
-    "rank1": {
-        "1316": {
-            "name0": "ft_printf",
-            "name1": "ft_printf",
-            "description_en": "Custom printf using variadic functions and format specifiers in C.",
-            "description_de": "Eigene printf-Implementierung mit variadischen Funktionen und Format-Handling.",
-            "hours": "70 H"
-        },
-        "1994": {
-            "name0": "Born2beroot",
-            "name1": "Born2beroot",
-            "description_en": "Introduction to system administration and virtualization with Linux.",
-            "description_de": "Einf\u00fchrung in Systemadministration und Virtualisierung mit Linux.",
-            "hours": "40 H"
-        },
-        "1327": {
-            "name0": "get_next_line",
-            "name1": "get_next_line",
-            "description_en": "Read file or input content line by line with buffer management in C.",
-            "description_de": "Datei- oder Eingabezeilen mit Buffer-Management in C zeilenweise einlesen.",
-            "hours": "70 H"
-        }
-    },
-    "rank2": {
-        "2008": {
-            "name0": "FdF",
-            "name1": "FdF",
-            "description_en": "3D wireframe rendering using a basic graphics window and event handling in C.",
-            "description_de": "3D-Wireframe-Rendering mit Grafik und Event-Handling in C.",
-            "hours": "60 H"
-        },
-        "2009": {
-            "name0": "so_long",
-            "name1": "so_long",
-            "description_en": "Create 2D game with player movement, collectibles, and event handling in C.",
-            "description_de": "2D-Game mit Player-Movement, Collectibles und Events in C entwickeln.",
-            "hours": "60 H"
-        },
-        "1476": {
-            "name0": "fract-ol",
-            "name1": "fract-ol",
-            "description_en": "Render Mandelbrot and Julia fractals with zoom and mouse controls in C.",
-            "description_de": "Mandelbrot- und Julia-Fraktale mit Zoom und Maussteuerung in C rendern.",
-            "hours": "60 H"
-        },
-        "1471": {
-            "name0": "push_swap",
-            "name1": "push_swap",
-            "description_en": "Sort a stack with a minimal set of operations using sorting algorithms in C.",
-            "description_de": "Stack mit minimalen Operationen per Sorting-Algorithmus in C sortieren.",
-            "hours": "60 H"
-        },
-        "2005": {
-            "name0": "minitalk",
-            "name1": "minitalk",
-            "description_en": "Exchange messages between processes via UNIX signals in C.",
-            "description_de": "Nachrichten zwischen Prozessen via UNIX-Signalen in C austauschen.",
-            "hours": "50 H"
-        },
-        "2004": {
-            "name0": "pipex",
-            "name1": "pipex",
-            "description_en": "Implement UNIX pipe mechanics to connect processes and manage i/o in C.",
-            "description_de": "UNIX-Pipe-Mechanik f\u00fcr Prozessverbindung und I/O-Handling in C umsetzen.",
-            "hours": "50 H"
-        }
-    },
-    "rank3": {
-        "1331": {
-            "name0": "minishell",
-            "name1": "minishell",
-            "description_en": "Build a simple shell handling commands, paths, and env variables in C.",
-            "description_de": "Einfache Shell f\u00fcr Commands, Pfade und Env-Variablen in C bauen.",
-            "hours": "210 H"
-        },
-        "1334": {
-            "name0": "Philosophers",
-            "name1": "Philosophers",
-            "description_en": "Learn concurrency using threads and mutexes in the dining problem in C.",
-            "description_de": "Dining-Problem: Concurrency mit Threads und Mutexes in C lernen.",
-            "hours": "70 H"
-        }
-    },
-    "rank4": {
-        "1326": {
-            "name0": "cub3d",
-            "name1": "cub3d",
-            "description_en": "Raycasting-based 3D maze viewer inspired by 90s FPS games in C.",
-            "description_de": "Raycasting-3D-Maze-Viewer inspiriert von 90er-FPS-Games in C entwickeln.",
-            "hours": "280 H"
-        },
-        "1315": {
-            "name0": "miniRT",
-            "name1": "miniRT",
-            "description_en": "Build a ray tracer rendering 3D scenes with shapes and lighting in C.",
-            "description_de": "Raytracer f\u00fcr 3D-Szenen mit Grundformen und Lighting in C entwickeln.",
-            "hours": "280 H"
-        },
-        "2007": {
-            "name0": "NetPractice",
-            "name1": "NetPractice",
-            "description_en": "Configure IP routing and subnetting to build functional network connections.",
-            "description_de": "IP-Routing und Subnetze konfigurieren, um funktionale Netzwerke aufzubauen.",
-            "hours": "50 H"
-        },
-        "1338": {
-            "name0": "CPP Module 00",
-            "name1": "CPP Module 00",
-            "description_en": "Understand C++ basics vs C: namespaces, classes, stdlib, and intro to OOP.",
-            "description_de": "C++-Grundlagen vs. C: Namespaces, Klassen, Stdlib, OOP-Einstieg verstehen.",
-            "hours": "22 H"
-        },
-        "1339": {
-            "name0": "CPP Module 01",
-            "name1": "CPP Module 01",
-            "description_en": "Study memory allocation, references, and member pointers in C++.",
-            "description_de": "Memory-Allocation, References und Member-Pointer in C++ studieren.",
-            "hours": "12 H"
-        },
-        "1340": {
-            "name0": "CPP Module 02",
-            "name1": "CPP Module 02",
-            "description_en": "Explore polymorphism, function overloading, and canonical form in C++.",
-            "description_de": "Polymorphismus, Function-Overloading und Canonical-Form in C++ erkunden.",
-            "hours": "12 H"
-        },
-        "1341": {
-            "name0": "CPP Module 03",
-            "name1": "CPP Module 03",
-            "description_en": "Learn inheritance principles and how to extend class behavior in C++.",
-            "description_de": "Vererbung und Erweiterung von Klassenverhalten in C++ lernen.",
-            "hours": "12 H"
-        },
-        "1342": {
-            "name0": "CPP Module 04",
-            "name1": "CPP Module 04",
-            "description_en": "Use abstract classes, interfaces, and subtype polymorphism in C++.",
-            "description_de": "Abstrakte Klassen, Interfaces und Subtyp-Polymorphismus in C++ nutzen.",
-            "hours": "12 H"
-        }
-    },
-    "rank5": {
-        "1343": {
-            "name0": "CPP Module 05",
-            "name1": "CPP Module 05",
-            "description_en": "Handle exceptions with try/catch and understand error management in C++.",
-            "description_de": "Exceptions mit try/catch behandeln und Error-Management in C++ verstehen.",
-            "hours": "25 H"
-        },
-        "1344": {
-            "name0": "CPP Module 06",
-            "name1": "CPP Module 06",
-            "description_en": "Apply static, dynamic, const, and reinterpret casts properly in C++.",
-            "description_de": "Static, Dynamic, Const und Reinterpret Casts korrekt in C++ anwenden.",
-            "hours": "25 H"
-        },
-        "1345": {
-            "name0": "CPP Module 07",
-            "name1": "CPP Module 07",
-            "description_en": "Learn to write and use generic functions and classes with templates in C++.",
-            "description_de": "Generische Functions und Klassen mit Templates in C++ schreiben und nutzen.",
-            "hours": "25 H"
-        },
-        "1346": {
-            "name0": "CPP Module 08",
-            "name1": "CPP Module 08",
-            "description_en": "Use STL-style containers, iterators, and algorithms via templates in C++.",
-            "description_de": "STL-Style-Container, Iteratoren und Algorithmen mit Templates in C++ nutzen.",
-            "hours": "25 H"
-        },
-        "2309": {
-            "name0": "CPP Module 09",
-            "name1": "CPP Module 09",
-            "description_en": "Deepen understanding of STL containers like vector, map, set, and deque.",
-            "description_de": "STL-Container wie Vector, Map, Set und Deque vertiefen.",
-            "hours": "40 H"
-        },
-        "1336": {
-            "name0": "ft_irc",
-            "name1": "ft_irc",
-            "description_en": "Develop a fully functional IRC server using C++.",
-            "description_de": "Voll funktionsf\u00e4higen IRC-Server in C++ entwickeln.",
-            "hours": "175 H"
-        },
-        "1332": {
-            "name0": "webserv",
-            "name1": "webserv",
-            "description_en": "Build an HTTP server to handle requests, responses, and browser testing in c++.",
-            "description_de": "HTTP-Server f\u00fcr Requests, Responses und Browser-Testing in C++ bauen.",
-            "hours": "175 H"
-        },
-        "1983": {
-            "name0": "Inception",
-            "name1": "Inception",
-            "description_en": "Learn system administration fundamentals by virtualizing multiple Docker images.",
-            "description_de": "Systemadministration durch Virtualisierung mehrerer Docker-Images lernen.",
-            "hours": "210 H"
-        }
-    },
-    "rank6": {
-        "1337": {
-            "name0": "ft_transcendence",
-            "name1": "transcendence",
-            "description_en": "Build and manage a full-stack web application from scratch.",
-            "description_de": "Full-Stack-Webanwendung von Grund auf bauen und managen.",
-            "hours": "245 H"
-        }
-    },
-    "vintage": {}
-}
+[
+  {
+    "groupName": "rank 0",
+    "projects": {
+      "1314": {
+        "name0": "Libft",
+        "name1": "Libft",
+        "description_en": "Reimplementation of key C standard library functions and custom utilities.",
+        "description_de": "Wichtige C-Standardfunktionen und eigene Utilities in C neu implementiert.",
+        "hours": "70 H"
+      }
+    }
+  },
+  {
+    "groupName": "rank 1",
+    "projects": {
+      "1316": {
+        "name0": "ft_printf",
+        "name1": "ft_printf",
+        "description_en": "Custom printf using variadic functions and format specifiers in C.",
+        "description_de": "Eigene printf-Implementierung mit variadischen Funktionen und Format-Handling.",
+        "hours": "70 H"
+      },
+      "1994": {
+        "name0": "Born2beroot",
+        "name1": "Born2beroot",
+        "description_en": "Introduction to system administration and virtualization with Linux.",
+        "description_de": "Einführung in Systemadministration und Virtualisierung mit Linux.",
+        "hours": "40 H"
+      },
+      "1327": {
+        "name0": "get_next_line",
+        "name1": "get_next_line",
+        "description_en": "Read file or input content line by line with buffer management in C.",
+        "description_de": "Datei- oder Eingabezeilen mit Buffer-Management in C zeilenweise einlesen.",
+        "hours": "70 H"
+      }
+    }
+  },
+  {
+    "groupName": "rank 2",
+    "projects": {
+      "2008": {
+        "name0": "FdF",
+        "name1": "FdF",
+        "description_en": "3D wireframe rendering using a basic graphics window and event handling in C.",
+        "description_de": "3D-Wireframe-Rendering mit Grafik und Event-Handling in C.",
+        "hours": "60 H"
+      },
+      "2009": {
+        "name0": "so_long",
+        "name1": "so_long",
+        "description_en": "Create 2D game with player movement, collectibles, and event handling in C.",
+        "description_de": "2D-Game mit Player-Movement, Collectibles und Events in C entwickeln.",
+        "hours": "60 H"
+      },
+      "1476": {
+        "name0": "fract-ol",
+        "name1": "fract-ol",
+        "description_en": "Render Mandelbrot and Julia fractals with zoom and mouse controls in C.",
+        "description_de": "Mandelbrot- und Julia-Fraktale mit Zoom und Maussteuerung in C rendern.",
+        "hours": "60 H"
+      },
+      "1471": {
+        "name0": "push_swap",
+        "name1": "push_swap",
+        "description_en": "Sort a stack with a minimal set of operations using sorting algorithms in C.",
+        "description_de": "Stack mit minimalen Operationen per Sorting-Algorithmus in C sortieren.",
+        "hours": "60 H"
+      },
+      "2005": {
+        "name0": "minitalk",
+        "name1": "minitalk",
+        "description_en": "Exchange messages between processes via UNIX signals in C.",
+        "description_de": "Nachrichten zwischen Prozessen via UNIX-Signalen in C austauschen.",
+        "hours": "50 H"
+      },
+      "2004": {
+        "name0": "pipex",
+        "name1": "pipex",
+        "description_en": "Implement UNIX pipe mechanics to connect processes and manage i/o in C.",
+        "description_de": "UNIX-Pipe-Mechanik für Prozessverbindung und I/O-Handling in C umsetzen.",
+        "hours": "50 H"
+      }
+    }
+  },
+  {
+    "groupName": "rank 3",
+    "projects": {
+      "1331": {
+        "name0": "minishell",
+        "name1": "minishell",
+        "description_en": "Build a simple shell handling commands, paths, and env variables in C.",
+        "description_de": "Einfache Shell für Commands, Pfade und Env-Variablen in C bauen.",
+        "hours": "210 H"
+      },
+      "1334": {
+        "name0": "Philosophers",
+        "name1": "Philosophers",
+        "description_en": "Learn concurrency using threads and mutexes in the dining problem in C.",
+        "description_de": "Dining-Problem: Concurrency mit Threads und Mutexes in C lernen.",
+        "hours": "70 H"
+      }
+    }
+  },
+  {
+    "groupName": "rank 4",
+    "projects": {
+      "1326": {
+        "name0": "cub3d",
+        "name1": "cub3d",
+        "description_en": "Raycasting-based 3D maze viewer inspired by 90s FPS games in C.",
+        "description_de": "Raycasting-3D-Maze-Viewer inspiriert von 90er-FPS-Games in C entwickeln.",
+        "hours": "280 H"
+      },
+      "1315": {
+        "name0": "miniRT",
+        "name1": "miniRT",
+        "description_en": "Build a ray tracer rendering 3D scenes with shapes and lighting in C.",
+        "description_de": "Raytracer für 3D-Szenen mit Grundformen und Lighting in C entwickeln.",
+        "hours": "280 H"
+      },
+      "2007": {
+        "name0": "NetPractice",
+        "name1": "NetPractice",
+        "description_en": "Configure IP routing and subnetting to build functional network connections.",
+        "description_de": "IP-Routing und Subnetze konfigurieren, um funktionale Netzwerke aufzubauen.",
+        "hours": "50 H"
+      },
+      "1338": {
+        "name0": "CPP Module 00",
+        "name1": "CPP Module 00",
+        "description_en": "Understand C++ basics vs C: namespaces, classes, stdlib, and intro to OOP.",
+        "description_de": "C++-Grundlagen vs. C: Namespaces, Klassen, Stdlib, OOP-Einstieg verstehen.",
+        "hours": "22 H"
+      },
+      "1339": {
+        "name0": "CPP Module 01",
+        "name1": "CPP Module 01",
+        "description_en": "Study memory allocation, references, and member pointers in C++.",
+        "description_de": "Memory-Allocation, References und Member-Pointer in C++ studieren.",
+        "hours": "12 H"
+      },
+      "1340": {
+        "name0": "CPP Module 02",
+        "name1": "CPP Module 02",
+        "description_en": "Explore polymorphism, function overloading, and canonical form in C++.",
+        "description_de": "Polymorphismus, Function-Overloading und Canonical-Form in C++ erkunden.",
+        "hours": "12 H"
+      },
+      "1341": {
+        "name0": "CPP Module 03",
+        "name1": "CPP Module 03",
+        "description_en": "Learn inheritance principles and how to extend class behavior in C++.",
+        "description_de": "Vererbung und Erweiterung von Klassenverhalten in C++ lernen.",
+        "hours": "12 H"
+      },
+      "1342": {
+        "name0": "CPP Module 04",
+        "name1": "CPP Module 04",
+        "description_en": "Use abstract classes, interfaces, and subtype polymorphism in C++.",
+        "description_de": "Abstrakte Klassen, Interfaces und Subtyp-Polymorphismus in C++ nutzen.",
+        "hours": "12 H"
+      }
+    }
+  },
+  {
+    "groupName": "rank 5",
+    "projects": {
+      "1343": {
+        "name0": "CPP Module 05",
+        "name1": "CPP Module 05",
+        "description_en": "Handle exceptions with try/catch and understand error management in C++.",
+        "description_de": "Exceptions mit try/catch behandeln und Error-Management in C++ verstehen.",
+        "hours": "25 H"
+      },
+      "1344": {
+        "name0": "CPP Module 06",
+        "name1": "CPP Module 06",
+        "description_en": "Apply static, dynamic, const, and reinterpret casts properly in C++.",
+        "description_de": "Static, Dynamic, Const und Reinterpret Casts korrekt in C++ anwenden.",
+        "hours": "25 H"
+      },
+      "1345": {
+        "name0": "CPP Module 07",
+        "name1": "CPP Module 07",
+        "description_en": "Learn to write and use generic functions and classes with templates in C++.",
+        "description_de": "Generische Functions und Klassen mit Templates in C++ schreiben und nutzen.",
+        "hours": "25 H"
+      },
+      "1346": {
+        "name0": "CPP Module 08",
+        "name1": "CPP Module 08",
+        "description_en": "Use STL-style containers, iterators, and algorithms via templates in C++.",
+        "description_de": "STL-Style-Container, Iteratoren und Algorithmen mit Templates in C++ nutzen.",
+        "hours": "25 H"
+      },
+      "2309": {
+        "name0": "CPP Module 09",
+        "name1": "CPP Module 09",
+        "description_en": "Deepen understanding of STL containers like vector, map, set, and deque.",
+        "description_de": "STL-Container wie Vector, Map, Set und Deque vertiefen.",
+        "hours": "40 H"
+      },
+      "1336": {
+        "name0": "ft_irc",
+        "name1": "ft_irc",
+        "description_en": "Develop a fully functional IRC server using C++.",
+        "description_de": "Voll funktionsfähigen IRC-Server in C++ entwickeln.",
+        "hours": "175 H"
+      },
+      "1332": {
+        "name0": "webserv",
+        "name1": "webserv",
+        "description_en": "Build an HTTP server to handle requests, responses, and browser testing in c++.",
+        "description_de": "HTTP-Server für Requests, Responses und Browser-Testing in C++ bauen.",
+        "hours": "175 H"
+      },
+      "1983": {
+        "name0": "Inception",
+        "name1": "Inception",
+        "description_en": "Learn system administration fundamentals by virtualizing multiple Docker images.",
+        "description_de": "Systemadministration durch Virtualisierung mehrerer Docker-Images lernen.",
+        "hours": "210 H"
+      }
+    }
+  },
+  {
+    "groupName": "rank 6",
+    "projects": {
+      "1337": {
+        "name0": "ft_transcendence",
+        "name1": "transcendence",
+        "description_en": "Build and manage a full-stack web application from scratch.",
+        "description_de": "Full-Stack-Webanwendung von Grund auf bauen und managen.",
+        "hours": "245 H"
+      }
+    }
+  },
+  {
+    "groupName": "vintage",
+    "projects": {}
+  }
+]

@@ -3,7 +3,7 @@
 import { cookies } from "next/headers";
 import { getSession } from "../lib/session";
 import { getUserInfo } from "../lib/fortytwo";
-// import { generatePDF } from "./generatePDF";
+import { generatePDF } from "./generatePDF/generatePDF";
 import { UserFormData } from "../types/user-form-data";
 
 type FormState = {
