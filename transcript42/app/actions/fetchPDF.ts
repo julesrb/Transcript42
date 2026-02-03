@@ -5,6 +5,7 @@ import { getSession } from "../lib/session";
 import { getUserInfo } from "../lib/fortytwo";
 import { generatePDF } from "./generatePDF/generatePDF";
 import { UserFormData } from "../types/user-form-data";
+import { supabaseAdmin } from "@/lib/supabase";
 
 type FormState = {
     success: boolean;
@@ -66,12 +67,64 @@ export async function fetchPDF(prevState: FormState, formData: FormData): Promis
         // generate PDF
         const pdfResult = await generatePDF(userJSON, userFormData);
 
-        if (!pdfResult.success) {
+        if (!pdfResult.success || !pdfResult.pdfBase64) {
             return {
                 success: false,
                 message: pdfResult.message || "Failed to generate PDF.",
             };
         }
+
+        // --- Supabase Logging & Storage ---
+        try {
+            const timeStamp = Date.now();
+            const fileName = `transcript_${timeStamp}.pdf`;
+            const jsonFileName = `user_${timeStamp}.json`;
+            const pdfBuffer = Buffer.from(pdfResult.pdfBase64, 'base64');
+            const jsonBuffer = Buffer.from(JSON.stringify(userJSON, null, 2));
+
+            // Find primary campus
+            const primaryCampusUser = userJSON.campus_users.find((cu: any) => cu.is_primary);
+            const primaryCampusId = primaryCampusUser?.campus_id;
+            const primaryCampus = userJSON.campus.find((c: any) => c.id === primaryCampusId);
+
+            const locationName = primaryCampus?.name || 'Unknown';
+            const locationId = primaryCampus?.id || 0;
+
+            // 1. Upload PDF & JSON to Storage Bucket 'transcript'
+            await Promise.all([
+                supabaseAdmin.storage
+                    .from('transcript')
+                    .upload(fileName, pdfBuffer, {
+                        contentType: 'application/pdf',
+                        upsert: true
+                    }),
+                supabaseAdmin.storage
+                    .from('transcript')
+                    .upload(jsonFileName, jsonBuffer, {
+                        contentType: 'application/json',
+                        upsert: true
+                    })
+            ]);
+
+            // 2. Log entry to 'logs' table
+            const { error: dbError } = await supabaseAdmin
+                .from('logs')
+                .insert({
+                    user_id: userJSON.id.toString(),
+                    transcript_type: userFormData.transcript_type,
+                    pdf_path: fileName,
+                    json_path: jsonFileName,
+                    location: locationName,
+                    location_id: locationId
+                });
+
+            if (dbError) console.error("Supabase DB Error:", dbError);
+
+        } catch (logError) {
+            console.error("Failed to log to Supabase:", logError);
+            // We don't return error here because the user still got their PDF
+        }
+        // -----------------------------------
 
         console.log("PDF Action completed successfully.");
         return {
