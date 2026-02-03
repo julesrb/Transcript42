@@ -6,6 +6,7 @@ export const ProjectUserSchema = z.object({
     status: z.string(),
     project: ProjectSchema,
     cursus_ids: z.array(z.number()),
+    marked_at: z.string().nullable().optional(),
     "validated?": z.boolean().nullable().optional(),
 });
 

@@ -15,10 +15,10 @@ async function main() {
     const userRawData = JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
 
     const dummyFormData = {
-        date_of_birth: "1990-01-01",
+        date_of_birth: "01.02.2006",
         location_of_birth: "Berlin, Germany",
-        language: "English",
-        transcript_type: "Official Transcript"
+        language: "en",
+        transcript_type: "core_advanced"
     };
 
     console.log("Generating PDF...");
