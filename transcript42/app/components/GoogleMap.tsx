@@ -1,8 +1,10 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Script from "next/script";
-import { cityData, mapStyles, City } from "../constants/mapData";
+import { mapStyles } from "../constants/mapData";
+import { City } from "../types/city";
+import { getCityData } from "../actions/getCityData";
 import "../map.css";
 
 declare global {
@@ -14,6 +16,8 @@ declare global {
 export default function GoogleMap() {
     const mapRef = useRef<HTMLDivElement>(null);
     const mapInstance = useRef<any>(null);
+    const [cities, setCities] = useState<City[]>([]);
+    const [isMapLoaded, setIsMapLoaded] = useState(false);
 
     const createMarker = (map: any, city: City) => {
         const marker = new window.google.maps.Marker({
@@ -52,7 +56,7 @@ export default function GoogleMap() {
     };
 
     const initMap = () => {
-        if (!mapRef.current || !window.google) return;
+        if (!mapRef.current || !window.google || mapInstance.current) return;
 
         mapInstance.current = new window.google.maps.Map(mapRef.current, {
             center: { lat: 30, lng: -35 },
@@ -67,14 +71,26 @@ export default function GoogleMap() {
             backgroundColor: "#1d2028",
         });
 
-        cityData.forEach((city) => createMarker(mapInstance.current, city));
+        setIsMapLoaded(true);
     };
 
     useEffect(() => {
+        const loadData = async () => {
+            const data = await getCityData();
+            setCities(data);
+        };
+        loadData();
+
         if (window.google) {
             initMap();
         }
     }, []);
+
+    useEffect(() => {
+        if (isMapLoaded && cities.length > 0 && mapInstance.current) {
+            cities.forEach((city) => createMarker(mapInstance.current, city));
+        }
+    }, [isMapLoaded, cities]);
 
     return (
         <>
@@ -88,3 +104,4 @@ export default function GoogleMap() {
         </>
     );
 }
+
