@@ -9,6 +9,8 @@ import { UserFormData } from "../types/user-form-data";
 type FormState = {
     success: boolean;
     message: string;
+    pdfBase64?: string;
+    fileName?: string;
 } | null;
 
 export async function fetchPDF(prevState: FormState, formData: FormData): Promise<FormState> {
@@ -62,12 +64,21 @@ export async function fetchPDF(prevState: FormState, formData: FormData): Promis
         }
 
         // generate PDF
-        // generatePDF(userJSON, userFormData);
+        const pdfResult = await generatePDF(userJSON, userFormData);
+
+        if (!pdfResult.success) {
+            return {
+                success: false,
+                message: pdfResult.message || "Failed to generate PDF.",
+            };
+        }
 
         console.log("PDF Action completed successfully.");
         return {
             success: true,
-            message: "PDF generated successfully!",
+            message: "PDF generated successfully! Starting download...",
+            pdfBase64: pdfResult.pdfBase64,
+            fileName: `Transcript_${userJSON.first_name}_${userJSON.last_name}.pdf`
         };
 
     } catch (error) {

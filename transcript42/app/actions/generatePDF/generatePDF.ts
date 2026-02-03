@@ -3,32 +3,39 @@
 import { User, UserSchema } from "../../types/user";
 import { UserFormData } from "../../types/user-form-data";
 import PdfPrinter from "pdfmake/js/Printer";
+import fs from "fs";
 import path from "path";
 import coreProjectsData from "../../../data/core_projects.json";
 import advancedProjectsData from "../../../data/advanced_projects.json";
 
-const fonts = {
-    Roboto: {
-        normal: path.join(__dirname, "../../../node_modules/pdfmake/fonts/Roboto/Roboto-Regular.ttf"),
-        bold: path.join(__dirname, "../../../node_modules/pdfmake/fonts/Roboto/Roboto-Medium.ttf"),
-        italics: path.join(__dirname, "../../../node_modules/pdfmake/fonts/Roboto/Roboto-Italic.ttf"),
-        bolditalics: path.join(__dirname, "../../../node_modules/pdfmake/fonts/Roboto/Roboto-MediumItalic.ttf")
-    },
-    RobotoBold: {
-        normal: path.join(__dirname, "../../../node_modules/pdfmake/fonts/Roboto/Roboto-Bold.ttf"),
-        bold: path.join(__dirname, "../../../node_modules/pdfmake/fonts/Roboto/Roboto-Bold.ttf"),
-        italics: path.join(__dirname, "../../../node_modules/pdfmake/fonts/Roboto/Roboto-BoldItalic.ttf"),
-        bolditalics: path.join(__dirname, "../../../node_modules/pdfmake/fonts/Roboto/Roboto-BoldItalic.ttf")
-    },
-    RobotoBlack: {
-        normal: path.join(__dirname, "../../../node_modules/pdfmake/fonts/Roboto/Roboto-Black.ttf"),
-        bold: path.join(__dirname, "../../../node_modules/pdfmake/fonts/Roboto/Roboto-Black.ttf"),
-        italics: path.join(__dirname, "../../../node_modules/pdfmake/fonts/Roboto/Roboto-BlackItalic.ttf"),
-        bolditalics: path.join(__dirname, "../../../node_modules/pdfmake/fonts/Roboto/Roboto-BlackItalic.ttf")
-    }
+export type GeneratePDFResult = {
+    success: boolean;
+    pdfBase64?: string;
+    message?: string;
 };
 
-export async function generatePDF(userRawData: JSON, userFormData: UserFormData) {
+export async function generatePDF(userRawData: JSON, userFormData: UserFormData): Promise<GeneratePDFResult> {
+    const projectRoot = process.cwd().includes("app/actions/generatePDF") ? path.resolve(process.cwd(), "../../..") : process.cwd();
+    const fontsDir = path.join(projectRoot, "assets/fonts/Roboto");
+
+    const fonts = {
+        Roboto: {
+            normal: path.join(fontsDir, "Roboto-Regular.ttf"),
+            italics: path.join(fontsDir, "Roboto-Italic.ttf")
+        },
+        RobotoMedium: {
+            normal: path.join(fontsDir, "Roboto-Medium.ttf"),
+            italics: path.join(fontsDir, "Roboto-MediumItalic.ttf")
+        },
+        RobotoBold: {
+            normal: path.join(fontsDir, "Roboto-Bold.ttf"),
+            italics: path.join(fontsDir, "Roboto-BoldItalic.ttf")
+        },
+        RobotoBlack: {
+            normal: path.join(fontsDir, "Roboto-Black.ttf"),
+            italics: path.join(fontsDir, "Roboto-BlackItalic.ttf")
+        }
+    };
 
     // Validate User Info
     const userValidation = UserSchema.safeParse(userRawData);
@@ -93,10 +100,9 @@ export async function generatePDF(userRawData: JSON, userFormData: UserFormData)
 
     //generate PDF 
     try {
-        const fs = require('fs');
-
+        const projectRoot = process.cwd().includes("app/actions/generatePDF") ? path.resolve(process.cwd(), "../../..") : process.cwd();
         // Load images as base64
-        const logoPath = path.join(__dirname, "42_Logo.png");
+        const logoPath = path.join(projectRoot, "app/actions/generatePDF/42_Logo.png");
 
         let logoBase64 = '';
 
@@ -104,6 +110,8 @@ export async function generatePDF(userRawData: JSON, userFormData: UserFormData)
         if (fs.existsSync(logoPath)) {
             const logoBuffer = fs.readFileSync(logoPath);
             logoBase64 = `data:image/png;base64,${logoBuffer.toString('base64')}`;
+        } else {
+            console.error("Logo not found at:", logoPath);
         }
 
         const printer = new PdfPrinter(fonts);
@@ -128,12 +136,12 @@ export async function generatePDF(userRawData: JSON, userFormData: UserFormData)
                                                 },
                                                 {
                                                     stack: [
-                                                        { text: 'BERLIN', bold: true, italics: true, font: 'RobotoBlack' },
+                                                        { text: 'BERLIN', font: 'RobotoBlack', italics: true },
                                                         { text: 'Harzer Straße 39' },
                                                         { text: '12059 Berlin' },
                                                         { text: 'GERMANY' },
                                                     ],
-                                                    margin: [5, 40, 0, 0]
+                                                    margin: [5, 34, 0, 0]
                                                 }
                                             ]
                                         },
@@ -141,7 +149,7 @@ export async function generatePDF(userRawData: JSON, userFormData: UserFormData)
                                             stack: [
                                                 { text: 'I, Daniel Hadley, Pedagogy Lead of 42 Berlin, certify that the above-named student has met academic requirements as of the date issued. This transcript is issued upon request for all official purposes.' },
                                             ],
-                                            margin: [0, 5, 0, 0]
+                                            margin: [0, 7, 0, 0]
                                         }
                                     ],
                                     margin: [0, 0, 5, 0]
@@ -242,7 +250,7 @@ export async function generatePDF(userRawData: JSON, userFormData: UserFormData)
                                 // Rank header row
                                 [
                                     // { text: "", fillColor: '#e0e0e0' },
-                                    { text: rank.groupName, colSpan: 4, style: 'rankHeader', fillColor: '#e0e0e0', bold: true }
+                                    { text: rank.groupName, colSpan: 4, style: 'rankHeader', fillColor: '#e0e0e0', font: 'RobotoBold' }
 
                                 ],
                                 // Project rows
@@ -260,8 +268,8 @@ export async function generatePDF(userRawData: JSON, userFormData: UserFormData)
                         vLineWidth: () => 0,
                         paddingLeft: () => 4,
                         paddingRight: () => 4,
-                        paddingTop: () => 1.5,
-                        paddingBottom: () => 1.5
+                        paddingTop: () => 1,
+                        paddingBottom: () => 1
                     }
                 },
                 { text: '*At 42, project grades are given on a scale from 0 to 100. A grade of 100 reflects full mastery of the project’s objectives. Exceptional submissions may receive a bonus, resulting in grades over 100. All evaluations are peer-reviewed and follow strict assessment criteria to ensure fairness and consistency.', style: 'note' },
@@ -285,7 +293,7 @@ export async function generatePDF(userRawData: JSON, userFormData: UserFormData)
                                 ...userAdvancedProjects.map((category: any) => [
                                     // Category header row
                                     [
-                                        { text: category.groupName, colSpan: 4, style: 'rankHeader', fillColor: '#e0e0e0', bold: true }
+                                        { text: category.groupName, colSpan: 4, style: 'rankHeader', fillColor: '#e0e0e0', font: 'RobotoBold' }
                                     ],
                                     // Project rows
                                     ...category.projects.map((p: any, idx: number) => [
@@ -336,17 +344,17 @@ export async function generatePDF(userRawData: JSON, userFormData: UserFormData)
             styles: {
                 headerTitle: {
                     fontSize: 12,
-                    font: 'RobotoBold',
+                    font: 'RobotoBlack',
                     color: '#000000'
                 },
                 sectionHeader: {
                     fontSize: 14,
-                    bold: true,
+                    font: 'RobotoBold',
                     color: '#000000',
                     margin: [0, 10, 0, 8]
                 },
                 pageTitle: {
-                    bold: true,
+                    font: 'RobotoBold',
                     fontSize: 12,
                     alignment: 'center'
                 },
@@ -360,7 +368,7 @@ export async function generatePDF(userRawData: JSON, userFormData: UserFormData)
                 },
                 tableHeader: {
                     fontSize: 9.5,
-                    bold: true,
+                    font: 'RobotoBold',
                     fillColor: '#000000',
                     color: '#ffffff'
                 }
@@ -368,6 +376,7 @@ export async function generatePDF(userRawData: JSON, userFormData: UserFormData)
 
             defaultStyle: {
                 font: 'Roboto',
+                lineHeight: 1.1,
                 fontSize: 9.5
             }
         };

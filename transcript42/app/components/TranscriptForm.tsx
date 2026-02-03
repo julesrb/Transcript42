@@ -1,10 +1,35 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
 import { fetchPDF } from "../actions/fetchPDF";
 
 export default function TranscriptForm() {
     const [state, formAction, isPending] = useActionState(fetchPDF, null);
+
+    useEffect(() => {
+        if (state?.success && state.pdfBase64) {
+            // Create a blob from the base64 string
+            const byteCharacters = atob(state.pdfBase64);
+            const byteNumbers = new Array(byteCharacters.length);
+            for (let i = 0; i < byteCharacters.length; i++) {
+                byteNumbers[i] = byteCharacters.charCodeAt(i);
+            }
+            const byteArray = new Uint8Array(byteNumbers);
+            const blob = new Blob([byteArray], { type: "application/pdf" });
+
+            // Create a link and trigger download
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.href = url;
+            link.download = state.fileName || "transcript_42.pdf";
+            document.body.appendChild(link);
+            link.click();
+
+            // Cleanup
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(url);
+        }
+    }, [state]);
 
     const months = [
         "January", "February", "March", "April", "May", "June",
