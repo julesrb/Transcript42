@@ -75,7 +75,7 @@ export const createHeader = (currentPage: number, pageCount: number, campus_id: 
                                             { text: language === 'en' ? 'Core Curriculum started on:' : 'Kernstudium begonnen am:' },
                                             { text: language === 'en' ? 'Core Curriculum completed on:' : 'Kernstudium abgeschlossen am:' },
                                             advanced ?
-                                                { text: language === 'en' ? 'Specialization track:' : 'Spezialisierung:' } : null
+                                                { text: language === 'en' ? 'Specialization track:' : 'Spezialisierung:' } : null,
                                         ]
                                     },
                                     {
@@ -87,7 +87,7 @@ export const createHeader = (currentPage: number, pageCount: number, campus_id: 
                                             { text: core_start },
                                             { text: core_end },
                                             advanced ?
-                                                { text: specialization } : null,
+                                                { text: core_end } : null,
                                         ]
                                     }
                                 ],

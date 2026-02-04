@@ -1,0 +1,15 @@
+{
+    "login": "no_cursus",
+    "first_name": "No",
+    "last_name": "Cursus",
+    "pool_month": "october",
+    "pool_year": "2023",
+    "cursus_users": [
+        {
+            "cursus_id": 9,
+            "grade": "Pisciner",
+            "created_at": "2023-09-25T07:19:38.396Z"
+        }
+    ],
+    "projects_users": []
+}

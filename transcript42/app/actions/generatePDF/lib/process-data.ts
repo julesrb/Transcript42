@@ -4,7 +4,7 @@ import advancedProjectsData from "../../../../data/advanced_projects.json";
 
 export const structureProjectData = (userInfo: User) => {
     // Filter finished projects
-    const finishedProjects = userInfo.projects_users?.filter(p => p.status === "finished") || [];
+    const finishedProjects = userInfo.projects_users?.filter(p => p['validated?']) || [];
 
     // Process Core Projects
     const userCoreProjects = [];

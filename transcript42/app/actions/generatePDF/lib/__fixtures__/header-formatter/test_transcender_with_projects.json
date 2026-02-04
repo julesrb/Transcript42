@@ -1,0 +1,42 @@
+{
+    "login": "transcender_with_projects",
+    "first_name": "Trans",
+    "last_name": "WithProjects",
+    "pool_month": "october",
+    "pool_year": "2023",
+    "cursus_users": [
+        {
+            "cursus_id": 21,
+            "grade": "Transcender",
+            "created_at": "2023-11-13T09:10:00.000Z"
+        }
+    ],
+    "projects_users": [
+        {
+            "final_mark": 100,
+            "status": "finished",
+            "validated?": true,
+            "project": {
+                "id": 2623,
+                "name": "42_Collaborative_resume"
+            },
+            "cursus_ids": [
+                21
+            ],
+            "marked_at": "2025-06-18T14:00:16.745Z"
+        },
+        {
+            "final_mark": 100,
+            "status": "finished",
+            "validated?": true,
+            "project": {
+                "id": 1324,
+                "name": "Exam Rank 06"
+            },
+            "cursus_ids": [
+                21
+            ],
+            "marked_at": "2025-05-13T08:41:53.722Z"
+        }
+    ]
+}
