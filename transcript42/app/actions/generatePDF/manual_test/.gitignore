@@ -1,0 +1,10 @@
+# Ignore test output folders content but keep the folders
+test/*
+!test/.gitkeep
+test_output/*
+!test_output/.gitkeep
+test_output_2/*
+!test_output_2/.gitkeep
+
+# Keep the test script
+!test_pdf.ts

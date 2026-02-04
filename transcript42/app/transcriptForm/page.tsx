@@ -3,7 +3,7 @@
 import GoogleMap from "../components/GoogleMap";
 import TranscriptForm from "../components/TranscriptForm";
 import Footer from "../components/Footer";
-import "../transcript.css";
+import "../styles/transcript.css";
 
 export default function TranscriptPage() {
     return (

@@ -5,7 +5,7 @@ import Script from "next/script";
 import { mapStyles } from "../constants/mapData";
 import { City } from "../types/city";
 import { getCityData } from "../actions/getCityData";
-import "../map.css";
+import "../styles/map.css";
 
 declare global {
     interface Window {

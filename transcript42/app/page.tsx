@@ -3,7 +3,7 @@
 import GoogleMap from "./components/GoogleMap";
 import LoginOverlay from "./components/LoginOverlay";
 import Footer from "./components/Footer";
-import "./home.css";
+import "./styles/home.css";
 
 export default function Home() {
   return (

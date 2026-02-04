@@ -1,7 +1,7 @@
 "use server";
 
 import { supabaseAdmin } from "@/lib/supabase";
-import { City } from "../constants/mapData";
+import { City } from "../types/city";
 
 /**
  * Fetches city data from Supabase city_data table.

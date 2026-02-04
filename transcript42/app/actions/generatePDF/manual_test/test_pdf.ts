@@ -1,10 +1,10 @@
 
-import { generatePDF } from "./generatePDF";
+import { generatePDF } from "../generatePDF";
 import fs from "fs";
 import path from "path";
 
 async function main() {
-    const jsonPath = path.join(__dirname, "user_test.json");
+    const jsonPath = path.join(__dirname, "../user_test.json");
     console.log(`Reading user data from: ${jsonPath}`);
 
     if (!fs.existsSync(jsonPath)) {
