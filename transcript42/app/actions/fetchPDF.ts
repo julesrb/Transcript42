@@ -49,8 +49,6 @@ export async function fetchPDF(prevState: FormState, formData: FormData): Promis
         language: formData.get("language") as string,
         transcript_type: formData.get("transcript_type") as string,
     };
-    console.log("PDF Generation Data:", userFormData);
-
 
     try {
         // Get User Info from 42 API
