@@ -87,7 +87,7 @@ export const createHeader = (currentPage: number, pageCount: number, campus_id: 
                                             { text: core_start },
                                             { text: core_end },
                                             advanced ?
-                                                { text: core_end } : null,
+                                                { text: specialization } : null,
                                         ]
                                     }
                                 ],
