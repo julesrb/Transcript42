@@ -75,7 +75,7 @@ export async function generatePDF(userRawData: JSON, userFormData: UserFormData)
 
             content: [
                 ...createProjectsTable(userCoreProjects, 'Core Curriculum', false),
-                ...createCurriculumDetails(),
+                ...createCurriculumDetails(userFormData),
                 ...(userFormData.transcript_type === 'core_advanced'
                     ? createProjectsTable(userAdvancedProjects, 'Specialization track', true)
                     : [])

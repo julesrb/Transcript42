@@ -15,6 +15,10 @@ export const pdfStyles = {
         fontSize: 12,
         alignment: 'center'
     },
+    descriptionTitle: {
+        font: 'RobotoBold',
+        fontSize: 12
+    },
     note: {
         fontSize: 9.5,
         italics: true,
