@@ -1,6 +1,7 @@
 import { User } from "../../../types/user";
 import coreProjectsData from "../data/core_projects.json";
 import advancedProjectsData from "../data/advanced_projects.json";
+import ignoredProjectsData from "../data/ignored_projects.json";
 
 export const structureProjectData = (userInfo: User) => {
     // Filter finished projects
@@ -8,12 +9,15 @@ export const structureProjectData = (userInfo: User) => {
 
     // Process Core Projects
     const userCoreProjects = [];
+    const assignedProjectIds = new Set<string>();
+
     for (const group of coreProjectsData) {
         const projectList = [];
         for (const [id, details] of Object.entries(group.projects)) {
             const userProject = finishedProjects.find(p => p.project.id.toString() === id);
             if (!userProject) continue;
 
+            assignedProjectIds.add(id);
             projectList.push({
                 id,
                 ...(typeof details === 'string' ? { name0: details } : details),
@@ -35,6 +39,7 @@ export const structureProjectData = (userInfo: User) => {
             const userProject = finishedProjects.find(p => p.project.id.toString() === id);
             if (!userProject) continue;
 
+            assignedProjectIds.add(id);
             projectList.push({
                 id,
                 ...(typeof details === 'string' ? { name0: details } : details),
@@ -50,6 +55,19 @@ export const structureProjectData = (userInfo: User) => {
 
     if (userAdvancedProjects.length > 0 && userCoreProjects.length < 3) {
         console.warn(`[process-data] Warning: User ${userInfo.login} has advanced projects but less than 3 core projects.`);
+    }
+
+    // Find Lost Projects (finished but not in core/advanced/ignored)
+    const lostProjects = finishedProjects.filter(p => {
+        const idStr = p.project.id.toString();
+        return !assignedProjectIds.has(idStr) &&
+            !Object.prototype.hasOwnProperty.call(ignoredProjectsData, idStr);
+    });
+
+    if (lostProjects.length > 0) {
+        console.log(`[process-data] Lost projects for ${userInfo.login}:`,
+            lostProjects.map(p => `${p.project.name} (ID: ${p.project.id})`)
+        );
     }
 
     return { userCoreProjects, userAdvancedProjects };

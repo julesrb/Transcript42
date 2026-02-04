@@ -48,4 +48,52 @@ describe('process-data structureProjectData', () => {
         expect(libft?.name0).toBe('Libft');
         expect(libft?.final_mark).toBe(100);
     });
+
+    test('should log "lost" projects that are not in core, advanced, or ignored lists', () => {
+        const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
+
+        const userInfo: User = {
+            login: 'testuser',
+            projects_users: [
+                {
+                    'validated?': true,
+                    final_mark: 100,
+                    project: { id: 9999, name: 'Unknown Project' },
+                    cursus_ids: [21]
+                }
+            ]
+        } as any;
+
+        structureProjectData(userInfo);
+
+        expect(consoleSpy).toHaveBeenCalledWith(
+            expect.stringContaining('[process-data] Lost projects for testuser:'),
+            expect.arrayContaining(['Unknown Project (ID: 9999)'])
+        );
+
+        consoleSpy.mockRestore();
+    });
+
+    test('should not log projects that are in the ignored list', () => {
+        const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
+
+        // ID 159 is in ignored_projects.json
+        const userInfo: User = {
+            login: 'testuser',
+            projects_users: [
+                {
+                    'validated?': true,
+                    final_mark: 100,
+                    project: { id: 159, name: 'Piscine C' },
+                    cursus_ids: [21]
+                }
+            ]
+        } as any;
+
+        structureProjectData(userInfo);
+
+        expect(consoleSpy).not.toHaveBeenCalled();
+
+        consoleSpy.mockRestore();
+    });
 });
