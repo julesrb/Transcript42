@@ -1,6 +1,6 @@
 import { User } from "../../../types/user";
-import coreProjectsData from "../../../../data/core_projects.json";
-import advancedProjectsData from "../../../../data/advanced_projects.json";
+import coreProjectsData from "../data/core_projects.json";
+import advancedProjectsData from "../data/advanced_projects.json";
 
 export const structureProjectData = (userInfo: User) => {
     // Filter finished projects

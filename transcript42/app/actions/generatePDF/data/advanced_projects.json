@@ -306,13 +306,6 @@
                 "description_de": "Eine Video-Streaming-Website mit einem MVC-Framework und BitTorrent erstellen.",
                 "hours": ""
             },
-            "1405": {
-                "name0": "darkly",
-                "name1": "darkly",
-                "description_en": "Dissect a vulnerable website to study web security fundamentals.",
-                "description_de": "Website zur Analyse von Web-Sicherheit untersuchen.",
-                "hours": ""
-            },
             "1406": {
                 "name0": "swifty-proteins",
                 "name1": "swifty-prot",
