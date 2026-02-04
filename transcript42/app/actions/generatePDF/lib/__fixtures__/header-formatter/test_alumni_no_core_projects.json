@@ -1,0 +1,29 @@
+{
+    "login": "alumni_no_core_projects",
+    "first_name": "Alumni",
+    "last_name": "NoCore",
+    "pool_month": "september",
+    "pool_year": "2022",
+    "cursus_users": [
+        {
+            "cursus_id": 21,
+            "grade": "Alumni",
+            "created_at": "2022-09-12T08:00:00.000Z"
+        }
+    ],
+    "projects_users": [
+        {
+            "final_mark": 100,
+            "status": "finished",
+            "validated?": true,
+            "project": {
+                "id": 2623,
+                "name": "42_Collaborative_resume"
+            },
+            "cursus_ids": [
+                21
+            ],
+            "marked_at": "2024-03-15T10:30:00.000Z"
+        }
+    ]
+}

@@ -63,4 +63,13 @@ describe('header-formatter getHeaderData', () => {
         // Latest date in test_transcender_with_projects.json is 2025-06-18
         expect(result.core_end).toBe('18.06.2025');
     });
+
+    // Case 4: Alumni with core finish projects
+    test('should return the project marked_at date for core_end if grade is Alumni and has core finish project', () => {
+        const userInfo = getHeaderFixture('test_alumni_no_core_projects.json');
+        const result = getHeaderData(userInfo, dummyFormData);
+
+        expect(result.core_start).toBe('12.09.2022');
+        expect(result.core_end).toBe('15.03.2024');
+    });
 });

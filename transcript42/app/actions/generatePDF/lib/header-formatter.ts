@@ -26,7 +26,11 @@ const getLatestProjectDate = (projects: any[] | undefined, projectIds: number[])
         projectIds.includes(pu.project.id) && pu.marked_at
     ) || [];
 
-    if (relevantProjects.length === 0) return '';
+    if (relevantProjects.length === 0) {
+        console.log(projects)
+        console.warn(`[HeaderFormatter] Warning: No projects found with IDs ${projectIds.join(', ')}.`);
+        return '';
+    }
 
     const latest = relevantProjects.reduce((prev, curr) =>
         new Date(curr.marked_at!) > new Date(prev.marked_at!) ? curr : prev
@@ -59,7 +63,8 @@ export const getHeaderData = (userInfo: User, userFormData: UserFormData): Heade
     let core_end = '';
 
     if (mainCursus) {
-        if (mainCursus.grade === 'Transcender') {
+        if (mainCursus.grade === 'Transcender' || mainCursus.grade === 'Alumni') {
+            console.log("trancender")
             const latestDate = getLatestProjectDate(userInfo.projects_users, [2623, 1324, 1337]);
             core_end = latestDate || IP_TEXT;
 
