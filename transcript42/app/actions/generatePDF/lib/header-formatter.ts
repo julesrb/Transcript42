@@ -46,7 +46,7 @@ export const getHeaderData = (userInfo: User, userFormData: UserFormData): Heade
         july: "07", august: "08", september: "09", october: "10", november: "11", december: "12"
     };
     const pool_month_numeric = months[userInfo.pool_month.toLowerCase()] || userInfo.pool_month;
-    const pool_date = `${pool_month_numeric} ${userInfo.pool_year}`;
+    const pool_date = `${pool_month_numeric}.${userInfo.pool_year}`;
     const date_issued = formatDate(new Date().toISOString());
 
     // 2. Cursus Logic
