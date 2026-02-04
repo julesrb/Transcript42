@@ -48,5 +48,9 @@ export const structureProjectData = (userInfo: User) => {
         }
     }
 
+    if (userAdvancedProjects.length > 0 && userCoreProjects.length < 3) {
+        console.warn(`[process-data] Warning: User ${userInfo.login} has advanced projects but less than 3 core projects.`);
+    }
+
     return { userCoreProjects, userAdvancedProjects };
 };
