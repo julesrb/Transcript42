@@ -1,0 +1,40 @@
+{
+    "projects_users": [
+        {
+            "final_mark": 100,
+            "status": "finished",
+            "validated?": true,
+            "project": {
+                "id": 1314,
+                "name": "Libft"
+            },
+            "cursus_ids": [
+                21
+            ]
+        },
+        {
+            "final_mark": 125,
+            "status": "finished",
+            "validated?": true,
+            "project": {
+                "id": 1316,
+                "name": "ft_printf"
+            },
+            "cursus_ids": [
+                21
+            ]
+        },
+        {
+            "final_mark": 100,
+            "status": "finished",
+            "validated?": true,
+            "project": {
+                "id": 1383,
+                "name": "gomoku"
+            },
+            "cursus_ids": [
+                21
+            ]
+        }
+    ]
+}
