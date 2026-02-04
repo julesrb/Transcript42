@@ -23,7 +23,17 @@ export type GeneratePDFResult = {
 };
 
 export async function generatePDF(userRawData: JSON, userFormData: UserFormData): Promise<GeneratePDFResult> {
-    const projectRoot = process.cwd().includes("app/actions/generatePDF") ? path.resolve(process.cwd(), "../../..") : process.cwd();
+    // Determine project root based on current working directory
+    let projectRoot: string;
+    const cwd = process.cwd();
+
+    if (cwd.includes("app/actions/generatePDF/manual_test")) {
+        projectRoot = path.resolve(cwd, "../../../..");
+    } else if (cwd.includes("app/actions/generatePDF")) {
+        projectRoot = path.resolve(cwd, "../../..");
+    } else {
+        projectRoot = cwd;
+    }
 
     // Validate User Info
     const userValidation = UserSchema.safeParse(userRawData);

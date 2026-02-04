@@ -1,5 +1,7 @@
 # Ignore test output folders content but keep the folders
 test/*
+all/*
+user_local.pdf
 !test/.gitkeep
 test_output/*
 !test_output/.gitkeep
