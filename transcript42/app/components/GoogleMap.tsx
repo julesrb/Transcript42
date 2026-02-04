@@ -42,7 +42,7 @@ export default function GoogleMap() {
         const infoWindow = new window.google.maps.InfoWindow({
             content: `
         <div style="color: #454545ff; font-family: Arial, sans-serif; padding: 8px;">
-          <strong style="color: #00babc; font-size: 16px;">${city.name}</strong><br>
+          <strong style="color: #00babc; font-size: 16px;">${city.campus}</strong><br>
           <div style="margin-top: 4px; font-size: 14px;">Students: <strong>${city.value}</strong></div>
         </div>
       `,

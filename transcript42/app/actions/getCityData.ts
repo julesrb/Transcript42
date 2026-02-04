@@ -11,7 +11,7 @@ export async function getCityData(): Promise<City[]> {
     try {
         const { data, error } = await supabaseAdmin
             .from('city_data')
-            .select('name, lat, lng, value')
+            .select('campus, lat, lng, value')
             .order('value', { ascending: false });
 
         if (error) {

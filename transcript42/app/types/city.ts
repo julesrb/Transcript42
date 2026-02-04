@@ -1,5 +1,5 @@
 export interface City {
-    name: string;
+    campus: string;
     lat: number;
     lng: number;
     value: number;
