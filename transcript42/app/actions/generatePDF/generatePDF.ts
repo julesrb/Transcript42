@@ -2,6 +2,7 @@
 
 import { User, UserSchema } from "../../types/user";
 import { UserFormData } from "../../types/user-form-data";
+// @ts-ignore
 import PdfPrinter from "pdfmake/js/Printer";
 import path from "path";
 import { structureProjectData } from "./lib/process-data";
