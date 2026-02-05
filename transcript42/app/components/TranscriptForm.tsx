@@ -125,8 +125,8 @@ export default function TranscriptForm() {
                                 required
                                 className="transcript-select"
                             >
-                                <option value="core">Core</option>
                                 <option value="core_advanced">Core + Advanced</option>
+                                <option value="core">Core</option>
                             </select>
                         </div>
                     </label>
