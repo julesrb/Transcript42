@@ -15,6 +15,7 @@ import { createFooter } from "./components/footer";
 import { createBackground } from "./components/background";
 import { createProjectsTable } from "./components/projects-table";
 import { createCurriculumDetails } from "./components/curriculum-details";
+import { logger } from "@/lib/logger";
 
 export type GeneratePDFResult = {
     success: boolean;
@@ -39,7 +40,7 @@ export async function generatePDF(userRawData: JSON, userFormData: UserFormData)
     const userValidation = UserSchema.safeParse(userRawData);
 
     if (!userValidation.success) {
-        console.error("User validation failed:", userValidation.error.format());
+        logger.error("User validation failed", { error: userValidation.error.format() });
         return {
             success: false,
             message: "Invalid user data received from 42 API.",
@@ -98,7 +99,7 @@ export async function generatePDF(userRawData: JSON, userFormData: UserFormData)
                 });
             });
             pdfDoc.on('error', (err: any) => {
-                console.error("PDF generation error:", err);
+                logger.error("PDF generation error", { error: err });
                 resolve({
                     success: false,
                     message: "Failed to generate PDF."
@@ -108,7 +109,7 @@ export async function generatePDF(userRawData: JSON, userFormData: UserFormData)
         });
 
     } catch (error) {
-        console.error("PDF generation exception:", error);
+        logger.error("PDF generation exception", { error });
         return {
             success: false,
             message: "An error occurred during PDF generation."

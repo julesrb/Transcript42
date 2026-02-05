@@ -2,6 +2,7 @@
 
 import { supabaseAdmin } from "@/lib/supabase";
 import { UserFormData } from "../types/user-form-data";
+import { logger } from "@/lib/logger";
 
 /**
  * Handles all background tasks:
@@ -54,7 +55,7 @@ export async function auditAndLog(userJSON: any, userFormData: UserFormData, pdf
                     });
             }
         } catch (trackingError) {
-            console.error("Audit tracking error:", trackingError);
+            logger.error("Audit tracking error", { trackingError, userLogin: userJSON.login });
         }
 
         // --- Storage & Audit Logging ---
@@ -91,10 +92,10 @@ export async function auditAndLog(userJSON: any, userFormData: UserFormData, pdf
                 });
 
         } catch (logError) {
-            console.error("Audit logging error:", logError);
+            logger.error("Audit logging error", { logError, userLogin: userJSON.login });
         }
 
     } catch (err) {
-        console.error("Global audit error:", err);
+        logger.error("Global audit error", { err, userLogin: userJSON?.login });
     }
 }

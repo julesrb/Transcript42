@@ -2,6 +2,7 @@ import { User } from "../../../types/user";
 import coreProjectsData from "../data/core_projects.json";
 import advancedProjectsData from "../data/advanced_projects.json";
 import ignoredProjectsData from "../data/ignored_projects.json";
+import { logger } from "@/lib/logger";
 
 export const structureProjectData = (userInfo: User) => {
     // Filter finished projects
@@ -54,7 +55,7 @@ export const structureProjectData = (userInfo: User) => {
     }
 
     if (userAdvancedProjects.length > 0 && userCoreProjects.length < 3) {
-        console.warn(`[process-data] Warning: User ${userInfo.login} has advanced projects but less than 3 core projects.`);
+        logger.warn(`User has advanced projects but less than 3 core projects`, { login: userInfo.login });
     }
 
     // Find Lost Projects (finished but not in core/advanced/ignored)
@@ -65,9 +66,10 @@ export const structureProjectData = (userInfo: User) => {
     });
 
     if (lostProjects.length > 0) {
-        console.log(`[process-data] Lost projects for ${userInfo.login}:`,
-            lostProjects.map(p => `${p.project.name} (ID: ${p.project.id})`)
-        );
+        logger.info(`Lost projects found`, {
+            login: userInfo.login,
+            lost_projects: lostProjects.map(p => `${p.project.name} (ID: ${p.project.id})`)
+        });
     }
 
     return { userCoreProjects, userAdvancedProjects };

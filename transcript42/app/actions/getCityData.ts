@@ -2,6 +2,7 @@
 
 import { supabaseAdmin } from "@/lib/supabase";
 import { City } from "../types/city";
+import { logger } from "@/lib/logger";
 
 /**
  * Fetches city data from Supabase city_data table.
@@ -15,7 +16,7 @@ export async function getCityData(): Promise<City[]> {
             .order('value', { ascending: false });
 
         if (error) {
-            console.error('Error fetching city data from Supabase:', error);
+            logger.error('Error fetching city data from Supabase', { error });
             return [];
         }
 
@@ -25,7 +26,7 @@ export async function getCityData(): Promise<City[]> {
 
         return data as City[];
     } catch (e) {
-        console.error('Unexpected error fetching city data:', e);
+        logger.error('Unexpected error fetching city data', { error: e });
         return [];
     }
 }

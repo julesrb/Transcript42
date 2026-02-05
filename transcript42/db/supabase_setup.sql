@@ -79,5 +79,18 @@ VALUES
     ('Nice', 43.68338, 7.2028, 1)
 ON CONFLICT (campus) DO UPDATE SET value = EXCLUDED.value;
 
+-- 4. General Logs Table
+CREATE TABLE IF NOT EXISTS public.logs (
+    id BIGSERIAL PRIMARY KEY,
+    created_at TIMESTAMPTZ DEFAULT now() NOT NULL,
+    level TEXT DEFAULT 'info',
+    service TEXT DEFAULT 'transcript42',
+    message TEXT NOT NULL,
+    metadata JSONB DEFAULT '{}'::jsonb
+);
+
+-- Enable RLS
+ALTER TABLE public.logs ENABLE ROW LEVEL SECURITY;
+
 -- Note: Ensure you have a storage bucket named 'transcript' created 
 -- via the Supabase Dashboard Storage section.

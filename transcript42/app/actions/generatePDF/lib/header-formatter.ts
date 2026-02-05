@@ -1,5 +1,6 @@
 import { User } from "../../../types/user";
 import { UserFormData } from "../../../types/user-form-data";
+import { logger } from "@/lib/logger";
 
 export interface HeaderData {
     language: string;
@@ -27,8 +28,7 @@ const getLatestProjectDate = (projects: any[] | undefined, projectIds: number[])
     ) || [];
 
     if (relevantProjects.length === 0) {
-        console.log(projects)
-        console.warn(`[HeaderFormatter] Warning: No projects found with IDs ${projectIds.join(', ')}.`);
+        logger.warn(`No projects found for date calculation`, { projectIds });
         return '';
     }
 
@@ -56,7 +56,7 @@ export const getHeaderData = (userInfo: User, userFormData: UserFormData): Heade
     // 2. Cursus Logic
     const mainCursus = userInfo.cursus_users?.find(cu => cu.cursus_id === 21);
     if (!mainCursus) {
-        console.error(`[HeaderFormatter] Error: Main 42cursus (ID 21) not found for user ${userInfo.login}.`);
+        logger.error(`Main 42cursus (ID 21) not found for user`, { login: userInfo.login });
     }
 
     const core_start = formatDate(mainCursus?.created_at);
@@ -64,12 +64,11 @@ export const getHeaderData = (userInfo: User, userFormData: UserFormData): Heade
 
     if (mainCursus) {
         if (mainCursus.grade === 'Transcender' || mainCursus.grade === 'Alumni') {
-            console.log("trancender")
             const latestDate = getLatestProjectDate(userInfo.projects_users, [2623, 1324, 1337]);
             core_end = latestDate || IP_TEXT;
 
             if (!latestDate) {
-                console.warn(`[HeaderFormatter] Warning: User ${userInfo.login} is Transcender but no core finish projects found. Falling back to "${IP_TEXT}".`);
+                logger.warn(`Transcender user but no core finish projects found`, { login: userInfo.login });
             }
         } else {
             core_end = IP_TEXT;

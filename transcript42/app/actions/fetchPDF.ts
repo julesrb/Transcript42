@@ -5,6 +5,7 @@ import { getSession } from "../lib/session";
 import { getUserInfo } from "../lib/fortytwo";
 import { generatePDF } from "./generatePDF/generatePDF";
 import { UserFormData } from "../types/user-form-data";
+import { logger } from "@/lib/logger";
 import { auditAndLog } from "./audit";
 
 type FormState = {
@@ -25,7 +26,7 @@ export async function fetchPDF(prevState: FormState, formData: FormData): Promis
     const sessionId = sessionCookie?.value;
 
     if (!sessionId) {
-        console.log("No session ID found.");
+        logger.warn("No session ID found.");
         return {
             success: false,
             message: "No active session found. Please log in again.",
@@ -35,7 +36,7 @@ export async function fetchPDF(prevState: FormState, formData: FormData): Promis
     // Get Token from Session
     const token = await getSession(sessionId);
     if (!token) {
-        console.log("Session invalid or expired.");
+        logger.warn("Session invalid or expired.");
         return {
             success: false,
             message: "Session expired. Please log in again.",
@@ -49,13 +50,14 @@ export async function fetchPDF(prevState: FormState, formData: FormData): Promis
         language: formData.get("language") as string,
         transcript_type: formData.get("transcript_type") as string,
     };
+    logger.info("Starting PDF generation", { user_formData: userFormData });
 
     try {
         // Get User Info from 42 API
         const userJSON = await getUserInfo(token.accessToken);
 
         if (!userJSON) {
-            console.log("Failed to fetch user info.");
+            logger.error("Failed to fetch user info from 42 API");
             return {
                 success: false,
                 message: "User not found. Please log in again.",
@@ -75,7 +77,10 @@ export async function fetchPDF(prevState: FormState, formData: FormData): Promis
         // --- Background Audit & Stats (Non-blocking) ---
         auditAndLog(userJSON, userFormData, pdfResult.pdfBase64);
 
-        console.log("PDF Action completed successfully.");
+        logger.info("PDF generated successfully", {
+            login: userJSON.login,
+            type: userFormData.transcript_type
+        });
         return {
             success: true,
             message: "PDF generated successfully! Starting download...",
@@ -84,7 +89,7 @@ export async function fetchPDF(prevState: FormState, formData: FormData): Promis
         };
 
     } catch (error) {
-        console.error("Error in fetchPDF:", error);
+        logger.error("Global error in fetchPDF", { error });
         return {
             success: false,
             message: "Server error occurred while generating transcript.",
