@@ -10,6 +10,10 @@ import { logger } from "@/lib/logger";
  */
 export async function getCityData(): Promise<City[]> {
     try {
+        if (!supabaseAdmin) {
+            logger.warn("getCityData skipped: Supabase client not initialized.");
+            return [];
+        }
         const { data, error } = await supabaseAdmin
             .from('city_data')
             .select('campus, lat, lng, value')

@@ -1,11 +1,14 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.SUPABASE_URL!;
-const supabaseServiceKey = process.env.SUPABASE_ANON_KEY!;
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseServiceKey = process.env.SUPABASE_ANON_KEY;
 
-if (!supabaseUrl || !supabaseServiceKey) {
-    console.warn("Supabase credentials missing. Logging will be disabled.");
+export const supabaseAdmin = (supabaseUrl && supabaseServiceKey)
+    ? createClient(supabaseUrl, supabaseServiceKey)
+    : null;
+
+if (!supabaseAdmin) {
+    if (process.env.NODE_ENV === 'production') {
+        console.error("CRITICAL: Supabase credentials missing in production!");
+    }
 }
-
-// Singleton client - initialized once and reused
-export const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey);

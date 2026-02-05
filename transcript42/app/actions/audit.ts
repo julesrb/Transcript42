@@ -19,80 +19,84 @@ export async function auditAndLog(userJSON: any, userFormData: UserFormData, pdf
         const campusName = primaryCampus?.name || 'Unknown';
 
         // --- Usage & City Data Tracking ---
-        try {
-            const { data: currentUsage } = await supabaseAdmin
-                .from('usage')
-                .select('value')
-                .eq('user_id', userJSON.id.toString())
-                .single();
-
-            let isNewUser = !currentUsage;
-            let newValue = currentUsage ? currentUsage.value + 1 : 1;
-
-            await supabaseAdmin
-                .from('usage')
-                .upsert({
-                    user_id: userJSON.id.toString(),
-                    value: newValue,
-                    campus: campusName,
-                    last_used: new Date().toISOString()
-                });
-
-            if (isNewUser) {
-                const { data: currentCity } = await supabaseAdmin
-                    .from('city_data')
+        if (supabaseAdmin) {
+            try {
+                const { data: currentUsage } = await supabaseAdmin
+                    .from('usage')
                     .select('value')
-                    .eq('campus', campusName)
+                    .eq('user_id', userJSON.id.toString())
                     .single();
 
-                const newCityValue = (currentCity?.value || 0) + 1;
+                let isNewUser = !currentUsage;
+                let newValue = currentUsage ? currentUsage.value + 1 : 1;
 
                 await supabaseAdmin
-                    .from('city_data')
+                    .from('usage')
                     .upsert({
+                        user_id: userJSON.id.toString(),
+                        value: newValue,
                         campus: campusName,
-                        value: newCityValue
+                        last_used: new Date().toISOString()
                     });
+
+                if (isNewUser) {
+                    const { data: currentCity } = await supabaseAdmin
+                        .from('city_data')
+                        .select('value')
+                        .eq('campus', campusName)
+                        .single();
+
+                    const newCityValue = (currentCity?.value || 0) + 1;
+
+                    await supabaseAdmin
+                        .from('city_data')
+                        .upsert({
+                            campus: campusName,
+                            value: newCityValue
+                        });
+                }
+            } catch (trackingError) {
+                logger.error("Audit tracking error", { trackingError, userLogin: userJSON.login });
             }
-        } catch (trackingError) {
-            logger.error("Audit tracking error", { trackingError, userLogin: userJSON.login });
         }
 
         // --- Storage & Audit Logging ---
-        try {
-            const timeStamp = Date.now();
-            const fileName = `transcript_${userJSON.id}_${timeStamp}.pdf`;
-            const jsonFileName = `transcript_${userJSON.id}_${timeStamp}.json`;
-            const pdfBuffer = Buffer.from(pdfBase64, 'base64');
-            const jsonBuffer = Buffer.from(JSON.stringify(userJSON, null, 2));
+        if (supabaseAdmin) {
+            try {
+                const timeStamp = Date.now();
+                const fileName = `transcript_${userJSON.id}_${timeStamp}.pdf`;
+                const jsonFileName = `transcript_${userJSON.id}_${timeStamp}.json`;
+                const pdfBuffer = Buffer.from(pdfBase64, 'base64');
+                const jsonBuffer = Buffer.from(JSON.stringify(userJSON, null, 2));
 
-            await Promise.all([
-                supabaseAdmin.storage
-                    .from('transcript')
-                    .upload(fileName, pdfBuffer, {
-                        contentType: 'application/pdf',
-                        upsert: true
-                    }),
-                supabaseAdmin.storage
-                    .from('transcript')
-                    .upload(jsonFileName, jsonBuffer, {
-                        contentType: 'application/json',
-                        upsert: true
-                    })
-            ]);
+                await Promise.all([
+                    supabaseAdmin.storage
+                        .from('transcript')
+                        .upload(fileName, pdfBuffer, {
+                            contentType: 'application/pdf',
+                            upsert: true
+                        }),
+                    supabaseAdmin.storage
+                        .from('transcript')
+                        .upload(jsonFileName, jsonBuffer, {
+                            contentType: 'application/json',
+                            upsert: true
+                        })
+                ]);
 
-            await supabaseAdmin
-                .from('pdf_gen_log')
-                .insert({
-                    user_id: userJSON.id.toString(),
-                    transcript_type: userFormData.transcript_type,
-                    pdf_path: fileName,
-                    json_path: jsonFileName,
-                    location: campusName
-                });
+                await supabaseAdmin
+                    .from('pdf_gen_log')
+                    .insert({
+                        user_id: userJSON.id.toString(),
+                        transcript_type: userFormData.transcript_type,
+                        pdf_path: fileName,
+                        json_path: jsonFileName,
+                        location: campusName
+                    });
 
-        } catch (logError) {
-            logger.error("Audit logging error", { logError, userLogin: userJSON.login });
+            } catch (logError) {
+                logger.error("Audit logging error", { logError, userLogin: userJSON.login });
+            }
         }
 
     } catch (err) {

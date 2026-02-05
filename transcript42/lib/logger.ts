@@ -25,16 +25,18 @@ class Logger {
             console.log(consoleMsg, metadata);
         }
 
-        // Push to Supabase
-        try {
-            await supabaseAdmin.from('logs').insert({
-                level,
-                message,
-                metadata,
-                service: this.service
-            });
-        } catch (err) {
-            console.error('Failed to push log to Supabase:', err);
+        // Push to Supabase optionally
+        if (supabaseAdmin) {
+            try {
+                await supabaseAdmin.from('logs').insert({
+                    level,
+                    message,
+                    metadata,
+                    service: this.service
+                });
+            } catch (err) {
+                console.error('Failed to push log to Supabase:', err);
+            }
         }
     }
 
