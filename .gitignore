@@ -1,2 +1,4 @@
 .env
 .env.prod
+.env.cloud
+.env.prod.cloud
