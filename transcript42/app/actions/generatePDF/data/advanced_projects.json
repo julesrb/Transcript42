@@ -106,6 +106,13 @@
                 "description_en": "Analyze leaf images for disease recognition using computer vision.",
                 "description_de": "Blattbilder zur Krankheitserkennung mit Computer-Vision analysieren.",
                 "hours": "294 H"
+            },
+            "2551": {
+                "name0": "Learn2Slither",
+                "name1": "Learn2Slither",
+                "description_en": "A cutting-edge Q-learning project focused on autonomous decision-making in a dynamic environment.",
+                "description_de": "Ein modernes Q-Learning-Projekt, das sich auf autonome Entscheidungsfindung in einer dynamischen Umgebung konzentriert.",
+                "hours": "98 H"
             }
         }
     },
@@ -359,6 +366,20 @@
                 "description_en": "Intensive immersion in mobile development concepts and tools.",
                 "description_de": "Intensive Einführung in mobile Entwicklungskonzepte und Werkzeuge.",
                 "hours": ""
+            },
+            "2485": {
+                "name0": "Tokenizer",
+                "name1": "Tokenizer",
+                "description_en": "This project allows you to learn the basics in web3. You will have to create your non-fungible token!",
+                "description_de": "Dieses Projekt ermöglicht es dir, die Grundlagen in Web3 zu erlernen. Du wirst dein eigenes Non-Fungible Token erstellen!",
+                "hours": "98 H"
+            },
+            "2600": {
+                "name0": "TokenizeArt",
+                "name1": "TokenizeArt",
+                "description_en": "This project allows you to learn the basics in web3. You will have to create your non-fungible token!",
+                "description_de": "Dieses Projekt ermöglicht es dir, die Grundlagen in Web3 zu erlernen. Du wirst dein eigenes Non-Fungible Token erstellen!",
+                "hours": "98 H"
             }
         }
     },
@@ -553,6 +574,13 @@
                 "description_en": "Develop a full-featured shell with advanced UNIX and POSIX features.",
                 "description_de": "Shell mit fortgeschrittenem UNIX und POSIX bauen.",
                 "hours": "294 H"
+            },
+            "1461": {
+                "name0": "abstract-vm",
+                "name1": "abstract-vm",
+                "description_en": "This project gets you back into the flow after the C++ piscine and involves creating a virtual machine capable of executing code in basic pseudo-ASM. You will use a stack for basic arithmetic operations, similar to the dc command.",
+                "description_de": "Dieses Projekt führt dich nach der C++-Piscine wieder in den Fluss ein und umfasst die Erstellung einer virtuellen Maschine, die Code in einfachem Pseudo-ASM ausführen kann.",
+                "hours": "100 H"
             }
         }
     },
