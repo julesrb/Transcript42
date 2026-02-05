@@ -4,34 +4,75 @@ on:
   push:
     branches: [v2-nextjs]
 
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: julesrb/transcript42
+
 jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    environment: main
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./transcript42
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+          build-args: |
+            NEXT_PUBLIC_FORTYTWO_UID=${{ secrets.NEXT_PUBLIC_FORTYTWO_UID }}
+            NEXT_PUBLIC_OAUTH_REDIRECT_URI=${{ secrets.NEXT_PUBLIC_OAUTH_REDIRECT_URI }}
+            NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}
+            NEXT_PUBLIC_APP_URL=${{ secrets.NEXT_PUBLIC_APP_URL }}
+        env:
+          NEXT_PUBLIC_FORTYTWO_UID: ${{ secrets.NEXT_PUBLIC_FORTYTWO_UID }}
+          NEXT_PUBLIC_OAUTH_REDIRECT_URI: ${{ secrets.NEXT_PUBLIC_OAUTH_REDIRECT_URI }}
+          NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}
+          NEXT_PUBLIC_APP_URL: ${{ secrets.NEXT_PUBLIC_APP_URL }}
+
   deploy:
+    needs: build-and-push
     runs-on: ubuntu-latest
     environment: main
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.DROPLET_SSH_KEY }}
 
-    - name: Set up SSH
-      uses: webfactory/ssh-agent@v0.9.0
-      with:
-        ssh-private-key: ${{ secrets.DEV_SSH }}
-
-    - name: Deploy via Git pull
-      env:
-        REPO_URL: https://github.com/${{ github.repository }}.git
-      run: |
-        ssh -o StrictHostKeyChecking=no ${{ secrets.DEV_USER }}@${{ secrets.DEV_HOST }} "
-          mkdir -p /var/www/pdf-service &&
-          cd /var/www/pdf-service &&
-          if [ ! -d .git ]; then
-            git clone $REPO_URL . &&
-            git checkout v2-nextjs
-          else
-            git checkout v2-nextjs
+      - name: Deploy via SSH
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.DROPLET_USER }}@${{ secrets.DROPLET_HOST }} "
+            mkdir -p /var/www/pdf-service &&
+            cd /var/www/pdf-service &&
+            
+            # Pull latest code for the compose file
+            if [ ! -d .git ]; then
+              git clone https://github.com/${{ github.repository }}.git .
+            fi &&
             git fetch origin &&
-            git reset --hard origin/v2-nextjs
-          fi &&
-          make
-        "
+            git reset --hard origin/v2-nextjs &&
+
+            # Login to registry on the droplet
+            echo ${{ secrets.GITHUB_TOKEN }} | docker login ${{ env.REGISTRY }} -u ${{ github.actor }} --password-stdin &&
+
+            # Pull and Restart with the new image
+            export DOCKER_IMAGE=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest &&
+            docker compose pull &&
+            docker compose up -d
+          "

@@ -1,6 +1,7 @@
 services:
 
   transcript42:
+    image: ${DOCKER_IMAGE:-transcript42-local}
     build:
       context: transcript42
       dockerfile: Dockerfile
