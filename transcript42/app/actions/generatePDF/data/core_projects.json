@@ -34,6 +34,13 @@
         "description_en": "Read file or input content line by line with buffer management in C.",
         "description_de": "Datei- oder Eingabezeilen mit Buffer-Management in C zeilenweise einlesen.",
         "hours": "70 H"
+      },
+      "2687": {
+        "name0": "push_swap",
+        "name1": "push_swap",
+        "description_en": "Sort a stack with a minimal set of operations using sorting algorithms in C.",
+        "description_de": "Stack mit minimalen Operationen per Sorting-Algorithmus in C sortieren.",
+        "hours": "60 H"
       }
     }
   },
@@ -81,6 +88,90 @@
         "description_en": "Implement UNIX pipe mechanics to connect processes and manage i/o in C.",
         "description_de": "UNIX-Pipe-Mechanik für Prozessverbindung und I/O-Handling in C umsetzen.",
         "hours": "50 H"
+      },
+      "2688": {
+        "name0": "A-Maze-ing",
+        "name1": "A-Maze-ing",
+        "description_en": "Functional programming project to solve labyrinths and pathfinding.",
+        "description_de": "Funktionale Programmierung zur Labyrinthlösung und Pfadfindung.",
+        "hours": "50 H"
+      },
+      "2690": {
+        "name0": "Python Module 00",
+        "name1": "Py Module 00",
+        "description_en": "Introduction to Python: basics, variables, and data structures.",
+        "description_de": "Einführung in Python: Grundlagen, Variablen und Datenstrukturen.",
+        "hours": "9 H"
+      },
+      "2691": {
+        "name0": "Python Module 01",
+        "name1": "Py Module 01",
+        "description_en": "Python basics and array manipulation with NumPy.",
+        "description_de": "Python-Grundlagen und Array-Manipulation mit NumPy.",
+        "hours": "9 H"
+      },
+      "2692": {
+        "name0": "Python Module 02",
+        "name1": "Py Module 02",
+        "description_en": "Further Python basics and image processing.",
+        "description_de": "Weitere Python-Grundlagen und Bildverarbeitung.",
+        "hours": "9 H"
+      },
+      "2693": {
+        "name0": "Python Module 03",
+        "name1": "Py Module 03",
+        "description_en": "Introduction to Object-Oriented Programming in Python.",
+        "description_de": "Einführung in objektorientierte Programmierung in Python.",
+        "hours": "9 H"
+      },
+      "2694": {
+        "name0": "Python Module 04",
+        "name1": "Py Module 04",
+        "description_en": "Advanced Python concepts and data manipulation.",
+        "description_de": "Fortgeschrittene Python-Konzepte und Datenmanipulation.",
+        "hours": "9 H"
+      },
+      "2695": {
+        "name0": "Python Module 05",
+        "name1": "Py Module 05",
+        "description_en": "Intermediate Python modules and package management.",
+        "description_de": "Mittlere Python-Module und Paketverwaltung.",
+        "hours": "9 H"
+      },
+      "2696": {
+        "name0": "Python Module 06",
+        "name1": "Py Module 06",
+        "description_en": "Exploring Python algorithms and performance.",
+        "description_de": "Python-Algorithmen und Performance erkunden.",
+        "hours": "9 H"
+      },
+      "2697": {
+        "name0": "Python Module 07",
+        "name1": "Py Module 07",
+        "description_en": "Python project focusing on specific library usage.",
+        "description_de": "Python-Projekt mit Fokus auf spezifische Libraries.",
+        "hours": "9 H"
+      },
+      "2698": {
+        "name0": "Python Module 08",
+        "name1": "Py Module 08",
+        "description_en": "Deep dive into Python data analysis tools.",
+        "description_de": "Vertiefung in Python Datenanalyse-Tools.",
+        "hours": "9 H"
+      },
+      "2707": {
+        "name0": "Python Module 09",
+        "name1": "Py Module 09",
+        "description_en": "Advanced Python data processing techniques.",
+        "description_de": "Fortgeschrittene Techniken zur Datenverarbeitung in Python.",
+        "hours": "9 H"
+      },
+      "2699": {
+        "name0": "Python Module 10",
+        "name1": "Py Module 10",
+        "description_en": "Final Python module covering complex applications.",
+        "description_de": "Abschlussmodul Python für komplexe Anwendungen.",
+        "hours": "9 H"
       }
     }
   },
@@ -100,6 +191,27 @@
         "description_en": "Learn concurrency using threads and mutexes in the dining problem in C.",
         "description_de": "Dining-Problem: Concurrency mit Threads und Mutexes in C lernen.",
         "hours": "70 H"
+      },
+      "2704": {
+        "name0": "Codexion",
+        "name1": "Codexion",
+        "description_en": "Project focused on code organization, modularity, and best practices.",
+        "description_de": "Projekt mit Fokus auf Code-Organisation, Modularität und Best Practices.",
+        "hours": "80 H"
+      },
+      "2705": {
+        "name0": "Fly-in",
+        "name1": "Fly-in",
+        "description_en": "Interactive graphics project exploring event-driven programming.",
+        "description_de": "Interaktives Grafikprojekt zu ereignisgesteuerter Programmierung.",
+        "hours": "120 H"
+      },
+      "2689": {
+        "name0": "Call Me Maybe",
+        "name1": "Call Me Maybe",
+        "description_en": "Introduction to asynchronous programming and callbacks.",
+        "description_de": "Einführung in asynchrone Programmierung und Callbacks.",
+        "hours": "80 H"
       }
     }
   },
@@ -119,13 +231,6 @@
         "description_en": "Build a ray tracer rendering 3D scenes with shapes and lighting in C.",
         "description_de": "Raytracer für 3D-Szenen mit Grundformen und Lighting in C entwickeln.",
         "hours": "280 H"
-      },
-      "2007": {
-        "name0": "NetPractice",
-        "name1": "NetPractice",
-        "description_en": "Configure IP routing and subnetting to build functional network connections.",
-        "description_de": "IP-Routing und Subnetze konfigurieren, um funktionale Netzwerke aufzubauen.",
-        "hours": "50 H"
       },
       "1338": {
         "name0": "CPP Module 00",
@@ -161,6 +266,27 @@
         "description_en": "Use abstract classes, interfaces, and subtype polymorphism in C++.",
         "description_de": "Abstrakte Klassen, Interfaces und Subtyp-Polymorphismus in C++ nutzen.",
         "hours": "12 H"
+      },
+      "2007": {
+        "name0": "NetPractice",
+        "name1": "NetPractice",
+        "description_en": "Configure IP routing and subnetting to build functional network connections.",
+        "description_de": "IP-Routing und Subnetze konfigurieren, um funktionale Netzwerke aufzubauen.",
+        "hours": "50 H"
+      },
+      "2706": {
+        "name0": "Pac-Man",
+        "name1": "Pac-Man",
+        "description_en": "Recreation of the Pac-Man game to learn OOP and game logic.",
+        "description_de": "Nachbau von Pac-Man, um OOP und Gamelogik zu lernen.",
+        "hours": "150 H"
+      },
+      "2700": {
+        "name0": "RAG against the machine",
+        "name1": "RAG against the machine",
+        "description_en": "Retrieval-Augmented Generation project exploring AI and LLM integration.",
+        "description_de": "RAG-Projekt zur Exploration von KI- und LLM-Integration.",
+        "hours": "150 H"
       }
     }
   },
@@ -222,6 +348,20 @@
         "description_en": "Learn system administration fundamentals by virtualizing multiple Docker images.",
         "description_de": "Systemadministration durch Virtualisierung mehrerer Docker-Images lernen.",
         "hours": "210 H"
+      },
+      "2701": {
+        "name0": "The Answer Protocol",
+        "name1": "The Answer Protocol",
+        "description_en": "Advanced communication protocol implementation for data exchange.",
+        "description_de": "Implementierung eines fortgeschrittenen Kommunikationsprotokolls.",
+        "hours": "150 H"
+      },
+      "2703": {
+        "name0": "Agent Smith",
+        "name1": "Agent Smith",
+        "description_en": "Security and forensics project focusing on system monitoring.",
+        "description_de": "Sicherheits- und Forensikprojekt mit Fokus auf System-Monitoring.",
+        "hours": "100 H"
       }
     }
   },
