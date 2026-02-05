@@ -59,7 +59,7 @@ export const getHeaderData = (userInfo: User, userFormData: UserFormData): Heade
         logger.error(`Main 42cursus (ID 21) not found for user`, { login: userInfo.login });
     }
 
-    const core_start = formatDate(mainCursus?.created_at);
+    const core_start = formatDate(mainCursus?.begin_at);
     let core_end = '';
 
     if (mainCursus) {

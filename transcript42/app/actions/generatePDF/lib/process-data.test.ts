@@ -67,8 +67,11 @@ describe('process-data structureProjectData', () => {
         structureProjectData(userInfo);
 
         expect(consoleSpy).toHaveBeenCalledWith(
-            expect.stringContaining('[process-data] Lost projects for testuser:'),
-            expect.arrayContaining(['Unknown Project (ID: 9999)'])
+            expect.stringContaining('[INFO] Lost projects found'),
+            expect.objectContaining({
+                login: 'testuser',
+                lost_projects: expect.arrayContaining(['Unknown Project (ID: 9999)'])
+            })
         );
 
         consoleSpy.mockRestore();
