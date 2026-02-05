@@ -52,7 +52,7 @@ export default function TranscriptForm() {
         <div className="transcript-card z-10">
             <header className="mb-10 text-center">
                 <h1 className="text-white m-0 leading-tight text-4xl lg:text-5xl font-black tracking-tighter">
-                    42 Berlin
+                    ft_Transcript
                 </h1>
                 <p className="text-white/40 mt-3 text-lg font-medium">
                     Academic Transcript

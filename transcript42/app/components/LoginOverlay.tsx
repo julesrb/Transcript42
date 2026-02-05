@@ -15,7 +15,7 @@ export default function LoginOverlay() {
     return (
         <div className="login-card max-w-[400px] w-full rounded-xl p-10 text-center relative z-10 flex flex-col items-center">
             <h1 className="m-0 leading-tight text-white text-[2.5rem] font-extrabold tracking-tight">
-                ft_Transcipt
+                ft_Transcript
             </h1>
             <h2 className="mt-2 mb-8 leading-normal text-white/70 text-lg font-normal">
                 Academic Transcript
