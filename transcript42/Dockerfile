@@ -1,4 +1,17 @@
-FROM node:20-alpine AS builder
+FROM node:20-bookworm-slim AS builder
+
+# Install system dependencies for node-canvas
+RUN apt-get update && apt-get install -y \
+    python3 \
+    make \
+    g++ \
+    pkg-config \
+    libcairo2-dev \
+    libpango1.0-dev \
+    libjpeg-dev \
+    libgif-dev \
+    librsvg2-dev \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
@@ -20,7 +33,16 @@ ENV NEXT_PUBLIC_APP_URL=$NEXT_PUBLIC_APP_URL
 RUN npm run build
 
 
-FROM node:20-alpine AS runner
+FROM node:20-bookworm-slim AS runner
+
+# Install runtime dependencies for node-canvas
+RUN apt-get update && apt-get install -y \
+    libcairo2 \
+    libjpeg62-turbo \
+    libpango-1.0-0 \
+    libgif7 \
+    librsvg2-2 \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 ENV NODE_ENV=production
