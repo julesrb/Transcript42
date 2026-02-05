@@ -49,8 +49,8 @@ export const getHeaderData = (userInfo: User, userFormData: UserFormData): Heade
         january: "01", february: "02", march: "03", april: "04", may: "05", june: "06",
         july: "07", august: "08", september: "09", october: "10", november: "11", december: "12"
     };
-    const pool_month_numeric = months[userInfo.pool_month.toLowerCase()] || userInfo.pool_month;
-    const pool_date = `${pool_month_numeric}.${userInfo.pool_year}`;
+    const pool_month_numeric = userInfo.pool_month ? (months[userInfo.pool_month.toLowerCase()] || userInfo.pool_month) : '';
+    const pool_date = [pool_month_numeric, userInfo.pool_year].filter(Boolean).join('.');
     const date_issued = formatDate(new Date().toISOString());
 
     // 2. Cursus Logic

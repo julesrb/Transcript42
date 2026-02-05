@@ -72,4 +72,34 @@ describe('header-formatter getHeaderData', () => {
         expect(result.core_start).toBe('12.09.2022');
         expect(result.core_end).toBe('15.03.2024');
     });
+
+    test('should handle missing pool_month and pool_year gracefully', () => {
+        const userInfo: User = {
+            ...getHeaderFixture('test_transcender_with_projects.json'),
+            pool_month: null,
+            pool_year: null,
+        };
+        const result = getHeaderData(userInfo, dummyFormData);
+        expect(result.pool_date).toBe('');
+    });
+
+    test('should handle missing pool_month but present pool_year', () => {
+        const userInfo: User = {
+            ...getHeaderFixture('test_transcender_with_projects.json'),
+            pool_month: null,
+            pool_year: '2024',
+        };
+        const result = getHeaderData(userInfo, dummyFormData);
+        expect(result.pool_date).toBe('2024');
+    });
+
+    test('should handle present pool_month but missing pool_year', () => {
+        const userInfo: User = {
+            ...getHeaderFixture('test_transcender_with_projects.json'),
+            pool_month: 'January',
+            pool_year: null,
+        };
+        const result = getHeaderData(userInfo, dummyFormData);
+        expect(result.pool_date).toBe('01');
+    });
 });

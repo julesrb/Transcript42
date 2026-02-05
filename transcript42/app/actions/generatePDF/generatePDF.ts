@@ -23,7 +23,7 @@ export type GeneratePDFResult = {
     message?: string;
 };
 
-export async function generatePDF(userRawData: JSON, userFormData: UserFormData): Promise<GeneratePDFResult> {
+export async function generatePDF(userRawData: any, userFormData: UserFormData): Promise<GeneratePDFResult> {
     // Determine project root based on current working directory
     let projectRoot: string;
     const cwd = process.cwd();
@@ -40,7 +40,7 @@ export async function generatePDF(userRawData: JSON, userFormData: UserFormData)
     const userValidation = UserSchema.safeParse(userRawData);
 
     if (!userValidation.success) {
-        logger.error("User validation failed", { error: userValidation.error.format() });
+        logger.error(`User ${userRawData?.login} validation failed`, { error: userValidation.error.format() });
         return {
             success: false,
             message: "Invalid user data received from 42 API.",
