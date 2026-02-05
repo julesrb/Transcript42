@@ -92,85 +92,85 @@
       "2688": {
         "name0": "A-Maze-ing",
         "name1": "A-Maze-ing",
-        "description_en": "Functional programming project to solve labyrinths and pathfinding.",
-        "description_de": "Funktionale Programmierung zur Labyrinthlösung und Pfadfindung.",
+        "description_en": "Generate and display a functional maze following specific constraints.",
+        "description_de": "Labyrinth-Erstellung und Anzeige unter Einhaltung von Vorgaben.",
         "hours": "50 H"
       },
       "2690": {
         "name0": "Python Module 00",
         "name1": "Py Module 00",
-        "description_en": "Introduction to Python: basics, variables, and data structures.",
-        "description_de": "Einführung in Python: Grundlagen, Variablen und Datenstrukturen.",
+        "description_en": "Introduction to Python programming through community garden scenarios.",
+        "description_de": "Einführung in Python anhand von Gemeinschaftsgarten-Szenarien.",
         "hours": "9 H"
       },
       "2691": {
         "name0": "Python Module 01",
         "name1": "Py Module 01",
-        "description_en": "Python basics and array manipulation with NumPy.",
-        "description_de": "Python-Grundlagen und Array-Manipulation mit NumPy.",
+        "description_en": "Learn Object-Oriented Programming OOP through digital gardening exercises.",
+        "description_de": "Erlernen von OOP durch Übungen zur digitalen Gartenarbeit.",
         "hours": "9 H"
       },
       "2692": {
         "name0": "Python Module 02",
         "name1": "Py Module 02",
-        "description_en": "Further Python basics and image processing.",
-        "description_de": "Weitere Python-Grundlagen und Bildverarbeitung.",
+        "description_en": "Master exception handling and data pipelines in agricultural systems.",
+        "description_de": "Meisterung von Exception-Handling und Daten-Pipelines in Agrarsystemen.",
         "hours": "9 H"
       },
       "2693": {
         "name0": "Python Module 03",
         "name1": "Py Module 03",
-        "description_en": "Introduction to Object-Oriented Programming in Python.",
-        "description_de": "Einführung in objektorientierte Programmierung in Python.",
+        "description_en": "Explore data structures and streaming pipelines through game analytics.",
+        "description_de": "Erkundung von Datenstrukturen und Streaming-Pipelines via Spielanalysen.",
         "hours": "9 H"
       },
       "2694": {
         "name0": "Python Module 04",
         "name1": "Py Module 04",
-        "description_en": "Advanced Python concepts and data manipulation.",
-        "description_de": "Fortgeschrittene Python-Konzepte und Datenmanipulation.",
+        "description_en": "Master file operations and error handling in cyberpunk archiving missions.",
+        "description_de": "Beherrschung von Dateioperationen in Cyberpunk-Archivierungsmissionen.",
         "hours": "9 H"
       },
       "2695": {
         "name0": "Python Module 05",
         "name1": "Py Module 05",
-        "description_en": "Intermediate Python modules and package management.",
-        "description_de": "Mittlere Python-Module und Paketverwaltung.",
+        "description_en": "Implement method overriding and polymorphism in cyberpunk data systems.",
+        "description_de": "Method-Overriding und Polymorphismus in Cyberpunk-Datensystemen.",
         "hours": "9 H"
       },
       "2696": {
         "name0": "Python Module 06",
         "name1": "Py Module 06",
-        "description_en": "Exploring Python algorithms and performance.",
-        "description_de": "Python-Algorithmen und Performance erkunden.",
+        "description_en": "Master Python's import system and package control via laboratory projects.",
+        "description_de": "Beherrschung des Python-Importsystems durch Labor-Projekte.",
         "hours": "9 H"
       },
       "2697": {
         "name0": "Python Module 07",
         "name1": "Py Module 07",
-        "description_en": "Python project focusing on specific library usage.",
-        "description_de": "Python-Projekt mit Fokus auf spezifische Libraries.",
+        "description_en": "Master abstract classes and interfaces by building a card game engine.",
+        "description_de": "Abstrakte Klassen und Schnittstellen durch Bau einer Kartenspiel-Engine.",
         "hours": "9 H"
       },
       "2698": {
         "name0": "Python Module 08",
         "name1": "Py Module 08",
-        "description_en": "Deep dive into Python data analysis tools.",
-        "description_de": "Vertiefung in Python Datenanalyse-Tools.",
+        "description_en": "Master data engineering tools and environments in a Matrix-themed project.",
+        "description_de": "Data-Engineering-Tools und Umgebungen in einem Matrix-Projekt.",
         "hours": "9 H"
       },
       "2707": {
         "name0": "Python Module 09",
         "name1": "Py Module 09",
-        "description_en": "Advanced Python data processing techniques.",
-        "description_de": "Fortgeschrittene Techniken zur Datenverarbeitung in Python.",
+        "description_en": "Master data validation with Pydantic through interstellar cosmic exercises.",
+        "description_de": "Datenvalidierung mit Pydantic durch interstellare Kosmos-Übungen.",
         "hours": "9 H"
       },
       "2699": {
         "name0": "Python Module 10",
         "name1": "Py Module 10",
-        "description_en": "Final Python module covering complex applications.",
-        "description_de": "Abschlussmodul Python für komplexe Anwendungen.",
+        "description_en": "Master advanced functional programming in a cyberpunk RPG scenario.",
+        "description_de": "Fortgeschrittene funktionale Programmierung in einem Cyberpunk-RPG.",
         "hours": "9 H"
       }
     }
@@ -195,22 +195,22 @@
       "2704": {
         "name0": "Codexion",
         "name1": "Codexion",
-        "description_en": "Project focused on code organization, modularity, and best practices.",
-        "description_de": "Projekt mit Fokus auf Code-Organisation, Modularität und Best Practices.",
+        "description_en": "Master concurrent programming using threads and mutexes in C.",
+        "description_de": "Meisterung von Nebenläufigkeit mit Threads und Mutexes in C.",
         "hours": "80 H"
       },
       "2705": {
         "name0": "Fly-in",
         "name1": "Fly-in",
-        "description_en": "Interactive graphics project exploring event-driven programming.",
-        "description_de": "Interaktives Grafikprojekt zu ereignisgesteuerter Programmierung.",
+        "description_en": "Design a drone routing and pathfinding system using OOP principles.",
+        "description_de": "Entwurf eines Drohnen-Routing-Systems nach OOP-Prinzipien.",
         "hours": "120 H"
       },
       "2689": {
         "name0": "Call Me Maybe",
         "name1": "Call Me Maybe",
-        "description_en": "Introduction to asynchronous programming and callbacks.",
-        "description_de": "Einführung in asynchrone Programmierung und Callbacks.",
+        "description_en": "Implement LLM function calling and constrained JSON decoding.",
+        "description_de": "Implementierung von LLM-Funktionsaufrufen und JSON-Dekodierung.",
         "hours": "80 H"
       }
     }
@@ -277,15 +277,15 @@
       "2706": {
         "name0": "Pac-Man",
         "name1": "Pac-Man",
-        "description_en": "Recreation of the Pac-Man game to learn OOP and game logic.",
-        "description_de": "Nachbau von Pac-Man, um OOP und Gamelogik zu lernen.",
+        "description_en": "Develop a modern Python implementation of the classic Pac-Man game.",
+        "description_de": "Moderne Python-Implementierung des Spieleklassikers Pac-Man.",
         "hours": "150 H"
       },
       "2700": {
         "name0": "RAG against the machine",
         "name1": "RAG against the machine",
-        "description_en": "Retrieval-Augmented Generation project exploring AI and LLM integration.",
-        "description_de": "RAG-Projekt zur Exploration von KI- und LLM-Integration.",
+        "description_en": "Build a RAG system with intelligent data chunking.",
+        "description_de": "Bau eines RAG-Systems mit intelligentem Chunking und Datenabruf.",
         "hours": "150 H"
       }
     }
@@ -352,15 +352,15 @@
       "2701": {
         "name0": "The Answer Protocol",
         "name1": "The Answer Protocol",
-        "description_en": "Advanced communication protocol implementation for data exchange.",
-        "description_de": "Implementierung eines fortgeschrittenen Kommunikationsprotokolls.",
+        "description_en": "Build a multiplayer world and TCP server using the RFC 42TAP protocol.",
+        "description_de": "Bau einer Mehrspielerwelt und eines TCP-Servers nach RFC 42TAP.",
         "hours": "150 H"
       },
       "2703": {
         "name0": "Agent Smith",
         "name1": "Agent Smith",
-        "description_en": "Security and forensics project focusing on system monitoring.",
-        "description_de": "Sicherheits- und Forensikprojekt mit Fokus auf System-Monitoring.",
+        "description_en": "Develop AI agentic pipelines for autonomous task orchestration.",
+        "description_de": "Entwicklung von KI-Pipelines für autonome Aufgaben-Orchestrierung.",
         "hours": "100 H"
       }
     }
