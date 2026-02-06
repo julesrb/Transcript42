@@ -66,7 +66,7 @@ export const structureProjectData = (userInfo: User) => {
     });
 
     if (lostProjects.length > 0) {
-        logger.info(`Lost projects found`, {
+        logger.warn(`Lost projects found`, {
             login: userInfo.login,
             lost_projects: lostProjects.map(p => `${p.project.name} (ID: ${p.project.id})`)
         });
