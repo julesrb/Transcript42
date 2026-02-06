@@ -1,4 +1,12 @@
-.env
-.env.prod
-.env.cloud
-.env.prod.cloud
+.env*
+!.env.example
+!.env.*.example
+
+.DS_Store
+**/.DS_Store
+
+node_modules/
+.next/
+build/
+dist/
+*.log
