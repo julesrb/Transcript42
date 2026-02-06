@@ -91,14 +91,14 @@
                 "name1": "PyDataSci",
                 "description_en": "Intensive introduction to Python for data science applications.",
                 "description_de": "Intensive Einführung in Python für Anwendungen der Datenwissenschaft.",
-                "hours": ""
+                "hours": "63 H"
             },
             "2295": {
                 "name0": "Piscine Data Science",
                 "name1": "PiscineDataSci",
                 "description_en": "Introductory immersion in data science professions and tools.",
                 "description_de": "Einführung in die Berufe der Datenwissenschaft und Werkzeuge.",
-                "hours": ""
+                "hours": "63 H"
             },
             "2372": {
                 "name0": "Leaffliction",
@@ -229,7 +229,7 @@
                 "name1": "Cybersecurity",
                 "description_en": "Intensive immersion in cybersecurity concepts and practices.",
                 "description_de": "Intensive Einführung in Cyber-Sicherheits-Konzepte und Praktiken.",
-                "hours": ""
+                "hours": "63 H"
             }
         }
     },
@@ -344,28 +344,28 @@
                 "name1": "Piscine RoR",
                 "description_en": "Intensive immersion in Ruby on Rails for web development skills.",
                 "description_de": "Intensive Einführung in Ruby on Rails für Web-Entwicklungsfähigkeiten.",
-                "hours": ""
+                "hours": "63 H"
             },
             "2189": {
                 "name0": "Piscine Django",
                 "name1": "Piscine Django",
                 "description_en": "Intensive immersion in Django for web development skills.",
                 "description_de": "Intensive Einführung in Django für Web-Entwicklungsfähigkeiten.",
-                "hours": ""
+                "hours": "63 H"
             },
             "2199": {
                 "name0": "Piscine Symfony",
                 "name1": "PiscSymfony",
                 "description_en": "Intensive immersion in Symfony for web development skills.",
                 "description_de": "Intensive Einführung in Symfony für Web-Entwicklungsfähigkeiten.",
-                "hours": ""
+                "hours": "63 H"
             },
             "2355": {
                 "name0": "Mobile",
                 "name1": "Piscine Mobile",
                 "description_en": "Intensive immersion in mobile development concepts and tools.",
                 "description_de": "Intensive Einführung in mobile Entwicklungskonzepte und Werkzeuge.",
-                "hours": ""
+                "hours": "63 H"
             },
             "2485": {
                 "name0": "Tokenizer",
@@ -690,7 +690,7 @@
                 "name1": "Piscine Unity",
                 "description_en": "Intensive immersion in Unity for 3D and game development skills.",
                 "description_de": "Intensive Einführung in Unity für 3D- und Spieleentwicklungsfähigkeiten.",
-                "hours": ""
+                "hours": "63 H"
             }
         }
     },
@@ -826,14 +826,14 @@
                 "name1": "Piscine OCaml",
                 "description_en": "Intensive immersion in Ocaml programming concepts.",
                 "description_de": "Intensive Einführung in Ocaml-Programmierungskonzepte.",
-                "hours": ""
+                "hours": "63 H"
             },
             "2364": {
                 "name0": "Piscine Object",
                 "name1": "PiscObject",
                 "description_en": "Intensive immersion in object-oriented programming concepts.",
                 "description_de": "Intensive Einführung in objektorientierte Programmierungskonzepte.",
-                "hours": ""
+                "hours": "63 H"
             },
             "2371": {
                 "name0": "Abstract_data",
