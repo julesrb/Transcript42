@@ -61,6 +61,9 @@ export async function generatePDF(userRawData: any, userFormData: UserFormData):
         const logoBase64 = getLogoBase64(projectRoot);
         const printer = new PdfPrinter(fonts);
 
+        const coreTitle = userFormData.language === 'de' ? 'Kernstudium' : 'Core Curriculum';
+        const advancedTitle = userFormData.language === 'de' ? 'Spezialisierung' : 'Specialization track';
+
         const docDefinition = {
             pageSize: 'A4',
             pageMargins: [30, 180, 30, 50],
@@ -75,10 +78,10 @@ export async function generatePDF(userRawData: any, userFormData: UserFormData):
                 createBackground(pageSize),
 
             content: [
-                ...createProjectsTable(userCoreProjects, 'Core Curriculum', false),
+                ...createProjectsTable(userCoreProjects, coreTitle, userFormData.language, false),
                 ...createCurriculumDetails(userFormData),
                 ...(userFormData.transcript_type === 'core_advanced'
-                    ? createProjectsTable(userAdvancedProjects, 'Specialization track', true)
+                    ? createProjectsTable(userAdvancedProjects, advancedTitle, userFormData.language, true)
                     : [])
             ],
 
