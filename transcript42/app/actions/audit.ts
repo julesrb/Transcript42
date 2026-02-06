@@ -39,21 +39,37 @@ export async function auditAndLog(userJSON: any, userFormData: UserFormData, pdf
                         last_used: new Date().toISOString()
                     });
 
-                if (isNewUser) {
+                if (isNewUser && campusName !== 'Unknown') {
                     const { data: currentCity } = await supabaseAdmin
                         .from('city_data')
                         .select('value')
                         .eq('campus', campusName)
                         .single();
 
-                    const newCityValue = (currentCity?.value || 0) + 1;
+                    if (currentCity) {
+                        // City exists, increment it
+                        const newCityValue = currentCity.value + 1;
+                        await supabaseAdmin
+                            .from('city_data')
+                            .update({
+                                value: newCityValue,
+                                updated_at: new Date().toISOString()
+                            })
+                            .eq('campus', campusName);
+                    } else {
+                        // New city, create it with defaults
+                        await supabaseAdmin
+                            .from('city_data')
+                            .insert({
+                                campus: campusName,
+                                value: 1,
+                                lat: 0,
+                                lng: 0,
+                                updated_at: new Date().toISOString()
+                            });
 
-                    await supabaseAdmin
-                        .from('city_data')
-                        .upsert({
-                            campus: campusName,
-                            value: newCityValue
-                        });
+                        logger.info("New campus added to city_data", { campus: campusName });
+                    }
                 }
             } catch (trackingError) {
                 logger.error("Audit tracking error", { trackingError, userLogin: userJSON.login });

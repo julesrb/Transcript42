@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS public.city_data (
     lat DOUBLE PRECISION NOT NULL,
     lng DOUBLE PRECISION NOT NULL,
     value INTEGER DEFAULT 0,
-    created_at TIMESTAMPTZ DEFAULT now()
+    updated_at TIMESTAMPTZ DEFAULT now()
 );
 
 -- Enable RLS but NO public policies (Only accessible via service role / Admin)

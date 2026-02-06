@@ -50,7 +50,7 @@ describe('process-data structureProjectData', () => {
     });
 
     test('should log "lost" projects that are not in core, advanced, or ignored lists', () => {
-        const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
+        const consoleSpy = jest.spyOn(console, 'warn').mockImplementation();
 
         const userInfo: User = {
             login: 'testuser',
@@ -67,7 +67,7 @@ describe('process-data structureProjectData', () => {
         structureProjectData(userInfo);
 
         expect(consoleSpy).toHaveBeenCalledWith(
-            expect.stringContaining('[INFO] Lost projects found'),
+            expect.stringContaining('[WARN] Lost projects found'),
             expect.objectContaining({
                 login: 'testuser',
                 lost_projects: expect.arrayContaining(['Unknown Project (ID: 9999)'])
@@ -78,7 +78,7 @@ describe('process-data structureProjectData', () => {
     });
 
     test('should not log projects that are in the ignored list', () => {
-        const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
+        const consoleSpy = jest.spyOn(console, 'warn').mockImplementation();
 
         // ID 159 is in ignored_projects.json
         const userInfo: User = {
