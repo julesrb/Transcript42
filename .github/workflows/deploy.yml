@@ -38,11 +38,6 @@ jobs:
             NEXT_PUBLIC_OAUTH_REDIRECT_URI=${{ secrets.NEXT_PUBLIC_OAUTH_REDIRECT_URI }}
             NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}
             NEXT_PUBLIC_APP_URL=${{ secrets.NEXT_PUBLIC_APP_URL }}
-        env:
-          NEXT_PUBLIC_FORTYTWO_UID: ${{ secrets.NEXT_PUBLIC_FORTYTWO_UID }}
-          NEXT_PUBLIC_OAUTH_REDIRECT_URI: ${{ secrets.NEXT_PUBLIC_OAUTH_REDIRECT_URI }}
-          NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}
-          NEXT_PUBLIC_APP_URL: ${{ secrets.NEXT_PUBLIC_APP_URL }}
 
   deploy:
     needs: build-and-push
@@ -74,5 +69,8 @@ jobs:
             # Pull and Restart with the new image
             export DOCKER_IMAGE=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest &&
             docker compose pull &&
-            docker compose up -d
+            docker compose up -d &&
+            
+            # Clean up old images to save space
+            docker image prune -f
           "
