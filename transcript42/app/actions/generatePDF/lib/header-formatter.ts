@@ -64,7 +64,7 @@ export const getHeaderData = (userInfo: User, userFormData: UserFormData): Heade
 
     if (mainCursus) {
         if (mainCursus.grade === 'Transcender' || mainCursus.grade === 'Alumni') {
-            const latestDate = getLatestProjectDate(userInfo.projects_users, [2623, 1324, 1337]);
+            const latestDate = getLatestProjectDate(userInfo.projects_users, [1324, 1337]);
             core_end = latestDate || IP_TEXT;
 
             if (!latestDate) {
