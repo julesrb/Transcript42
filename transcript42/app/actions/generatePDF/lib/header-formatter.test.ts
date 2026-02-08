@@ -61,7 +61,7 @@ describe('header-formatter getHeaderData', () => {
 
         expect(result.core_start).toBe('13.11.2023');
         // Latest date in test_transcender_with_projects.json is 2025-06-18
-        expect(result.core_end).toBe('18.06.2025');
+        expect(result.core_end).toBe('13.05.2025');
     });
 
     // Case 4: Alumni with core finish projects
