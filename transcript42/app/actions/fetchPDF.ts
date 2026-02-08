@@ -17,6 +17,9 @@ type FormState = {
 
 export async function fetchPDF(prevState: FormState, formData: FormData): Promise<FormState> {
 
+    const ignoreDateOfBirth: boolean = formData.get("ignore_date_of_birth") === "true";
+    const ignorePlaceOfBirth: boolean = formData.get("ignore_place_of_birth") === "true";
+
     const day = formData.get("dob_day") as string;
     const month = formData.get("dob_month") as string;
     const year = formData.get("dob_year") as string;
@@ -45,8 +48,8 @@ export async function fetchPDF(prevState: FormState, formData: FormData): Promis
 
     // Data for PDF (from Form)
     const userFormData: UserFormData = {
-        date_of_birth: `${day.padStart(2, "0")}.${month.padStart(2, "0")}.${year}`,
-        location_of_birth: formData.get("location_of_birth") as string,
+        date_of_birth: ignoreDateOfBirth ? undefined : `${day.padStart(2, "0")}.${month.padStart(2, "0")}.${year}`,
+        location_of_birth: ignorePlaceOfBirth ? undefined : (formData.get("location_of_birth") as string),
         language: formData.get("language") as string,
         transcript_type: formData.get("transcript_type") as string,
     };

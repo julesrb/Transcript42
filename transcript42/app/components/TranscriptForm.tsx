@@ -1,10 +1,12 @@
 "use client";
 
-import { useActionState, useEffect } from "react";
+import { useActionState, useEffect, useState } from "react";
 import { fetchPDF } from "../actions/fetchPDF";
 
 export default function TranscriptForm() {
     const [state, formAction, isPending] = useActionState(fetchPDF, null);
+    const [ignoreDateOfBirth, setIgnoreDateOfBirth] = useState(false);
+    const [ignorePlaceOfBirth, setIgnorePlaceOfBirth] = useState(false);
 
     useEffect(() => {
         if (state?.success && state.pdfBase64) {
@@ -61,48 +63,82 @@ export default function TranscriptForm() {
 
             <form action={formAction} className="space-y-2">
                 <input type="hidden" name="user_id" value="user_id_placeholder" />
+                <input type="hidden" name="ignore_date_of_birth" value={ignoreDateOfBirth ? "true" : "false"} />
+                <input type="hidden" name="ignore_place_of_birth" value={ignorePlaceOfBirth ? "true" : "false"} />
 
                 {/* Date of Birth */}
-                <label className="transcript-label">
-                    Date of Birth
-                    <div className="input-wrapper">
-                        <div className="date-grid">
-                            <select name="dob_day" required className="transcript-select">
-                                <option value="">Day</option>
-                                {days.map(d => (
-                                    <option key={d} value={d}>{d}</option>
-                                ))}
-                            </select>
+                <div className="transcript-label">
+                    {!ignoreDateOfBirth && (
+                        <>
+                            <span>Date of Birth</span>
+                            <div className="input-wrapper">
+                                <div className="date-grid">
+                                    <select name="dob_day" required className="transcript-select">
+                                        <option value="">Day</option>
+                                        {days.map(d => (
+                                            <option key={d} value={d}>{d}</option>
+                                        ))}
+                                    </select>
 
-                            <select name="dob_month" required className="transcript-select">
-                                <option value="">Month</option>
-                                {months.map((m, i) => (
-                                    <option key={m} value={i + 1}>{m}</option>
-                                ))}
-                            </select>
+                                    <select name="dob_month" required className="transcript-select">
+                                        <option value="">Month</option>
+                                        {months.map((m, i) => (
+                                            <option key={m} value={i + 1}>{m}</option>
+                                        ))}
+                                    </select>
 
-                            <select name="dob_year" required className="transcript-select">
-                                <option value="">Year</option>
-                                {years.map(y => (
-                                    <option key={y} value={y}>{y}</option>
-                                ))}
-                            </select>
-                        </div>
-                    </div>
-                </label>
+                                    <select name="dob_year" required className="transcript-select">
+                                        <option value="">Year</option>
+                                        {years.map(y => (
+                                            <option key={y} value={y}>{y}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                            </div>
+                        </>
+                    )}
+                    {/* Ignore Date of Birth Checkbox */}
+                    <label className="flex items-center gap-2 cursor-pointer group mt-2">
+                        <input
+                            type="checkbox"
+                            checked={ignoreDateOfBirth}
+                            onChange={(e) => setIgnoreDateOfBirth(e.target.checked)}
+                            className="w-4 h-4 rounded border-2 border-white/20 bg-white/5 checked:bg-[#00babc] checked:border-[#00babc] cursor-pointer transition-all"
+                        />
+                        <span className="text-white/50 text-xs font-medium group-hover:text-white/70 transition-colors">
+                            Ignore and remove date of birth from the transcript
+                        </span>
+                    </label>
+                </div>
 
                 {/* Location of Birth */}
-                <label className="transcript-label">
-                    Location of Birth
-                    <div className="input-wrapper">
+                <div className="transcript-label">
+                    {!ignorePlaceOfBirth && (
+                        <>
+                            <span>Location of Birth</span>
+                            <div className="input-wrapper">
+                                <input
+                                    name="location_of_birth"
+                                    required
+                                    className="transcript-input"
+                                    placeholder="e.g. Berlin, Germany"
+                                />
+                            </div>
+                        </>
+                    )}
+                    {/* Ignore Place of Birth Checkbox */}
+                    <label className="flex items-center gap-2 cursor-pointer group mt-2">
                         <input
-                            name="location_of_birth"
-                            required
-                            className="transcript-input"
-                            placeholder="e.g. Berlin, Germany"
+                            type="checkbox"
+                            checked={ignorePlaceOfBirth}
+                            onChange={(e) => setIgnorePlaceOfBirth(e.target.checked)}
+                            className="w-4 h-4 rounded border-2 border-white/20 bg-white/5 checked:bg-[#00babc] checked:border-[#00babc] cursor-pointer transition-all"
                         />
-                    </div>
-                </label>
+                        <span className="text-white/50 text-xs font-medium group-hover:text-white/70 transition-colors">
+                            Ignore and remove place of birth from the transcript
+                        </span>
+                    </label>
+                </div>
 
                 <div className="grid grid-cols-2 gap-4">
                     {/* Language */}

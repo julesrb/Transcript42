@@ -68,27 +68,27 @@ export const createHeader = (currentPage: number, pageCount: number, campus_id: 
                                     {
                                         width: 170,
                                         stack: [
-                                            { text: language === 'en' ? 'Date of birth:' : 'Geburtsdatum:' },
-                                            { text: language === 'en' ? 'Location of birth:' : 'Geburtsort:' },
+                                            dateOfBirth ? { text: language === 'en' ? 'Date of birth:' : 'Geburtsdatum:' } : null,
+                                            locationOfBirth ? { text: language === 'en' ? 'Location of birth:' : 'Geburtsort:' } : null,
                                             { text: language === 'en' ? 'Date issued:' : 'Ausstellungsdatum:' },
                                             { text: language === 'en' ? 'Passed Selection in:' : 'Auswahl bestanden in:' },
                                             { text: language === 'en' ? 'Core Curriculum started on:' : 'Kernstudium begonnen am:' },
                                             { text: language === 'en' ? 'Core Curriculum completed on:' : 'Kernstudium abgeschlossen am:' },
                                             advanced ?
                                                 { text: language === 'en' ? 'Specialization track:' : 'Spezialisierung:' } : null,
-                                        ]
+                                        ].filter(Boolean)
                                     },
                                     {
                                         stack: [
-                                            { text: dateOfBirth },
-                                            { text: locationOfBirth },
+                                            dateOfBirth ? { text: dateOfBirth } : null,
+                                            locationOfBirth ? { text: locationOfBirth } : null,
                                             { text: date_issued },
                                             { text: pool_date },
                                             { text: core_start },
                                             { text: core_end },
                                             advanced ?
                                                 { text: specialization } : null,
-                                        ]
+                                        ].filter(Boolean)
                                     }
                                 ],
                                 margin: [0, 10, 0, 0]

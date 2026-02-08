@@ -12,8 +12,8 @@ export interface HeaderData {
     specialization: string;
     firstName: string;
     lastName: string;
-    dateOfBirth: string;
-    locationOfBirth: string;
+    dateOfBirth: string | undefined;
+    locationOfBirth: string | undefined;
 }
 
 const formatDate = (dateString?: string): string => {
