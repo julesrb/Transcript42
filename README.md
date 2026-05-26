@@ -79,7 +79,6 @@ Generated transcripts include:
 - Student name and birth information
 - Pool month/year and core curriculum dates
 - Completed projects with grades
-- Optional: specialization track (for advanced students)
 
 Available in **German** or **English** formats.
 
