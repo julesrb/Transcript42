@@ -85,7 +85,7 @@ export async function auditAndLog(userJSON: any, userFormData: UserFormData, pdf
                 const pdfBuffer = Buffer.from(pdfBase64, 'base64');
                 const jsonBuffer = Buffer.from(JSON.stringify(userJSON, null, 2));
 
-                await Promise.all([
+                const [pdfUpload, jsonUpload] = await Promise.all([
                     supabaseAdmin.storage
                         .from('transcript')
                         .upload(fileName, pdfBuffer, {
@@ -100,7 +100,19 @@ export async function auditAndLog(userJSON: any, userFormData: UserFormData, pdf
                         })
                 ]);
 
-                await supabaseAdmin
+                if (pdfUpload.error) {
+                    logger.error("Failed to upload PDF to storage", { error: pdfUpload.error, fileName });
+                } else {
+                    logger.info("PDF uploaded to storage", { path: pdfUpload.data.path });
+                }
+
+                if (jsonUpload.error) {
+                    logger.error("Failed to upload JSON to storage", { error: jsonUpload.error, jsonFileName });
+                } else {
+                    logger.info("JSON uploaded to storage", { path: jsonUpload.data.path });
+                }
+
+                const { error: insertError } = await supabaseAdmin
                     .from('pdf_gen_log')
                     .insert({
                         user_id: userJSON.id.toString(),
@@ -109,6 +121,12 @@ export async function auditAndLog(userJSON: any, userFormData: UserFormData, pdf
                         json_path: jsonFileName,
                         location: campusName
                     });
+
+                if (insertError) {
+                    logger.error("Failed to insert into pdf_gen_log", { error: insertError });
+                } else {
+                    logger.info("Audit log inserted into pdf_gen_log");
+                }
 
             } catch (logError) {
                 logger.error("Audit logging error", { logError, userLogin: userJSON.login });
