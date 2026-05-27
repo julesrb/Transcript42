@@ -16,11 +16,17 @@ export async function exchangeCodeForToken(code: string) {
             },
         }
     );
+    if (!response.ok) return null;
     const data = await response.json();
     return data;
 }
 
-export async function getUserInfo(token: string) {
+export type GetUserInfoResult =
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    | { ok: true; data: any }
+    | { ok: false; reason: "unauthorized" | "error" };
+
+export async function getUserInfo(token: string): Promise<GetUserInfoResult> {
     const response = await fetch(
         `https://api.intra.42.fr/v2/me`,
         {
@@ -30,7 +36,11 @@ export async function getUserInfo(token: string) {
             },
         }
     );
+    if (response.status === 401 || response.status === 403) {
+        return { ok: false, reason: "unauthorized" };
+    }
+    if (!response.ok) return { ok: false, reason: "error" };
     const data = await response.json();
-    return data;
+    return { ok: true, data };
 }
 

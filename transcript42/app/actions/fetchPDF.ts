@@ -57,15 +57,24 @@ export async function fetchPDF(prevState: FormState, formData: FormData): Promis
 
     try {
         // Get User Info from 42 API
-        const userJSON = await getUserInfo(token.accessToken);
+        const userResult = await getUserInfo(token.accessToken);
 
-        if (!userJSON) {
+        if (!userResult.ok) {
+            if (userResult.reason === "unauthorized") {
+                logger.error("42 API rejected the access token (401/403)");
+                return {
+                    success: false,
+                    message: "Your session has expired. Please log in again.",
+                };
+            }
             logger.error("Failed to fetch user info from 42 API");
             return {
                 success: false,
-                message: "User not found. Please log in again.",
+                message: "Could not reach the 42 API. Please try again later.",
             };
         }
+
+        const userJSON = userResult.data;
 
         // generate PDF
         const pdfResult = await generatePDF(userJSON, userFormData);
